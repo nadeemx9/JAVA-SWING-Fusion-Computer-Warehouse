@@ -1121,9 +1121,9 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_add_cust_menu" max="32767" attributes="0"/>
-                                      <Component id="pnl_cust_det_menu" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="pnl_edit_cust_menu" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="pnl_add_cust_menu" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_cust_det_menu" alignment="0" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_edit_cust_menu" alignment="1" pref="59" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
