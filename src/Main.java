@@ -16,6 +16,8 @@ import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class Main extends javax.swing.JFrame
 {
@@ -24,7 +26,7 @@ public class Main extends javax.swing.JFrame
     Statement st;
     PreparedStatement pst;
     ResultSet result;
-
+    DefaultTableModel tableModel;
     String query;
 
     public Main()
@@ -1356,14 +1358,14 @@ public class Main extends javax.swing.JFrame
         table_editcust.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME"
             }
         ));
         table_editcust.setPreferredSize(new java.awt.Dimension(908, 300));
@@ -1590,14 +1592,14 @@ public class Main extends javax.swing.JFrame
         table_custdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME", "Title 6"
             }
         ));
         table_custdet.setPreferredSize(new java.awt.Dimension(908, 400));
@@ -4573,6 +4575,7 @@ public class Main extends javax.swing.JFrame
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
             txt_editcust_id.grabFocus();
             txt_editcust_id.setText(getMaxID("customer"));
+            bindTableData(table_editcust, "customer");
         }
     }//GEN-LAST:event_btn_edit_custKeyPressed
 
@@ -4588,6 +4591,7 @@ public class Main extends javax.swing.JFrame
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
             txt_custdet_custid.grabFocus();
             txt_custdet_custid.setText(getMaxID("customer"));
+            bindTableData(table_custdet, "customer");
         }
     }//GEN-LAST:event_btn_cust_detKeyPressed
 
@@ -5008,6 +5012,7 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
         txt_editcust_id.grabFocus();
         txt_editcust_id.setText(getMaxID("customer"));
+        bindTableData(table_editcust, "customer");
     }//GEN-LAST:event_btn_edit_custActionPerformed
 
     private void btn_cust_detActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_cust_detActionPerformed
@@ -5016,6 +5021,7 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
         txt_custdet_custid.grabFocus();
         txt_custdet_custid.setText(getMaxID("customer"));
+        bindTableData(table_custdet, "customer");
     }//GEN-LAST:event_btn_cust_detActionPerformed
 
     private void btn_add_empActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_add_empActionPerformed
@@ -5127,7 +5133,7 @@ public class Main extends javax.swing.JFrame
             pst.setString(6, txt_editcust_id.getText());
 
             pst.executeUpdate();
-
+            bindTableData(table_editcust, "customer");
             JOptionPane.showMessageDialog(null, "Recored Updated Successfully");
         }
         catch (Exception e)
@@ -5138,7 +5144,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_editKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editcust_editKeyPressed
     {//GEN-HEADEREND:event_btn_editcust_editKeyPressed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_btn_editcust_editKeyPressed
 
     private void btn_editcust_rmvFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_rmvFocusGained
@@ -5328,7 +5334,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_custdetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_custdetActionPerformed
     {//GEN-HEADEREND:event_btn_custdetActionPerformed
-        // TODO add your handling code here:
+        bindTableData(table_custdet, "customer");
     }//GEN-LAST:event_btn_custdetActionPerformed
 
     private void btn_custdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_custdetMouseExited
@@ -5455,6 +5461,7 @@ public class Main extends javax.swing.JFrame
                 pst.setString(1, txt_editcust_id.getText());
 
                 pst.executeUpdate();
+                bindTableData(table_editcust, "customer");
                 JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
             }
             catch (Exception e)
@@ -5611,21 +5618,35 @@ public class Main extends javax.swing.JFrame
         return "1";
     }
 
-    public void bindTableData(String tablenm)
+    public void bindTableData(JTable table, String tablenm)
     {
         try
         {
+            tableModel = (DefaultTableModel) table.getModel();
+            tableModel.setRowCount(0);
+
             con = dbconnection.getdbConnection();
             query = "select * from " + tablenm;
             pst = con.prepareStatement(query);
 
             result = pst.executeQuery();
 
-            String[] rows;
-
+            String id, nm, contact, email, shpnm, addr;
             while (result.next())
             {
+                id = result.getString(1);
+                nm = result.getString(2);
+                contact = result.getString(3);
+                email = result.getString(4);
+                shpnm = result.getString(5);
+                addr = result.getString(6);
 
+                String[] rows =
+                {
+                    id, nm, contact, email, shpnm, addr
+                };
+
+                tableModel.addRow(rows);
             }
         }
         catch (Exception e)
