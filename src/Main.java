@@ -1,6 +1,7 @@
 
 import com.k33ptoo.components.KButton;
 import com.k33ptoo.components.KGradientPanel;
+import connection.dbconnection;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -8,11 +9,20 @@ import java.awt.Image;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class Main extends javax.swing.JFrame
 {
+
+    Connection con;
+    Statement statement;
+    PreparedStatement pst;
+    ResultSet result;
 
     public Main()
     {
@@ -36,6 +46,7 @@ public class Main extends javax.swing.JFrame
         panel_dashboard.setVisible(false);
         lbl_role.grabFocus();
 
+        con = dbconnection.getdbConnection();
     }
 
     @SuppressWarnings("unchecked")
@@ -4272,6 +4283,7 @@ public class Main extends javax.swing.JFrame
         lbl_dash_usr.setText(cmbbox_role.getSelectedItem().toString());
         lbl_dash_welcome.grabFocus();
         visibility(true, false, false, false, false, false, btnCustomer);
+
     }//GEN-LAST:event_btn_loginActionPerformed
 
     private void btnEmployeeMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnEmployeeMouseEntered

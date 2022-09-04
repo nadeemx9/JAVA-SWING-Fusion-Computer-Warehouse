@@ -87,33 +87,41 @@ public class Splash extends javax.swing.JFrame
 
     public void splashh()
     {
-        try {
+        try
+        {
             Thread.sleep(1000);
-            for (int i = 0; i <= 4; i++) {
-                if (i == 0) {
+            for (int i = 0; i <= 4; i++)
+            {
+                if (i == 0)
+                {
                     lbl_txt.setText("Connecting to Database...");
                     Thread.sleep(1500);
                 }
-                else if (i == 1) {
+                else if (i == 1)
+                {
                     lbl_txt.setText("Importing Files...");
                     Thread.sleep(1500);
                 }
-                else if (i == 2) {
+                else if (i == 2)
+                {
                     lbl_txt.setText("Almost there...");
                     Thread.sleep(1500);
                 }
-                else if (i == 3) {
+                else if (i == 3)
+                {
                     lbl_txt.setText("Opening Application..");
                     Thread.sleep(1500);
                 }
-                else {
+                else
+                {
                     Main m = new Main();
                     m.setVisible(true);
                     this.dispose();
                 }
             }
         }
-        catch (Exception e) {
+        catch (Exception e)
+        {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
 
