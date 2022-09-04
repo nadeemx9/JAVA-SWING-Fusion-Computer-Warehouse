@@ -1107,7 +1107,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="pnl_add_cust_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_addcust_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="pnl_edit_cust_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
@@ -1121,16 +1121,16 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_add_cust_menu" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_cust_det_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_edit_cust_menu" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_addcust_menu" max="32767" attributes="0"/>
+                                      <Component id="pnl_cust_det_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_edit_cust_menu" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_add_cust_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_addcust_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -1151,7 +1151,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_add_cust" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_add_cust" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_addcust_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1161,7 +1161,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btn_add_cust" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_addcust_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_add_cust" max="32767" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1170,7 +1170,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_add_cust">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_addcust_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1198,19 +1198,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_edit_cust"/>
+                                  <ComponentRef name="btn_editcust_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_add_custFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_add_custFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_add_custMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_add_custMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_add_custActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_add_custKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addcust_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addcust_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addcust_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addcust_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_addcust_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_addcust_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_add_cust">
@@ -1267,7 +1267,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_edit_cust" alignment="0" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_edit_cust" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_editcust_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1277,7 +1277,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btn_edit_cust" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_editcust_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_edit_cust" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1285,7 +1285,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_cust">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_editcust_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1313,19 +1313,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_cust_det"/>
+                                  <ComponentRef name="btn_custdet_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_edit_custFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_edit_custFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_custMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_custMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_edit_custActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_edit_custKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_editcust_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_editcust_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editcust_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editcust_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editcust_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_editcust_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_edit_cust">
@@ -1382,7 +1382,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_cust_det" alignment="0" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_cust_det" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_custdet_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -1392,7 +1392,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btn_cust_det" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_custdet_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_cust_det" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -1400,7 +1400,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_cust_det">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_custdet_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -1428,19 +1428,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_add_cust"/>
+                                  <ComponentRef name="btn_addcust_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_cust_detFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_cust_detFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_cust_detMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_cust_detMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cust_detActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_cust_detKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_custdet_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_custdet_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_custdet_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_custdet_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_custdet_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_custdet_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_cust_det">
@@ -1972,7 +1972,7 @@
                                   <Color blue="6" green="a7" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_edit_cust"/>
+                                  <ComponentRef name="txt_editcust_id"/>
                                 </Property>
                                 <Property name="opaque" type="boolean" value="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2186,6 +2186,9 @@
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[128, 64]"/>
                                 </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="btn_custdet"/>
+                                </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[404, 64]"/>
                                 </Property>
@@ -2253,7 +2256,7 @@
                                   <Color blue="6" green="a7" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btnEmployee"/>
+                                  <ComponentRef name="txt_custdet_custid"/>
                                 </Property>
                                 <Property name="opaque" type="boolean" value="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
