@@ -5434,7 +5434,21 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_rmvActionPerformed
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "delete from customer where custid = ?";
 
+            pst = con.prepareStatement(query);
+            pst.setInt(1, Integer.parseInt(txt_editcust_id.getText()));
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_editcust_rmvActionPerformed
 
     public static void main(String args[])
