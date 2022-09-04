@@ -4316,7 +4316,7 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
 
-        txt_addcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+        txt_addcust_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btnCustomerActionPerformed
 
     private void btn_loginMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_loginMouseEntered
@@ -4395,7 +4395,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
 //            hover(btnCustomer, btnEmployee, btnProduct, btnReport, btnUser);   // To select dashboard main buttons.
-            txt_addcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+            txt_addcust_id.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btnCustomerKeyPressed
 
@@ -4529,7 +4529,6 @@ public class Main extends javax.swing.JFrame
     private void btn_edit_custFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_edit_custFocusGained
     {//GEN-HEADEREND:event_btn_edit_custFocusGained
         hover(btn_edit_cust, new Color(1, 109, 218), Color.white);
-
     }//GEN-LAST:event_btn_edit_custFocusGained
 
     private void btn_edit_custFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_edit_custFocusLost
@@ -4540,7 +4539,6 @@ public class Main extends javax.swing.JFrame
     private void btn_cust_detFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_cust_detFocusGained
     {//GEN-HEADEREND:event_btn_cust_detFocusGained
         hover(btn_cust_det, new Color(1, 109, 218), Color.white);
-
     }//GEN-LAST:event_btn_cust_detFocusGained
 
     private void btn_cust_detFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_cust_detFocusLost
@@ -4559,7 +4557,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
             txt_addcust_id.grabFocus();
-            txt_addcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+            txt_addcust_id.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btn_add_custKeyPressed
 
@@ -4574,7 +4572,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
             txt_editcust_id.grabFocus();
-            txt_editcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+            txt_editcust_id.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btn_edit_custKeyPressed
 
@@ -4589,7 +4587,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
             txt_custdet_custid.grabFocus();
-            txt_custdet_custid.setText(Integer.toString(getMaxID("customer") + 1));
+            txt_custdet_custid.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btn_cust_detKeyPressed
 
@@ -5001,7 +4999,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
         onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
         txt_addcust_id.grabFocus();
-        txt_editcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+        txt_editcust_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btn_add_custActionPerformed
 
     private void btn_edit_custActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_edit_custActionPerformed
@@ -5009,7 +5007,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
         onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
         txt_editcust_id.grabFocus();
-        txt_editcust_id.setText(Integer.toString(getMaxID("customer") + 1));
+        txt_editcust_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btn_edit_custActionPerformed
 
     private void btn_cust_detActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_cust_detActionPerformed
@@ -5017,7 +5015,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
         txt_custdet_custid.grabFocus();
-        txt_custdet_custid.setText(Integer.toString(getMaxID("customer") + 1));
+        txt_custdet_custid.setText(getMaxID("customer"));
     }//GEN-LAST:event_btn_cust_detActionPerformed
 
     private void btn_add_empActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_add_empActionPerformed
@@ -5126,7 +5124,7 @@ public class Main extends javax.swing.JFrame
             pst.setString(3, txt_editcust_email.getText());
             pst.setString(4, txt_editcust_shopnm.getText());
             pst.setString(5, txt_editcust_shopaddr.getText());
-            pst.setInt(6, Integer.parseInt(txt_editcust_id.getText()));
+            pst.setString(6, txt_editcust_id.getText());
 
             pst.executeUpdate();
 
@@ -5201,7 +5199,7 @@ public class Main extends javax.swing.JFrame
             query = "insert into customer values(?, ?, ?, ?, ?, ?)";
             pst = con.prepareStatement(query);
 
-            pst.setInt(1, Integer.parseInt(txt_addcust_id.getText()));
+            pst.setString(1, txt_addcust_id.getText());
             pst.setString(2, txt_addcust_nm.getText());
             pst.setString(3, txt_addcust_contact.getText());
             pst.setString(4, txt_addcust_email.getText());
@@ -5445,20 +5443,24 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_rmvActionPerformed
-        try
+        int confirmMsg = JOptionPane.showConfirmDialog(null, "Confirm Deletion ?");
+        if (confirmMsg == 0)
         {
-            con = dbconnection.getdbConnection();
-            query = "delete from customer where id = ?";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "delete from customer where id = ?";
 
-            pst = con.prepareStatement(query);
-            pst.setInt(1, Integer.parseInt(txt_editcust_id.getText()));
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_editcust_id.getText());
 
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_editcust_rmvActionPerformed
 
@@ -5579,8 +5581,9 @@ public class Main extends javax.swing.JFrame
         lid3.setBackground(Color.black);
     }
 
-    public int getMaxID(String tablenm)
+    public String getMaxID(String tablenm)
     {
+        int id;
         try
         {
             con = dbconnection.getdbConnection();
@@ -5590,18 +5593,73 @@ public class Main extends javax.swing.JFrame
 
             if (result.next())
             {
-                return result.getInt(1);
+                if (result.getInt(1) > 0)
+                {
+                    id = result.getInt(1) + 1;
+                    return Integer.toString(id);
+                }
+                else
+                {
+                    return "1";
+                }
             }
-            else
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "returned null");
+        }
+        return "1";
+    }
+
+    public void bindTableData(String tablenm)
+    {
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "select * from " + tablenm;
+            pst = con.prepareStatement(query);
+
+            result = pst.executeQuery();
+
+            String[] rows;
+
+            while (result.next())
             {
-                return 0;
+
             }
         }
         catch (Exception e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-        return 0;
+    }
+
+    public boolean isIdExist(String txtid, String tblnm)
+    {
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "select id from " + tblnm + " where id = ?";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txtid);
+
+            result = pst.executeQuery();
+
+            if (result.next())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+            return false;
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
