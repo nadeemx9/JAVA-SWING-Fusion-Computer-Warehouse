@@ -1,4 +1,9 @@
-
+/*
+1.  Textfield validations   X
+2.  clear textfields method     X
+3.  buttons hover on focus gain/lost    X
+4.  Search data by name     X
+ */
 import com.k33ptoo.components.KButton;
 import com.k33ptoo.components.KGradientPanel;
 import connection.dbconnection;
@@ -5215,6 +5220,7 @@ public class Main extends javax.swing.JFrame
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
+            txt_addcust_id.setText(getMaxID("customer"));
         }
         catch (Exception e)
         {
