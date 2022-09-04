@@ -4580,7 +4580,6 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
             txt_editcust_id.grabFocus();
-            txt_editcust_id.setText(getMaxID("customer"));
             bindTableData(table_editcust, "customer");
         }
     }//GEN-LAST:event_btn_edit_custKeyPressed
@@ -4596,7 +4595,6 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
             txt_custdet_custid.grabFocus();
-            txt_custdet_custid.setText(getMaxID("customer"));
             bindTableData(table_custdet, "customer");
         }
     }//GEN-LAST:event_btn_cust_detKeyPressed
@@ -5017,7 +5015,6 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
         onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
         txt_editcust_id.grabFocus();
-        txt_editcust_id.setText(getMaxID("customer"));
         bindTableData(table_editcust, "customer");
     }//GEN-LAST:event_btn_edit_custActionPerformed
 
@@ -5026,7 +5023,6 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
         txt_custdet_custid.grabFocus();
-        txt_custdet_custid.setText(getMaxID("customer"));
         bindTableData(table_custdet, "customer");
     }//GEN-LAST:event_btn_cust_detActionPerformed
 
