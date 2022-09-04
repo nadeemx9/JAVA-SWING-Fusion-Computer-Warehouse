@@ -14,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Main extends javax.swing.JFrame
@@ -23,6 +24,8 @@ public class Main extends javax.swing.JFrame
     Statement statement;
     PreparedStatement pst;
     ResultSet result;
+
+    String query;
 
     public Main()
     {
@@ -138,8 +141,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_email = new textfield.TextField();
         txt_editcust_shopnm = new textfield.TextField();
         txt_editcust_shopaddr = new textfield.TextField();
-        txt_editcust_otp = new textfield.TextField();
-        lbl_editcust_otp = new javax.swing.JLabel();
+        txt_editcust_id = new textfield.TextField();
         pnl_cust_det = new com.k33ptoo.components.KGradientPanel();
         txt_custdet_custid = new textfield.TextField();
         scrolltbl_custdet = new javax.swing.JScrollPane();
@@ -1243,11 +1245,12 @@ public class Main extends javax.swing.JFrame
         txt_addcust_shopaddr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_shopaddr.setLabelText("SHOP ADDRESS");
         txt_addcust_shopaddr.setLineColor(new java.awt.Color(255, 167, 6));
+        txt_addcust_shopaddr.setNextFocusableComponent(btn_addcust_add);
         txt_addcust_shopaddr.setPreferredSize(new java.awt.Dimension(404, 128));
 
         txt_addcust_shopnm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_shopnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_addcust_shopnm.setLabelText("SHOP NAME");
+        txt_addcust_shopnm.setLabelText(" SHOP NAME (optional)");
         txt_addcust_shopnm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_shopnm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_shopnm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -1262,7 +1265,7 @@ public class Main extends javax.swing.JFrame
         btn_addcust_add.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_addcust_add.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_addcust_add.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_addcust_add.setNextFocusableComponent(btnEmployee);
+        btn_addcust_add.setNextFocusableComponent(txt_addcust_id);
         btn_addcust_add.setOpaque(true);
         btn_addcust_add.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_addcust_add.addFocusListener(new java.awt.event.FocusAdapter()
@@ -1376,7 +1379,7 @@ public class Main extends javax.swing.JFrame
         btn_editcust_edit.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editcust_edit.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editcust_edit.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_editcust_edit.setNextFocusableComponent(btnEmployee);
+        btn_editcust_edit.setNextFocusableComponent(btn_editcust_rmv);
         btn_editcust_edit.setOpaque(true);
         btn_editcust_edit.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editcust_edit.addFocusListener(new java.awt.event.FocusAdapter()
@@ -1426,7 +1429,7 @@ public class Main extends javax.swing.JFrame
         btn_editcust_rmv.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editcust_rmv.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editcust_rmv.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_editcust_rmv.setNextFocusableComponent(btnEmployee);
+        btn_editcust_rmv.setNextFocusableComponent(btn_edit_cust);
         btn_editcust_rmv.setOpaque(true);
         btn_editcust_rmv.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editcust_rmv.addFocusListener(new java.awt.event.FocusAdapter()
@@ -1451,6 +1454,13 @@ public class Main extends javax.swing.JFrame
                 btn_editcust_rmvMouseExited(evt);
             }
         });
+        btn_editcust_rmv.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btn_editcust_rmvActionPerformed(evt);
+            }
+        });
         btn_editcust_rmv.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
@@ -1464,6 +1474,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_contact.setLabelText("CONTACT NO");
         txt_editcust_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_contact.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_contact.setNextFocusableComponent(txt_editcust_email);
         txt_editcust_contact.setPreferredSize(new java.awt.Dimension(250, 64));
 
         txt_editcust_nm.setBackground(new java.awt.Color(150, 195, 248));
@@ -1471,6 +1482,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_nm.setLabelText("CUSTOMER NAME");
         txt_editcust_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_nm.setNextFocusableComponent(txt_editcust_contact);
         txt_editcust_nm.setPreferredSize(new java.awt.Dimension(250, 64));
 
         txt_editcust_email.setBackground(new java.awt.Color(150, 195, 248));
@@ -1478,6 +1490,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_email.setLabelText("EMAIL");
         txt_editcust_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_email.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_email.setNextFocusableComponent(txt_editcust_shopnm);
         txt_editcust_email.setPreferredSize(new java.awt.Dimension(250, 64));
 
         txt_editcust_shopnm.setBackground(new java.awt.Color(150, 195, 248));
@@ -1485,6 +1498,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopnm.setLabelText("SHOP NAME");
         txt_editcust_shopnm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_shopnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_shopnm.setNextFocusableComponent(txt_editcust_shopaddr);
         txt_editcust_shopnm.setPreferredSize(new java.awt.Dimension(250, 64));
 
         txt_editcust_shopaddr.setBackground(new java.awt.Color(150, 195, 248));
@@ -1492,6 +1506,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopaddr.setLabelText("SHOP ADDRESS");
         txt_editcust_shopaddr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_shopaddr.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_shopaddr.setNextFocusableComponent(btn_editcust_edit);
         txt_editcust_shopaddr.setPreferredSize(new java.awt.Dimension(250, 64));
         txt_editcust_shopaddr.addActionListener(new java.awt.event.ActionListener()
         {
@@ -1501,30 +1516,13 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        txt_editcust_otp.setBackground(new java.awt.Color(150, 195, 248));
-        txt_editcust_otp.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_editcust_otp.setLabelText("OTP");
-        txt_editcust_otp.setLineColor(new java.awt.Color(255, 167, 6));
-        txt_editcust_otp.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editcust_otp.setPreferredSize(new java.awt.Dimension(250, 64));
-
-        lbl_editcust_otp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lbl_editcust_otp.setText("Click here to generate OTP");
-        lbl_editcust_otp.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseClicked(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcust_otpMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcust_otpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                lbl_editcust_otpMouseExited(evt);
-            }
-        });
+        txt_editcust_id.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editcust_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editcust_id.setLabelText("CUSTOMER ID");
+        txt_editcust_id.setLineColor(new java.awt.Color(255, 167, 6));
+        txt_editcust_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editcust_id.setNextFocusableComponent(txt_editcust_nm);
+        txt_editcust_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         javax.swing.GroupLayout pnl_edit_custLayout = new javax.swing.GroupLayout(pnl_edit_cust);
         pnl_edit_cust.setLayout(pnl_edit_custLayout);
@@ -1535,21 +1533,23 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrolltbl_editcust, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnl_edit_custLayout.createSequentialGroup()
-                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_editcust_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_editcust_edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_editcust_shopnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btn_editcust_rmv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_editcust_email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txt_editcust_shopaddr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_edit_custLayout.createSequentialGroup()
+                                .addComponent(btn_editcust_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn_editcust_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_edit_custLayout.createSequentialGroup()
+                                .addComponent(txt_editcust_id, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txt_editcust_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_edit_custLayout.createSequentialGroup()
+                                .addComponent(txt_editcust_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txt_editcust_shopnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_editcust_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txt_editcust_otp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lbl_editcust_otp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(txt_editcust_shopaddr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(100, 100, 100))
         );
         pnl_edit_custLayout.setVerticalGroup(
@@ -1558,27 +1558,20 @@ public class Main extends javax.swing.JFrame
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_editcust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_edit_custLayout.createSequentialGroup()
-                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_editcust_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editcust_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_editcust_shopnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editcust_otp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_editcust_otp, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btn_editcust_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btn_editcust_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(31, 31, 31))
-                    .addGroup(pnl_edit_custLayout.createSequentialGroup()
-                        .addComponent(txt_editcust_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txt_editcust_shopaddr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_editcust_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editcust_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editcust_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_editcust_shopaddr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editcust_shopnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editcust_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(pnl_edit_custLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_editcust_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_editcust_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
         );
 
         pnl_cust_det.setkEndColor(new java.awt.Color(150, 195, 248));
@@ -4562,6 +4555,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
+            txt_addcust_id.grabFocus();
         }
     }//GEN-LAST:event_btn_add_custKeyPressed
 
@@ -4575,6 +4569,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
+            txt_editcust_id.grabFocus();
         }
     }//GEN-LAST:event_btn_edit_custKeyPressed
 
@@ -4999,6 +4994,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_add_custActionPerformed
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
         onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
+        txt_addcust_id.grabFocus();
     }//GEN-LAST:event_btn_add_custActionPerformed
 
     private void btn_edit_custActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_edit_custActionPerformed
@@ -5088,17 +5084,17 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
     {//GEN-HEADEREND:event_btn_editcust_editFocusGained
-        // TODO add your handling code here:
+        hover(btn_editcust_edit, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_editcust_editFocusGained
 
     private void btn_editcust_editFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusLost
     {//GEN-HEADEREND:event_btn_editcust_editFocusLost
-        // TODO add your handling code here:
+        hover(btn_editcust_edit, new Color(255, 167, 6), Color.WHITE);
     }//GEN-LAST:event_btn_editcust_editFocusLost
 
     private void btn_editcust_editMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editcust_editMouseEntered
     {//GEN-HEADEREND:event_btn_editcust_editMouseEntered
-        // TODO add your handling code here:
+        btn_editcust_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_editcust_editMouseEntered
 
     private void btn_editcust_editMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editcust_editMouseExited
@@ -5108,7 +5104,27 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_editActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_editActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "update customer set custnm = ?, contact = ?, email = ?, shopnm = ?, address = ? where custid = ?";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_editcust_nm.getText());
+            pst.setString(2, txt_editcust_contact.getText());
+            pst.setString(3, txt_editcust_email.getText());
+            pst.setString(4, txt_editcust_shopnm.getText());
+            pst.setString(5, txt_editcust_shopaddr.getText());
+            pst.setInt(6, Integer.parseInt(txt_editcust_id.getText()));
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Recored Updated Successfully");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_editcust_editActionPerformed
 
     private void btn_editcust_editKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editcust_editKeyPressed
@@ -5118,7 +5134,6 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_rmvFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_rmvFocusGained
     {//GEN-HEADEREND:event_btn_editcust_rmvFocusGained
-        // TODO add your handling code here:
     }//GEN-LAST:event_btn_editcust_rmvFocusGained
 
     private void btn_editcust_rmvFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_rmvFocusLost
@@ -5128,7 +5143,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_rmvMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editcust_rmvMouseEntered
     {//GEN-HEADEREND:event_btn_editcust_rmvMouseEntered
-        // TODO add your handling code here:
+        btn_editcust_rmv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_editcust_rmvMouseEntered
 
     private void btn_editcust_rmvMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editcust_rmvMouseExited
@@ -5140,23 +5155,6 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_editcust_rmvKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_editcust_rmvKeyPressed
-
-    private void lbl_editcust_otpMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcust_otpMouseClicked
-    {//GEN-HEADEREND:event_lbl_editcust_otpMouseClicked
-        txt_editcust_otp.grabFocus();
-    }//GEN-LAST:event_lbl_editcust_otpMouseClicked
-
-    private void lbl_editcust_otpMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcust_otpMouseEntered
-    {//GEN-HEADEREND:event_lbl_editcust_otpMouseEntered
-        lbl_editcust_otp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lbl_editcust_otp.setText("<html><u>Click here to generate OTP</u></html>");
-    }//GEN-LAST:event_lbl_editcust_otpMouseEntered
-
-    private void lbl_editcust_otpMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_editcust_otpMouseExited
-    {//GEN-HEADEREND:event_lbl_editcust_otpMouseExited
-        lbl_editcust_otp.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        lbl_editcust_otp.setText("Click here to generate OTP");
-    }//GEN-LAST:event_lbl_editcust_otpMouseExited
 
     private void txt_editcust_shopaddrActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_editcust_shopaddrActionPerformed
     {//GEN-HEADEREND:event_txt_editcust_shopaddrActionPerformed
@@ -5175,27 +5173,38 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addcust_addFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addcust_addFocusGained
     {//GEN-HEADEREND:event_btn_addcust_addFocusGained
-        // TODO add your handling code here:
+        hover(btn_addcust_add, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_addcust_addFocusGained
 
     private void btn_addcust_addFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addcust_addFocusLost
     {//GEN-HEADEREND:event_btn_addcust_addFocusLost
-        // TODO add your handling code here:
+        hover(btn_addcust_add, new Color(255, 167, 6), Color.WHITE);
     }//GEN-LAST:event_btn_addcust_addFocusLost
-
-    private void btn_addcust_addMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addcust_addMouseEntered
-    {//GEN-HEADEREND:event_btn_addcust_addMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addcust_addMouseEntered
-
-    private void btn_addcust_addMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addcust_addMouseExited
-    {//GEN-HEADEREND:event_btn_addcust_addMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addcust_addMouseExited
 
     private void btn_addcust_addActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_addActionPerformed
     {//GEN-HEADEREND:event_btn_addcust_addActionPerformed
-        // TODO add your handling code here:
+
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "insert into customer values(?, ?, ?, ?, ?, ?)";
+            pst = con.prepareStatement(query);
+
+            pst.setInt(1, Integer.parseInt(txt_addcust_id.getText()));
+            pst.setString(2, txt_addcust_nm.getText());
+            pst.setString(3, txt_addcust_contact.getText());
+            pst.setString(4, txt_addcust_email.getText());
+            pst.setString(5, txt_addcust_shopnm.getText());
+            pst.setString(6, txt_addcust_shopaddr.getText());
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_addcust_addActionPerformed
 
     private void btn_addcust_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addcust_addKeyPressed
@@ -5413,6 +5422,21 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_addprod_costpriceActionPerformed
 
+    private void btn_addcust_addMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addcust_addMouseExited
+    {//GEN-HEADEREND:event_btn_addcust_addMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_addcust_addMouseExited
+
+    private void btn_addcust_addMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addcust_addMouseEntered
+    {//GEN-HEADEREND:event_btn_addcust_addMouseEntered
+        btn_addcust_add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_addcust_addMouseEntered
+
+    private void btn_editcust_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_rmvActionPerformed
+    {//GEN-HEADEREND:event_btn_editcust_rmvActionPerformed
+
+    }//GEN-LAST:event_btn_editcust_rmvActionPerformed
+
     public static void main(String args[])
     {
 
@@ -5580,7 +5604,6 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel lbl_close;
     private javax.swing.JLabel lbl_dash_usr;
     private javax.swing.JLabel lbl_dash_welcome;
-    private javax.swing.JLabel lbl_editcust_otp;
     private javax.swing.JLabel lbl_editemp_img;
     private javax.swing.JLabel lbl_editemp_insrtimg;
     private javax.swing.JLabel lbl_editemp_rmvimg;
@@ -5691,8 +5714,8 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_custdet_custid;
     private textfield.TextField txt_editcust_contact;
     private textfield.TextField txt_editcust_email;
+    private textfield.TextField txt_editcust_id;
     private textfield.TextField txt_editcust_nm;
-    private textfield.TextField txt_editcust_otp;
     private textfield.TextField txt_editcust_shopaddr;
     private textfield.TextField txt_editcust_shopnm;
     private textfield.TextField txt_editemp_addr;
