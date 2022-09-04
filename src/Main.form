@@ -2209,13 +2209,12 @@
                                 <Component class="javax.swing.JTable" name="table_custdet">
                                   <Properties>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                                      <Table columnCount="6" rowCount="4">
+                                      <Table columnCount="5" rowCount="4">
                                         <Column editable="true" title="ID" type="java.lang.Object"/>
                                         <Column editable="true" title="NAME" type="java.lang.Object"/>
                                         <Column editable="true" title="CONTACT" type="java.lang.Object"/>
                                         <Column editable="true" title="EMAIL" type="java.lang.Object"/>
                                         <Column editable="true" title="SHOP NAME" type="java.lang.Object"/>
-                                        <Column editable="true" title="Title 6" type="java.lang.Object"/>
                                       </Table>
                                     </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2339,11 +2338,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="pnl_add_emp_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_addemp_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="pnl_edit_emp_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_editemp_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="pnl_emp_det_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_empdet_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="418" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -2353,16 +2352,16 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_add_emp_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_emp_det_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_edit_emp_menu" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_addemp_menu" alignment="0" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_empdet_menu" alignment="0" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_editemp_menu" alignment="1" pref="59" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_add_emp_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_addemp_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -2383,7 +2382,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_add_emp" alignment="0" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_add_emp" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_addemp_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2393,7 +2392,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btn_add_emp" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_addemp_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_add_emp" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2402,7 +2401,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_add_emp">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_addemp_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -2430,19 +2429,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_edit_emp"/>
+                                  <ComponentRef name="btn_editemp_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_add_empFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_add_empFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_add_empMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_add_empMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_add_empActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_add_empKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addemp_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_addemp_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addemp_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_addemp_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_addemp_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_addemp_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_add_emp">
@@ -2478,7 +2477,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_edit_emp_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_editemp_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -2499,7 +2498,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_edit_emp" alignment="0" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_edit_emp" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_editemp_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2509,7 +2508,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btn_edit_emp" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_editemp_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_edit_emp" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -2517,7 +2516,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_edit_emp">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_editemp_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -2545,19 +2544,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_emp_det"/>
+                                  <ComponentRef name="btn_empdet_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_edit_empFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_edit_empFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_empMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_edit_empMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_edit_empActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_edit_empKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_editemp_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_editemp_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editemp_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editemp_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editemp_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_editemp_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_edit_emp">
@@ -2593,7 +2592,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_emp_det_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_empdet_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -2614,7 +2613,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lid_emp_det" alignment="0" pref="188" max="32767" attributes="0"/>
-                                          <Component id="btn_emp_det" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="btn_empdet_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2624,7 +2623,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btn_emp_det" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn_empdet_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_emp_det" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -2632,7 +2631,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="com.k33ptoo.components.KButton" name="btn_emp_det">
+                            <Component class="com.k33ptoo.components.KButton" name="btn_empdet_menu">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -2660,19 +2659,19 @@
                                   <Color blue="6d" green="cb" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="btn_add_emp"/>
+                                  <ComponentRef name="btn_addemp_menu"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[185, 43]"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_emp_detFocusGained"/>
-                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_emp_detFocusLost"/>
-                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_emp_detMouseEntered"/>
-                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_emp_detMouseExited"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_emp_detActionPerformed"/>
-                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_emp_detKeyPressed"/>
+                                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_empdet_menuFocusGained"/>
+                                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btn_empdet_menuFocusLost"/>
+                                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_empdet_menuMouseEntered"/>
+                                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_empdet_menuMouseExited"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_empdet_menuActionPerformed"/>
+                                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_empdet_menuKeyPressed"/>
                               </Events>
                             </Component>
                             <Container class="com.k33ptoo.components.KGradientPanel" name="lid_emp_det">
