@@ -1,6 +1,7 @@
 /*
-1.  Textfield validations   X
+1.  Textfield validations method   X
 2.  clear textfields method     X
+3.  implement isIdExist() method on operations.     X
 3.  buttons hover on focus gain/lost    X
 4.  Search data by name     X
  */
