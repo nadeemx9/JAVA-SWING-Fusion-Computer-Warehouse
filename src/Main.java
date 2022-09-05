@@ -193,7 +193,7 @@ public class Main extends javax.swing.JFrame
         btn_editemp_rmv = new com.k33ptoo.components.KButton();
         txt_editemp_pswd = new textfield.PasswordField();
         pnl_emp_det = new com.k33ptoo.components.KGradientPanel();
-        txt_empdet_id = new textfield.TextField();
+        txt_empdet_nm = new textfield.TextField();
         scrolltbl_empdet = new javax.swing.JScrollPane();
         table_empdet = new javax.swing.JTable();
         btn_empdet = new com.k33ptoo.components.KButton();
@@ -2429,12 +2429,19 @@ public class Main extends javax.swing.JFrame
         pnl_emp_det.setOpaque(false);
         pnl_emp_det.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        txt_empdet_id.setBackground(new java.awt.Color(150, 195, 248));
-        txt_empdet_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_empdet_id.setLabelText("EMPLOYEE ID");
-        txt_empdet_id.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_empdet_id.setNextFocusableComponent(btn_empdet);
-        txt_empdet_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_empdet_nm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_empdet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_empdet_nm.setLabelText("EMPLOYEE ID");
+        txt_empdet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_empdet_nm.setNextFocusableComponent(btn_empdet);
+        txt_empdet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_empdet_nm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_empdet_nmKeyReleased(evt);
+            }
+        });
 
         scrolltbl_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
 
@@ -2448,7 +2455,7 @@ public class Main extends javax.swing.JFrame
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "Title 6"
+                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS"
             }
         ));
         table_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
@@ -2464,7 +2471,7 @@ public class Main extends javax.swing.JFrame
         btn_empdet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_empdet.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_empdet.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_empdet.setNextFocusableComponent(txt_empdet_id);
+        btn_empdet.setNextFocusableComponent(txt_empdet_nm);
         btn_empdet.setOpaque(true);
         btn_empdet.setPreferredSize(new java.awt.Dimension(450, 60));
         btn_empdet.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2511,7 +2518,7 @@ public class Main extends javax.swing.JFrame
             .addGroup(pnl_emp_detLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(pnl_emp_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_empdet_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_empdet_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
@@ -2520,7 +2527,7 @@ public class Main extends javax.swing.JFrame
             pnl_emp_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_emp_detLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(txt_empdet_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_empdet_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -4609,7 +4616,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
             onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
-            txt_empdet_id.grabFocus();
+            txt_empdet_nm.grabFocus();
             bindTableData(table_empdet, "employee");
         }
     }//GEN-LAST:event_btn_empdet_menuKeyPressed
@@ -4963,7 +4970,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_empdet_menuActionPerformed
         visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
         onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
-        txt_empdet_id.grabFocus();
+        txt_empdet_nm.grabFocus();
         bindTableData(table_empdet, "employee");
     }//GEN-LAST:event_btn_empdet_menuActionPerformed
 
@@ -5460,9 +5467,90 @@ public class Main extends javax.swing.JFrame
         }
         else
         {
-            searchCustomerByName(table_custdet, txt_custdet_custnm.getText());
+            String custnm = txt_custdet_custnm.getText();
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "select * from customer where custnm like '" + custnm + "%'";
+
+                tableModel = (DefaultTableModel) table_custdet.getModel();
+                tableModel.setRowCount(0);
+
+                pst = con.prepareStatement(query);
+                result = pst.executeQuery();
+
+                String id, nm, contact, email, shpnm, shpaddr;
+
+                while (result.next())
+                {
+                    id = result.getString(1);
+                    nm = result.getString(2);
+                    contact = result.getString(3);
+                    email = result.getString(4);
+                    shpnm = result.getString(5);
+                    shpaddr = result.getString(6);
+
+                    String[] rows =
+                    {
+                        id, nm, contact, email, shpnm, shpaddr
+                    };
+
+                    tableModel.addRow(rows);
+                }
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_txt_custdet_custnmKeyReleased
+
+    private void txt_empdet_nmKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_empdet_nmKeyReleased
+    {//GEN-HEADEREND:event_txt_empdet_nmKeyReleased
+        if (txt_empdet_nm.getText().equals(""))
+        {
+            bindTableData(table_empdet, "employee");
+        }
+        else
+        {
+            String empnm = txt_empdet_nm.getText();
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "select * from employee where nm like '" + empnm + "%'";
+
+                tableModel = (DefaultTableModel) table_empdet.getModel();
+                tableModel.setRowCount(0);
+
+                pst = con.prepareStatement(query);
+                result = pst.executeQuery();
+
+                String id, nm, contact, email, salary, addr, pswd;
+
+                while (result.next())
+                {
+                    id = result.getString(1);
+                    nm = result.getString(2);
+                    contact = result.getString(3);
+                    email = result.getString(4);
+                    salary = result.getString(5);
+                    addr = result.getString(6);
+                    pswd = result.getString(7);
+
+                    String[] rows =
+                    {
+                        id, nm, contact, email, salary, addr, pswd
+                    };
+
+                    tableModel.addRow(rows);
+                }
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+        }
+    }//GEN-LAST:event_txt_empdet_nmKeyReleased
 
     public static void main(String args[])
     {
@@ -5474,7 +5562,6 @@ public class Main extends javax.swing.JFrame
                 new Main().setVisible(true);
             }
         });
-
     }
 
     public void hover(JPanel panel, Color color)
@@ -5719,45 +5806,6 @@ public class Main extends javax.swing.JFrame
         txt6.setText("");
     }
 
-    public void searchCustomerByName(JTable table, String custnm)
-    {
-        try
-        {
-            con = dbconnection.getdbConnection();
-            query = "select * from customer where custnm like '" + custnm + "%'";
-
-            tableModel = (DefaultTableModel) table.getModel();
-            tableModel.setRowCount(0);
-
-            String id, nm, contact, email, shpnm, shpaddr;
-
-            pst = con.prepareStatement(query);
-
-            result = pst.executeQuery();
-
-            while (result.next())
-            {
-                id = result.getString(1);
-                nm = result.getString(2);
-                contact = result.getString(3);
-                email = result.getString(4);
-                shpnm = result.getString(5);
-                shpaddr = result.getString(6);
-
-                String[] rows =
-                {
-                    id, nm, contact, email, shpnm, shpaddr
-                };
-
-                tableModel.addRow(rows);
-            }
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btnCustomer;
     private com.k33ptoo.components.KButton btnEmployee;
@@ -5921,7 +5969,7 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editemp_nm;
     private textfield.PasswordField txt_editemp_pswd;
     private textfield.TextField txt_editemp_salary;
-    private textfield.TextField txt_empdet_id;
+    private textfield.TextField txt_empdet_nm;
     private textfield.PasswordField txt_pswd;
     // End of variables declaration//GEN-END:variables
 }
