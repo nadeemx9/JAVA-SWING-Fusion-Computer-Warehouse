@@ -186,16 +186,16 @@ public class Main extends javax.swing.JFrame
         lbl_editemp_rmvimg = new javax.swing.JLabel();
         txt_editemp_id = new textfield.TextField();
         txt_editemp_nm = new textfield.TextField();
-        txt_editemp_salary = new textfield.TextField();
-        txt_editemp_email = new textfield.TextField();
-        txt_editemp_addr = new textfield.TextField();
         txt_editemp_contact = new textfield.TextField();
+        txt_editemp_email = new textfield.TextField();
+        txt_editemp_salary = new textfield.TextField();
+        txt_editemp_addr = new textfield.TextField();
         btn_editemp_edit = new com.k33ptoo.components.KButton();
         btn_editemp_rmv = new com.k33ptoo.components.KButton();
         pnl_emp_det = new com.k33ptoo.components.KGradientPanel();
-        txt_empdet_custid = new textfield.TextField();
+        txt_empdet_id = new textfield.TextField();
         scrolltbl_empdet = new javax.swing.JScrollPane();
-        table_custdet1 = new javax.swing.JTable();
+        table_empdet = new javax.swing.JTable();
         btn_empdet = new com.k33ptoo.components.KButton();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         pnl_prod_menubar = new com.k33ptoo.components.KGradientPanel();
@@ -1206,9 +1206,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_cust_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_cust_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_customer_main.setkEndColor(new java.awt.Color(150, 195, 248));
@@ -2058,6 +2058,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_id.setLabelText("EMPLOYEE ID");
         txt_addemp_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_addemp_id.setNextFocusableComponent(txt_addemp_nm);
         txt_addemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_nm.setBackground(new java.awt.Color(150, 195, 248));
@@ -2065,6 +2066,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_nm.setLabelText("EMPLOYEE NAME");
         txt_addemp_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_addemp_nm.setNextFocusableComponent(txt_addemp_contact);
         txt_addemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_contact.setBackground(new java.awt.Color(150, 195, 248));
@@ -2072,6 +2074,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_contact.setLabelText("CONTACT NO");
         txt_addemp_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_contact.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_addemp_contact.setNextFocusableComponent(txt_addemp_email);
         txt_addemp_contact.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_email.setBackground(new java.awt.Color(150, 195, 248));
@@ -2079,7 +2082,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_email.setLabelText("EMAIL");
         txt_addemp_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_email.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_addemp_email.setNextFocusableComponent(txt_addcust_shopnm);
+        txt_addemp_email.setNextFocusableComponent(txt_addemp_salary);
         txt_addemp_email.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_salary.setBackground(new java.awt.Color(150, 195, 248));
@@ -2087,6 +2090,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_salary.setLabelText("SALARY");
         txt_addemp_salary.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_salary.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_addemp_salary.setNextFocusableComponent(txt_addemp_addr);
         txt_addemp_salary.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_addr.setBackground(new java.awt.Color(150, 195, 248));
@@ -2094,7 +2098,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_addr.setLabelText("ADDRESS");
         txt_addemp_addr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_addr.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_addemp_addr.setNextFocusableComponent(txt_addcust_shopnm);
+        txt_addemp_addr.setNextFocusableComponent(btn_addemp_add);
         txt_addemp_addr.setPreferredSize(new java.awt.Dimension(404, 64));
 
         lbl_addemp_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/empuser.png"))); // NOI18N
@@ -2127,7 +2131,7 @@ public class Main extends javax.swing.JFrame
         btn_addemp_add.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_addemp_add.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_addemp_add.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_addemp_add.setNextFocusableComponent(btnEmployee);
+        btn_addemp_add.setNextFocusableComponent(txt_addemp_id);
         btn_addemp_add.setOpaque(true);
         btn_addemp_add.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_addemp_add.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2234,14 +2238,14 @@ public class Main extends javax.swing.JFrame
         table_editemp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS"
             }
         ));
         table_editemp.setPreferredSize(new java.awt.Dimension(527, 336));
@@ -2272,6 +2276,7 @@ public class Main extends javax.swing.JFrame
         txt_editemp_id.setLabelText("EMPLOYEE ID");
         txt_editemp_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_id.setNextFocusableComponent(txt_editemp_nm);
         txt_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_editemp_nm.setBackground(new java.awt.Color(150, 195, 248));
@@ -2279,37 +2284,40 @@ public class Main extends javax.swing.JFrame
         txt_editemp_nm.setLabelText("EMPLOYEE NAME");
         txt_editemp_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_nm.setNextFocusableComponent(txt_editemp_contact);
         txt_editemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
-        txt_editemp_salary.setBackground(new java.awt.Color(150, 195, 248));
-        txt_editemp_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_editemp_salary.setLabelText("SALARY");
-        txt_editemp_salary.setLineColor(new java.awt.Color(255, 167, 6));
-        txt_editemp_salary.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_salary.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editemp_contact.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editemp_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editemp_contact.setLabelText("CONTACT");
+        txt_editemp_contact.setLineColor(new java.awt.Color(255, 167, 6));
+        txt_editemp_contact.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_contact.setNextFocusableComponent(txt_editemp_email);
+        txt_editemp_contact.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_editemp_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_email.setLabelText("EMAIL");
         txt_editemp_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_email.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_email.setNextFocusableComponent(txt_addcust_shopnm);
+        txt_editemp_email.setNextFocusableComponent(txt_editemp_salary);
         txt_editemp_email.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_editemp_salary.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editemp_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editemp_salary.setLabelText("SALARY");
+        txt_editemp_salary.setLineColor(new java.awt.Color(255, 167, 6));
+        txt_editemp_salary.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_salary.setNextFocusableComponent(txt_editemp_addr);
+        txt_editemp_salary.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_editemp_addr.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_addr.setLabelText("ADDRESS");
         txt_editemp_addr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_addr.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_addr.setNextFocusableComponent(txt_addcust_shopnm);
+        txt_editemp_addr.setNextFocusableComponent(btn_editemp_edit);
         txt_editemp_addr.setPreferredSize(new java.awt.Dimension(404, 64));
-
-        txt_editemp_contact.setBackground(new java.awt.Color(150, 195, 248));
-        txt_editemp_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_editemp_contact.setLabelText("CONTACT NO");
-        txt_editemp_contact.setLineColor(new java.awt.Color(255, 167, 6));
-        txt_editemp_contact.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_contact.setPreferredSize(new java.awt.Dimension(404, 64));
 
         btn_editemp_edit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_editemp_edit.setText("EDIT EMPLOYEE");
@@ -2321,7 +2329,7 @@ public class Main extends javax.swing.JFrame
         btn_editemp_edit.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editemp_edit.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editemp_edit.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_editemp_edit.setNextFocusableComponent(btnEmployee);
+        btn_editemp_edit.setNextFocusableComponent(btn_editemp_rmv);
         btn_editemp_edit.setOpaque(true);
         btn_editemp_edit.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editemp_edit.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2371,7 +2379,7 @@ public class Main extends javax.swing.JFrame
         btn_editemp_rmv.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editemp_rmv.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editemp_rmv.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_editemp_rmv.setNextFocusableComponent(btnEmployee);
+        btn_editemp_rmv.setNextFocusableComponent(txt_editemp_id);
         btn_editemp_rmv.setOpaque(true);
         btn_editemp_rmv.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editemp_rmv.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2433,10 +2441,10 @@ public class Main extends javax.swing.JFrame
                     .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_editemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editemp_salary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editemp_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editemp_id, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50))
@@ -2458,20 +2466,20 @@ public class Main extends javax.swing.JFrame
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_editemp_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_editemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_editemp_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_editemp_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_editemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_editemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_editemp_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_editemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
                         .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_editemp_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pnl_emp_det.setkBorderRadius(40);
@@ -2480,30 +2488,30 @@ public class Main extends javax.swing.JFrame
         pnl_emp_det.setOpaque(false);
         pnl_emp_det.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        txt_empdet_custid.setBackground(new java.awt.Color(150, 195, 248));
-        txt_empdet_custid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_empdet_custid.setLabelText("EMPLOYEE ID");
-        txt_empdet_custid.setLineColor(new java.awt.Color(255, 167, 6));
-        txt_empdet_custid.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_empdet_custid.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_empdet_id.setBackground(new java.awt.Color(150, 195, 248));
+        txt_empdet_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_empdet_id.setLabelText("EMPLOYEE ID");
+        txt_empdet_id.setLineColor(new java.awt.Color(255, 167, 6));
+        txt_empdet_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_empdet_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         scrolltbl_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
 
-        table_custdet1.setModel(new javax.swing.table.DefaultTableModel(
+        table_empdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "Title 6"
             }
         ));
-        table_custdet1.setPreferredSize(new java.awt.Dimension(908, 400));
-        scrolltbl_empdet.setViewportView(table_custdet1);
+        table_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
+        scrolltbl_empdet.setViewportView(table_empdet);
 
         btn_empdet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_empdet.setText("FETCH EMPLOYEE DETAIL");
@@ -2562,7 +2570,7 @@ public class Main extends javax.swing.JFrame
             .addGroup(pnl_emp_detLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(pnl_emp_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_empdet_custid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_empdet_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
@@ -2571,7 +2579,7 @@ public class Main extends javax.swing.JFrame
             pnl_emp_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_emp_detLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(txt_empdet_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_empdet_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -4415,6 +4423,7 @@ public class Main extends javax.swing.JFrame
             visibility(false, false, true, false, false, false, btn_addemp_menu);
             visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
             onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
+            txt_addemp_id.setText(getMaxID("employee"));
 //            hover(btnEmployee, btnCustomer, btnProduct, btnReport, btnUser);   // To select dashboard main buttons.
         }
     }//GEN-LAST:event_btnEmployeeKeyPressed
@@ -4454,6 +4463,7 @@ public class Main extends javax.swing.JFrame
         visibility(false, false, true, false, false, false, btn_addemp_menu);
         visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
         onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
+        txt_addemp_id.setText(getMaxID("employee"));
     }//GEN-LAST:event_btnEmployeeActionPerformed
 
     private void btnProductActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnProductActionPerformed
@@ -4630,6 +4640,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
             onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
+            txt_addemp_id.setText(getMaxID("employee"));
+            txt_addemp_id.grabFocus();
         }
     }//GEN-LAST:event_btn_addemp_menuKeyPressed
 
@@ -4663,6 +4675,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
             onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
+            txt_editemp_id.grabFocus();
+            bindTableData(table_editemp, "employee");
         }
     }//GEN-LAST:event_btn_editemp_menuKeyPressed
 
@@ -4696,6 +4710,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
             onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
+            txt_empdet_id.grabFocus();
+            bindTableData(table_empdet, "employee");
         }
     }//GEN-LAST:event_btn_empdet_menuKeyPressed
 
@@ -5031,18 +5047,24 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addemp_menuActionPerformed
         visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
         onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
+        txt_addemp_id.setText(getMaxID("employee"));
+        txt_addemp_id.grabFocus();
     }//GEN-LAST:event_btn_addemp_menuActionPerformed
 
     private void btn_editemp_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_menuActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_menuActionPerformed
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
+        txt_editemp_id.grabFocus();
+        bindTableData(table_empdet, "employee");
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
     private void btn_empdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_empdet_menuActionPerformed
     {//GEN-HEADEREND:event_btn_empdet_menuActionPerformed
         visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
         onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
+        txt_empdet_id.grabFocus();
+        bindTableData(table_empdet, "employee");
     }//GEN-LAST:event_btn_empdet_menuActionPerformed
 
     private void btn_addprod_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addprod_menuActionPerformed
@@ -5229,12 +5251,12 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addemp_addFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addemp_addFocusGained
     {//GEN-HEADEREND:event_btn_addemp_addFocusGained
-        // TODO add your handling code here:
+        hover(btn_addemp_add, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_addemp_addFocusGained
 
     private void btn_addemp_addFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addemp_addFocusLost
     {//GEN-HEADEREND:event_btn_addemp_addFocusLost
-        // TODO add your handling code here:
+        hover(btn_addemp_add, new Color(255, 167, 6), Color.WHITE);
     }//GEN-LAST:event_btn_addemp_addFocusLost
 
     private void btn_addemp_addMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addemp_addMouseEntered
@@ -5249,7 +5271,28 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addemp_addActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addemp_addActionPerformed
     {//GEN-HEADEREND:event_btn_addemp_addActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "insert into employee (id, nm, contact, email, salary, address) values(?, ?, ?, ?, ?, ?)";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_addemp_id.getText());
+            pst.setString(2, txt_addemp_nm.getText());
+            pst.setString(3, txt_addemp_contact.getText());
+            pst.setString(4, txt_addemp_email.getText());
+            pst.setString(5, txt_addemp_salary.getText());
+            pst.setString(6, txt_addemp_addr.getText());
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Record Inserted Successfully!");
+            txt_addemp_id.setText(getMaxID("employee"));
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_addemp_addActionPerformed
 
     private void btn_addemp_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addemp_addKeyPressed
@@ -5274,7 +5317,27 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_editActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_editActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "update employee set nm = ?, contact = ?, email = ?, salary = ?, address = ? where id = ? ";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_editemp_nm.getText());
+            pst.setString(2, txt_editemp_contact.getText());
+            pst.setString(3, txt_editemp_email.getText());
+            pst.setString(4, txt_editemp_salary.getText());
+            pst.setString(5, txt_editemp_addr.getText());
+            pst.setString(6, txt_editemp_id.getText());
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Record Updated Successfully!");
+            bindTableData(table_editemp, "employee");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_editemp_editActionPerformed
 
     private void btn_editemp_editMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_editMouseExited
@@ -5289,22 +5352,22 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_editFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_editFocusLost
     {//GEN-HEADEREND:event_btn_editemp_editFocusLost
-        // TODO add your handling code here:
+        hover(btn_editemp_edit, new Color(255, 167, 6), Color.WHITE);
     }//GEN-LAST:event_btn_editemp_editFocusLost
 
     private void btn_editemp_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_editFocusGained
     {//GEN-HEADEREND:event_btn_editemp_editFocusGained
-        // TODO add your handling code here:
+        hover(btn_editemp_edit, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_editemp_editFocusGained
 
     private void btn_editemp_rmvFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_rmvFocusGained
     {//GEN-HEADEREND:event_btn_editemp_rmvFocusGained
-        // TODO add your handling code here:
+        hover(btn_editemp_rmv, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_editemp_rmvFocusGained
 
     private void btn_editemp_rmvFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_rmvFocusLost
     {//GEN-HEADEREND:event_btn_editemp_rmvFocusLost
-        // TODO add your handling code here:
+        hover(btn_editemp_rmv, new Color(255, 167, 6), Color.WHITE);
     }//GEN-LAST:event_btn_editemp_rmvFocusLost
 
     private void btn_editemp_rmvMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_rmvMouseEntered
@@ -5825,9 +5888,9 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JScrollPane scrolltbl_empdet;
     private com.k33ptoo.components.KGradientPanel staff_menubar;
     private javax.swing.JTable table_custdet;
-    private javax.swing.JTable table_custdet1;
     private javax.swing.JTable table_editcust;
     private javax.swing.JTable table_editemp;
+    private javax.swing.JTable table_empdet;
     private textfield.TextField txt_addcust_contact;
     private textfield.TextField txt_addcust_email;
     private textfield.TextField txt_addcust_id;
@@ -5858,7 +5921,7 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editemp_id;
     private textfield.TextField txt_editemp_nm;
     private textfield.TextField txt_editemp_salary;
-    private textfield.TextField txt_empdet_custid;
+    private textfield.TextField txt_empdet_id;
     private textfield.PasswordField txt_pswd;
     // End of variables declaration//GEN-END:variables
 }
