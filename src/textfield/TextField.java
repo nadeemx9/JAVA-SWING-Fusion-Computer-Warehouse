@@ -46,7 +46,7 @@ public class TextField extends JTextField
     private boolean show;
     private boolean mouseOver = false;
     private String labelText = "Label";
-    private Color lineColor = new Color(3, 155, 216);
+    private Color lineColor = new Color(255, 167, 6);
 
     public TextField()
     {
@@ -106,10 +106,12 @@ public class TextField extends JTextField
 
     private void showing(boolean action)
     {
-        if (animator.isRunning()) {
+        if (animator.isRunning())
+        {
             animator.stop();
         }
-        else {
+        else
+        {
             location = 1;
         }
         animator.setStartFraction(1f - location);
@@ -127,10 +129,12 @@ public class TextField extends JTextField
         g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_LCD_HRGB);
         int width = getWidth();
         int height = getHeight();
-        if (mouseOver) {
+        if (mouseOver)
+        {
             g2.setColor(lineColor);
         }
-        else {
+        else
+        {
             g2.setColor(new Color(150, 150, 150));
         }
         g2.fillRect(2, height - 1, width - 4, 1);
@@ -148,15 +152,19 @@ public class TextField extends JTextField
         double height = getHeight() - in.top - in.bottom;
         double textY = (height - r2.getHeight()) / 2;
         double size;
-        if (animateHinText) {
-            if (show) {
+        if (animateHinText)
+        {
+            if (show)
+            {
                 size = 28 * (1 - location);
             }
-            else {
+            else
+            {
                 size = 28 * location;
             }
         }
-        else {
+        else
+        {
             size = 28;
         }
         g2.drawString(labelText, in.right, (int) (in.top + textY + ft.getAscent() - size));
@@ -164,15 +172,18 @@ public class TextField extends JTextField
 
     private void createLineStyle(Graphics2D g2)
     {
-        if (isFocusOwner()) {
+        if (isFocusOwner())
+        {
             double width = getWidth() - 4;
             int height = getHeight();
             g2.setColor(lineColor);
             double size;
-            if (show) {
+            if (show)
+            {
                 size = width * (1 - location);
             }
-            else {
+            else
+            {
                 size = width * location;
             }
             double x = (width - size) / 2;
@@ -183,7 +194,8 @@ public class TextField extends JTextField
     @Override
     public void setText(String string)
     {
-        if (!getText().equals(string)) {
+        if (!getText().equals(string))
+        {
             showing(string.equals(""));
         }
         super.setText(string);
