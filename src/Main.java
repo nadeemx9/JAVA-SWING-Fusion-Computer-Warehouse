@@ -7,6 +7,7 @@
  */
 import com.k33ptoo.components.KButton;
 import com.k33ptoo.components.KGradientPanel;
+import combo_suggestion.ComboBoxSuggestion;
 import connection.dbconnection;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -205,7 +206,7 @@ public class Main extends javax.swing.JFrame
         btn_editprod_menu = new com.k33ptoo.components.KButton();
         lid3_2 = new com.k33ptoo.components.KGradientPanel();
         pnl1_menu18 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl3_tab3 = new com.k33ptoo.components.KButton();
+        btn_proddet_menu = new com.k33ptoo.components.KButton();
         lid3_3 = new com.k33ptoo.components.KGradientPanel();
         pnl_prod_main = new com.k33ptoo.components.KGradientPanel();
         pnl_add_product = new com.k33ptoo.components.KGradientPanel();
@@ -217,7 +218,6 @@ public class Main extends javax.swing.JFrame
         btn_addprod = new com.k33ptoo.components.KButton();
         txt_addprod_quantity = new textfield.TextField();
         pnl_edit_product = new com.k33ptoo.components.KGradientPanel();
-        jLabel16 = new javax.swing.JLabel();
         pnl3_tab3 = new com.k33ptoo.components.KGradientPanel();
         jLabel17 = new javax.swing.JLabel();
         panel_report = new com.k33ptoo.components.KGradientPanel();
@@ -2711,7 +2711,7 @@ public class Main extends javax.swing.JFrame
         btn_editprod_menu.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editprod_menu.setkStartColor(new java.awt.Color(255, 203, 109));
         btn_editprod_menu.setLabel("EDIT PRODUCT");
-        btn_editprod_menu.setNextFocusableComponent(btn_pnl3_tab3);
+        btn_editprod_menu.setNextFocusableComponent(btn_proddet_menu);
         btn_editprod_menu.setPreferredSize(new java.awt.Dimension(185, 43));
         btn_editprod_menu.addFocusListener(new java.awt.event.FocusAdapter()
         {
@@ -2793,51 +2793,51 @@ public class Main extends javax.swing.JFrame
         pnl1_menu18.setOpaque(false);
         pnl1_menu18.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl3_tab3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl3_tab3.setText("TAB 3");
-        btn_pnl3_tab3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl3_tab3.setkBorderRadius(20);
-        btn_pnl3_tab3.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl3_tab3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl3_tab3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl3_tab3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl3_tab3.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl3_tab3.setNextFocusableComponent(btn_addprod_menu);
-        btn_pnl3_tab3.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl3_tab3.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_proddet_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_proddet_menu.setText("PRODUCT DETAIL");
+        btn_proddet_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_proddet_menu.setkBorderRadius(20);
+        btn_proddet_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_proddet_menu.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_proddet_menu.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_proddet_menu.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_proddet_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_proddet_menu.setNextFocusableComponent(btn_addprod_menu);
+        btn_proddet_menu.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_proddet_menu.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl3_tab3FocusGained(evt);
+                btn_proddet_menuFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl3_tab3FocusLost(evt);
+                btn_proddet_menuFocusLost(evt);
             }
         });
-        btn_pnl3_tab3.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_proddet_menu.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl3_tab3MouseEntered(evt);
+                btn_proddet_menuMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl3_tab3MouseExited(evt);
+                btn_proddet_menuMouseExited(evt);
             }
         });
-        btn_pnl3_tab3.addActionListener(new java.awt.event.ActionListener()
+        btn_proddet_menu.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl3_tab3ActionPerformed(evt);
+                btn_proddet_menuActionPerformed(evt);
             }
         });
-        btn_pnl3_tab3.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_proddet_menu.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl3_tab3KeyPressed(evt);
+                btn_proddet_menuKeyPressed(evt);
             }
         });
 
@@ -2867,14 +2867,14 @@ public class Main extends javax.swing.JFrame
                 .addContainerGap()
                 .addGroup(pnl1_menu18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lid3_3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl3_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                    .addComponent(btn_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
         pnl1_menu18Layout.setVerticalGroup(
             pnl1_menu18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl1_menu18Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_pnl3_tab3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_proddet_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addComponent(lid3_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -2897,9 +2897,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu18, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl1_menu18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -3076,29 +3076,15 @@ public class Main extends javax.swing.JFrame
         pnl_edit_product.setOpaque(false);
         pnl_edit_product.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("PANEL 3 Tab 2");
-
         javax.swing.GroupLayout pnl_edit_productLayout = new javax.swing.GroupLayout(pnl_edit_product);
         pnl_edit_product.setLayout(pnl_edit_productLayout);
         pnl_edit_productLayout.setHorizontalGroup(
             pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_edit_productLayout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
         );
         pnl_edit_productLayout.setVerticalGroup(
             pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_edit_productLayout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
         );
 
         pnl3_tab3.setkBorderRadius(40);
@@ -4667,7 +4653,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addprod_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprod_menuMouseEntered
     {//GEN-HEADEREND:event_btn_addprod_menuMouseEntered
-        // TODO add your handling code here:
+        btn_addprod_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_addprod_menuMouseEntered
 
     private void btn_addprod_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprod_menuMouseExited
@@ -4701,7 +4687,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editprod_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_menuMouseEntered
     {//GEN-HEADEREND:event_btn_editprod_menuMouseEntered
-        // TODO add your handling code here:
+        btn_editprod_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_editprod_menuMouseEntered
 
     private void btn_editprod_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_menuMouseExited
@@ -4723,28 +4709,28 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_btn_editprod_menuKeyPressed
 
-    private void btn_pnl3_tab3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl3_tab3FocusGained
-    {//GEN-HEADEREND:event_btn_pnl3_tab3FocusGained
-        hover(btn_pnl3_tab3, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl3_tab3FocusGained
+    private void btn_proddet_menuFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddet_menuFocusGained
+    {//GEN-HEADEREND:event_btn_proddet_menuFocusGained
+        hover(btn_proddet_menu, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_proddet_menuFocusGained
 
-    private void btn_pnl3_tab3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl3_tab3FocusLost
-    {//GEN-HEADEREND:event_btn_pnl3_tab3FocusLost
-        hover(btn_pnl3_tab3, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl3_tab3FocusLost
+    private void btn_proddet_menuFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddet_menuFocusLost
+    {//GEN-HEADEREND:event_btn_proddet_menuFocusLost
+        hover(btn_proddet_menu, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_proddet_menuFocusLost
 
-    private void btn_pnl3_tab3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl3_tab3MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl3_tab3MouseEntered
+    private void btn_proddet_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddet_menuMouseEntered
+    {//GEN-HEADEREND:event_btn_proddet_menuMouseEntered
+        btn_proddet_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_proddet_menuMouseEntered
+
+    private void btn_proddet_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddet_menuMouseExited
+    {//GEN-HEADEREND:event_btn_proddet_menuMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl3_tab3MouseEntered
+    }//GEN-LAST:event_btn_proddet_menuMouseExited
 
-    private void btn_pnl3_tab3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl3_tab3MouseExited
-    {//GEN-HEADEREND:event_btn_pnl3_tab3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl3_tab3MouseExited
-
-    private void btn_pnl3_tab3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl3_tab3KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl3_tab3KeyPressed
+    private void btn_proddet_menuKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_proddet_menuKeyPressed
+    {//GEN-HEADEREND:event_btn_proddet_menuKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnProduct.grabFocus();
@@ -4754,7 +4740,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl3_tab3, pnl_add_product, pnl_edit_product);
             onIndicator(lid3_3, lid3_1, lid3_2);
         }
-    }//GEN-LAST:event_btn_pnl3_tab3KeyPressed
+    }//GEN-LAST:event_btn_proddet_menuKeyPressed
 
     private void btn_pnl4_tab1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab1FocusGained
     {//GEN-HEADEREND:event_btn_pnl4_tab1FocusGained
@@ -5021,11 +5007,11 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid3_2, lid3_1, lid3_3);
     }//GEN-LAST:event_btn_editprod_menuActionPerformed
 
-    private void btn_pnl3_tab3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl3_tab3ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl3_tab3ActionPerformed
+    private void btn_proddet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_proddet_menuActionPerformed
+    {//GEN-HEADEREND:event_btn_proddet_menuActionPerformed
         visibility(pnl3_tab3, pnl_add_product, pnl_edit_product);
         onIndicator(lid3_3, lid3_1, lid3_2);
-    }//GEN-LAST:event_btn_pnl3_tab3ActionPerformed
+    }//GEN-LAST:event_btn_proddet_menuActionPerformed
 
     private void btn_pnl4_tab1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl4_tab1ActionPerformed
     {//GEN-HEADEREND:event_btn_pnl4_tab1ActionPerformed
@@ -5195,7 +5181,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addemp_addMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addemp_addMouseEntered
     {//GEN-HEADEREND:event_btn_addemp_addMouseEntered
-        // TODO add your handling code here:
+        btn_addemp_add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_addemp_addMouseEntered
 
     private void btn_addemp_addMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addemp_addMouseExited
@@ -5254,7 +5240,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_custdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_custdetMouseEntered
     {//GEN-HEADEREND:event_btn_custdetMouseEntered
-        // TODO add your handling code here:
+        btn_custdet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_custdetMouseEntered
 
     private void btn_custdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_custdetFocusLost
@@ -5314,7 +5300,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addprodMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprodMouseEntered
     {//GEN-HEADEREND:event_btn_addprodMouseEntered
-        // TODO add your handling code here:
+        btn_addprod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_addprodMouseEntered
 
     private void btn_addprodMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprodMouseExited
@@ -5339,6 +5325,7 @@ public class Main extends javax.swing.JFrame
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Record inserted Successfull");
+            clearTextFields(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, cmbbox_addprod_brand, txt_addprod_quantity);
             txt_addprod_id.setText(getMaxID("product"));
         }
         catch (Exception e)
@@ -5428,7 +5415,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_rmvMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_rmvMouseEntered
     {//GEN-HEADEREND:event_btn_editemp_rmvMouseEntered
-        // TODO add your handling code here:
+        btn_editemp_rmv.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_editemp_rmvMouseEntered
 
     private void btn_editemp_rmvFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_rmvFocusLost
@@ -5479,7 +5466,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_editMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_editMouseEntered
     {//GEN-HEADEREND:event_btn_editemp_editMouseEntered
-        // TODO add your handling code here:
+        btn_editemp_edit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btn_editemp_editMouseEntered
 
     private void btn_editemp_editFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editemp_editFocusLost
@@ -5736,6 +5723,17 @@ public class Main extends javax.swing.JFrame
         txt7.setText("");
         txt8.setText("");
     }
+
+    public void clearTextFields(TextField txt1, TextField txt2, TextField txt3, TextField txt4, ComboBoxSuggestion cmbbox, TextField txt6)
+    {
+        txt1.setText("");
+        txt2.setText("");
+        txt3.setText("");
+        txt4.setText("");
+        cmbbox.setSelectedIndex(0);
+        txt6.setText("");
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btnCustomer;
     private com.k33ptoo.components.KButton btnEmployee;
@@ -5760,17 +5758,16 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_empdet_menu;
     private com.k33ptoo.components.KButton btn_login;
-    private com.k33ptoo.components.KButton btn_pnl3_tab3;
     private com.k33ptoo.components.KButton btn_pnl4_tab1;
     private com.k33ptoo.components.KButton btn_pnl4_tab2;
     private com.k33ptoo.components.KButton btn_pnl4_tab3;
     private com.k33ptoo.components.KButton btn_pnl5_tab1;
     private com.k33ptoo.components.KButton btn_pnl5_tab2;
     private com.k33ptoo.components.KButton btn_pnl5_tab3;
+    private com.k33ptoo.components.KButton btn_proddet_menu;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
