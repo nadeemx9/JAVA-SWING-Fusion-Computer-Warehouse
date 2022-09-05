@@ -221,40 +221,39 @@ public class Main extends javax.swing.JFrame
         pnl_prod_det = new com.k33ptoo.components.KGradientPanel();
         jLabel17 = new javax.swing.JLabel();
         panel_report = new com.k33ptoo.components.KGradientPanel();
-        pnl5_menubar = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu10 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl5_tab1 = new com.k33ptoo.components.KButton();
-        lid5_1 = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu11 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl5_tab2 = new com.k33ptoo.components.KButton();
-        lid5_2 = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu12 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl5_tab3 = new com.k33ptoo.components.KButton();
-        lid5_3 = new com.k33ptoo.components.KGradientPanel();
-        pnl5_main = new com.k33ptoo.components.KGradientPanel();
-        pnl5_tab1 = new com.k33ptoo.components.KGradientPanel();
-        jLabel21 = new javax.swing.JLabel();
-        pnl5_tab2 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_menubar = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_menu1 = new com.k33ptoo.components.KGradientPanel();
+        btn_report_menu1 = new com.k33ptoo.components.KButton();
+        lid_report_menu1 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_menu2 = new com.k33ptoo.components.KGradientPanel();
+        btn_report_menu2 = new com.k33ptoo.components.KButton();
+        lid_report_menu2 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_menu3 = new com.k33ptoo.components.KGradientPanel();
+        btn_report_menu3 = new com.k33ptoo.components.KButton();
+        lid_report_menu3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_main = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_tab1 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_tab2 = new com.k33ptoo.components.KGradientPanel();
         jLabel22 = new javax.swing.JLabel();
-        pnl5_tab3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_report_tab3 = new com.k33ptoo.components.KGradientPanel();
         jLabel23 = new javax.swing.JLabel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         pnl_account_menubar = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu7 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl4_tab1 = new com.k33ptoo.components.KButton();
-        lid4_1 = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu8 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl4_tab2 = new com.k33ptoo.components.KButton();
-        lid4_2 = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu9 = new com.k33ptoo.components.KGradientPanel();
-        btn_pnl4_tab3 = new com.k33ptoo.components.KButton();
-        lid4_3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_accsetting_menu = new com.k33ptoo.components.KGradientPanel();
+        btn_accsetting_menu = new com.k33ptoo.components.KButton();
+        lid_accsetting = new com.k33ptoo.components.KGradientPanel();
+        pnl_acc_menu2 = new com.k33ptoo.components.KGradientPanel();
+        btn_acc_menu2 = new com.k33ptoo.components.KButton();
+        lid_acc_menu2 = new com.k33ptoo.components.KGradientPanel();
+        pnl_acc_menu3 = new com.k33ptoo.components.KGradientPanel();
+        btn_acc_menu3 = new com.k33ptoo.components.KButton();
+        lid_acc_menu3 = new com.k33ptoo.components.KGradientPanel();
         pnl_account_main = new com.k33ptoo.components.KGradientPanel();
-        pnl4_tab1 = new com.k33ptoo.components.KGradientPanel();
+        pnl_accsetting = new com.k33ptoo.components.KGradientPanel();
         jLabel18 = new javax.swing.JLabel();
-        pnl4_tab2 = new com.k33ptoo.components.KGradientPanel();
+        pnl_acc_tab2 = new com.k33ptoo.components.KGradientPanel();
         jLabel19 = new javax.swing.JLabel();
-        pnl4_tab3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_acc_tab3 = new com.k33ptoo.components.KGradientPanel();
         jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -695,7 +694,7 @@ public class Main extends javax.swing.JFrame
         });
 
         btnReport.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btnReport.setText("REPORT");
+        btnReport.setText("GENERATE REPORT");
         btnReport.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         btnReport.setkBorderRadius(30);
         btnReport.setkEndColor(new java.awt.Color(255, 167, 6));
@@ -740,7 +739,7 @@ public class Main extends javax.swing.JFrame
         });
 
         btnaccount.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btnaccount.setText("USER MANUAL");
+        btnaccount.setText("ACCOUNT SETTING");
         btnaccount.setToolTipText("");
         btnaccount.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         btnaccount.setkBorderRadius(30);
@@ -2882,9 +2881,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -3147,429 +3146,415 @@ public class Main extends javax.swing.JFrame
         panel_report.setkStartColor(new java.awt.Color(150, 195, 248));
         panel_report.setOpaque(false);
 
-        pnl5_menubar.setkBorderRadius(20);
-        pnl5_menubar.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl5_menubar.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl5_menubar.setOpaque(false);
-        pnl5_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
+        pnl_report_menubar.setkBorderRadius(20);
+        pnl_report_menubar.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menubar.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menubar.setOpaque(false);
+        pnl_report_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
 
-        pnl1_menu10.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu10.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu10.setOpaque(false);
-        pnl1_menu10.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_report_menu1.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu1.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu1.setOpaque(false);
+        pnl_report_menu1.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl5_tab1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl5_tab1.setText("TAB 1");
-        btn_pnl5_tab1.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl5_tab1.setkBorderRadius(20);
-        btn_pnl5_tab1.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab1.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl5_tab1.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab1.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab1.setNextFocusableComponent(btn_pnl5_tab2);
-        btn_pnl5_tab1.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl5_tab1.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_report_menu1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_report_menu1.setText("TAB 1");
+        btn_report_menu1.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_report_menu1.setkBorderRadius(20);
+        btn_report_menu1.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu1.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_report_menu1.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu1.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu1.setNextFocusableComponent(btn_report_menu2);
+        btn_report_menu1.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_report_menu1.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab1FocusGained(evt);
+                btn_report_menu1FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab1FocusLost(evt);
+                btn_report_menu1FocusLost(evt);
             }
         });
-        btn_pnl5_tab1.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_report_menu1.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab1MouseEntered(evt);
+                btn_report_menu1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab1MouseExited(evt);
+                btn_report_menu1MouseExited(evt);
             }
         });
-        btn_pnl5_tab1.addActionListener(new java.awt.event.ActionListener()
+        btn_report_menu1.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl5_tab1ActionPerformed(evt);
+                btn_report_menu1ActionPerformed(evt);
             }
         });
-        btn_pnl5_tab1.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_report_menu1.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl5_tab1KeyPressed(evt);
+                btn_report_menu1KeyPressed(evt);
             }
         });
 
-        lid5_1.setBackground(new java.awt.Color(225, 223, 223));
-        lid5_1.setkBorderRadius(15);
-        lid5_1.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid5_1.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid5_1.setOpaque(false);
-        lid5_1.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_report_menu1.setBackground(new java.awt.Color(225, 223, 223));
+        lid_report_menu1.setkBorderRadius(15);
+        lid_report_menu1.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu1.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu1.setOpaque(false);
+        lid_report_menu1.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid5_1Layout = new javax.swing.GroupLayout(lid5_1);
-        lid5_1.setLayout(lid5_1Layout);
-        lid5_1Layout.setHorizontalGroup(
-            lid5_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_report_menu1Layout = new javax.swing.GroupLayout(lid_report_menu1);
+        lid_report_menu1.setLayout(lid_report_menu1Layout);
+        lid_report_menu1Layout.setHorizontalGroup(
+            lid_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid5_1Layout.setVerticalGroup(
-            lid5_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_report_menu1Layout.setVerticalGroup(
+            lid_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu10Layout = new javax.swing.GroupLayout(pnl1_menu10);
-        pnl1_menu10.setLayout(pnl1_menu10Layout);
-        pnl1_menu10Layout.setHorizontalGroup(
-            pnl1_menu10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu10Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_report_menu1Layout = new javax.swing.GroupLayout(pnl_report_menu1);
+        pnl_report_menu1.setLayout(pnl_report_menu1Layout);
+        pnl_report_menu1Layout.setHorizontalGroup(
+            pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid5_1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl5_tab1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu10Layout.setVerticalGroup(
-            pnl1_menu10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu10Layout.createSequentialGroup()
+        pnl_report_menu1Layout.setVerticalGroup(
+            pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_pnl5_tab1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid5_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lid_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        pnl1_menu11.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu11.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu11.setOpaque(false);
-        pnl1_menu11.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_report_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu2.setOpaque(false);
+        pnl_report_menu2.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl5_tab2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl5_tab2.setText("TAB 2");
-        btn_pnl5_tab2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl5_tab2.setkBorderRadius(20);
-        btn_pnl5_tab2.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab2.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl5_tab2.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab2.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab2.setNextFocusableComponent(btn_pnl5_tab3);
-        btn_pnl5_tab2.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl5_tab2.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_report_menu2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_report_menu2.setText("TAB 2");
+        btn_report_menu2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_report_menu2.setkBorderRadius(20);
+        btn_report_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu2.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_report_menu2.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu2.setNextFocusableComponent(btn_report_menu3);
+        btn_report_menu2.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_report_menu2.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab2FocusGained(evt);
+                btn_report_menu2FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab2FocusLost(evt);
+                btn_report_menu2FocusLost(evt);
             }
         });
-        btn_pnl5_tab2.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_report_menu2.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab2MouseEntered(evt);
+                btn_report_menu2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab2MouseExited(evt);
+                btn_report_menu2MouseExited(evt);
             }
         });
-        btn_pnl5_tab2.addActionListener(new java.awt.event.ActionListener()
+        btn_report_menu2.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl5_tab2ActionPerformed(evt);
+                btn_report_menu2ActionPerformed(evt);
             }
         });
-        btn_pnl5_tab2.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_report_menu2.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl5_tab2KeyPressed(evt);
+                btn_report_menu2KeyPressed(evt);
             }
         });
 
-        lid5_2.setBackground(new java.awt.Color(225, 223, 223));
-        lid5_2.setkBorderRadius(15);
-        lid5_2.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid5_2.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid5_2.setOpaque(false);
-        lid5_2.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_report_menu2.setBackground(new java.awt.Color(225, 223, 223));
+        lid_report_menu2.setkBorderRadius(15);
+        lid_report_menu2.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu2.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu2.setOpaque(false);
+        lid_report_menu2.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid5_2Layout = new javax.swing.GroupLayout(lid5_2);
-        lid5_2.setLayout(lid5_2Layout);
-        lid5_2Layout.setHorizontalGroup(
-            lid5_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_report_menu2Layout = new javax.swing.GroupLayout(lid_report_menu2);
+        lid_report_menu2.setLayout(lid_report_menu2Layout);
+        lid_report_menu2Layout.setHorizontalGroup(
+            lid_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid5_2Layout.setVerticalGroup(
-            lid5_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_report_menu2Layout.setVerticalGroup(
+            lid_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu11Layout = new javax.swing.GroupLayout(pnl1_menu11);
-        pnl1_menu11.setLayout(pnl1_menu11Layout);
-        pnl1_menu11Layout.setHorizontalGroup(
-            pnl1_menu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu11Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_report_menu2Layout = new javax.swing.GroupLayout(pnl_report_menu2);
+        pnl_report_menu2.setLayout(pnl_report_menu2Layout);
+        pnl_report_menu2Layout.setHorizontalGroup(
+            pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid5_2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl5_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_report_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_report_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu11Layout.setVerticalGroup(
-            pnl1_menu11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu11Layout.createSequentialGroup()
+        pnl_report_menu2Layout.setVerticalGroup(
+            pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_pnl5_tab2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid5_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl1_menu12.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu12.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu12.setOpaque(false);
-        pnl1_menu12.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_report_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_report_menu3.setOpaque(false);
+        pnl_report_menu3.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl5_tab3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl5_tab3.setText("TAB 3");
-        btn_pnl5_tab3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl5_tab3.setkBorderRadius(20);
-        btn_pnl5_tab3.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl5_tab3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl5_tab3.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl5_tab3.setNextFocusableComponent(btn_pnl5_tab1);
-        btn_pnl5_tab3.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl5_tab3.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_report_menu3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_report_menu3.setText("TAB 3");
+        btn_report_menu3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_report_menu3.setkBorderRadius(20);
+        btn_report_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_report_menu3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_report_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_report_menu3.setNextFocusableComponent(btn_report_menu1);
+        btn_report_menu3.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_report_menu3.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab3FocusGained(evt);
+                btn_report_menu3FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl5_tab3FocusLost(evt);
+                btn_report_menu3FocusLost(evt);
             }
         });
-        btn_pnl5_tab3.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_report_menu3.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab3MouseEntered(evt);
+                btn_report_menu3MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl5_tab3MouseExited(evt);
+                btn_report_menu3MouseExited(evt);
             }
         });
-        btn_pnl5_tab3.addActionListener(new java.awt.event.ActionListener()
+        btn_report_menu3.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl5_tab3ActionPerformed(evt);
+                btn_report_menu3ActionPerformed(evt);
             }
         });
-        btn_pnl5_tab3.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_report_menu3.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl5_tab3KeyPressed(evt);
+                btn_report_menu3KeyPressed(evt);
             }
         });
 
-        lid5_3.setBackground(new java.awt.Color(225, 223, 223));
-        lid5_3.setkBorderRadius(15);
-        lid5_3.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid5_3.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid5_3.setOpaque(false);
-        lid5_3.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_report_menu3.setBackground(new java.awt.Color(225, 223, 223));
+        lid_report_menu3.setkBorderRadius(15);
+        lid_report_menu3.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu3.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_report_menu3.setOpaque(false);
+        lid_report_menu3.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid5_3Layout = new javax.swing.GroupLayout(lid5_3);
-        lid5_3.setLayout(lid5_3Layout);
-        lid5_3Layout.setHorizontalGroup(
-            lid5_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_report_menu3Layout = new javax.swing.GroupLayout(lid_report_menu3);
+        lid_report_menu3.setLayout(lid_report_menu3Layout);
+        lid_report_menu3Layout.setHorizontalGroup(
+            lid_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid5_3Layout.setVerticalGroup(
-            lid5_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_report_menu3Layout.setVerticalGroup(
+            lid_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu12Layout = new javax.swing.GroupLayout(pnl1_menu12);
-        pnl1_menu12.setLayout(pnl1_menu12Layout);
-        pnl1_menu12Layout.setHorizontalGroup(
-            pnl1_menu12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu12Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_report_menu3Layout = new javax.swing.GroupLayout(pnl_report_menu3);
+        pnl_report_menu3.setLayout(pnl_report_menu3Layout);
+        pnl_report_menu3Layout.setHorizontalGroup(
+            pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid5_3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl5_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu12Layout.setVerticalGroup(
-            pnl1_menu12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu12Layout.createSequentialGroup()
+        pnl_report_menu3Layout.setVerticalGroup(
+            pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menu3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_pnl5_tab3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid5_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        javax.swing.GroupLayout pnl5_menubarLayout = new javax.swing.GroupLayout(pnl5_menubar);
-        pnl5_menubar.setLayout(pnl5_menubarLayout);
-        pnl5_menubarLayout.setHorizontalGroup(
-            pnl5_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl5_menubarLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_report_menubarLayout = new javax.swing.GroupLayout(pnl_report_menubar);
+        pnl_report_menubar.setLayout(pnl_report_menubarLayout);
+        pnl_report_menubarLayout.setHorizontalGroup(
+            pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_report_menubarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(pnl1_menu10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl1_menu11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(pnl1_menu12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(418, Short.MAX_VALUE))
         );
-        pnl5_menubarLayout.setVerticalGroup(
-            pnl5_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl5_menubarLayout.createSequentialGroup()
+        pnl_report_menubarLayout.setVerticalGroup(
+            pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_report_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(pnl5_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl1_menu10, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu12, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                .addGroup(pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_report_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
-        pnl5_main.setkBorderRadius(40);
-        pnl5_main.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl5_main.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl5_main.setOpaque(false);
-        pnl5_main.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_report_main.setkBorderRadius(40);
+        pnl_report_main.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_report_main.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_report_main.setOpaque(false);
+        pnl_report_main.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        pnl5_tab1.setkBorderRadius(40);
-        pnl5_tab1.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab1.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab1.setOpaque(false);
-        pnl5_tab1.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_report_tab1.setkBorderRadius(40);
+        pnl_report_tab1.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab1.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab1.setOpaque(false);
+        pnl_report_tab1.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel21.setText("PANEL 5 Tab 1");
-
-        javax.swing.GroupLayout pnl5_tab1Layout = new javax.swing.GroupLayout(pnl5_tab1);
-        pnl5_tab1.setLayout(pnl5_tab1Layout);
-        pnl5_tab1Layout.setHorizontalGroup(
-            pnl5_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_report_tab1Layout = new javax.swing.GroupLayout(pnl_report_tab1);
+        pnl_report_tab1.setLayout(pnl_report_tab1Layout);
+        pnl_report_tab1Layout.setHorizontalGroup(
+            pnl_report_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl5_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab1Layout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl5_tab1Layout.setVerticalGroup(
-            pnl5_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_report_tab1Layout.setVerticalGroup(
+            pnl_report_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl5_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab1Layout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
         );
 
-        pnl5_tab2.setkBorderRadius(40);
-        pnl5_tab2.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab2.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab2.setOpaque(false);
-        pnl5_tab2.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_report_tab2.setkBorderRadius(40);
+        pnl_report_tab2.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab2.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab2.setOpaque(false);
+        pnl_report_tab2.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("PANEL 5 Tab 2");
 
-        javax.swing.GroupLayout pnl5_tab2Layout = new javax.swing.GroupLayout(pnl5_tab2);
-        pnl5_tab2.setLayout(pnl5_tab2Layout);
-        pnl5_tab2Layout.setHorizontalGroup(
-            pnl5_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_report_tab2Layout = new javax.swing.GroupLayout(pnl_report_tab2);
+        pnl_report_tab2.setLayout(pnl_report_tab2Layout);
+        pnl_report_tab2Layout.setHorizontalGroup(
+            pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl5_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab2Layout.createSequentialGroup()
+            .addGroup(pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_report_tab2Layout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl5_tab2Layout.setVerticalGroup(
-            pnl5_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_report_tab2Layout.setVerticalGroup(
+            pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl5_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab2Layout.createSequentialGroup()
+            .addGroup(pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_report_tab2Layout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
         );
 
-        pnl5_tab3.setkBorderRadius(40);
-        pnl5_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl5_tab3.setOpaque(false);
-        pnl5_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_report_tab3.setkBorderRadius(40);
+        pnl_report_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_report_tab3.setOpaque(false);
+        pnl_report_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("PANEL 5 Tab 3");
 
-        javax.swing.GroupLayout pnl5_tab3Layout = new javax.swing.GroupLayout(pnl5_tab3);
-        pnl5_tab3.setLayout(pnl5_tab3Layout);
-        pnl5_tab3Layout.setHorizontalGroup(
-            pnl5_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_report_tab3Layout = new javax.swing.GroupLayout(pnl_report_tab3);
+        pnl_report_tab3.setLayout(pnl_report_tab3Layout);
+        pnl_report_tab3Layout.setHorizontalGroup(
+            pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl5_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_report_tab3Layout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl5_tab3Layout.setVerticalGroup(
-            pnl5_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_report_tab3Layout.setVerticalGroup(
+            pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl5_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl5_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_report_tab3Layout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
         );
 
-        javax.swing.GroupLayout pnl5_mainLayout = new javax.swing.GroupLayout(pnl5_main);
-        pnl5_main.setLayout(pnl5_mainLayout);
-        pnl5_mainLayout.setHorizontalGroup(
-            pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_report_mainLayout = new javax.swing.GroupLayout(pnl_report_main);
+        pnl_report_main.setLayout(pnl_report_mainLayout);
+        pnl_report_mainLayout.setHorizontalGroup(
+            pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pnl5_mainLayout.setVerticalGroup(
-            pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_report_mainLayout.setVerticalGroup(
+            pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl5_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl5_tab3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_report_tab3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_reportLayout = new javax.swing.GroupLayout(panel_report);
@@ -3579,17 +3564,17 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_reportLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panel_reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnl5_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl5_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnl_report_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_report_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panel_reportLayout.setVerticalGroup(
             panel_reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_reportLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(pnl5_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                .addComponent(pnl_report_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl5_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_report_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -3604,278 +3589,278 @@ public class Main extends javax.swing.JFrame
         pnl_account_menubar.setOpaque(false);
         pnl_account_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
 
-        pnl1_menu7.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu7.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu7.setOpaque(false);
-        pnl1_menu7.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_accsetting_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_accsetting_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_accsetting_menu.setOpaque(false);
+        pnl_accsetting_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl4_tab1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl4_tab1.setText("TAB 1");
-        btn_pnl4_tab1.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl4_tab1.setkBorderRadius(20);
-        btn_pnl4_tab1.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab1.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl4_tab1.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab1.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab1.setNextFocusableComponent(btn_pnl4_tab2);
-        btn_pnl4_tab1.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl4_tab1.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_accsetting_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_accsetting_menu.setText("SETTING");
+        btn_accsetting_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_accsetting_menu.setkBorderRadius(20);
+        btn_accsetting_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_accsetting_menu.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_accsetting_menu.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_accsetting_menu.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_accsetting_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_accsetting_menu.setNextFocusableComponent(btn_acc_menu2);
+        btn_accsetting_menu.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_accsetting_menu.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab1FocusGained(evt);
+                btn_accsetting_menuFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab1FocusLost(evt);
+                btn_accsetting_menuFocusLost(evt);
             }
         });
-        btn_pnl4_tab1.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_accsetting_menu.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab1MouseEntered(evt);
+                btn_accsetting_menuMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab1MouseExited(evt);
+                btn_accsetting_menuMouseExited(evt);
             }
         });
-        btn_pnl4_tab1.addActionListener(new java.awt.event.ActionListener()
+        btn_accsetting_menu.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl4_tab1ActionPerformed(evt);
+                btn_accsetting_menuActionPerformed(evt);
             }
         });
-        btn_pnl4_tab1.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_accsetting_menu.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl4_tab1KeyPressed(evt);
+                btn_accsetting_menuKeyPressed(evt);
             }
         });
 
-        lid4_1.setBackground(new java.awt.Color(225, 223, 223));
-        lid4_1.setkBorderRadius(15);
-        lid4_1.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid4_1.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid4_1.setOpaque(false);
-        lid4_1.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_accsetting.setBackground(new java.awt.Color(225, 223, 223));
+        lid_accsetting.setkBorderRadius(15);
+        lid_accsetting.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_accsetting.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_accsetting.setOpaque(false);
+        lid_accsetting.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid4_1Layout = new javax.swing.GroupLayout(lid4_1);
-        lid4_1.setLayout(lid4_1Layout);
-        lid4_1Layout.setHorizontalGroup(
-            lid4_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_accsettingLayout = new javax.swing.GroupLayout(lid_accsetting);
+        lid_accsetting.setLayout(lid_accsettingLayout);
+        lid_accsettingLayout.setHorizontalGroup(
+            lid_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid4_1Layout.setVerticalGroup(
-            lid4_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_accsettingLayout.setVerticalGroup(
+            lid_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu7Layout = new javax.swing.GroupLayout(pnl1_menu7);
-        pnl1_menu7.setLayout(pnl1_menu7Layout);
-        pnl1_menu7Layout.setHorizontalGroup(
-            pnl1_menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu7Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_accsetting_menuLayout = new javax.swing.GroupLayout(pnl_accsetting_menu);
+        pnl_accsetting_menu.setLayout(pnl_accsetting_menuLayout);
+        pnl_accsetting_menuLayout.setHorizontalGroup(
+            pnl_accsetting_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_accsetting_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid4_1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl4_tab1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_accsetting_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_accsetting, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu7Layout.setVerticalGroup(
-            pnl1_menu7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu7Layout.createSequentialGroup()
+        pnl_accsetting_menuLayout.setVerticalGroup(
+            pnl_accsetting_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_accsetting_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_pnl4_tab1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_accsetting_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid4_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lid_accsetting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        pnl1_menu8.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu8.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu8.setOpaque(false);
-        pnl1_menu8.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_acc_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_acc_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_acc_menu2.setOpaque(false);
+        pnl_acc_menu2.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl4_tab2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl4_tab2.setText("TAB 2");
-        btn_pnl4_tab2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl4_tab2.setkBorderRadius(20);
-        btn_pnl4_tab2.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab2.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl4_tab2.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab2.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab2.setNextFocusableComponent(btn_pnl4_tab3);
-        btn_pnl4_tab2.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl4_tab2.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_acc_menu2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_acc_menu2.setText("TAB 2");
+        btn_acc_menu2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_acc_menu2.setkBorderRadius(20);
+        btn_acc_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_acc_menu2.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_acc_menu2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_acc_menu2.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_acc_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_acc_menu2.setNextFocusableComponent(btn_acc_menu3);
+        btn_acc_menu2.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_acc_menu2.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab2FocusGained(evt);
+                btn_acc_menu2FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab2FocusLost(evt);
+                btn_acc_menu2FocusLost(evt);
             }
         });
-        btn_pnl4_tab2.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_acc_menu2.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab2MouseEntered(evt);
+                btn_acc_menu2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab2MouseExited(evt);
+                btn_acc_menu2MouseExited(evt);
             }
         });
-        btn_pnl4_tab2.addActionListener(new java.awt.event.ActionListener()
+        btn_acc_menu2.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl4_tab2ActionPerformed(evt);
+                btn_acc_menu2ActionPerformed(evt);
             }
         });
-        btn_pnl4_tab2.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_acc_menu2.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl4_tab2KeyPressed(evt);
+                btn_acc_menu2KeyPressed(evt);
             }
         });
 
-        lid4_2.setBackground(new java.awt.Color(225, 223, 223));
-        lid4_2.setkBorderRadius(15);
-        lid4_2.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid4_2.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid4_2.setOpaque(false);
-        lid4_2.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_acc_menu2.setBackground(new java.awt.Color(225, 223, 223));
+        lid_acc_menu2.setkBorderRadius(15);
+        lid_acc_menu2.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_acc_menu2.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_acc_menu2.setOpaque(false);
+        lid_acc_menu2.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid4_2Layout = new javax.swing.GroupLayout(lid4_2);
-        lid4_2.setLayout(lid4_2Layout);
-        lid4_2Layout.setHorizontalGroup(
-            lid4_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_acc_menu2Layout = new javax.swing.GroupLayout(lid_acc_menu2);
+        lid_acc_menu2.setLayout(lid_acc_menu2Layout);
+        lid_acc_menu2Layout.setHorizontalGroup(
+            lid_acc_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid4_2Layout.setVerticalGroup(
-            lid4_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_acc_menu2Layout.setVerticalGroup(
+            lid_acc_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu8Layout = new javax.swing.GroupLayout(pnl1_menu8);
-        pnl1_menu8.setLayout(pnl1_menu8Layout);
-        pnl1_menu8Layout.setHorizontalGroup(
-            pnl1_menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu8Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_acc_menu2Layout = new javax.swing.GroupLayout(pnl_acc_menu2);
+        pnl_acc_menu2.setLayout(pnl_acc_menu2Layout);
+        pnl_acc_menu2Layout.setHorizontalGroup(
+            pnl_acc_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_acc_menu2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid4_2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl4_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_acc_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_acc_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_acc_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu8Layout.setVerticalGroup(
-            pnl1_menu8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu8Layout.createSequentialGroup()
+        pnl_acc_menu2Layout.setVerticalGroup(
+            pnl_acc_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_acc_menu2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_pnl4_tab2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_acc_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid4_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_acc_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl1_menu9.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu9.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu9.setOpaque(false);
-        pnl1_menu9.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_acc_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_acc_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_acc_menu3.setOpaque(false);
+        pnl_acc_menu3.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_pnl4_tab3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_pnl4_tab3.setText("TAB 3");
-        btn_pnl4_tab3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_pnl4_tab3.setkBorderRadius(20);
-        btn_pnl4_tab3.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_pnl4_tab3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_pnl4_tab3.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_pnl4_tab3.setNextFocusableComponent(btn_pnl4_tab1);
-        btn_pnl4_tab3.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_pnl4_tab3.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_acc_menu3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_acc_menu3.setText("TAB 3");
+        btn_acc_menu3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_acc_menu3.setkBorderRadius(20);
+        btn_acc_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_acc_menu3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_acc_menu3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_acc_menu3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_acc_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_acc_menu3.setNextFocusableComponent(btn_accsetting_menu);
+        btn_acc_menu3.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_acc_menu3.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab3FocusGained(evt);
+                btn_acc_menu3FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_pnl4_tab3FocusLost(evt);
+                btn_acc_menu3FocusLost(evt);
             }
         });
-        btn_pnl4_tab3.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_acc_menu3.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab3MouseEntered(evt);
+                btn_acc_menu3MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_pnl4_tab3MouseExited(evt);
+                btn_acc_menu3MouseExited(evt);
             }
         });
-        btn_pnl4_tab3.addActionListener(new java.awt.event.ActionListener()
+        btn_acc_menu3.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_pnl4_tab3ActionPerformed(evt);
+                btn_acc_menu3ActionPerformed(evt);
             }
         });
-        btn_pnl4_tab3.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_acc_menu3.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_pnl4_tab3KeyPressed(evt);
+                btn_acc_menu3KeyPressed(evt);
             }
         });
 
-        lid4_3.setBackground(new java.awt.Color(225, 223, 223));
-        lid4_3.setkBorderRadius(15);
-        lid4_3.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid4_3.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid4_3.setOpaque(false);
-        lid4_3.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_acc_menu3.setBackground(new java.awt.Color(225, 223, 223));
+        lid_acc_menu3.setkBorderRadius(15);
+        lid_acc_menu3.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_acc_menu3.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_acc_menu3.setOpaque(false);
+        lid_acc_menu3.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid4_3Layout = new javax.swing.GroupLayout(lid4_3);
-        lid4_3.setLayout(lid4_3Layout);
-        lid4_3Layout.setHorizontalGroup(
-            lid4_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_acc_menu3Layout = new javax.swing.GroupLayout(lid_acc_menu3);
+        lid_acc_menu3.setLayout(lid_acc_menu3Layout);
+        lid_acc_menu3Layout.setHorizontalGroup(
+            lid_acc_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid4_3Layout.setVerticalGroup(
-            lid4_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_acc_menu3Layout.setVerticalGroup(
+            lid_acc_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu9Layout = new javax.swing.GroupLayout(pnl1_menu9);
-        pnl1_menu9.setLayout(pnl1_menu9Layout);
-        pnl1_menu9Layout.setHorizontalGroup(
-            pnl1_menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu9Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_acc_menu3Layout = new javax.swing.GroupLayout(pnl_acc_menu3);
+        pnl_acc_menu3.setLayout(pnl_acc_menu3Layout);
+        pnl_acc_menu3Layout.setHorizontalGroup(
+            pnl_acc_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_acc_menu3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid4_3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_pnl4_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_acc_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu9Layout.setVerticalGroup(
-            pnl1_menu9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu9Layout.createSequentialGroup()
+        pnl_acc_menu3Layout.setVerticalGroup(
+            pnl_acc_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_acc_menu3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_pnl4_tab3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_acc_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid4_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_acc_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout pnl_account_menubarLayout = new javax.swing.GroupLayout(pnl_account_menubar);
@@ -3884,11 +3869,11 @@ public class Main extends javax.swing.JFrame
             pnl_account_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_account_menubarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(pnl1_menu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl1_menu8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(pnl1_menu9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(418, Short.MAX_VALUE))
         );
         pnl_account_menubarLayout.setVerticalGroup(
@@ -3896,9 +3881,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_account_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_account_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl1_menu7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_account_main.setkBorderRadius(40);
@@ -3907,94 +3892,94 @@ public class Main extends javax.swing.JFrame
         pnl_account_main.setOpaque(false);
         pnl_account_main.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        pnl4_tab1.setkBorderRadius(40);
-        pnl4_tab1.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab1.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab1.setOpaque(false);
-        pnl4_tab1.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_accsetting.setkBorderRadius(40);
+        pnl_accsetting.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_accsetting.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_accsetting.setOpaque(false);
+        pnl_accsetting.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("PANEL 4 Tab 1");
 
-        javax.swing.GroupLayout pnl4_tab1Layout = new javax.swing.GroupLayout(pnl4_tab1);
-        pnl4_tab1.setLayout(pnl4_tab1Layout);
-        pnl4_tab1Layout.setHorizontalGroup(
-            pnl4_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_accsettingLayout = new javax.swing.GroupLayout(pnl_accsetting);
+        pnl_accsetting.setLayout(pnl_accsettingLayout);
+        pnl_accsettingLayout.setHorizontalGroup(
+            pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl4_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab1Layout.createSequentialGroup()
+            .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_accsettingLayout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl4_tab1Layout.setVerticalGroup(
-            pnl4_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_accsettingLayout.setVerticalGroup(
+            pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl4_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab1Layout.createSequentialGroup()
+            .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_accsettingLayout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
         );
 
-        pnl4_tab2.setkBorderRadius(40);
-        pnl4_tab2.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab2.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab2.setOpaque(false);
-        pnl4_tab2.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_acc_tab2.setkBorderRadius(40);
+        pnl_acc_tab2.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_acc_tab2.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_acc_tab2.setOpaque(false);
+        pnl_acc_tab2.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("PANEL 4 Tab 2");
 
-        javax.swing.GroupLayout pnl4_tab2Layout = new javax.swing.GroupLayout(pnl4_tab2);
-        pnl4_tab2.setLayout(pnl4_tab2Layout);
-        pnl4_tab2Layout.setHorizontalGroup(
-            pnl4_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_acc_tab2Layout = new javax.swing.GroupLayout(pnl_acc_tab2);
+        pnl_acc_tab2.setLayout(pnl_acc_tab2Layout);
+        pnl_acc_tab2Layout.setHorizontalGroup(
+            pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl4_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab2Layout.createSequentialGroup()
+            .addGroup(pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_acc_tab2Layout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl4_tab2Layout.setVerticalGroup(
-            pnl4_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_acc_tab2Layout.setVerticalGroup(
+            pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl4_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab2Layout.createSequentialGroup()
+            .addGroup(pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_acc_tab2Layout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
         );
 
-        pnl4_tab3.setkBorderRadius(40);
-        pnl4_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl4_tab3.setOpaque(false);
-        pnl4_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_acc_tab3.setkBorderRadius(40);
+        pnl_acc_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_acc_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_acc_tab3.setOpaque(false);
+        pnl_acc_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("PANEL 4 Tab 3");
 
-        javax.swing.GroupLayout pnl4_tab3Layout = new javax.swing.GroupLayout(pnl4_tab3);
-        pnl4_tab3.setLayout(pnl4_tab3Layout);
-        pnl4_tab3Layout.setHorizontalGroup(
-            pnl4_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_acc_tab3Layout = new javax.swing.GroupLayout(pnl_acc_tab3);
+        pnl_acc_tab3.setLayout(pnl_acc_tab3Layout);
+        pnl_acc_tab3Layout.setHorizontalGroup(
+            pnl_acc_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl4_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_acc_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_acc_tab3Layout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl4_tab3Layout.setVerticalGroup(
-            pnl4_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_acc_tab3Layout.setVerticalGroup(
+            pnl_acc_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl4_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl4_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_acc_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_acc_tab3Layout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
@@ -4006,21 +3991,21 @@ public class Main extends javax.swing.JFrame
             pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_accsetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_acc_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_acc_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_account_mainLayout.setVerticalGroup(
             pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_accsetting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_acc_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_account_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl4_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_acc_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_accountLayout = new javax.swing.GroupLayout(panel_account);
@@ -4344,8 +4329,9 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnReportKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(false, false, false, false, true, false, btn_pnl4_tab1);
-            onIndicator(lid4_1, lid4_2, lid4_3);
+            visibility(false, false, false, false, true, false, btn_report_menu1);
+            visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
+            onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
         }
     }//GEN-LAST:event_btnReportKeyPressed
 
@@ -4353,8 +4339,9 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btnaccountKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(false, false, false, false, false, true, btn_pnl5_tab1);
-            onIndicator(lid5_1, lid5_2, lid5_3);
+            visibility(false, false, false, false, false, true, btn_accsetting_menu);
+            visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
+            onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
         }
     }//GEN-LAST:event_btnaccountKeyPressed
 
@@ -4378,8 +4365,9 @@ public class Main extends javax.swing.JFrame
 
     private void btnaccountActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnaccountActionPerformed
     {//GEN-HEADEREND:event_btnaccountActionPerformed
-        visibility(false, false, false, false, false, true, btn_pnl5_tab1);
-        onIndicator(lid5_1, lid5_2, lid5_3);
+        visibility(false, false, false, false, false, true, btn_accsetting_menu);
+        visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
+        onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
     }//GEN-LAST:event_btnaccountActionPerformed
 
     private void lbl_dash_usrMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_dash_usrMouseClicked
@@ -4720,209 +4708,208 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_btn_proddet_menuKeyPressed
 
-    private void btn_pnl4_tab1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab1FocusGained
-    {//GEN-HEADEREND:event_btn_pnl4_tab1FocusGained
-        hover(btn_pnl4_tab1, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl4_tab1FocusGained
+    private void btn_accsetting_menuFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_accsetting_menuFocusGained
+    {//GEN-HEADEREND:event_btn_accsetting_menuFocusGained
+        hover(btn_accsetting_menu, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_accsetting_menuFocusGained
 
-    private void btn_pnl4_tab1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab1FocusLost
-    {//GEN-HEADEREND:event_btn_pnl4_tab1FocusLost
-        hover(btn_pnl4_tab1, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl4_tab1FocusLost
+    private void btn_accsetting_menuFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_accsetting_menuFocusLost
+    {//GEN-HEADEREND:event_btn_accsetting_menuFocusLost
+        hover(btn_accsetting_menu, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_accsetting_menuFocusLost
 
-    private void btn_pnl4_tab1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab1MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl4_tab1MouseEntered
+    private void btn_accsetting_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_accsetting_menuMouseEntered
+    {//GEN-HEADEREND:event_btn_accsetting_menuMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab1MouseEntered
+    }//GEN-LAST:event_btn_accsetting_menuMouseEntered
 
-    private void btn_pnl4_tab1MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab1MouseExited
-    {//GEN-HEADEREND:event_btn_pnl4_tab1MouseExited
+    private void btn_accsetting_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_accsetting_menuMouseExited
+    {//GEN-HEADEREND:event_btn_accsetting_menuMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab1MouseExited
+    }//GEN-LAST:event_btn_accsetting_menuMouseExited
 
-    private void btn_pnl4_tab1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl4_tab1KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl4_tab1KeyPressed
+    private void btn_accsetting_menuKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_accsetting_menuKeyPressed
+    {//GEN-HEADEREND:event_btn_accsetting_menuKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnReport.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl4_tab1, pnl4_tab2, pnl4_tab3);
-            onIndicator(lid4_1, lid4_2, lid4_3);
+            visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
+            onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
         }
-    }//GEN-LAST:event_btn_pnl4_tab1KeyPressed
+    }//GEN-LAST:event_btn_accsetting_menuKeyPressed
 
-    private void btn_pnl4_tab2FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab2FocusGained
-    {//GEN-HEADEREND:event_btn_pnl4_tab2FocusGained
-        hover(btn_pnl4_tab2, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl4_tab2FocusGained
+    private void btn_acc_menu2FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_acc_menu2FocusGained
+    {//GEN-HEADEREND:event_btn_acc_menu2FocusGained
+        hover(btn_acc_menu2, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_acc_menu2FocusGained
 
-    private void btn_pnl4_tab2FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab2FocusLost
-    {//GEN-HEADEREND:event_btn_pnl4_tab2FocusLost
-        hover(btn_pnl4_tab2, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl4_tab2FocusLost
+    private void btn_acc_menu2FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_acc_menu2FocusLost
+    {//GEN-HEADEREND:event_btn_acc_menu2FocusLost
+        hover(btn_acc_menu2, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_acc_menu2FocusLost
 
-    private void btn_pnl4_tab2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab2MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl4_tab2MouseEntered
+    private void btn_acc_menu2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_acc_menu2MouseEntered
+    {//GEN-HEADEREND:event_btn_acc_menu2MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab2MouseEntered
+    }//GEN-LAST:event_btn_acc_menu2MouseEntered
 
-    private void btn_pnl4_tab2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab2MouseExited
-    {//GEN-HEADEREND:event_btn_pnl4_tab2MouseExited
+    private void btn_acc_menu2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_acc_menu2MouseExited
+    {//GEN-HEADEREND:event_btn_acc_menu2MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab2MouseExited
+    }//GEN-LAST:event_btn_acc_menu2MouseExited
 
-    private void btn_pnl4_tab2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl4_tab2KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl4_tab2KeyPressed
+    private void btn_acc_menu2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_acc_menu2KeyPressed
+    {//GEN-HEADEREND:event_btn_acc_menu2KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnReport.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl4_tab2, pnl4_tab1, pnl4_tab3);
-            onIndicator(lid4_2, lid4_1, lid4_3);
+            visibility(pnl_acc_tab2, pnl_accsetting, pnl_acc_tab3);
+            onIndicator(lid_acc_menu2, lid_accsetting, lid_acc_menu3);
         }
-    }//GEN-LAST:event_btn_pnl4_tab2KeyPressed
+    }//GEN-LAST:event_btn_acc_menu2KeyPressed
 
-    private void btn_pnl4_tab3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab3FocusGained
-    {//GEN-HEADEREND:event_btn_pnl4_tab3FocusGained
-        hover(btn_pnl4_tab3, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl4_tab3FocusGained
+    private void btn_acc_menu3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_acc_menu3FocusGained
+    {//GEN-HEADEREND:event_btn_acc_menu3FocusGained
+        hover(btn_acc_menu3, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_acc_menu3FocusGained
 
-    private void btn_pnl4_tab3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl4_tab3FocusLost
-    {//GEN-HEADEREND:event_btn_pnl4_tab3FocusLost
-        hover(btn_pnl4_tab3, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl4_tab3FocusLost
+    private void btn_acc_menu3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_acc_menu3FocusLost
+    {//GEN-HEADEREND:event_btn_acc_menu3FocusLost
+        hover(btn_acc_menu3, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_acc_menu3FocusLost
 
-    private void btn_pnl4_tab3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab3MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl4_tab3MouseEntered
+    private void btn_acc_menu3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_acc_menu3MouseEntered
+    {//GEN-HEADEREND:event_btn_acc_menu3MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab3MouseEntered
+    }//GEN-LAST:event_btn_acc_menu3MouseEntered
 
-    private void btn_pnl4_tab3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl4_tab3MouseExited
-    {//GEN-HEADEREND:event_btn_pnl4_tab3MouseExited
+    private void btn_acc_menu3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_acc_menu3MouseExited
+    {//GEN-HEADEREND:event_btn_acc_menu3MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl4_tab3MouseExited
+    }//GEN-LAST:event_btn_acc_menu3MouseExited
 
-    private void btn_pnl4_tab3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl4_tab3KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl4_tab3KeyPressed
+    private void btn_acc_menu3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_acc_menu3KeyPressed
+    {//GEN-HEADEREND:event_btn_acc_menu3KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnReport.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl4_tab3, pnl4_tab1, pnl4_tab2);
-            onIndicator(lid4_3, lid4_1, lid4_2);
+            visibility(pnl_acc_tab3, pnl_accsetting, pnl_acc_tab2);
+            onIndicator(lid_acc_menu3, lid_accsetting, lid_acc_menu2);
         }
-    }//GEN-LAST:event_btn_pnl4_tab3KeyPressed
+    }//GEN-LAST:event_btn_acc_menu3KeyPressed
 
-    private void btn_pnl5_tab1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab1FocusGained
-    {//GEN-HEADEREND:event_btn_pnl5_tab1FocusGained
-        hover(btn_pnl5_tab1, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl5_tab1FocusGained
+    private void btn_report_menu1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu1FocusGained
+    {//GEN-HEADEREND:event_btn_report_menu1FocusGained
+        hover(btn_report_menu1, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_report_menu1FocusGained
 
-    private void btn_pnl5_tab1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab1FocusLost
-    {//GEN-HEADEREND:event_btn_pnl5_tab1FocusLost
-        hover(btn_pnl5_tab1, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl5_tab1FocusLost
+    private void btn_report_menu1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu1FocusLost
+    {//GEN-HEADEREND:event_btn_report_menu1FocusLost
+        hover(btn_report_menu1, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_report_menu1FocusLost
 
-    private void btn_pnl5_tab1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab1MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl5_tab1MouseEntered
+    private void btn_report_menu1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu1MouseEntered
+    {//GEN-HEADEREND:event_btn_report_menu1MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab1MouseEntered
+    }//GEN-LAST:event_btn_report_menu1MouseEntered
 
-    private void btn_pnl5_tab1MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab1MouseExited
-    {//GEN-HEADEREND:event_btn_pnl5_tab1MouseExited
+    private void btn_report_menu1MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu1MouseExited
+    {//GEN-HEADEREND:event_btn_report_menu1MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab1MouseExited
+    }//GEN-LAST:event_btn_report_menu1MouseExited
 
-    private void btn_pnl5_tab1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl5_tab1KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl5_tab1KeyPressed
+    private void btn_report_menu1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu1KeyPressed
+    {//GEN-HEADEREND:event_btn_report_menu1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl5_tab1, pnl5_tab2, pnl5_tab3);
-            onIndicator(lid5_1, lid5_2, lid5_3);
+            visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
+            onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
         }
-    }//GEN-LAST:event_btn_pnl5_tab1KeyPressed
+    }//GEN-LAST:event_btn_report_menu1KeyPressed
 
-    private void btn_pnl5_tab2FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab2FocusGained
-    {//GEN-HEADEREND:event_btn_pnl5_tab2FocusGained
-        hover(btn_pnl5_tab2, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl5_tab2FocusGained
+    private void btn_report_menu2FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu2FocusGained
+    {//GEN-HEADEREND:event_btn_report_menu2FocusGained
+        hover(btn_report_menu2, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_report_menu2FocusGained
 
-    private void btn_pnl5_tab2FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab2FocusLost
-    {//GEN-HEADEREND:event_btn_pnl5_tab2FocusLost
-        hover(btn_pnl5_tab2, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl5_tab2FocusLost
+    private void btn_report_menu2FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu2FocusLost
+    {//GEN-HEADEREND:event_btn_report_menu2FocusLost
+        hover(btn_report_menu2, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_report_menu2FocusLost
 
-    private void btn_pnl5_tab2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab2MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl5_tab2MouseEntered
+    private void btn_report_menu2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu2MouseEntered
+    {//GEN-HEADEREND:event_btn_report_menu2MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab2MouseEntered
+    }//GEN-LAST:event_btn_report_menu2MouseEntered
 
-    private void btn_pnl5_tab2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab2MouseExited
-    {//GEN-HEADEREND:event_btn_pnl5_tab2MouseExited
+    private void btn_report_menu2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu2MouseExited
+    {//GEN-HEADEREND:event_btn_report_menu2MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab2MouseExited
+    }//GEN-LAST:event_btn_report_menu2MouseExited
 
-    private void btn_pnl5_tab2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl5_tab2KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl5_tab2KeyPressed
+    private void btn_report_menu2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu2KeyPressed
+    {//GEN-HEADEREND:event_btn_report_menu2KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl5_tab2, pnl5_tab1, pnl5_tab3);
-            onIndicator(lid5_2, lid5_1, lid5_3);
+            visibility(pnl_report_tab2, pnl_report_tab1, pnl_report_tab3);
+            onIndicator(lid_report_menu2, lid_report_menu1, lid_report_menu3);
         }
-    }//GEN-LAST:event_btn_pnl5_tab2KeyPressed
+    }//GEN-LAST:event_btn_report_menu2KeyPressed
 
-    private void btn_pnl5_tab3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab3FocusGained
-    {//GEN-HEADEREND:event_btn_pnl5_tab3FocusGained
-        hover(btn_pnl5_tab3, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_pnl5_tab3FocusGained
+    private void btn_report_menu3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu3FocusGained
+    {//GEN-HEADEREND:event_btn_report_menu3FocusGained
+        hover(btn_report_menu3, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_report_menu3FocusGained
 
-    private void btn_pnl5_tab3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_pnl5_tab3FocusLost
-    {//GEN-HEADEREND:event_btn_pnl5_tab3FocusLost
-        hover(btn_pnl5_tab3, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_pnl5_tab3FocusLost
+    private void btn_report_menu3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu3FocusLost
+    {//GEN-HEADEREND:event_btn_report_menu3FocusLost
+        hover(btn_report_menu3, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_report_menu3FocusLost
 
-    private void btn_pnl5_tab3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab3MouseEntered
-    {//GEN-HEADEREND:event_btn_pnl5_tab3MouseEntered
+    private void btn_report_menu3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu3MouseEntered
+    {//GEN-HEADEREND:event_btn_report_menu3MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab3MouseEntered
+    }//GEN-LAST:event_btn_report_menu3MouseEntered
 
-    private void btn_pnl5_tab3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_pnl5_tab3MouseExited
-    {//GEN-HEADEREND:event_btn_pnl5_tab3MouseExited
+    private void btn_report_menu3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu3MouseExited
+    {//GEN-HEADEREND:event_btn_report_menu3MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_pnl5_tab3MouseExited
+    }//GEN-LAST:event_btn_report_menu3MouseExited
 
-    private void btn_pnl5_tab3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_pnl5_tab3KeyPressed
-    {//GEN-HEADEREND:event_btn_pnl5_tab3KeyPressed
+    private void btn_report_menu3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu3KeyPressed
+    {//GEN-HEADEREND:event_btn_report_menu3KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl5_tab3, pnl5_tab1, pnl5_tab2);
-            onIndicator(lid5_3, lid5_1, lid5_2);
+            visibility(pnl_report_tab3, pnl_report_tab1, pnl_report_tab2);
+            onIndicator(lid_report_menu3, lid_report_menu1, lid_report_menu2);
         }
-    }//GEN-LAST:event_btn_pnl5_tab3KeyPressed
+    }//GEN-LAST:event_btn_report_menu3KeyPressed
 
-    private void btn_pnl5_tab2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl5_tab2ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl5_tab2ActionPerformed
-        visibility(pnl5_tab2, pnl5_tab1, pnl5_tab3);
-        onIndicator(lid5_2, lid5_1, lid5_3);
-    }//GEN-LAST:event_btn_pnl5_tab2ActionPerformed
+    private void btn_report_menu2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu2ActionPerformed
+    {//GEN-HEADEREND:event_btn_report_menu2ActionPerformed
+
+    }//GEN-LAST:event_btn_report_menu2ActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
     {//GEN-HEADEREND:event_btn_addcust_menuActionPerformed
@@ -4991,41 +4978,39 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid_proddet, lid_addprod, lid_editprod);
     }//GEN-LAST:event_btn_proddet_menuActionPerformed
 
-    private void btn_pnl4_tab1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl4_tab1ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl4_tab1ActionPerformed
-        visibility(pnl4_tab1, pnl4_tab2, pnl4_tab3);
-        onIndicator(lid4_1, lid4_2, lid4_3);
-    }//GEN-LAST:event_btn_pnl4_tab1ActionPerformed
+    private void btn_accsetting_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_accsetting_menuActionPerformed
+    {//GEN-HEADEREND:event_btn_accsetting_menuActionPerformed
+        visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
+        onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
+    }//GEN-LAST:event_btn_accsetting_menuActionPerformed
 
-    private void btn_pnl4_tab2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl4_tab2ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl4_tab2ActionPerformed
-        visibility(pnl4_tab2, pnl4_tab1, pnl4_tab3);
-        onIndicator(lid4_2, lid4_1, lid4_3);
-    }//GEN-LAST:event_btn_pnl4_tab2ActionPerformed
+    private void btn_acc_menu2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_acc_menu2ActionPerformed
+    {//GEN-HEADEREND:event_btn_acc_menu2ActionPerformed
+        visibility(pnl_acc_tab2, pnl_accsetting, pnl_acc_tab3);
+        onIndicator(lid_acc_menu2, lid_accsetting, lid_acc_menu3);
+    }//GEN-LAST:event_btn_acc_menu2ActionPerformed
 
-    private void btn_pnl4_tab3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl4_tab3ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl4_tab3ActionPerformed
-        visibility(pnl4_tab3, pnl4_tab1, pnl4_tab2);
-        onIndicator(lid4_3, lid4_1, lid4_2);
-    }//GEN-LAST:event_btn_pnl4_tab3ActionPerformed
+    private void btn_acc_menu3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_acc_menu3ActionPerformed
+    {//GEN-HEADEREND:event_btn_acc_menu3ActionPerformed
+        visibility(pnl_acc_tab3, pnl_accsetting, pnl_acc_tab2);
+        onIndicator(lid_acc_menu3, lid_accsetting, lid_acc_menu2);
+    }//GEN-LAST:event_btn_acc_menu3ActionPerformed
 
-    private void btn_pnl5_tab1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl5_tab1ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl5_tab1ActionPerformed
-        visibility(pnl5_tab1, pnl5_tab2, pnl5_tab3);
-        onIndicator(lid5_1, lid5_2, lid5_3);
+    private void btn_report_menu1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu1ActionPerformed
+    {//GEN-HEADEREND:event_btn_report_menu1ActionPerformed
 
-    }//GEN-LAST:event_btn_pnl5_tab1ActionPerformed
+    }//GEN-LAST:event_btn_report_menu1ActionPerformed
 
-    private void btn_pnl5_tab3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl5_tab3ActionPerformed
-    {//GEN-HEADEREND:event_btn_pnl5_tab3ActionPerformed
-        visibility(pnl5_tab3, pnl5_tab1, pnl5_tab2);
-        onIndicator(lid5_3, lid5_1, lid5_2);
-    }//GEN-LAST:event_btn_pnl5_tab3ActionPerformed
+    private void btn_report_menu3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu3ActionPerformed
+    {//GEN-HEADEREND:event_btn_report_menu3ActionPerformed
+
+    }//GEN-LAST:event_btn_report_menu3ActionPerformed
 
     private void btnReportActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnReportActionPerformed
     {//GEN-HEADEREND:event_btnReportActionPerformed
-        visibility(false, false, false, false, true, false, btn_pnl4_tab1);
-        onIndicator(lid4_1, lid4_2, lid4_3);
+        visibility(false, false, false, false, true, false, btn_report_menu1);
+        visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
+        onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
     }//GEN-LAST:event_btnReportActionPerformed
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
@@ -5616,8 +5601,8 @@ public class Main extends javax.swing.JFrame
         panel_customer.setVisible(pnl1);
         panel_employee.setVisible(pnl2);
         panel_product.setVisible(pnl3);
-        panel_report.setVisible(pnl5);
-        panel_account.setVisible(pnl4);
+        panel_report.setVisible(pnl4);
+        panel_account.setVisible(pnl5);
         btn.grabFocus();
 
     }
@@ -5809,6 +5794,9 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btnEmployee;
     private com.k33ptoo.components.KButton btnProduct;
     private com.k33ptoo.components.KButton btnReport;
+    private com.k33ptoo.components.KButton btn_acc_menu2;
+    private com.k33ptoo.components.KButton btn_acc_menu3;
+    private com.k33ptoo.components.KButton btn_accsetting_menu;
     private com.k33ptoo.components.KButton btn_addcust_add;
     private com.k33ptoo.components.KButton btn_addcust_menu;
     private com.k33ptoo.components.KButton btn_addemp_add;
@@ -5827,13 +5815,10 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_empdet_menu;
     private com.k33ptoo.components.KButton btn_login;
-    private com.k33ptoo.components.KButton btn_pnl4_tab1;
-    private com.k33ptoo.components.KButton btn_pnl4_tab2;
-    private com.k33ptoo.components.KButton btn_pnl4_tab3;
-    private com.k33ptoo.components.KButton btn_pnl5_tab1;
-    private com.k33ptoo.components.KButton btn_pnl5_tab2;
-    private com.k33ptoo.components.KButton btn_pnl5_tab3;
     private com.k33ptoo.components.KButton btn_proddet_menu;
+    private com.k33ptoo.components.KButton btn_report_menu1;
+    private com.k33ptoo.components.KButton btn_report_menu2;
+    private com.k33ptoo.components.KButton btn_report_menu3;
     private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
@@ -5842,7 +5827,6 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel lbl_close;
@@ -5854,12 +5838,9 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel lbl_pswd_icon;
     private javax.swing.JLabel lbl_role;
     private javax.swing.JLabel lbl_usr_icon;
-    private com.k33ptoo.components.KGradientPanel lid4_1;
-    private com.k33ptoo.components.KGradientPanel lid4_2;
-    private com.k33ptoo.components.KGradientPanel lid4_3;
-    private com.k33ptoo.components.KGradientPanel lid5_1;
-    private com.k33ptoo.components.KGradientPanel lid5_2;
-    private com.k33ptoo.components.KGradientPanel lid5_3;
+    private com.k33ptoo.components.KGradientPanel lid_acc_menu2;
+    private com.k33ptoo.components.KGradientPanel lid_acc_menu3;
+    private com.k33ptoo.components.KGradientPanel lid_accsetting;
     private com.k33ptoo.components.KGradientPanel lid_add_cust;
     private com.k33ptoo.components.KGradientPanel lid_add_emp;
     private com.k33ptoo.components.KGradientPanel lid_addprod;
@@ -5869,6 +5850,9 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel lid_editprod;
     private com.k33ptoo.components.KGradientPanel lid_emp_det;
     private com.k33ptoo.components.KGradientPanel lid_proddet;
+    private com.k33ptoo.components.KGradientPanel lid_report_menu1;
+    private com.k33ptoo.components.KGradientPanel lid_report_menu2;
+    private com.k33ptoo.components.KGradientPanel lid_report_menu3;
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_bg;
     private com.k33ptoo.components.KGradientPanel panel_customer;
@@ -5883,22 +5867,14 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_login_main;
     private com.k33ptoo.components.KGradientPanel panel_product;
     private com.k33ptoo.components.KGradientPanel panel_report;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu10;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu11;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu12;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu7;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu8;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu9;
-    private com.k33ptoo.components.KGradientPanel pnl4_tab1;
-    private com.k33ptoo.components.KGradientPanel pnl4_tab2;
-    private com.k33ptoo.components.KGradientPanel pnl4_tab3;
-    private com.k33ptoo.components.KGradientPanel pnl5_main;
-    private com.k33ptoo.components.KGradientPanel pnl5_menubar;
-    private com.k33ptoo.components.KGradientPanel pnl5_tab1;
-    private com.k33ptoo.components.KGradientPanel pnl5_tab2;
-    private com.k33ptoo.components.KGradientPanel pnl5_tab3;
+    private com.k33ptoo.components.KGradientPanel pnl_acc_menu2;
+    private com.k33ptoo.components.KGradientPanel pnl_acc_menu3;
+    private com.k33ptoo.components.KGradientPanel pnl_acc_tab2;
+    private com.k33ptoo.components.KGradientPanel pnl_acc_tab3;
     private com.k33ptoo.components.KGradientPanel pnl_account_main;
     private com.k33ptoo.components.KGradientPanel pnl_account_menubar;
+    private com.k33ptoo.components.KGradientPanel pnl_accsetting;
+    private com.k33ptoo.components.KGradientPanel pnl_accsetting_menu;
     private com.k33ptoo.components.KGradientPanel pnl_add_cust;
     private com.k33ptoo.components.KGradientPanel pnl_add_emp;
     private com.k33ptoo.components.KGradientPanel pnl_add_prod;
@@ -5926,6 +5902,14 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_prod_main;
     private com.k33ptoo.components.KGradientPanel pnl_prod_menubar;
     private com.k33ptoo.components.KGradientPanel pnl_proddet_menu;
+    private com.k33ptoo.components.KGradientPanel pnl_report_main;
+    private com.k33ptoo.components.KGradientPanel pnl_report_menu1;
+    private com.k33ptoo.components.KGradientPanel pnl_report_menu2;
+    private com.k33ptoo.components.KGradientPanel pnl_report_menu3;
+    private com.k33ptoo.components.KGradientPanel pnl_report_menubar;
+    private com.k33ptoo.components.KGradientPanel pnl_report_tab1;
+    private com.k33ptoo.components.KGradientPanel pnl_report_tab2;
+    private com.k33ptoo.components.KGradientPanel pnl_report_tab3;
     private javax.swing.JScrollPane scrolltbl_custdet;
     private javax.swing.JScrollPane scrolltbl_editcust;
     private javax.swing.JScrollPane scrolltbl_editemp;
