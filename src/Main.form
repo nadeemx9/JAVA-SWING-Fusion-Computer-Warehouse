@@ -978,7 +978,7 @@
                           <Component id="panel_employee" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_usermanual" alignment="0" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Component id="panel_report" alignment="0" max="32767" attributes="0"/>
@@ -1002,7 +1002,7 @@
                           <Component id="panel_employee" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="panel_usermanual" alignment="1" max="32767" attributes="0"/>
+                          <Component id="panel_account" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
                           <Component id="panel_report" alignment="0" max="32767" attributes="0"/>
@@ -4954,7 +4954,7 @@
                     </Container>
                   </SubComponents>
                 </Container>
-                <Container class="com.k33ptoo.components.KGradientPanel" name="panel_usermanual">
+                <Container class="com.k33ptoo.components.KGradientPanel" name="panel_account">
                   <Properties>
                     <Property name="kBorderRadius" type="int" value="40"/>
                     <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4972,8 +4972,8 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="staff_menubar" max="32767" attributes="0"/>
-                                  <Component id="pnl_staff_main" max="32767" attributes="0"/>
+                                  <Component id="pnl_account_menubar" max="32767" attributes="0"/>
+                                  <Component id="pnl_account_main" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -4983,16 +4983,16 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="staff_menubar" pref="59" max="32767" attributes="0"/>
+                              <Component id="pnl_account_menubar" pref="59" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="pnl_staff_main" max="32767" attributes="0"/>
+                              <Component id="pnl_account_main" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="com.k33ptoo.components.KGradientPanel" name="staff_menubar">
+                    <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_account_menubar">
                       <Properties>
                         <Property name="kBorderRadius" type="int" value="20"/>
                         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -5026,9 +5026,9 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl1_menu7" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl1_menu9" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl1_menu8" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl1_menu7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl1_menu9" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl1_menu8" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -5383,7 +5383,7 @@
                         </Container>
                       </SubComponents>
                     </Container>
-                    <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_staff_main">
+                    <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_account_main">
                       <Properties>
                         <Property name="kBorderRadius" type="int" value="40"/>
                         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
