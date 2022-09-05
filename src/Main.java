@@ -5056,7 +5056,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
         txt_editemp_id.grabFocus();
-        bindTableData(table_empdet, "employee");
+        bindTableData(table_editemp, "employee");
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
     private void btn_empdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_empdet_menuActionPerformed
@@ -5382,7 +5382,22 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_rmvActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "delete from employee where id = ?";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_editemp_id.getText());
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+            bindTableData(table_editemp, "employee");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_editemp_rmvActionPerformed
 
     private void btn_editemp_rmvKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editemp_rmvKeyPressed
