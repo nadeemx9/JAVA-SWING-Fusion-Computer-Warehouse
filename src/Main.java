@@ -24,6 +24,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import textfield.PasswordField;
 import textfield.TextField;
 
 public class Main extends javax.swing.JFrame
@@ -2149,6 +2150,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addemp_pswd.setLabelText("PASSWORD");
+        txt_addemp_pswd.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_pswd.setNextFocusableComponent(txt_addemp_cpswd);
         txt_addemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_addemp_pswd.setShowAndHide(true);
@@ -2156,6 +2158,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_cpswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_cpswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addemp_cpswd.setLabelText("CONFIRM PASSWORD");
+        txt_addemp_cpswd.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_cpswd.setNextFocusableComponent(btn_addemp_add);
         txt_addemp_cpswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_addemp_cpswd.setShowAndHide(true);
@@ -2198,7 +2201,7 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_cpswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -5167,6 +5170,7 @@ public class Main extends javax.swing.JFrame
             JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
             clearTextFields(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr);
             txt_addcust_id.setText(getMaxID("customer"));
+            txt_addcust_id.grabFocus();
         }
         catch (Exception e)
         {
@@ -5218,7 +5222,9 @@ public class Main extends javax.swing.JFrame
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Record Inserted Successfully!");
+            clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr, txt_addemp_pswd, txt_addemp_cpswd);
             txt_addemp_id.setText(getMaxID("employee"));
+            txt_addemp_id.grabFocus();
         }
         catch (Exception e)
         {
@@ -5708,6 +5714,28 @@ public class Main extends javax.swing.JFrame
         txt6.setText("");
     }
 
+    public void clearTextFields(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextField txt6, TextField txt7)
+    {
+        txt1.setText("");
+        txt2.setText("");
+        txt3.setText("");
+        txt4.setText("");
+        txt5.setText("");
+        txt6.setText("");
+        txt7.setText("");
+    }
+
+    public void clearTextFields(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextField txt6, PasswordField txt7, PasswordField txt8)
+    {
+        txt1.setText("");
+        txt2.setText("");
+        txt3.setText("");
+        txt4.setText("");
+        txt5.setText("");
+        txt6.setText("");
+        txt7.setText("");
+        txt8.setText("");
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btnCustomer;
     private com.k33ptoo.components.KButton btnEmployee;
