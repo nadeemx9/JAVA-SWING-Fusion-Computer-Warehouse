@@ -607,7 +607,7 @@
                               <Component id="btnEmployee" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnProduct" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnReport" alignment="1" max="32767" attributes="0"/>
-                              <Component id="btnUser" alignment="1" max="32767" attributes="0"/>
+                              <Component id="btnaccount" alignment="1" max="32767" attributes="0"/>
                               <Component id="btnCustomer" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
@@ -633,7 +633,7 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Component id="btnReport" min="-2" pref="63" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                          <Component id="btnUser" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="btnaccount" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace pref="52" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -808,7 +808,7 @@
                       <Color blue="6" green="a7" red="ff" type="rgb"/>
                     </Property>
                     <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="btnUser"/>
+                      <ComponentRef name="btnaccount"/>
                     </Property>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[450, 60]"/>
@@ -822,7 +822,7 @@
                     <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btnReportKeyPressed"/>
                   </Events>
                 </Component>
-                <Component class="com.k33ptoo.components.KButton" name="btnUser">
+                <Component class="com.k33ptoo.components.KButton" name="btnaccount">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
@@ -861,11 +861,11 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btnUserFocusGained"/>
-                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btnUserFocusLost"/>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnUserMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUserActionPerformed"/>
-                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btnUserKeyPressed"/>
+                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btnaccountFocusGained"/>
+                    <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="btnaccountFocusLost"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnaccountMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaccountActionPerformed"/>
+                    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btnaccountKeyPressed"/>
                   </Events>
                 </Component>
                 <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_menu_head">
@@ -3553,11 +3553,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Component id="pnl_add_prod_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_addprod_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="pnl_edit_prod_menu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_editprod_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="pnl1_menu18" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnl_proddet_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="418" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -3567,16 +3567,16 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_add_prod_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl1_menu18" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_edit_prod_menu" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_addprod_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_proddet_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_editprod_menu" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_add_prod_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_addprod_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -3596,7 +3596,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lid3_1" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="lid_addprod" alignment="0" pref="188" max="32767" attributes="0"/>
                                           <Component id="btn_addprod_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3609,7 +3609,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btn_addprod_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                      <Component id="lid3_1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lid_addprod" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -3659,7 +3659,7 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_addprod_menuKeyPressed"/>
                               </Events>
                             </Component>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid3_1">
+                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid_addprod">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="df" green="df" red="e1" type="rgb"/>
@@ -3692,7 +3692,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_edit_prod_menu">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_editprod_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -3712,7 +3712,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lid3_2" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="lid_editprod" alignment="0" pref="188" max="32767" attributes="0"/>
                                           <Component id="btn_editprod_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3725,7 +3725,7 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="btn_editprod_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                      <Component id="lid3_2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lid_editprod" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -3774,7 +3774,7 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_editprod_menuKeyPressed"/>
                               </Events>
                             </Component>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid3_2">
+                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid_editprod">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="df" green="df" red="e1" type="rgb"/>
@@ -3807,7 +3807,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl1_menu18">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_proddet_menu">
                           <Properties>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                               <Color blue="6d" green="cb" red="ff" type="rgb"/>
@@ -3827,7 +3827,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lid3_3" alignment="0" pref="188" max="32767" attributes="0"/>
+                                          <Component id="lid_proddet" alignment="0" pref="188" max="32767" attributes="0"/>
                                           <Component id="btn_proddet_menu" alignment="0" pref="188" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -3840,7 +3840,7 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="btn_proddet_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                      <Component id="lid3_3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lid_proddet" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -3889,7 +3889,7 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_proddet_menuKeyPressed"/>
                               </Events>
                             </Component>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid3_3">
+                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid_proddet">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="df" green="df" red="e1" type="rgb"/>
@@ -3944,13 +3944,13 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                  <Component id="pnl_add_product" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="pnl_add_prod" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                                  <Component id="pnl_edit_product" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_edit_prod" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                                  <Component id="pnl3_tab3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_prod_det" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3958,19 +3958,19 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <EmptySpace min="0" pref="672" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                                  <Component id="pnl_add_product" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_add_prod" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                                  <Component id="pnl_edit_product" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="pnl_edit_prod" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                                  <Component id="pnl3_tab3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_prod_det" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_add_product">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_add_prod">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4231,7 +4231,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_edit_product">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_edit_prod">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4259,7 +4259,7 @@
                             </DimensionLayout>
                           </Layout>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl3_tab3">
+                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_prod_det">
                           <Properties>
                             <Property name="kBorderRadius" type="int" value="40"/>
                             <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">

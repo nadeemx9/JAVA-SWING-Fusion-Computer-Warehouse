@@ -116,7 +116,7 @@ public class Main extends javax.swing.JFrame
         btnEmployee = new com.k33ptoo.components.KButton();
         btnProduct = new com.k33ptoo.components.KButton();
         btnReport = new com.k33ptoo.components.KButton();
-        btnUser = new com.k33ptoo.components.KButton();
+        btnaccount = new com.k33ptoo.components.KButton();
         pnl_menu_head = new com.k33ptoo.components.KGradientPanel();
         lbl_dash_welcome = new javax.swing.JLabel();
         lbl_dash_usr = new javax.swing.JLabel();
@@ -199,17 +199,17 @@ public class Main extends javax.swing.JFrame
         btn_empdet = new com.k33ptoo.components.KButton();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         pnl_prod_menubar = new com.k33ptoo.components.KGradientPanel();
-        pnl_add_prod_menu = new com.k33ptoo.components.KGradientPanel();
+        pnl_addprod_menu = new com.k33ptoo.components.KGradientPanel();
         btn_addprod_menu = new com.k33ptoo.components.KButton();
-        lid3_1 = new com.k33ptoo.components.KGradientPanel();
-        pnl_edit_prod_menu = new com.k33ptoo.components.KGradientPanel();
+        lid_addprod = new com.k33ptoo.components.KGradientPanel();
+        pnl_editprod_menu = new com.k33ptoo.components.KGradientPanel();
         btn_editprod_menu = new com.k33ptoo.components.KButton();
-        lid3_2 = new com.k33ptoo.components.KGradientPanel();
-        pnl1_menu18 = new com.k33ptoo.components.KGradientPanel();
+        lid_editprod = new com.k33ptoo.components.KGradientPanel();
+        pnl_proddet_menu = new com.k33ptoo.components.KGradientPanel();
         btn_proddet_menu = new com.k33ptoo.components.KButton();
-        lid3_3 = new com.k33ptoo.components.KGradientPanel();
+        lid_proddet = new com.k33ptoo.components.KGradientPanel();
         pnl_prod_main = new com.k33ptoo.components.KGradientPanel();
-        pnl_add_product = new com.k33ptoo.components.KGradientPanel();
+        pnl_add_prod = new com.k33ptoo.components.KGradientPanel();
         txt_addprod_id = new textfield.TextField();
         txt_addprod_costprice = new textfield.TextField();
         txt_addprod_sellingprice = new textfield.TextField();
@@ -217,8 +217,8 @@ public class Main extends javax.swing.JFrame
         txt_addprod_nm = new textfield.TextField();
         btn_addprod = new com.k33ptoo.components.KButton();
         txt_addprod_quantity = new textfield.TextField();
-        pnl_edit_product = new com.k33ptoo.components.KGradientPanel();
-        pnl3_tab3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_edit_prod = new com.k33ptoo.components.KGradientPanel();
+        pnl_prod_det = new com.k33ptoo.components.KGradientPanel();
         jLabel17 = new javax.swing.JLabel();
         panel_report = new com.k33ptoo.components.KGradientPanel();
         pnl5_menubar = new com.k33ptoo.components.KGradientPanel();
@@ -704,7 +704,7 @@ public class Main extends javax.swing.JFrame
         btnReport.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btnReport.setkPressedColor(new java.awt.Color(255, 167, 6));
         btnReport.setkStartColor(new java.awt.Color(255, 167, 6));
-        btnReport.setNextFocusableComponent(btnUser);
+        btnReport.setNextFocusableComponent(btnaccount);
         btnReport.setPreferredSize(new java.awt.Dimension(450, 60));
         btnReport.addFocusListener(new java.awt.event.FocusAdapter()
         {
@@ -739,49 +739,49 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        btnUser.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btnUser.setText("USER MANUAL");
-        btnUser.setToolTipText("");
-        btnUser.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btnUser.setkBorderRadius(30);
-        btnUser.setkEndColor(new java.awt.Color(255, 167, 6));
-        btnUser.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btnUser.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btnUser.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btnUser.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btnUser.setkStartColor(new java.awt.Color(255, 167, 6));
-        btnUser.setNextFocusableComponent(btnCustomer);
-        btnUser.setPreferredSize(new java.awt.Dimension(450, 60));
-        btnUser.addFocusListener(new java.awt.event.FocusAdapter()
+        btnaccount.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnaccount.setText("USER MANUAL");
+        btnaccount.setToolTipText("");
+        btnaccount.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btnaccount.setkBorderRadius(30);
+        btnaccount.setkEndColor(new java.awt.Color(255, 167, 6));
+        btnaccount.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btnaccount.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btnaccount.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btnaccount.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btnaccount.setkStartColor(new java.awt.Color(255, 167, 6));
+        btnaccount.setNextFocusableComponent(btnCustomer);
+        btnaccount.setPreferredSize(new java.awt.Dimension(450, 60));
+        btnaccount.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btnUserFocusGained(evt);
+                btnaccountFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btnUserFocusLost(evt);
+                btnaccountFocusLost(evt);
             }
         });
-        btnUser.addMouseListener(new java.awt.event.MouseAdapter()
+        btnaccount.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btnUserMouseEntered(evt);
+                btnaccountMouseEntered(evt);
             }
         });
-        btnUser.addActionListener(new java.awt.event.ActionListener()
+        btnaccount.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnUserActionPerformed(evt);
+                btnaccountActionPerformed(evt);
             }
         });
-        btnUser.addKeyListener(new java.awt.event.KeyAdapter()
+        btnaccount.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btnUserKeyPressed(evt);
+                btnaccountKeyPressed(evt);
             }
         });
 
@@ -848,7 +848,7 @@ public class Main extends javax.swing.JFrame
                     .addComponent(btnEmployee, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnProduct, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnaccount, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(50, 50, 50))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_dash_menuLayout.createSequentialGroup()
@@ -870,7 +870,7 @@ public class Main extends javax.swing.JFrame
                 .addGap(50, 50, 50)
                 .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(btnUser, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnaccount, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -2590,10 +2590,10 @@ public class Main extends javax.swing.JFrame
         pnl_prod_menubar.setOpaque(false);
         pnl_prod_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
 
-        pnl_add_prod_menu.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_add_prod_menu.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_add_prod_menu.setOpaque(false);
-        pnl_add_prod_menu.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_addprod_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_addprod_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_addprod_menu.setOpaque(false);
+        pnl_addprod_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
         btn_addprod_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_addprod_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
@@ -2643,49 +2643,49 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        lid3_1.setBackground(new java.awt.Color(225, 223, 223));
-        lid3_1.setkBorderRadius(15);
-        lid3_1.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid3_1.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid3_1.setOpaque(false);
-        lid3_1.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_addprod.setBackground(new java.awt.Color(225, 223, 223));
+        lid_addprod.setkBorderRadius(15);
+        lid_addprod.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_addprod.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_addprod.setOpaque(false);
+        lid_addprod.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid3_1Layout = new javax.swing.GroupLayout(lid3_1);
-        lid3_1.setLayout(lid3_1Layout);
-        lid3_1Layout.setHorizontalGroup(
-            lid3_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_addprodLayout = new javax.swing.GroupLayout(lid_addprod);
+        lid_addprod.setLayout(lid_addprodLayout);
+        lid_addprodLayout.setHorizontalGroup(
+            lid_addprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid3_1Layout.setVerticalGroup(
-            lid3_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_addprodLayout.setVerticalGroup(
+            lid_addprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl_add_prod_menuLayout = new javax.swing.GroupLayout(pnl_add_prod_menu);
-        pnl_add_prod_menu.setLayout(pnl_add_prod_menuLayout);
-        pnl_add_prod_menuLayout.setHorizontalGroup(
-            pnl_add_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_add_prod_menuLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_addprod_menuLayout = new javax.swing.GroupLayout(pnl_addprod_menu);
+        pnl_addprod_menu.setLayout(pnl_addprod_menuLayout);
+        pnl_addprod_menuLayout.setHorizontalGroup(
+            pnl_addprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_addprod_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_add_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid3_1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                .addGroup(pnl_addprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_addprod, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                     .addComponent(btn_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl_add_prod_menuLayout.setVerticalGroup(
-            pnl_add_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_add_prod_menuLayout.createSequentialGroup()
+        pnl_addprod_menuLayout.setVerticalGroup(
+            pnl_addprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_addprod_menuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_addprod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid3_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lid_addprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        pnl_edit_prod_menu.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_edit_prod_menu.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_edit_prod_menu.setOpaque(false);
-        pnl_edit_prod_menu.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_editprod_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_editprod_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_editprod_menu.setOpaque(false);
+        pnl_editprod_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
         btn_editprod_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_editprod_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
@@ -2735,48 +2735,48 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        lid3_2.setBackground(new java.awt.Color(225, 223, 223));
-        lid3_2.setkBorderRadius(15);
-        lid3_2.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid3_2.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid3_2.setOpaque(false);
-        lid3_2.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_editprod.setBackground(new java.awt.Color(225, 223, 223));
+        lid_editprod.setkBorderRadius(15);
+        lid_editprod.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_editprod.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_editprod.setOpaque(false);
+        lid_editprod.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid3_2Layout = new javax.swing.GroupLayout(lid3_2);
-        lid3_2.setLayout(lid3_2Layout);
-        lid3_2Layout.setHorizontalGroup(
-            lid3_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_editprodLayout = new javax.swing.GroupLayout(lid_editprod);
+        lid_editprod.setLayout(lid_editprodLayout);
+        lid_editprodLayout.setHorizontalGroup(
+            lid_editprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid3_2Layout.setVerticalGroup(
-            lid3_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_editprodLayout.setVerticalGroup(
+            lid_editprodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl_edit_prod_menuLayout = new javax.swing.GroupLayout(pnl_edit_prod_menu);
-        pnl_edit_prod_menu.setLayout(pnl_edit_prod_menuLayout);
-        pnl_edit_prod_menuLayout.setHorizontalGroup(
-            pnl_edit_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_edit_prod_menuLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_editprod_menuLayout = new javax.swing.GroupLayout(pnl_editprod_menu);
+        pnl_editprod_menu.setLayout(pnl_editprod_menuLayout);
+        pnl_editprod_menuLayout.setHorizontalGroup(
+            pnl_editprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_editprod_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_edit_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid3_2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                .addGroup(pnl_editprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_editprod, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                     .addComponent(btn_editprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl_edit_prod_menuLayout.setVerticalGroup(
-            pnl_edit_prod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_edit_prod_menuLayout.createSequentialGroup()
+        pnl_editprod_menuLayout.setVerticalGroup(
+            pnl_editprod_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_editprod_menuLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_editprod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid3_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_editprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl1_menu18.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu18.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl1_menu18.setOpaque(false);
-        pnl1_menu18.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_proddet_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_proddet_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_proddet_menu.setOpaque(false);
+        pnl_proddet_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
         btn_proddet_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_proddet_menu.setText("PRODUCT DETAIL");
@@ -2826,42 +2826,42 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        lid3_3.setBackground(new java.awt.Color(225, 223, 223));
-        lid3_3.setkBorderRadius(15);
-        lid3_3.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid3_3.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid3_3.setOpaque(false);
-        lid3_3.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_proddet.setBackground(new java.awt.Color(225, 223, 223));
+        lid_proddet.setkBorderRadius(15);
+        lid_proddet.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_proddet.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_proddet.setOpaque(false);
+        lid_proddet.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid3_3Layout = new javax.swing.GroupLayout(lid3_3);
-        lid3_3.setLayout(lid3_3Layout);
-        lid3_3Layout.setHorizontalGroup(
-            lid3_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_proddetLayout = new javax.swing.GroupLayout(lid_proddet);
+        lid_proddet.setLayout(lid_proddetLayout);
+        lid_proddetLayout.setHorizontalGroup(
+            lid_proddetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid3_3Layout.setVerticalGroup(
-            lid3_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_proddetLayout.setVerticalGroup(
+            lid_proddetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl1_menu18Layout = new javax.swing.GroupLayout(pnl1_menu18);
-        pnl1_menu18.setLayout(pnl1_menu18Layout);
-        pnl1_menu18Layout.setHorizontalGroup(
-            pnl1_menu18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu18Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_proddet_menuLayout = new javax.swing.GroupLayout(pnl_proddet_menu);
+        pnl_proddet_menu.setLayout(pnl_proddet_menuLayout);
+        pnl_proddet_menuLayout.setHorizontalGroup(
+            pnl_proddet_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_proddet_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl1_menu18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid3_3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                .addGroup(pnl_proddet_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_proddet, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                     .addComponent(btn_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl1_menu18Layout.setVerticalGroup(
-            pnl1_menu18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl1_menu18Layout.createSequentialGroup()
+        pnl_proddet_menuLayout.setVerticalGroup(
+            pnl_proddet_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_proddet_menuLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_proddet_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid3_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout pnl_prod_menubarLayout = new javax.swing.GroupLayout(pnl_prod_menubar);
@@ -2870,11 +2870,11 @@ public class Main extends javax.swing.JFrame
             pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(pnl1_menu18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(418, Short.MAX_VALUE))
         );
         pnl_prod_menubarLayout.setVerticalGroup(
@@ -2882,9 +2882,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu18, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -2893,11 +2893,11 @@ public class Main extends javax.swing.JFrame
         pnl_prod_main.setOpaque(false);
         pnl_prod_main.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        pnl_add_product.setkBorderRadius(40);
-        pnl_add_product.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_add_product.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_add_product.setOpaque(false);
-        pnl_add_product.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_add_prod.setkBorderRadius(40);
+        pnl_add_prod.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_add_prod.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_add_prod.setOpaque(false);
+        pnl_add_prod.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         txt_addprod_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_id.setFocusCycleRoot(true);
@@ -3008,41 +3008,41 @@ public class Main extends javax.swing.JFrame
         txt_addprod_quantity.setNextFocusableComponent(btn_addprod);
         txt_addprod_quantity.setPreferredSize(new java.awt.Dimension(404, 64));
 
-        javax.swing.GroupLayout pnl_add_productLayout = new javax.swing.GroupLayout(pnl_add_product);
-        pnl_add_product.setLayout(pnl_add_productLayout);
-        pnl_add_productLayout.setHorizontalGroup(
-            pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_add_productLayout.createSequentialGroup()
-                .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_add_productLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_add_prodLayout = new javax.swing.GroupLayout(pnl_add_prod);
+        pnl_add_prod.setLayout(pnl_add_prodLayout);
+        pnl_add_prodLayout.setHorizontalGroup(
+            pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_add_prodLayout.createSequentialGroup()
+                .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_add_prodLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_addprod_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_addprod_costprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cmbbox_addprod_brand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(100, 100, 100)
-                        .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_addprod_sellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_addprod_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_addprod_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnl_add_productLayout.createSequentialGroup()
+                    .addGroup(pnl_add_prodLayout.createSequentialGroup()
                         .addGap(400, 400, 400)
                         .addComponent(btn_addprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
-        pnl_add_productLayout.setVerticalGroup(
-            pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_add_productLayout.createSequentialGroup()
+        pnl_add_prodLayout.setVerticalGroup(
+            pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_add_prodLayout.createSequentialGroup()
                 .addGap(236, 236, 236)
-                .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addprod_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addprod_nm, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txt_addprod_sellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addprod_costprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_add_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_add_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addprod_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbbox_addprod_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
@@ -3050,49 +3050,49 @@ public class Main extends javax.swing.JFrame
                 .addGap(50, 50, 50))
         );
 
-        pnl_edit_product.setkBorderRadius(40);
-        pnl_edit_product.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_edit_product.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_edit_product.setOpaque(false);
-        pnl_edit_product.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_edit_prod.setkBorderRadius(40);
+        pnl_edit_prod.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_edit_prod.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_edit_prod.setOpaque(false);
+        pnl_edit_prod.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        javax.swing.GroupLayout pnl_edit_productLayout = new javax.swing.GroupLayout(pnl_edit_product);
-        pnl_edit_product.setLayout(pnl_edit_productLayout);
-        pnl_edit_productLayout.setHorizontalGroup(
-            pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_edit_prodLayout = new javax.swing.GroupLayout(pnl_edit_prod);
+        pnl_edit_prod.setLayout(pnl_edit_prodLayout);
+        pnl_edit_prodLayout.setHorizontalGroup(
+            pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
         );
-        pnl_edit_productLayout.setVerticalGroup(
-            pnl_edit_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_edit_prodLayout.setVerticalGroup(
+            pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
         );
 
-        pnl3_tab3.setkBorderRadius(40);
-        pnl3_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl3_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl3_tab3.setOpaque(false);
-        pnl3_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_prod_det.setkBorderRadius(40);
+        pnl_prod_det.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_prod_det.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_prod_det.setOpaque(false);
+        pnl_prod_det.setPreferredSize(new java.awt.Dimension(1108, 672));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("PANEL 3 Tab 3");
 
-        javax.swing.GroupLayout pnl3_tab3Layout = new javax.swing.GroupLayout(pnl3_tab3);
-        pnl3_tab3.setLayout(pnl3_tab3Layout);
-        pnl3_tab3Layout.setHorizontalGroup(
-            pnl3_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_prod_detLayout = new javax.swing.GroupLayout(pnl_prod_det);
+        pnl_prod_det.setLayout(pnl_prod_detLayout);
+        pnl_prod_detLayout.setHorizontalGroup(
+            pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl3_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl3_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_prod_detLayout.createSequentialGroup()
                     .addGap(404, 404, 404)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(404, Short.MAX_VALUE)))
         );
-        pnl3_tab3Layout.setVerticalGroup(
-            pnl3_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_prod_detLayout.setVerticalGroup(
+            pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl3_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl3_tab3Layout.createSequentialGroup()
+            .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_prod_detLayout.createSequentialGroup()
                     .addGap(311, 311, 311)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(311, Short.MAX_VALUE)))
@@ -3104,21 +3104,21 @@ public class Main extends javax.swing.JFrame
             pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_add_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_add_prod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_edit_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_edit_prod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl3_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_prod_det, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_prod_mainLayout.setVerticalGroup(
             pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 672, Short.MAX_VALUE)
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_add_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_add_prod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_edit_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_edit_prod, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_prod_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl3_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnl_prod_det, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_productLayout = new javax.swing.GroupLayout(panel_product);
@@ -4209,10 +4209,10 @@ public class Main extends javax.swing.JFrame
         btnReport.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btnReportMouseEntered
 
-    private void btnUserMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnUserMouseEntered
-    {//GEN-HEADEREND:event_btnUserMouseEntered
-        btnUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_btnUserMouseEntered
+    private void btnaccountMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnaccountMouseEntered
+    {//GEN-HEADEREND:event_btnaccountMouseEntered
+        btnaccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btnaccountMouseEntered
 
     private void btn_loginFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_loginFocusGained
     {//GEN-HEADEREND:event_btn_loginFocusGained
@@ -4293,15 +4293,15 @@ public class Main extends javax.swing.JFrame
         hover(btnReport, new Color(255, 167, 6), Color.white);
     }//GEN-LAST:event_btnReportFocusLost
 
-    private void btnUserFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnUserFocusGained
-    {//GEN-HEADEREND:event_btnUserFocusGained
-        hover(btnUser, new Color(1, 109, 218), Color.black);
-    }//GEN-LAST:event_btnUserFocusGained
+    private void btnaccountFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnaccountFocusGained
+    {//GEN-HEADEREND:event_btnaccountFocusGained
+        hover(btnaccount, new Color(1, 109, 218), Color.black);
+    }//GEN-LAST:event_btnaccountFocusGained
 
-    private void btnUserFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnUserFocusLost
-    {//GEN-HEADEREND:event_btnUserFocusLost
-        hover(btnUser, new Color(255, 167, 6), Color.white);
-    }//GEN-LAST:event_btnUserFocusLost
+    private void btnaccountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnaccountFocusLost
+    {//GEN-HEADEREND:event_btnaccountFocusLost
+        hover(btnaccount, new Color(255, 167, 6), Color.white);
+    }//GEN-LAST:event_btnaccountFocusLost
 
     private void btnCustomerKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnCustomerKeyPressed
     {//GEN-HEADEREND:event_btnCustomerKeyPressed
@@ -4325,7 +4325,6 @@ public class Main extends javax.swing.JFrame
             onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
             txt_addemp_id.setText(getMaxID("employee"));
             txt_addemp_id.setText(getMaxID("customer"));
-//            hover(btnEmployee, btnCustomer, btnProduct, btnReport, btnUser);   // To select dashboard main buttons.
         }
     }//GEN-LAST:event_btnEmployeeKeyPressed
 
@@ -4334,10 +4333,10 @@ public class Main extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             visibility(false, false, false, true, false, false, btn_addprod_menu);
-            onIndicator(lid3_1, lid3_2, lid3_3);
-//            hover(btnProduct, btnCustomer, btnEmployee, btnReport, btnUser);   // To select dashboard main buttons.
+            visibility(pnl_add_prod, pnl_edit_prod, pnl_prod_det);
+            onIndicator(lid_addprod, lid_editprod, lid_proddet);
             txt_addprod_id.setText(getMaxID("product"));
-            txt_addprod_id.grabFocus();
+            btn_addprod_menu.grabFocus();
         }
     }//GEN-LAST:event_btnProductKeyPressed
 
@@ -4347,19 +4346,17 @@ public class Main extends javax.swing.JFrame
         {
             visibility(false, false, false, false, true, false, btn_pnl4_tab1);
             onIndicator(lid4_1, lid4_2, lid4_3);
-//            hover(btnReport, btnCustomer, btnEmployee, btnProduct, btnUser);   // To select dashboard main buttons.
         }
     }//GEN-LAST:event_btnReportKeyPressed
 
-    private void btnUserKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnUserKeyPressed
-    {//GEN-HEADEREND:event_btnUserKeyPressed
+    private void btnaccountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnaccountKeyPressed
+    {//GEN-HEADEREND:event_btnaccountKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             visibility(false, false, false, false, false, true, btn_pnl5_tab1);
             onIndicator(lid5_1, lid5_2, lid5_3);
-//            hover(btnUser, btnCustomer, btnEmployee, btnProduct, btnReport);   // To select dashboard main buttons.
         }
-    }//GEN-LAST:event_btnUserKeyPressed
+    }//GEN-LAST:event_btnaccountKeyPressed
 
     private void btnEmployeeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnEmployeeActionPerformed
     {//GEN-HEADEREND:event_btnEmployeeActionPerformed
@@ -4373,16 +4370,17 @@ public class Main extends javax.swing.JFrame
     private void btnProductActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnProductActionPerformed
     {//GEN-HEADEREND:event_btnProductActionPerformed
         visibility(false, false, false, true, false, false, btn_addprod_menu);
-        onIndicator(lid3_1, lid3_2, lid3_3);
+        visibility(pnl_add_prod, pnl_edit_prod, pnl_prod_det);
+        onIndicator(lid_addprod, lid_editprod, lid_proddet);
         txt_addprod_id.setText(getMaxID("product"));
-        txt_addprod_id.grabFocus();
+        btn_addprod_menu.grabFocus();
     }//GEN-LAST:event_btnProductActionPerformed
 
-    private void btnUserActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnUserActionPerformed
-    {//GEN-HEADEREND:event_btnUserActionPerformed
+    private void btnaccountActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnaccountActionPerformed
+    {//GEN-HEADEREND:event_btnaccountActionPerformed
         visibility(false, false, false, false, false, true, btn_pnl5_tab1);
         onIndicator(lid5_1, lid5_2, lid5_3);
-    }//GEN-LAST:event_btnUserActionPerformed
+    }//GEN-LAST:event_btnaccountActionPerformed
 
     private void lbl_dash_usrMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_dash_usrMouseClicked
     {//GEN-HEADEREND:event_lbl_dash_usrMouseClicked
@@ -4649,8 +4647,8 @@ public class Main extends javax.swing.JFrame
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl_add_product, pnl_edit_product, pnl3_tab3);
-            onIndicator(lid3_1, lid3_2, lid3_3);
+            visibility(pnl_add_prod, pnl_edit_prod, pnl_prod_det);
+            onIndicator(lid_addprod, lid_editprod, lid_proddet);
             txt_addprod_id.grabFocus();
         }
     }//GEN-LAST:event_btn_addprod_menuKeyPressed
@@ -4683,8 +4681,8 @@ public class Main extends javax.swing.JFrame
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl_edit_product, pnl_add_product, pnl3_tab3);
-            onIndicator(lid3_2, lid3_1, lid3_3
+            visibility(pnl_edit_prod, pnl_add_prod, pnl_prod_det);
+            onIndicator(lid_editprod, lid_addprod, lid_proddet
             );
         }
     }//GEN-LAST:event_btn_editprod_menuKeyPressed
@@ -4717,8 +4715,8 @@ public class Main extends javax.swing.JFrame
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl3_tab3, pnl_add_product, pnl_edit_product);
-            onIndicator(lid3_3, lid3_1, lid3_2);
+            visibility(pnl_prod_det, pnl_add_prod, pnl_edit_prod);
+            onIndicator(lid_proddet, lid_addprod, lid_editprod);
         }
     }//GEN-LAST:event_btn_proddet_menuKeyPressed
 
@@ -4845,7 +4843,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_pnl5_tab1KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnUser.grabFocus();
+            btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -4878,7 +4876,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_pnl5_tab2KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnUser.grabFocus();
+            btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -4911,7 +4909,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_pnl5_tab3KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnUser.grabFocus();
+            btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -4976,21 +4974,21 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addprod_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addprod_menuActionPerformed
     {//GEN-HEADEREND:event_btn_addprod_menuActionPerformed
-        visibility(pnl_add_product, pnl_edit_product, pnl3_tab3);
-        onIndicator(lid3_1, lid3_2, lid3_3);
+        visibility(pnl_add_prod, pnl_edit_prod, pnl_prod_det);
+        onIndicator(lid_addprod, lid_editprod, lid_proddet);
         txt_addprod_id.grabFocus();
     }//GEN-LAST:event_btn_addprod_menuActionPerformed
 
     private void btn_editprod_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_menuActionPerformed
     {//GEN-HEADEREND:event_btn_editprod_menuActionPerformed
-        visibility(pnl_edit_product, pnl_add_product, pnl3_tab3);
-        onIndicator(lid3_2, lid3_1, lid3_3);
+        visibility(pnl_edit_prod, pnl_add_prod, pnl_prod_det);
+        onIndicator(lid_editprod, lid_addprod, lid_proddet);
     }//GEN-LAST:event_btn_editprod_menuActionPerformed
 
     private void btn_proddet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_proddet_menuActionPerformed
     {//GEN-HEADEREND:event_btn_proddet_menuActionPerformed
-        visibility(pnl3_tab3, pnl_add_product, pnl_edit_product);
-        onIndicator(lid3_3, lid3_1, lid3_2);
+        visibility(pnl_prod_det, pnl_add_prod, pnl_edit_prod);
+        onIndicator(lid_proddet, lid_addprod, lid_editprod);
     }//GEN-LAST:event_btn_proddet_menuActionPerformed
 
     private void btn_pnl4_tab1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_pnl4_tab1ActionPerformed
@@ -5811,7 +5809,6 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btnEmployee;
     private com.k33ptoo.components.KButton btnProduct;
     private com.k33ptoo.components.KButton btnReport;
-    private com.k33ptoo.components.KButton btnUser;
     private com.k33ptoo.components.KButton btn_addcust_add;
     private com.k33ptoo.components.KButton btn_addcust_menu;
     private com.k33ptoo.components.KButton btn_addemp_add;
@@ -5837,6 +5834,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_pnl5_tab2;
     private com.k33ptoo.components.KButton btn_pnl5_tab3;
     private com.k33ptoo.components.KButton btn_proddet_menu;
+    private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
     private javax.swing.JLabel jLabel1;
@@ -5856,9 +5854,6 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel lbl_pswd_icon;
     private javax.swing.JLabel lbl_role;
     private javax.swing.JLabel lbl_usr_icon;
-    private com.k33ptoo.components.KGradientPanel lid3_1;
-    private com.k33ptoo.components.KGradientPanel lid3_2;
-    private com.k33ptoo.components.KGradientPanel lid3_3;
     private com.k33ptoo.components.KGradientPanel lid4_1;
     private com.k33ptoo.components.KGradientPanel lid4_2;
     private com.k33ptoo.components.KGradientPanel lid4_3;
@@ -5867,10 +5862,13 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel lid5_3;
     private com.k33ptoo.components.KGradientPanel lid_add_cust;
     private com.k33ptoo.components.KGradientPanel lid_add_emp;
+    private com.k33ptoo.components.KGradientPanel lid_addprod;
     private com.k33ptoo.components.KGradientPanel lid_cust_det;
     private com.k33ptoo.components.KGradientPanel lid_edit_cust;
     private com.k33ptoo.components.KGradientPanel lid_edit_emp;
+    private com.k33ptoo.components.KGradientPanel lid_editprod;
     private com.k33ptoo.components.KGradientPanel lid_emp_det;
+    private com.k33ptoo.components.KGradientPanel lid_proddet;
     private com.k33ptoo.components.KGradientPanel panel_bg;
     private com.k33ptoo.components.KGradientPanel panel_customer;
     private com.k33ptoo.components.KGradientPanel panel_dash_main;
@@ -5888,11 +5886,9 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl1_menu10;
     private com.k33ptoo.components.KGradientPanel pnl1_menu11;
     private com.k33ptoo.components.KGradientPanel pnl1_menu12;
-    private com.k33ptoo.components.KGradientPanel pnl1_menu18;
     private com.k33ptoo.components.KGradientPanel pnl1_menu7;
     private com.k33ptoo.components.KGradientPanel pnl1_menu8;
     private com.k33ptoo.components.KGradientPanel pnl1_menu9;
-    private com.k33ptoo.components.KGradientPanel pnl3_tab3;
     private com.k33ptoo.components.KGradientPanel pnl4_tab1;
     private com.k33ptoo.components.KGradientPanel pnl4_tab2;
     private com.k33ptoo.components.KGradientPanel pnl4_tab3;
@@ -5903,10 +5899,10 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl5_tab3;
     private com.k33ptoo.components.KGradientPanel pnl_add_cust;
     private com.k33ptoo.components.KGradientPanel pnl_add_emp;
-    private com.k33ptoo.components.KGradientPanel pnl_add_prod_menu;
-    private com.k33ptoo.components.KGradientPanel pnl_add_product;
+    private com.k33ptoo.components.KGradientPanel pnl_add_prod;
     private com.k33ptoo.components.KGradientPanel pnl_addcust_menu;
     private com.k33ptoo.components.KGradientPanel pnl_addemp_menu;
+    private com.k33ptoo.components.KGradientPanel pnl_addprod_menu;
     private javax.swing.JPanel pnl_close;
     private com.k33ptoo.components.KGradientPanel pnl_cust_det;
     private com.k33ptoo.components.KGradientPanel pnl_cust_det_menu;
@@ -5915,17 +5911,19 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_edit_cust;
     private com.k33ptoo.components.KGradientPanel pnl_edit_cust_menu;
     private com.k33ptoo.components.KGradientPanel pnl_edit_emp;
-    private com.k33ptoo.components.KGradientPanel pnl_edit_prod_menu;
-    private com.k33ptoo.components.KGradientPanel pnl_edit_product;
+    private com.k33ptoo.components.KGradientPanel pnl_edit_prod;
     private com.k33ptoo.components.KGradientPanel pnl_editemp_menu;
+    private com.k33ptoo.components.KGradientPanel pnl_editprod_menu;
     private com.k33ptoo.components.KGradientPanel pnl_emp_det;
     private com.k33ptoo.components.KGradientPanel pnl_emp_menubar;
     private com.k33ptoo.components.KGradientPanel pnl_empdet_menu;
     private com.k33ptoo.components.KGradientPanel pnl_employee_main;
     private com.k33ptoo.components.KGradientPanel pnl_menu_head;
     private javax.swing.JPanel pnl_minimize;
+    private com.k33ptoo.components.KGradientPanel pnl_prod_det;
     private com.k33ptoo.components.KGradientPanel pnl_prod_main;
     private com.k33ptoo.components.KGradientPanel pnl_prod_menubar;
+    private com.k33ptoo.components.KGradientPanel pnl_proddet_menu;
     private com.k33ptoo.components.KGradientPanel pnl_staff_main;
     private javax.swing.JScrollPane scrolltbl_custdet;
     private javax.swing.JScrollPane scrolltbl_editcust;
