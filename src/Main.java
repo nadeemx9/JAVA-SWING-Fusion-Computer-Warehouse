@@ -154,7 +154,7 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopaddr = new textfield.TextField();
         txt_editcust_id = new textfield.TextField();
         pnl_cust_det = new com.k33ptoo.components.KGradientPanel();
-        txt_custdet_custid = new textfield.TextField();
+        txt_custdet_custnm = new textfield.TextField();
         scrolltbl_custdet = new javax.swing.JScrollPane();
         table_custdet = new javax.swing.JTable();
         btn_custdet = new com.k33ptoo.components.KButton();
@@ -408,7 +408,6 @@ public class Main extends javax.swing.JFrame
         txt_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_pswd.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_pswd.setLabelText("Password");
-        txt_pswd.setLineColor(new java.awt.Color(255, 167, 6));
         txt_pswd.setMaximumSize(new java.awt.Dimension(415, 64));
         txt_pswd.setMinimumSize(new java.awt.Dimension(415, 64));
         txt_pswd.setNextFocusableComponent(btn_login);
@@ -1219,28 +1218,24 @@ public class Main extends javax.swing.JFrame
         txt_addcust_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_id.setLabelText("CUSTOMER ID");
-        txt_addcust_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addcust_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_nm.setLabelText("CUSTOMER NAME");
-        txt_addcust_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addcust_contact.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_contact.setLabelText("CONTACT NO");
-        txt_addcust_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_contact.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addcust_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_email.setLabelText("EMAIL");
-        txt_addcust_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_email.setNextFocusableComponent(txt_addcust_shopnm);
         txt_addcust_email.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -1248,14 +1243,12 @@ public class Main extends javax.swing.JFrame
         txt_addcust_shopaddr.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_shopaddr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_shopaddr.setLabelText("SHOP ADDRESS");
-        txt_addcust_shopaddr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_shopaddr.setNextFocusableComponent(btn_addcust_add);
         txt_addcust_shopaddr.setPreferredSize(new java.awt.Dimension(404, 128));
 
         txt_addcust_shopnm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_shopnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_shopnm.setLabelText(" SHOP NAME (optional)");
-        txt_addcust_shopnm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addcust_shopnm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_shopnm.setPreferredSize(new java.awt.Dimension(404, 64));
 
@@ -1476,7 +1469,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_contact.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_contact.setLabelText("CONTACT NO");
-        txt_editcust_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_contact.setNextFocusableComponent(txt_editcust_email);
         txt_editcust_contact.setPreferredSize(new java.awt.Dimension(250, 64));
@@ -1484,7 +1476,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_nm.setLabelText("CUSTOMER NAME");
-        txt_editcust_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_nm.setNextFocusableComponent(txt_editcust_contact);
         txt_editcust_nm.setPreferredSize(new java.awt.Dimension(250, 64));
@@ -1492,7 +1483,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_email.setLabelText("EMAIL");
-        txt_editcust_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_email.setNextFocusableComponent(txt_editcust_shopnm);
         txt_editcust_email.setPreferredSize(new java.awt.Dimension(250, 64));
@@ -1500,7 +1490,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopnm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_shopnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_shopnm.setLabelText("SHOP NAME");
-        txt_editcust_shopnm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_shopnm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_shopnm.setNextFocusableComponent(txt_editcust_shopaddr);
         txt_editcust_shopnm.setPreferredSize(new java.awt.Dimension(250, 64));
@@ -1508,7 +1497,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopaddr.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_shopaddr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_shopaddr.setLabelText("SHOP ADDRESS");
-        txt_editcust_shopaddr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_shopaddr.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_shopaddr.setNextFocusableComponent(btn_editcust_edit);
         txt_editcust_shopaddr.setPreferredSize(new java.awt.Dimension(250, 64));
@@ -1523,7 +1511,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_id.setLabelText("CUSTOMER ID");
-        txt_editcust_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editcust_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_id.setNextFocusableComponent(txt_editcust_nm);
         txt_editcust_id.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -1582,27 +1569,33 @@ public class Main extends javax.swing.JFrame
         pnl_cust_det.setkStartColor(new java.awt.Color(150, 195, 248));
         pnl_cust_det.setOpaque(false);
 
-        txt_custdet_custid.setBackground(new java.awt.Color(150, 195, 248));
-        txt_custdet_custid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_custdet_custid.setLabelText("CUSTOMER ID");
-        txt_custdet_custid.setLineColor(new java.awt.Color(255, 167, 6));
-        txt_custdet_custid.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_custdet_custid.setNextFocusableComponent(btn_custdet);
-        txt_custdet_custid.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_custdet_custnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_custdet_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_custdet_custnm.setLabelText("CUSTOMER NAME");
+        txt_custdet_custnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_custdet_custnm.setNextFocusableComponent(btn_custdet);
+        txt_custdet_custnm.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_custdet_custnm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_custdet_custnmKeyReleased(evt);
+            }
+        });
 
         scrolltbl_custdet.setPreferredSize(new java.awt.Dimension(908, 400));
 
         table_custdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME"
+                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME", "Title 6"
             }
         ));
         table_custdet.setPreferredSize(new java.awt.Dimension(908, 400));
@@ -1618,7 +1611,7 @@ public class Main extends javax.swing.JFrame
         btn_custdet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_custdet.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_custdet.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_custdet.setNextFocusableComponent(txt_custdet_custid);
+        btn_custdet.setNextFocusableComponent(txt_custdet_custnm);
         btn_custdet.setOpaque(true);
         btn_custdet.setPreferredSize(new java.awt.Dimension(450, 60));
         btn_custdet.addFocusListener(new java.awt.event.FocusAdapter()
@@ -1665,7 +1658,7 @@ public class Main extends javax.swing.JFrame
             .addGroup(pnl_cust_detLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(pnl_cust_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_custdet_custid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_custdet_custnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
@@ -1674,7 +1667,7 @@ public class Main extends javax.swing.JFrame
             pnl_cust_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_cust_detLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(txt_custdet_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_custdet_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -2052,7 +2045,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_id.setLabelText("EMPLOYEE ID");
-        txt_addemp_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_id.setNextFocusableComponent(txt_addemp_nm);
         txt_addemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2060,7 +2052,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_nm.setLabelText("EMPLOYEE NAME");
-        txt_addemp_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_nm.setNextFocusableComponent(txt_addemp_contact);
         txt_addemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2068,7 +2059,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_contact.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_contact.setLabelText("CONTACT NO");
-        txt_addemp_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_contact.setNextFocusableComponent(txt_addemp_email);
         txt_addemp_contact.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2076,7 +2066,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_email.setLabelText("EMAIL");
-        txt_addemp_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_email.setNextFocusableComponent(txt_addemp_salary);
         txt_addemp_email.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2084,7 +2073,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_salary.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_salary.setLabelText("SALARY");
-        txt_addemp_salary.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_salary.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_salary.setNextFocusableComponent(txt_addemp_addr);
         txt_addemp_salary.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2092,7 +2080,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_addr.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_addr.setLabelText("ADDRESS");
-        txt_addemp_addr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_addr.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_addr.setNextFocusableComponent(txt_addemp_pswd);
         txt_addemp_addr.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2150,7 +2137,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addemp_pswd.setLabelText("PASSWORD");
-        txt_addemp_pswd.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_pswd.setNextFocusableComponent(txt_addemp_cpswd);
         txt_addemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_addemp_pswd.setShowAndHide(true);
@@ -2158,7 +2144,6 @@ public class Main extends javax.swing.JFrame
         txt_addemp_cpswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_cpswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addemp_cpswd.setLabelText("CONFIRM PASSWORD");
-        txt_addemp_cpswd.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addemp_cpswd.setNextFocusableComponent(btn_addemp_add);
         txt_addemp_cpswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_addemp_cpswd.setShowAndHide(true);
@@ -2237,7 +2222,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_id.setLabelText("EMPLOYEE ID");
-        txt_editemp_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_id.setNextFocusableComponent(txt_editemp_nm);
         txt_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2245,7 +2229,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_nm.setLabelText("EMPLOYEE NAME");
-        txt_editemp_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_nm.setNextFocusableComponent(txt_editemp_contact);
         txt_editemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2253,7 +2236,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_contact.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_contact.setLabelText("CONTACT");
-        txt_editemp_contact.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_contact.setNextFocusableComponent(txt_editemp_email);
         txt_editemp_contact.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2261,7 +2243,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_email.setLabelText("EMAIL");
-        txt_editemp_email.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_email.setNextFocusableComponent(txt_editemp_salary);
         txt_editemp_email.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2269,7 +2250,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_salary.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_salary.setLabelText("SALARY");
-        txt_editemp_salary.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_salary.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_salary.setNextFocusableComponent(txt_editemp_addr);
         txt_editemp_salary.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2277,7 +2257,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_addr.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_addr.setLabelText("ADDRESS");
-        txt_editemp_addr.setLineColor(new java.awt.Color(255, 167, 6));
         txt_editemp_addr.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editemp_addr.setNextFocusableComponent(btn_editemp_edit);
         txt_editemp_addr.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2453,7 +2432,6 @@ public class Main extends javax.swing.JFrame
         txt_empdet_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_empdet_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_empdet_id.setLabelText("EMPLOYEE ID");
-        txt_empdet_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_empdet_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_empdet_id.setNextFocusableComponent(btn_empdet);
         txt_empdet_id.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2897,9 +2875,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl1_menu18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_add_prod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl1_menu18, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_edit_prod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -2918,7 +2896,6 @@ public class Main extends javax.swing.JFrame
         txt_addprod_id.setFocusCycleRoot(true);
         txt_addprod_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addprod_id.setLabelText("PRODUCT ID");
-        txt_addprod_id.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addprod_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_id.setNextFocusableComponent(txt_addprod_nm);
         txt_addprod_id.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2926,7 +2903,6 @@ public class Main extends javax.swing.JFrame
         txt_addprod_costprice.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_costprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addprod_costprice.setLabelText("COST PRICE");
-        txt_addprod_costprice.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addprod_costprice.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_costprice.setNextFocusableComponent(txt_addprod_sellingprice);
         txt_addprod_costprice.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2941,7 +2917,6 @@ public class Main extends javax.swing.JFrame
         txt_addprod_sellingprice.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_sellingprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addprod_sellingprice.setLabelText("SELLING PRICE");
-        txt_addprod_sellingprice.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addprod_sellingprice.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_sellingprice.setNextFocusableComponent(cmbbox_addprod_brand);
         txt_addprod_sellingprice.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2966,7 +2941,6 @@ public class Main extends javax.swing.JFrame
         txt_addprod_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_nm.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addprod_nm.setLabelText("PRODUCT NAME");
-        txt_addprod_nm.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addprod_nm.setNextFocusableComponent(txt_addprod_costprice);
         txt_addprod_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
@@ -3023,7 +2997,6 @@ public class Main extends javax.swing.JFrame
         txt_addprod_quantity.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_quantity.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addprod_quantity.setLabelText("QUANTITY");
-        txt_addprod_quantity.setLineColor(new java.awt.Color(255, 167, 6));
         txt_addprod_quantity.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_quantity.setNextFocusableComponent(btn_addprod);
         txt_addprod_quantity.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -4531,7 +4504,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
-            txt_custdet_custid.grabFocus();
+            txt_custdet_custnm.grabFocus();
             bindTableData(table_custdet, "customer");
         }
     }//GEN-LAST:event_btn_custdet_menuKeyPressed
@@ -4966,7 +4939,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_custdet_menuActionPerformed
         visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
-        txt_custdet_custid.grabFocus();
+        txt_custdet_custnm.grabFocus();
         bindTableData(table_custdet, "customer");
     }//GEN-LAST:event_btn_custdet_menuActionPerformed
 
@@ -5479,6 +5452,18 @@ public class Main extends javax.swing.JFrame
         hover(btn_editemp_edit, new Color(1, 109, 218), Color.BLACK);
     }//GEN-LAST:event_btn_editemp_editFocusGained
 
+    private void txt_custdet_custnmKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_custdet_custnmKeyReleased
+    {//GEN-HEADEREND:event_txt_custdet_custnmKeyReleased
+        if (txt_custdet_custnm.getText().equals(""))
+        {
+            bindTableData(table_custdet, "customer");
+        }
+        else
+        {
+            searchCustomerByName(table_custdet, txt_custdet_custnm.getText());
+        }
+    }//GEN-LAST:event_txt_custdet_custnmKeyReleased
+
     public static void main(String args[])
     {
 
@@ -5734,6 +5719,45 @@ public class Main extends javax.swing.JFrame
         txt6.setText("");
     }
 
+    public void searchCustomerByName(JTable table, String custnm)
+    {
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "select * from customer where custnm like '" + custnm + "%'";
+
+            tableModel = (DefaultTableModel) table.getModel();
+            tableModel.setRowCount(0);
+
+            String id, nm, contact, email, shpnm, shpaddr;
+
+            pst = con.prepareStatement(query);
+
+            result = pst.executeQuery();
+
+            while (result.next())
+            {
+                id = result.getString(1);
+                nm = result.getString(2);
+                contact = result.getString(3);
+                email = result.getString(4);
+                shpnm = result.getString(5);
+                shpaddr = result.getString(6);
+
+                String[] rows =
+                {
+                    id, nm, contact, email, shpnm, shpaddr
+                };
+
+                tableModel.addRow(rows);
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btnCustomer;
     private com.k33ptoo.components.KButton btnEmployee;
@@ -5883,7 +5907,7 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_addprod_nm;
     private textfield.TextField txt_addprod_quantity;
     private textfield.TextField txt_addprod_sellingprice;
-    private textfield.TextField txt_custdet_custid;
+    private textfield.TextField txt_custdet_custnm;
     private textfield.TextField txt_editcust_contact;
     private textfield.TextField txt_editcust_email;
     private textfield.TextField txt_editcust_id;
