@@ -5912,7 +5912,20 @@ public class Main extends javax.swing.JFrame
 
     private void table_editprodMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_table_editprodMouseClicked
     {//GEN-HEADEREND:event_table_editprodMouseClicked
-        // TODO add your handling code here:
+        table_editprod = (JTable) evt.getSource();
+
+        if (evt.getClickCount() == 1 && table_editprod.getSelectedRow() != -1)
+        {
+            int i = table_editprod.getSelectedRow();
+            tableModel = (DefaultTableModel) table_editprod.getModel();
+
+            txt_editprod_id.setText(tableModel.getValueAt(i, 0).toString());
+            txt_editprod_nm.setText(tableModel.getValueAt(i, 1).toString());
+            txt_editprod_costprice.setText(tableModel.getValueAt(i, 2).toString());
+            txt_editprod_sellingprice.setText(tableModel.getValueAt(i, 3).toString());
+            cmbbox_editprod_brand.setSelectedItem(tableModel.getValueAt(i, 4).toString());
+            txt_editprod_quantity.setText(tableModel.getValueAt(i, 5).toString());
+        }
     }//GEN-LAST:event_table_editprodMouseClicked
 
     private void cmbbox_editprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editprod_brandActionPerformed
