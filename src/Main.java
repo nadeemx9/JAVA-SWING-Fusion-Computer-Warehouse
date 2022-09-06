@@ -218,8 +218,21 @@ public class Main extends javax.swing.JFrame
         btn_addprod = new com.k33ptoo.components.KButton();
         txt_addprod_quantity = new textfield.TextField();
         pnl_edit_prod = new com.k33ptoo.components.KGradientPanel();
+        scrolltbl_editprod = new javax.swing.JScrollPane();
+        table_editprod = new javax.swing.JTable();
+        txt_editprod_id = new textfield.TextField();
+        txt_editprod_nm = new textfield.TextField();
+        txt_editprod_costprice = new textfield.TextField();
+        txt_editprod_quantity = new textfield.TextField();
+        txt_editprod_sellingprice = new textfield.TextField();
+        cmbbox_editprod_brand = new combo_suggestion.ComboBoxSuggestion();
+        btn_editprod_edit = new com.k33ptoo.components.KButton();
+        btn_editprod_rmv = new com.k33ptoo.components.KButton();
         pnl_prod_det = new com.k33ptoo.components.KGradientPanel();
-        jLabel17 = new javax.swing.JLabel();
+        txt_proddet_nm = new textfield.TextField();
+        scrolltbl_proddet = new javax.swing.JScrollPane();
+        table_proddet = new javax.swing.JTable();
+        btn_proddet = new com.k33ptoo.components.KButton();
         panel_report = new com.k33ptoo.components.KGradientPanel();
         pnl_report_menubar = new com.k33ptoo.components.KGradientPanel();
         pnl_report_menu1 = new com.k33ptoo.components.KGradientPanel();
@@ -1200,9 +1213,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_cust_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_cust_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_customer_main.setkEndColor(new java.awt.Color(150, 195, 248));
@@ -1601,7 +1614,7 @@ public class Main extends javax.swing.JFrame
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME", "Title 6"
+                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME", "SHOP ADDRESS"
             }
         ));
         table_custdet.setPreferredSize(new java.awt.Dimension(908, 400));
@@ -2031,9 +2044,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_emp_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_emp_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addemp_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_empdet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_editemp_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_addemp_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_empdet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_editemp_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_employee_main.setkBorderRadius(40);
@@ -2212,14 +2225,14 @@ public class Main extends javax.swing.JFrame
         table_editemp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS"
+                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS", "PASSWORD"
             }
         ));
         table_editemp.setPreferredSize(new java.awt.Dimension(527, 336));
@@ -2461,14 +2474,14 @@ public class Main extends javax.swing.JFrame
         table_empdet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS"
+                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS", "PASSWORD"
             }
         ));
         table_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
@@ -2895,9 +2908,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -3069,15 +3082,235 @@ public class Main extends javax.swing.JFrame
         pnl_edit_prod.setOpaque(false);
         pnl_edit_prod.setPreferredSize(new java.awt.Dimension(1108, 672));
 
+        scrolltbl_editprod.setPreferredSize(new java.awt.Dimension(527, 336));
+
+        table_editprod.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String []
+            {
+                "ID", "NAME", "COST PRICE", "SELLING PRICE", "BRAND", "QUANTITY"
+            }
+        ));
+        table_editprod.setPreferredSize(new java.awt.Dimension(527, 336));
+        table_editprod.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                table_editprodMouseClicked(evt);
+            }
+        });
+        scrolltbl_editprod.setViewportView(table_editprod);
+
+        txt_editprod_id.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editprod_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editprod_id.setLabelText("PRODUCT ID");
+        txt_editprod_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editprod_id.setNextFocusableComponent(txt_editprod_nm);
+        txt_editprod_id.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_editprod_nm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editprod_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editprod_nm.setLabelText("PRODUCT NAME");
+        txt_editprod_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editprod_nm.setNextFocusableComponent(cmbbox_editprod_brand);
+        txt_editprod_nm.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_editprod_costprice.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editprod_costprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editprod_costprice.setLabelText("COST PRICE");
+        txt_editprod_costprice.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editprod_costprice.setNextFocusableComponent(txt_editprod_quantity);
+        txt_editprod_costprice.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_editprod_quantity.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editprod_quantity.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editprod_quantity.setLabelText("QUANTITY");
+        txt_editprod_quantity.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editprod_quantity.setNextFocusableComponent(btn_editprod_edit);
+        txt_editprod_quantity.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_editprod_sellingprice.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editprod_sellingprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editprod_sellingprice.setLabelText("SELLING PRICE");
+        txt_editprod_sellingprice.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editprod_sellingprice.setNextFocusableComponent(txt_editprod_costprice);
+        txt_editprod_sellingprice.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        cmbbox_editprod_brand.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_editprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_editprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "DELL", "HP", "LENOVO", "ACER" }));
+        cmbbox_editprod_brand.setSelectedItem("--SELECT--BRAND--");
+        cmbbox_editprod_brand.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_editprod_brand.setMaximumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editprod_brand.setNextFocusableComponent(txt_editprod_sellingprice);
+        cmbbox_editprod_brand.setPreferredSize(new java.awt.Dimension(404, 64));
+        cmbbox_editprod_brand.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbbox_editprod_brandActionPerformed(evt);
+            }
+        });
+
+        btn_editprod_edit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_editprod_edit.setText("EDIT PRODUCT");
+        btn_editprod_edit.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btn_editprod_edit.setkBorderRadius(30);
+        btn_editprod_edit.setkEndColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_edit.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_editprod_edit.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_editprod_edit.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_editprod_edit.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_edit.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_edit.setNextFocusableComponent(btn_editprod_rmv);
+        btn_editprod_edit.setOpaque(true);
+        btn_editprod_edit.setPreferredSize(new java.awt.Dimension(250, 60));
+        btn_editprod_edit.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                btn_editprod_editFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                btn_editprod_editFocusLost(evt);
+            }
+        });
+        btn_editprod_edit.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                btn_editprod_editMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                btn_editprod_editMouseExited(evt);
+            }
+        });
+        btn_editprod_edit.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btn_editprod_editActionPerformed(evt);
+            }
+        });
+        btn_editprod_edit.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                btn_editprod_editKeyPressed(evt);
+            }
+        });
+
+        btn_editprod_rmv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_editprod_rmv.setText("REMOVE PRODUCT");
+        btn_editprod_rmv.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btn_editprod_rmv.setkBorderRadius(30);
+        btn_editprod_rmv.setkEndColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_rmv.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_editprod_rmv.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_editprod_rmv.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_editprod_rmv.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_rmv.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_editprod_rmv.setNextFocusableComponent(txt_editprod_id);
+        btn_editprod_rmv.setOpaque(true);
+        btn_editprod_rmv.setPreferredSize(new java.awt.Dimension(250, 60));
+        btn_editprod_rmv.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                btn_editprod_rmvFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                btn_editprod_rmvFocusLost(evt);
+            }
+        });
+        btn_editprod_rmv.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                btn_editprod_rmvMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                btn_editprod_rmvMouseExited(evt);
+            }
+        });
+        btn_editprod_rmv.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btn_editprod_rmvActionPerformed(evt);
+            }
+        });
+        btn_editprod_rmv.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                btn_editprod_rmvKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnl_edit_prodLayout = new javax.swing.GroupLayout(pnl_edit_prod);
         pnl_edit_prod.setLayout(pnl_edit_prodLayout);
         pnl_edit_prodLayout.setHorizontalGroup(
             pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
+            .addGroup(pnl_edit_prodLayout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_edit_prodLayout.createSequentialGroup()
+                        .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_edit_prodLayout.createSequentialGroup()
+                                .addComponent(txt_editprod_id, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                                .addComponent(txt_editprod_nm, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(scrolltbl_editprod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnl_edit_prodLayout.createSequentialGroup()
+                                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_editprod_costprice, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbbox_editprod_brand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_editprod_quantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txt_editprod_sellingprice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(100, 100, 100))
+                    .addGroup(pnl_edit_prodLayout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(btn_editprod_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(262, 262, 262)
+                        .addComponent(btn_editprod_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnl_edit_prodLayout.setVerticalGroup(
             pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
+            .addGroup(pnl_edit_prodLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(scrolltbl_editprod, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_editprod_id, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editprod_nm, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txt_editprod_sellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbbox_editprod_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_editprod_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editprod_costprice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_editprod_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_editprod_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pnl_prod_det.setkBorderRadius(40);
@@ -3086,29 +3319,110 @@ public class Main extends javax.swing.JFrame
         pnl_prod_det.setOpaque(false);
         pnl_prod_det.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("PANEL 3 Tab 3");
+        txt_proddet_nm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_proddet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_proddet_nm.setLabelText("EMPLOYEE ID");
+        txt_proddet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_proddet_nm.setNextFocusableComponent(btn_proddet);
+        txt_proddet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_proddet_nm.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_proddet_nmKeyReleased(evt);
+            }
+        });
+
+        scrolltbl_proddet.setPreferredSize(new java.awt.Dimension(908, 400));
+
+        table_proddet.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String []
+            {
+                "ID", "NAME", "COST PRICE", "SELLING PRICE", "BRAND", "QUANTITY"
+            }
+        ));
+        table_proddet.setPreferredSize(new java.awt.Dimension(908, 400));
+        scrolltbl_proddet.setViewportView(table_proddet);
+
+        btn_proddet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_proddet.setText("FETCH PRODUCT DETAIL");
+        btn_proddet.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btn_proddet.setkBorderRadius(30);
+        btn_proddet.setkEndColor(new java.awt.Color(255, 167, 6));
+        btn_proddet.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_proddet.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_proddet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_proddet.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btn_proddet.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_proddet.setNextFocusableComponent(txt_proddet_nm);
+        btn_proddet.setOpaque(true);
+        btn_proddet.setPreferredSize(new java.awt.Dimension(450, 60));
+        btn_proddet.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                btn_proddetFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                btn_proddetFocusLost(evt);
+            }
+        });
+        btn_proddet.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                btn_proddetMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                btn_proddetMouseExited(evt);
+            }
+        });
+        btn_proddet.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btn_proddetActionPerformed(evt);
+            }
+        });
+        btn_proddet.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                btn_proddetKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_prod_detLayout = new javax.swing.GroupLayout(pnl_prod_det);
         pnl_prod_det.setLayout(pnl_prod_detLayout);
         pnl_prod_detLayout.setHorizontalGroup(
             pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_prod_detLayout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
+            .addGroup(pnl_prod_detLayout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_proddet_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_proddet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(scrolltbl_proddet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         pnl_prod_detLayout.setVerticalGroup(
             pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_prod_detLayout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
+            .addGroup(pnl_prod_detLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(txt_proddet_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(scrolltbl_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnl_prod_mainLayout = new javax.swing.GroupLayout(pnl_prod_main);
@@ -4497,7 +4811,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
             txt_editcust_id.grabFocus();
-            bindTableData(table_editcust, "customer");
+            bindCustomerTableData(table_editcust);
         }
     }//GEN-LAST:event_btn_editcust_menuKeyPressed
 
@@ -4512,7 +4826,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
             txt_custdet_custnm.grabFocus();
-            bindTableData(table_custdet, "customer");
+            bindCustomerTableData(table_custdet);
         }
     }//GEN-LAST:event_btn_custdet_menuKeyPressed
 
@@ -4582,7 +4896,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
             onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
             txt_editemp_id.grabFocus();
-            bindTableData(table_editemp, "employee");
+            bindEmployeeTableData(table_editemp);
         }
     }//GEN-LAST:event_btn_editemp_menuKeyPressed
 
@@ -4617,7 +4931,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
             onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
             txt_empdet_nm.grabFocus();
-            bindTableData(table_empdet, "employee");
+            bindEmployeeTableData(table_empdet);
         }
     }//GEN-LAST:event_btn_empdet_menuKeyPressed
 
@@ -4684,8 +4998,10 @@ public class Main extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             visibility(pnl_edit_prod, pnl_add_prod, pnl_prod_det);
-            onIndicator(lid_editprod, lid_addprod, lid_proddet
-            );
+            onIndicator(lid_editprod, lid_addprod, lid_proddet);
+            bindProductTableData(table_editprod);
+
+            txt_editprod_id.grabFocus();
         }
     }//GEN-LAST:event_btn_editprod_menuKeyPressed
 
@@ -4719,6 +5035,9 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_prod_det, pnl_add_prod, pnl_edit_prod);
             onIndicator(lid_proddet, lid_addprod, lid_editprod);
+            bindProductTableData(table_proddet);
+
+            txt_proddet_nm.grabFocus();
         }
     }//GEN-LAST:event_btn_proddet_menuKeyPressed
 
@@ -4938,7 +5257,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
         onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
         txt_editcust_id.grabFocus();
-        bindTableData(table_editcust, "customer");
+        bindCustomerTableData(table_editcust);
     }//GEN-LAST:event_btn_editcust_menuActionPerformed
 
     private void btn_custdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_custdet_menuActionPerformed
@@ -4946,7 +5265,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
         txt_custdet_custnm.grabFocus();
-        bindTableData(table_custdet, "customer");
+        bindCustomerTableData(table_custdet);
     }//GEN-LAST:event_btn_custdet_menuActionPerformed
 
     private void btn_addemp_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addemp_menuActionPerformed
@@ -4962,7 +5281,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
         txt_editemp_id.grabFocus();
-        bindTableData(table_editemp, "employee");
+        bindEmployeeTableData(table_editemp);
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
     private void btn_empdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_empdet_menuActionPerformed
@@ -4970,7 +5289,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_emp_det, pnl_add_emp, pnl_edit_emp);
         onIndicator(lid_emp_det, lid_add_emp, lid_edit_emp);
         txt_empdet_nm.grabFocus();
-        bindTableData(table_empdet, "employee");
+        bindEmployeeTableData(table_empdet);
     }//GEN-LAST:event_btn_empdet_menuActionPerformed
 
     private void btn_addprod_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addprod_menuActionPerformed
@@ -4984,12 +5303,17 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_editprod_menuActionPerformed
         visibility(pnl_edit_prod, pnl_add_prod, pnl_prod_det);
         onIndicator(lid_editprod, lid_addprod, lid_proddet);
+        bindProductTableData(table_editprod);
+        txt_editprod_id.grabFocus();
     }//GEN-LAST:event_btn_editprod_menuActionPerformed
 
     private void btn_proddet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_proddet_menuActionPerformed
     {//GEN-HEADEREND:event_btn_proddet_menuActionPerformed
         visibility(pnl_prod_det, pnl_add_prod, pnl_edit_prod);
         onIndicator(lid_proddet, lid_addprod, lid_editprod);
+        bindProductTableData(table_proddet);
+
+        txt_proddet_nm.grabFocus();
     }//GEN-LAST:event_btn_proddet_menuActionPerformed
 
     private void btn_accsetting_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_accsetting_menuActionPerformed
@@ -5063,7 +5387,7 @@ public class Main extends javax.swing.JFrame
             pst.setString(6, txt_editcust_id.getText());
 
             pst.executeUpdate();
-            bindTableData(table_editcust, "customer");
+            bindCustomerTableData(table_editcust);
             JOptionPane.showMessageDialog(null, "Recored Updated Successfully");
         }
         catch (Exception e)
@@ -5207,7 +5531,7 @@ public class Main extends javax.swing.JFrame
 
     private void btn_custdetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_custdetActionPerformed
     {//GEN-HEADEREND:event_btn_custdetActionPerformed
-        bindTableData(table_custdet, "customer");
+        bindCustomerTableData(table_custdet);
     }//GEN-LAST:event_btn_custdetActionPerformed
 
     private void btn_custdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_custdetMouseExited
@@ -5345,7 +5669,7 @@ public class Main extends javax.swing.JFrame
                 pst.setString(1, txt_editcust_id.getText());
 
                 pst.executeUpdate();
-                bindTableData(table_editcust, "customer");
+                bindCustomerTableData(table_editcust);
                 JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
             }
             catch (Exception e)
@@ -5377,7 +5701,7 @@ public class Main extends javax.swing.JFrame
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
-            bindTableData(table_editemp, "employee");
+            bindEmployeeTableData(table_editemp);
         }
         catch (Exception e)
         {
@@ -5428,7 +5752,7 @@ public class Main extends javax.swing.JFrame
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Record Updated Successfully!");
-            bindTableData(table_editemp, "employee");
+            bindEmployeeTableData(table_editemp);
         }
         catch (Exception e)
         {
@@ -5460,7 +5784,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_custdet_custnmKeyReleased
         if (txt_custdet_custnm.getText().equals(""))
         {
-            bindTableData(table_custdet, "customer");
+            bindCustomerTableData(table_custdet);
         }
         else
         {
@@ -5506,7 +5830,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_empdet_nmKeyReleased
         if (txt_empdet_nm.getText().equals(""))
         {
-            bindTableData(table_empdet, "employee");
+            bindEmployeeTableData(table_empdet);
         }
         else
         {
@@ -5568,8 +5892,162 @@ public class Main extends javax.swing.JFrame
 
     private void table_editempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_table_editempMouseClicked
     {//GEN-HEADEREND:event_table_editempMouseClicked
-        // TODO add your handling code here:
+        table_editemp = (JTable) evt.getSource();
+
+        if (evt.getClickCount() == 1 && table_editemp.getSelectedRow() != -1)
+        {
+            int i = table_editemp.getSelectedRow();
+            tableModel = (DefaultTableModel) table_editemp.getModel();
+
+            txt_editemp_id.setText(tableModel.getValueAt(i, 0).toString());
+            txt_editemp_nm.setText(tableModel.getValueAt(i, 1).toString());
+            txt_editemp_contact.setText(tableModel.getValueAt(i, 2).toString());
+            txt_editemp_email.setText(tableModel.getValueAt(i, 3).toString());
+            txt_editemp_salary.setText(tableModel.getValueAt(i, 4).toString());
+            txt_editemp_addr.setText(tableModel.getValueAt(i, 5).toString());
+            txt_editemp_pswd.setText(tableModel.getValueAt(i, 6).toString());
+//            txt_editemp_pswd.setText(tableModel.getValueAt(i, 7).toString());
+        }
     }//GEN-LAST:event_table_editempMouseClicked
+
+    private void table_editprodMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_table_editprodMouseClicked
+    {//GEN-HEADEREND:event_table_editprodMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_table_editprodMouseClicked
+
+    private void cmbbox_editprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editprod_brandActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_editprod_brandActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbbox_editprod_brandActionPerformed
+
+    private void btn_editprod_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editprod_editFocusGained
+    {//GEN-HEADEREND:event_btn_editprod_editFocusGained
+        hover(btn_editprod_edit, new Color(1, 109, 218), Color.BLACK);
+    }//GEN-LAST:event_btn_editprod_editFocusGained
+
+    private void btn_editprod_editFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editprod_editFocusLost
+    {//GEN-HEADEREND:event_btn_editprod_editFocusLost
+        hover(btn_editprod_edit, new Color(255, 167, 6), Color.WHITE);
+    }//GEN-LAST:event_btn_editprod_editFocusLost
+
+    private void btn_editprod_editMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_editMouseEntered
+    {//GEN-HEADEREND:event_btn_editprod_editMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_editMouseEntered
+
+    private void btn_editprod_editMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_editMouseExited
+    {//GEN-HEADEREND:event_btn_editprod_editMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_editMouseExited
+
+    private void btn_editprod_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_editActionPerformed
+    {//GEN-HEADEREND:event_btn_editprod_editActionPerformed
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "update product set nm = ?, costprice = ?, sellingprice = ?, brand = ?, quantity = ? where id = ? ";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_editprod_nm.getText());
+            pst.setString(2, txt_editprod_costprice.getText());
+            pst.setString(3, txt_editprod_sellingprice.getText());
+            pst.setString(4, cmbbox_editprod_brand.getSelectedItem().toString());
+            pst.setString(5, txt_editprod_quantity.getText());
+            pst.setString(6, txt_editprod_id.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Product Updated Successfully!");
+            bindProductTableData(table_editprod);
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }//GEN-LAST:event_btn_editprod_editActionPerformed
+
+    private void btn_editprod_editKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editprod_editKeyPressed
+    {//GEN-HEADEREND:event_btn_editprod_editKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_editKeyPressed
+
+    private void btn_editprod_rmvFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editprod_rmvFocusGained
+    {//GEN-HEADEREND:event_btn_editprod_rmvFocusGained
+        hover(btn_editprod_rmv, new Color(1, 109, 218), Color.BLACK);
+    }//GEN-LAST:event_btn_editprod_rmvFocusGained
+
+    private void btn_editprod_rmvFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editprod_rmvFocusLost
+    {//GEN-HEADEREND:event_btn_editprod_rmvFocusLost
+        hover(btn_editprod_rmv, new Color(255, 167, 6), Color.WHITE);
+    }//GEN-LAST:event_btn_editprod_rmvFocusLost
+
+    private void btn_editprod_rmvMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_rmvMouseEntered
+    {//GEN-HEADEREND:event_btn_editprod_rmvMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_rmvMouseEntered
+
+    private void btn_editprod_rmvMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editprod_rmvMouseExited
+    {//GEN-HEADEREND:event_btn_editprod_rmvMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_rmvMouseExited
+
+    private void btn_editprod_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_rmvActionPerformed
+    {//GEN-HEADEREND:event_btn_editprod_rmvActionPerformed
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "delete from product where id = ?";
+
+            pst = con.prepareStatement(query);
+            pst.setString(1, txt_editprod_id.getText());
+
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Producgt Deleted Successfully !");
+            bindProductTableData(table_editprod);
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }//GEN-LAST:event_btn_editprod_rmvActionPerformed
+
+    private void btn_editprod_rmvKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editprod_rmvKeyPressed
+    {//GEN-HEADEREND:event_btn_editprod_rmvKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_editprod_rmvKeyPressed
+
+    private void txt_proddet_nmKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_proddet_nmKeyReleased
+    {//GEN-HEADEREND:event_txt_proddet_nmKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_proddet_nmKeyReleased
+
+    private void btn_proddetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddetFocusGained
+    {//GEN-HEADEREND:event_btn_proddetFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetFocusGained
+
+    private void btn_proddetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddetFocusLost
+    {//GEN-HEADEREND:event_btn_proddetFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetFocusLost
+
+    private void btn_proddetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddetMouseEntered
+    {//GEN-HEADEREND:event_btn_proddetMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetMouseEntered
+
+    private void btn_proddetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddetMouseExited
+    {//GEN-HEADEREND:event_btn_proddetMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetMouseExited
+
+    private void btn_proddetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_proddetActionPerformed
+    {//GEN-HEADEREND:event_btn_proddetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetActionPerformed
+
+    private void btn_proddetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_proddetKeyPressed
+    {//GEN-HEADEREND:event_btn_proddetKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_proddetKeyPressed
 
     public static void main(String args[])
     {
@@ -5717,7 +6195,7 @@ public class Main extends javax.swing.JFrame
         return "1";
     }
 
-    public void bindTableData(JTable table, String tablenm)
+    public void bindCustomerTableData(JTable table)
     {
         try
         {
@@ -5725,7 +6203,7 @@ public class Main extends javax.swing.JFrame
             tableModel.setRowCount(0);
 
             con = dbconnection.getdbConnection();
-            query = "select * from " + tablenm;
+            query = "select * from customer";
             pst = con.prepareStatement(query);
 
             result = pst.executeQuery();
@@ -5743,6 +6221,81 @@ public class Main extends javax.swing.JFrame
                 String[] rows =
                 {
                     id, nm, contact, email, shpnm, addr
+                };
+
+                tableModel.addRow(rows);
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
+
+    public void bindEmployeeTableData(JTable table)
+    {
+        try
+        {
+            tableModel = (DefaultTableModel) table.getModel();
+            tableModel.setRowCount(0);
+
+            con = dbconnection.getdbConnection();
+            query = "select * from employee";
+            pst = con.prepareStatement(query);
+
+            result = pst.executeQuery();
+
+            String id, nm, contact, email, salary, addr, pswd;
+            while (result.next())
+            {
+                id = result.getString(1);
+                nm = result.getString(2);
+                contact = result.getString(3);
+                email = result.getString(4);
+                salary = result.getString(5);
+                addr = result.getString(6);
+                pswd = result.getString(7);
+
+                String[] rows =
+                {
+                    id, nm, contact, email, salary, addr, pswd
+                };
+
+                tableModel.addRow(rows);
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
+
+    public void bindProductTableData(JTable table)
+    {
+        try
+        {
+            tableModel = (DefaultTableModel) table.getModel();
+            tableModel.setRowCount(0);
+
+            con = dbconnection.getdbConnection();
+            query = "select * from product";
+            pst = con.prepareStatement(query);
+
+            result = pst.executeQuery();
+
+            String id, nm, costprice, sellingprice, brand, quantity;
+            while (result.next())
+            {
+                id = result.getString(1);
+                nm = result.getString(2);
+                costprice = result.getString(3);
+                sellingprice = result.getString(4);
+                brand = result.getString(5);
+                quantity = result.getString(6);
+
+                String[] rows =
+                {
+                    id, nm, costprice, sellingprice, brand, quantity
                 };
 
                 tableModel.addRow(rows);
@@ -5847,19 +6400,22 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_editemp_edit;
     private com.k33ptoo.components.KButton btn_editemp_menu;
     private com.k33ptoo.components.KButton btn_editemp_rmv;
+    private com.k33ptoo.components.KButton btn_editprod_edit;
     private com.k33ptoo.components.KButton btn_editprod_menu;
+    private com.k33ptoo.components.KButton btn_editprod_rmv;
     private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_empdet_menu;
     private com.k33ptoo.components.KButton btn_login;
+    private com.k33ptoo.components.KButton btn_proddet;
     private com.k33ptoo.components.KButton btn_proddet_menu;
     private com.k33ptoo.components.KButton btn_report_menu1;
     private com.k33ptoo.components.KButton btn_report_menu2;
     private com.k33ptoo.components.KButton btn_report_menu3;
     private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
@@ -5949,11 +6505,15 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JScrollPane scrolltbl_custdet;
     private javax.swing.JScrollPane scrolltbl_editcust;
     private javax.swing.JScrollPane scrolltbl_editemp;
+    private javax.swing.JScrollPane scrolltbl_editprod;
     private javax.swing.JScrollPane scrolltbl_empdet;
+    private javax.swing.JScrollPane scrolltbl_proddet;
     private javax.swing.JTable table_custdet;
     private javax.swing.JTable table_editcust;
     private javax.swing.JTable table_editemp;
+    private javax.swing.JTable table_editprod;
     private javax.swing.JTable table_empdet;
+    private javax.swing.JTable table_proddet;
     private textfield.TextField txt_addcust_contact;
     private textfield.TextField txt_addcust_email;
     private textfield.TextField txt_addcust_id;
@@ -5987,7 +6547,13 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editemp_nm;
     private textfield.PasswordField txt_editemp_pswd;
     private textfield.TextField txt_editemp_salary;
+    private textfield.TextField txt_editprod_costprice;
+    private textfield.TextField txt_editprod_id;
+    private textfield.TextField txt_editprod_nm;
+    private textfield.TextField txt_editprod_quantity;
+    private textfield.TextField txt_editprod_sellingprice;
     private textfield.TextField txt_empdet_nm;
+    private textfield.TextField txt_proddet_nm;
     private textfield.PasswordField txt_pswd;
     // End of variables declaration//GEN-END:variables
 }
