@@ -1352,17 +1352,24 @@ public class Main extends javax.swing.JFrame
         table_editcust.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME"
+                "ID", "NAME", "CONTACT", "EMAIL", "SHOP NAME", "ADDRESS"
             }
         ));
         table_editcust.setPreferredSize(new java.awt.Dimension(908, 300));
+        table_editcust.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                table_editcustMouseClicked(evt);
+            }
+        });
         scrolltbl_editcust.setViewportView(table_editcust);
 
         btn_editcust_edit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -2216,6 +2223,13 @@ public class Main extends javax.swing.JFrame
             }
         ));
         table_editemp.setPreferredSize(new java.awt.Dimension(527, 336));
+        table_editemp.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseClicked(java.awt.event.MouseEvent evt)
+            {
+                table_editempMouseClicked(evt);
+            }
+        });
         scrolltbl_editemp.setViewportView(table_editemp);
 
         txt_editemp_id.setBackground(new java.awt.Color(150, 195, 248));
@@ -5534,6 +5548,28 @@ public class Main extends javax.swing.JFrame
             }
         }
     }//GEN-LAST:event_txt_empdet_nmKeyReleased
+
+    private void table_editcustMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_table_editcustMouseClicked
+    {//GEN-HEADEREND:event_table_editcustMouseClicked
+        table_editcust = (JTable) evt.getSource();
+
+        if (evt.getClickCount() == 1 && table_editcust.getSelectedRow() != -1)
+        {
+            int i = table_editcust.getSelectedRow();
+            tableModel = (DefaultTableModel) table_editcust.getModel();
+            txt_editcust_id.setText(tableModel.getValueAt(i, 0).toString());
+            txt_editcust_nm.setText(tableModel.getValueAt(i, 1).toString());
+            txt_editcust_contact.setText(tableModel.getValueAt(i, 2).toString());
+            txt_editcust_email.setText(tableModel.getValueAt(i, 3).toString());
+            txt_editcust_shopnm.setText(tableModel.getValueAt(i, 4).toString());
+            txt_editcust_shopaddr.setText(tableModel.getValueAt(i, 5).toString());
+        }
+    }//GEN-LAST:event_table_editcustMouseClicked
+
+    private void table_editempMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_table_editempMouseClicked
+    {//GEN-HEADEREND:event_table_editempMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_table_editempMouseClicked
 
     public static void main(String args[])
     {
