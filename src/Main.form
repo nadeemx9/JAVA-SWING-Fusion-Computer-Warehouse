@@ -4863,7 +4863,7 @@
                                       <Component id="btn_createbill_menu" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                       <Component id="lid_createbill" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -5414,6 +5414,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5435,6 +5436,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5456,6 +5458,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5537,6 +5540,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5558,6 +5562,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5603,15 +5608,57 @@
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lbl_createbill_grosstotal" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="lbl_createbill_tax" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="lbl_createbill_tax1" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                                 <DimensionLayout dim="1">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbl_createbill_grosstotal" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="lbl_createbill_tax" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                          <Component id="lbl_createbill_tax1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                 </DimensionLayout>
                               </Layout>
+                              <SubComponents>
+                                <Component class="javax.swing.JLabel" name="lbl_createbill_grosstotal">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="GROSS TOTAL :"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="lbl_createbill_tax">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="TAX :"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JLabel" name="lbl_createbill_tax1">
+                                  <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="1"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="TAX :"/>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
                             </Container>
                             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
                               <AuxValues>
@@ -5751,7 +5798,7 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
                                 </Property>
-                                <Property name="labelText" type="java.lang.String" value="PRICE"/>
+                                <Property name="labelText" type="java.lang.String" value="TAX (in percentage)"/>
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[128, 64]"/>
                                 </Property>

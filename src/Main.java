@@ -260,6 +260,9 @@ public class Main extends javax.swing.JFrame
         txt_createbill_prodprice = new textfield.TextField();
         spin_createbill_quantity = new spinner.Spinner();
         pnl_calc = new javax.swing.JPanel();
+        lbl_createbill_grosstotal = new javax.swing.JLabel();
+        lbl_createbill_tax = new javax.swing.JLabel();
+        lbl_createbill_tax1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table_createbill = new javax.swing.JTable();
         btn_addprod1 = new com.k33ptoo.components.KButton();
@@ -3588,7 +3591,7 @@ public class Main extends javax.swing.JFrame
                 .addComponent(btn_createbill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addComponent(lid_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pnl_modifybill_menu.setkEndColor(new java.awt.Color(255, 203, 109));
@@ -3789,6 +3792,7 @@ public class Main extends javax.swing.JFrame
         });
 
         txt_createbill_custnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_custnm.setEnabled(false);
         txt_createbill_custnm.setFocusCycleRoot(true);
         txt_createbill_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_custnm.setLabelText("CUSTOMER NAME");
@@ -3797,6 +3801,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_custnm.setPreferredSize(new java.awt.Dimension(300, 64));
 
         txt_createbill_addr.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_addr.setEnabled(false);
         txt_createbill_addr.setFocusCycleRoot(true);
         txt_createbill_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_addr.setLabelText("ADDRESS");
@@ -3805,6 +3810,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_addr.setPreferredSize(new java.awt.Dimension(300, 64));
 
         txt_createbill_contact.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_contact.setEnabled(false);
         txt_createbill_contact.setFocusCycleRoot(true);
         txt_createbill_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_contact.setLabelText("CONTACT");
@@ -3836,6 +3842,7 @@ public class Main extends javax.swing.JFrame
         });
 
         txt_createbill_prodnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodnm.setEnabled(false);
         txt_createbill_prodnm.setFocusCycleRoot(true);
         txt_createbill_prodnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_prodnm.setLabelText("PRODUCT NAME");
@@ -3844,6 +3851,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_prodnm.setPreferredSize(new java.awt.Dimension(300, 64));
 
         txt_createbill_prodprice.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodprice.setEnabled(false);
         txt_createbill_prodprice.setFocusCycleRoot(true);
         txt_createbill_prodprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_prodprice.setLabelText("PRICE");
@@ -3859,15 +3867,37 @@ public class Main extends javax.swing.JFrame
         pnl_calc.setBackground(new java.awt.Color(150, 195, 248));
         pnl_calc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        lbl_createbill_grosstotal.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_createbill_grosstotal.setText("GROSS TOTAL :");
+
+        lbl_createbill_tax.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_createbill_tax.setText("TAX :");
+
+        lbl_createbill_tax1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_createbill_tax1.setText("TAX :");
+
         javax.swing.GroupLayout pnl_calcLayout = new javax.swing.GroupLayout(pnl_calc);
         pnl_calc.setLayout(pnl_calcLayout);
         pnl_calcLayout.setHorizontalGroup(
             pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnl_calcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_createbill_grosstotal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_createbill_tax, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_createbill_tax1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_calcLayout.setVerticalGroup(
             pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnl_calcLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_createbill_grosstotal)
+                .addGap(20, 20, 20)
+                .addComponent(lbl_createbill_tax)
+                .addGap(20, 20, 20)
+                .addComponent(lbl_createbill_tax1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         table_createbill.setModel(new javax.swing.table.DefaultTableModel(
@@ -3993,7 +4023,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_prodprice1.setBackground(new java.awt.Color(150, 195, 248));
         txt_createbill_prodprice1.setFocusCycleRoot(true);
         txt_createbill_prodprice1.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_createbill_prodprice1.setLabelText("PRICE");
+        txt_createbill_prodprice1.setLabelText("TAX (in percentage)");
         txt_createbill_prodprice1.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_createbill_prodprice1.setPreferredSize(new java.awt.Dimension(294, 64));
 
@@ -6761,7 +6791,10 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel lbl_billno_no;
     private javax.swing.JLabel lbl_close;
     private javax.swing.JLabel lbl_createbill_custdet;
+    private javax.swing.JLabel lbl_createbill_grosstotal;
     private javax.swing.JLabel lbl_createbill_proddet;
+    private javax.swing.JLabel lbl_createbill_tax;
+    private javax.swing.JLabel lbl_createbill_tax1;
     private javax.swing.JLabel lbl_dash_usr;
     private javax.swing.JLabel lbl_dash_welcome;
     private javax.swing.JLabel lbl_forgot_pswd;
