@@ -115,7 +115,7 @@ public class Main extends javax.swing.JFrame
         btnCustomer = new com.k33ptoo.components.KButton();
         btnEmployee = new com.k33ptoo.components.KButton();
         btnProduct = new com.k33ptoo.components.KButton();
-        btnReport = new com.k33ptoo.components.KButton();
+        btnBill = new com.k33ptoo.components.KButton();
         btnaccount = new com.k33ptoo.components.KButton();
         pnl_menu_head = new com.k33ptoo.components.KGradientPanel();
         lbl_dash_welcome = new javax.swing.JLabel();
@@ -233,23 +233,36 @@ public class Main extends javax.swing.JFrame
         scrolltbl_proddet = new javax.swing.JScrollPane();
         table_proddet = new javax.swing.JTable();
         btn_proddet = new com.k33ptoo.components.KButton();
-        panel_report = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_menubar = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_menu1 = new com.k33ptoo.components.KGradientPanel();
-        btn_report_menu1 = new com.k33ptoo.components.KButton();
-        lid_report_menu1 = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_menu2 = new com.k33ptoo.components.KGradientPanel();
-        btn_report_menu2 = new com.k33ptoo.components.KButton();
-        lid_report_menu2 = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_menu3 = new com.k33ptoo.components.KGradientPanel();
-        btn_report_menu3 = new com.k33ptoo.components.KButton();
-        lid_report_menu3 = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_main = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_tab1 = new com.k33ptoo.components.KGradientPanel();
-        pnl_report_tab2 = new com.k33ptoo.components.KGradientPanel();
-        jLabel22 = new javax.swing.JLabel();
-        pnl_report_tab3 = new com.k33ptoo.components.KGradientPanel();
-        jLabel23 = new javax.swing.JLabel();
+        panel_bill = new com.k33ptoo.components.KGradientPanel();
+        pnl_bill_menubar = new com.k33ptoo.components.KGradientPanel();
+        pnl_createbill_menu = new com.k33ptoo.components.KGradientPanel();
+        btn_createbill_menu = new com.k33ptoo.components.KButton();
+        lid_createbill = new com.k33ptoo.components.KGradientPanel();
+        pnl_modifybill_menu = new com.k33ptoo.components.KGradientPanel();
+        btn_modifybill_menu = new com.k33ptoo.components.KButton();
+        lid_modifybill = new com.k33ptoo.components.KGradientPanel();
+        pnl_bill_menu3 = new com.k33ptoo.components.KGradientPanel();
+        lid_bill_menu3 = new com.k33ptoo.components.KGradientPanel();
+        pnl_bill_main = new com.k33ptoo.components.KGradientPanel();
+        pnl_createbill = new com.k33ptoo.components.KGradientPanel();
+        lbl_createbill_custdet = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        lbl_billno = new javax.swing.JLabel();
+        lbl_billno_no = new javax.swing.JLabel();
+        cmbbox_createbill_custid = new combo_suggestion.ComboBoxSuggestion();
+        txt_createbill_custnm = new textfield.TextField();
+        txt_createbill_addr = new textfield.TextField();
+        txt_createbill_contact = new textfield.TextField();
+        lbl_createbill_proddet = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        cmbbox_createbill_prodid = new combo_suggestion.ComboBoxSuggestion();
+        txt_createbill_prodnm = new textfield.TextField();
+        txt_createbill_prodprice = new textfield.TextField();
+        spin_createbill_quantity = new spinner.Spinner();
+        pnl_calc = new javax.swing.JPanel();
+        pnl_modifybill = new com.k33ptoo.components.KGradientPanel();
+        jLabel3 = new javax.swing.JLabel();
+        pnl_bill_tab3 = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         pnl_account_menubar = new com.k33ptoo.components.KGradientPanel();
         pnl_accsetting_menu = new com.k33ptoo.components.KGradientPanel();
@@ -671,7 +684,7 @@ public class Main extends javax.swing.JFrame
         btnProduct.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btnProduct.setkPressedColor(new java.awt.Color(255, 167, 6));
         btnProduct.setkStartColor(new java.awt.Color(255, 167, 6));
-        btnProduct.setNextFocusableComponent(btnReport);
+        btnProduct.setNextFocusableComponent(btnBill);
         btnProduct.setPreferredSize(new java.awt.Dimension(450, 60));
         btnProduct.addFocusListener(new java.awt.event.FocusAdapter()
         {
@@ -706,48 +719,48 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        btnReport.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btnReport.setText("GENERATE REPORT");
-        btnReport.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btnReport.setkBorderRadius(30);
-        btnReport.setkEndColor(new java.awt.Color(255, 167, 6));
-        btnReport.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btnReport.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btnReport.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btnReport.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btnReport.setkStartColor(new java.awt.Color(255, 167, 6));
-        btnReport.setNextFocusableComponent(btnaccount);
-        btnReport.setPreferredSize(new java.awt.Dimension(450, 60));
-        btnReport.addFocusListener(new java.awt.event.FocusAdapter()
+        btnBill.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnBill.setText("BILL MANAGEMENT");
+        btnBill.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btnBill.setkBorderRadius(30);
+        btnBill.setkEndColor(new java.awt.Color(255, 167, 6));
+        btnBill.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btnBill.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btnBill.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btnBill.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btnBill.setkStartColor(new java.awt.Color(255, 167, 6));
+        btnBill.setNextFocusableComponent(btnaccount);
+        btnBill.setPreferredSize(new java.awt.Dimension(450, 60));
+        btnBill.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btnReportFocusGained(evt);
+                btnBillFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btnReportFocusLost(evt);
+                btnBillFocusLost(evt);
             }
         });
-        btnReport.addMouseListener(new java.awt.event.MouseAdapter()
+        btnBill.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btnReportMouseEntered(evt);
+                btnBillMouseEntered(evt);
             }
         });
-        btnReport.addActionListener(new java.awt.event.ActionListener()
+        btnBill.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnReportActionPerformed(evt);
+                btnBillActionPerformed(evt);
             }
         });
-        btnReport.addKeyListener(new java.awt.event.KeyAdapter()
+        btnBill.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btnReportKeyPressed(evt);
+                btnBillKeyPressed(evt);
             }
         });
 
@@ -859,7 +872,7 @@ public class Main extends javax.swing.JFrame
                 .addGroup(panel_dash_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnEmployee, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnProduct, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnReport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnaccount, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(50, 50, 50))
@@ -880,7 +893,7 @@ public class Main extends javax.swing.JFrame
                 .addGap(50, 50, 50)
                 .addComponent(btnProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(btnReport, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBill, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(btnaccount, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
@@ -1213,9 +1226,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_cust_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_cust_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_addcust_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_cust_det_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_edit_cust_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_customer_main.setkEndColor(new java.awt.Color(150, 195, 248));
@@ -2044,9 +2057,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_emp_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_emp_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addemp_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_empdet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_editemp_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_addemp_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_empdet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_editemp_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_employee_main.setkBorderRadius(40);
@@ -2908,9 +2921,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -3469,440 +3482,547 @@ public class Main extends javax.swing.JFrame
                 .addContainerGap())
         );
 
-        panel_report.setkBorderRadius(40);
-        panel_report.setkEndColor(new java.awt.Color(150, 195, 248));
-        panel_report.setkStartColor(new java.awt.Color(150, 195, 248));
-        panel_report.setOpaque(false);
+        panel_bill.setkBorderRadius(40);
+        panel_bill.setkEndColor(new java.awt.Color(150, 195, 248));
+        panel_bill.setkStartColor(new java.awt.Color(150, 195, 248));
+        panel_bill.setOpaque(false);
 
-        pnl_report_menubar.setkBorderRadius(20);
-        pnl_report_menubar.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menubar.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menubar.setOpaque(false);
-        pnl_report_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
+        pnl_bill_menubar.setkBorderRadius(20);
+        pnl_bill_menubar.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_bill_menubar.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_bill_menubar.setOpaque(false);
+        pnl_bill_menubar.setPreferredSize(new java.awt.Dimension(1108, 60));
 
-        pnl_report_menu1.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu1.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu1.setOpaque(false);
-        pnl_report_menu1.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_createbill_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_createbill_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_createbill_menu.setOpaque(false);
+        pnl_createbill_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_report_menu1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_report_menu1.setText("TAB 1");
-        btn_report_menu1.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_report_menu1.setkBorderRadius(20);
-        btn_report_menu1.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu1.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_report_menu1.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu1.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu1.setNextFocusableComponent(btn_report_menu2);
-        btn_report_menu1.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_report_menu1.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_createbill_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_createbill_menu.setText("CREATE BILL");
+        btn_createbill_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_createbill_menu.setkBorderRadius(20);
+        btn_createbill_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_createbill_menu.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_createbill_menu.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_createbill_menu.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_createbill_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_createbill_menu.setNextFocusableComponent(btn_modifybill_menu);
+        btn_createbill_menu.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_createbill_menu.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_report_menu1FocusGained(evt);
+                btn_createbill_menuFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_report_menu1FocusLost(evt);
+                btn_createbill_menuFocusLost(evt);
             }
         });
-        btn_report_menu1.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_createbill_menu.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_report_menu1MouseEntered(evt);
+                btn_createbill_menuMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_report_menu1MouseExited(evt);
+                btn_createbill_menuMouseExited(evt);
             }
         });
-        btn_report_menu1.addActionListener(new java.awt.event.ActionListener()
+        btn_createbill_menu.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_report_menu1ActionPerformed(evt);
+                btn_createbill_menuActionPerformed(evt);
             }
         });
-        btn_report_menu1.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_createbill_menu.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_report_menu1KeyPressed(evt);
+                btn_createbill_menuKeyPressed(evt);
             }
         });
 
-        lid_report_menu1.setBackground(new java.awt.Color(225, 223, 223));
-        lid_report_menu1.setkBorderRadius(15);
-        lid_report_menu1.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu1.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu1.setOpaque(false);
-        lid_report_menu1.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_createbill.setBackground(new java.awt.Color(225, 223, 223));
+        lid_createbill.setkBorderRadius(15);
+        lid_createbill.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_createbill.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_createbill.setOpaque(false);
+        lid_createbill.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid_report_menu1Layout = new javax.swing.GroupLayout(lid_report_menu1);
-        lid_report_menu1.setLayout(lid_report_menu1Layout);
-        lid_report_menu1Layout.setHorizontalGroup(
-            lid_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_createbillLayout = new javax.swing.GroupLayout(lid_createbill);
+        lid_createbill.setLayout(lid_createbillLayout);
+        lid_createbillLayout.setHorizontalGroup(
+            lid_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid_report_menu1Layout.setVerticalGroup(
-            lid_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_createbillLayout.setVerticalGroup(
+            lid_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl_report_menu1Layout = new javax.swing.GroupLayout(pnl_report_menu1);
-        pnl_report_menu1.setLayout(pnl_report_menu1Layout);
-        pnl_report_menu1Layout.setHorizontalGroup(
-            pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_createbill_menuLayout = new javax.swing.GroupLayout(pnl_createbill_menu);
+        pnl_createbill_menu.setLayout(pnl_createbill_menuLayout);
+        pnl_createbill_menuLayout.setHorizontalGroup(
+            pnl_createbill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_createbill_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_createbill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_createbill, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_createbill_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl_report_menu1Layout.setVerticalGroup(
-            pnl_report_menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu1Layout.createSequentialGroup()
+        pnl_createbill_menuLayout.setVerticalGroup(
+            pnl_createbill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_createbill_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_createbill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(lid_createbill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
-        pnl_report_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu2.setOpaque(false);
-        pnl_report_menu2.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_modifybill_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_modifybill_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_modifybill_menu.setOpaque(false);
+        pnl_modifybill_menu.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_report_menu2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_report_menu2.setText("TAB 2");
-        btn_report_menu2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_report_menu2.setkBorderRadius(20);
-        btn_report_menu2.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu2.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_report_menu2.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu2.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu2.setNextFocusableComponent(btn_report_menu3);
-        btn_report_menu2.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_report_menu2.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_modifybill_menu.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_modifybill_menu.setText("MODIFY BILL");
+        btn_modifybill_menu.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        btn_modifybill_menu.setkBorderRadius(20);
+        btn_modifybill_menu.setkEndColor(new java.awt.Color(255, 203, 109));
+        btn_modifybill_menu.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_modifybill_menu.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_modifybill_menu.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_modifybill_menu.setkStartColor(new java.awt.Color(255, 203, 109));
+        btn_modifybill_menu.setPreferredSize(new java.awt.Dimension(185, 43));
+        btn_modifybill_menu.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_report_menu2FocusGained(evt);
+                btn_modifybill_menuFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_report_menu2FocusLost(evt);
+                btn_modifybill_menuFocusLost(evt);
             }
         });
-        btn_report_menu2.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_modifybill_menu.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_report_menu2MouseEntered(evt);
+                btn_modifybill_menuMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_report_menu2MouseExited(evt);
+                btn_modifybill_menuMouseExited(evt);
             }
         });
-        btn_report_menu2.addActionListener(new java.awt.event.ActionListener()
+        btn_modifybill_menu.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_report_menu2ActionPerformed(evt);
+                btn_modifybill_menuActionPerformed(evt);
             }
         });
-        btn_report_menu2.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_modifybill_menu.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_report_menu2KeyPressed(evt);
+                btn_modifybill_menuKeyPressed(evt);
             }
         });
 
-        lid_report_menu2.setBackground(new java.awt.Color(225, 223, 223));
-        lid_report_menu2.setkBorderRadius(15);
-        lid_report_menu2.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu2.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu2.setOpaque(false);
-        lid_report_menu2.setPreferredSize(new java.awt.Dimension(200, 6));
+        lid_modifybill.setBackground(new java.awt.Color(225, 223, 223));
+        lid_modifybill.setkBorderRadius(15);
+        lid_modifybill.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_modifybill.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_modifybill.setOpaque(false);
+        lid_modifybill.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        javax.swing.GroupLayout lid_report_menu2Layout = new javax.swing.GroupLayout(lid_report_menu2);
-        lid_report_menu2.setLayout(lid_report_menu2Layout);
-        lid_report_menu2Layout.setHorizontalGroup(
-            lid_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout lid_modifybillLayout = new javax.swing.GroupLayout(lid_modifybill);
+        lid_modifybill.setLayout(lid_modifybillLayout);
+        lid_modifybillLayout.setHorizontalGroup(
+            lid_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        lid_report_menu2Layout.setVerticalGroup(
-            lid_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_modifybillLayout.setVerticalGroup(
+            lid_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl_report_menu2Layout = new javax.swing.GroupLayout(pnl_report_menu2);
-        pnl_report_menu2.setLayout(pnl_report_menu2Layout);
-        pnl_report_menu2Layout.setHorizontalGroup(
-            pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_modifybill_menuLayout = new javax.swing.GroupLayout(pnl_modifybill_menu);
+        pnl_modifybill_menu.setLayout(pnl_modifybill_menuLayout);
+        pnl_modifybill_menuLayout.setHorizontalGroup(
+            pnl_modifybill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_modifybill_menuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid_report_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_report_menu2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addGroup(pnl_modifybill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lid_modifybill, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                    .addComponent(btn_modifybill_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnl_report_menu2Layout.setVerticalGroup(
-            pnl_report_menu2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu2Layout.createSequentialGroup()
+        pnl_modifybill_menuLayout.setVerticalGroup(
+            pnl_modifybill_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_modifybill_menuLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_modifybill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(lid_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_modifybill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl_report_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_report_menu3.setOpaque(false);
-        pnl_report_menu3.setPreferredSize(new java.awt.Dimension(200, 60));
+        pnl_bill_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
+        pnl_bill_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
+        pnl_bill_menu3.setOpaque(false);
+        pnl_bill_menu3.setPreferredSize(new java.awt.Dimension(200, 60));
 
-        btn_report_menu3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_report_menu3.setText("TAB 3");
-        btn_report_menu3.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
-        btn_report_menu3.setkBorderRadius(20);
-        btn_report_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu3.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu3.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_report_menu3.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_report_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
-        btn_report_menu3.setNextFocusableComponent(btn_report_menu1);
-        btn_report_menu3.setPreferredSize(new java.awt.Dimension(185, 43));
-        btn_report_menu3.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                btn_report_menu3FocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                btn_report_menu3FocusLost(evt);
-            }
-        });
-        btn_report_menu3.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                btn_report_menu3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                btn_report_menu3MouseExited(evt);
-            }
-        });
-        btn_report_menu3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btn_report_menu3ActionPerformed(evt);
-            }
-        });
-        btn_report_menu3.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                btn_report_menu3KeyPressed(evt);
-            }
-        });
+        lid_bill_menu3.setBackground(new java.awt.Color(225, 223, 223));
+        lid_bill_menu3.setkBorderRadius(15);
+        lid_bill_menu3.setkEndColor(new java.awt.Color(211, 211, 211));
+        lid_bill_menu3.setkStartColor(new java.awt.Color(211, 211, 211));
+        lid_bill_menu3.setOpaque(false);
+        lid_bill_menu3.setPreferredSize(new java.awt.Dimension(200, 6));
 
-        lid_report_menu3.setBackground(new java.awt.Color(225, 223, 223));
-        lid_report_menu3.setkBorderRadius(15);
-        lid_report_menu3.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu3.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid_report_menu3.setOpaque(false);
-        lid_report_menu3.setPreferredSize(new java.awt.Dimension(200, 6));
-
-        javax.swing.GroupLayout lid_report_menu3Layout = new javax.swing.GroupLayout(lid_report_menu3);
-        lid_report_menu3.setLayout(lid_report_menu3Layout);
-        lid_report_menu3Layout.setHorizontalGroup(
-            lid_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        javax.swing.GroupLayout lid_bill_menu3Layout = new javax.swing.GroupLayout(lid_bill_menu3);
+        lid_bill_menu3.setLayout(lid_bill_menu3Layout);
+        lid_bill_menu3Layout.setHorizontalGroup(
+            lid_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 188, Short.MAX_VALUE)
         );
-        lid_report_menu3Layout.setVerticalGroup(
-            lid_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lid_bill_menu3Layout.setVerticalGroup(
+            lid_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout pnl_report_menu3Layout = new javax.swing.GroupLayout(pnl_report_menu3);
-        pnl_report_menu3.setLayout(pnl_report_menu3Layout);
-        pnl_report_menu3Layout.setHorizontalGroup(
-            pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu3Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_bill_menu3Layout = new javax.swing.GroupLayout(pnl_bill_menu3);
+        pnl_bill_menu3.setLayout(pnl_bill_menu3Layout);
+        pnl_bill_menu3Layout.setHorizontalGroup(
+            pnl_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_bill_menu3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lid_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                    .addComponent(btn_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                .addComponent(lid_bill_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        pnl_report_menu3Layout.setVerticalGroup(
-            pnl_report_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menu3Layout.createSequentialGroup()
+        pnl_bill_menu3Layout.setVerticalGroup(
+            pnl_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_bill_menu3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(lid_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lid_bill_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        javax.swing.GroupLayout pnl_report_menubarLayout = new javax.swing.GroupLayout(pnl_report_menubar);
-        pnl_report_menubar.setLayout(pnl_report_menubarLayout);
-        pnl_report_menubarLayout.setHorizontalGroup(
-            pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_report_menubarLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_bill_menubarLayout = new javax.swing.GroupLayout(pnl_bill_menubar);
+        pnl_bill_menubar.setLayout(pnl_bill_menubarLayout);
+        pnl_bill_menubarLayout.setHorizontalGroup(
+            pnl_bill_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_bill_menubarLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(pnl_report_menu1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_createbill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl_report_menu2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_modifybill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(pnl_report_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_bill_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(418, Short.MAX_VALUE))
         );
-        pnl_report_menubarLayout.setVerticalGroup(
-            pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_report_menubarLayout.createSequentialGroup()
+        pnl_bill_menubarLayout.setVerticalGroup(
+            pnl_bill_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_bill_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addGroup(pnl_report_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_report_menu1, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_report_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_report_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                .addGroup(pnl_bill_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_createbill_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_bill_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_modifybill_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        pnl_report_main.setkBorderRadius(40);
-        pnl_report_main.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_report_main.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_report_main.setOpaque(false);
-        pnl_report_main.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_bill_main.setkBorderRadius(40);
+        pnl_bill_main.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_bill_main.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_bill_main.setOpaque(false);
+        pnl_bill_main.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        pnl_report_tab1.setkBorderRadius(40);
-        pnl_report_tab1.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab1.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab1.setOpaque(false);
-        pnl_report_tab1.setPreferredSize(new java.awt.Dimension(1108, 672));
+        pnl_createbill.setkBorderRadius(40);
+        pnl_createbill.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_createbill.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_createbill.setOpaque(false);
+        pnl_createbill.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        javax.swing.GroupLayout pnl_report_tab1Layout = new javax.swing.GroupLayout(pnl_report_tab1);
-        pnl_report_tab1.setLayout(pnl_report_tab1Layout);
-        pnl_report_tab1Layout.setHorizontalGroup(
-            pnl_report_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
-        );
-        pnl_report_tab1Layout.setVerticalGroup(
-            pnl_report_tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-        );
+        lbl_createbill_custdet.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbl_createbill_custdet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_createbill_custdet.setText("CONSUMER DETAIL :");
+        lbl_createbill_custdet.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lbl_createbill_custdet.setPreferredSize(new java.awt.Dimension(240, 50));
 
-        pnl_report_tab2.setkBorderRadius(40);
-        pnl_report_tab2.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab2.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab2.setOpaque(false);
-        pnl_report_tab2.setPreferredSize(new java.awt.Dimension(1108, 672));
+        lbl_billno.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbl_billno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_billno.setText("BILL NO.");
+        lbl_billno.setPreferredSize(new java.awt.Dimension(209, 50));
 
-        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel22.setText("PANEL 5 Tab 2");
+        lbl_billno_no.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lbl_billno_no.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_billno_no.setText("1");
+        lbl_billno_no.setPreferredSize(new java.awt.Dimension(50, 50));
 
-        javax.swing.GroupLayout pnl_report_tab2Layout = new javax.swing.GroupLayout(pnl_report_tab2);
-        pnl_report_tab2.setLayout(pnl_report_tab2Layout);
-        pnl_report_tab2Layout.setHorizontalGroup(
-            pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_report_tab2Layout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
-        );
-        pnl_report_tab2Layout.setVerticalGroup(
-            pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_report_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_report_tab2Layout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
-        );
+        cmbbox_createbill_custid.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_createbill_custid.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_createbill_custid.setMaximumRowCount(5);
+        cmbbox_createbill_custid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cmbbox_createbill_custid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_createbill_custid.setMaximumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_custid.setMinimumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_custid.setNextFocusableComponent(txt_createbill_custnm);
+        cmbbox_createbill_custid.setPreferredSize(new java.awt.Dimension(150, 64));
+        cmbbox_createbill_custid.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbbox_createbill_custidActionPerformed(evt);
+            }
+        });
 
-        pnl_report_tab3.setkBorderRadius(40);
-        pnl_report_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
-        pnl_report_tab3.setOpaque(false);
-        pnl_report_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
+        txt_createbill_custnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_custnm.setFocusCycleRoot(true);
+        txt_createbill_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_custnm.setLabelText("CUSTOMER NAME");
+        txt_createbill_custnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_custnm.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_custnm.setPreferredSize(new java.awt.Dimension(300, 64));
 
-        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("PANEL 5 Tab 3");
+        txt_createbill_addr.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_addr.setFocusCycleRoot(true);
+        txt_createbill_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_addr.setLabelText("ADDRESS");
+        txt_createbill_addr.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_addr.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_addr.setPreferredSize(new java.awt.Dimension(300, 64));
 
-        javax.swing.GroupLayout pnl_report_tab3Layout = new javax.swing.GroupLayout(pnl_report_tab3);
-        pnl_report_tab3.setLayout(pnl_report_tab3Layout);
-        pnl_report_tab3Layout.setHorizontalGroup(
-            pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_report_tab3Layout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
-        );
-        pnl_report_tab3Layout.setVerticalGroup(
-            pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_report_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_report_tab3Layout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
-        );
+        txt_createbill_contact.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_contact.setFocusCycleRoot(true);
+        txt_createbill_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_contact.setLabelText("CONTACT");
+        txt_createbill_contact.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_contact.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_contact.setPreferredSize(new java.awt.Dimension(300, 64));
 
-        javax.swing.GroupLayout pnl_report_mainLayout = new javax.swing.GroupLayout(pnl_report_main);
-        pnl_report_main.setLayout(pnl_report_mainLayout);
-        pnl_report_mainLayout.setHorizontalGroup(
-            pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        lbl_createbill_proddet.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbl_createbill_proddet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_createbill_proddet.setText("PRODUCTS LISTING :");
+        lbl_createbill_proddet.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lbl_createbill_proddet.setPreferredSize(new java.awt.Dimension(240, 50));
+
+        cmbbox_createbill_prodid.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_createbill_prodid.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_createbill_prodid.setMaximumRowCount(5);
+        cmbbox_createbill_prodid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cmbbox_createbill_prodid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_createbill_prodid.setMaximumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_prodid.setMinimumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_prodid.setNextFocusableComponent(txt_createbill_custnm);
+        cmbbox_createbill_prodid.setPreferredSize(new java.awt.Dimension(150, 64));
+        cmbbox_createbill_prodid.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbbox_createbill_prodidActionPerformed(evt);
+            }
+        });
+
+        txt_createbill_prodnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodnm.setFocusCycleRoot(true);
+        txt_createbill_prodnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_prodnm.setLabelText("PRODUCT NAME");
+        txt_createbill_prodnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_prodnm.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_prodnm.setPreferredSize(new java.awt.Dimension(300, 64));
+
+        txt_createbill_prodprice.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodprice.setFocusCycleRoot(true);
+        txt_createbill_prodprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_prodprice.setLabelText("PRICE");
+        txt_createbill_prodprice.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_prodprice.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_prodprice.setPreferredSize(new java.awt.Dimension(300, 64));
+
+        spin_createbill_quantity.setForeground(new java.awt.Color(150, 195, 248));
+        spin_createbill_quantity.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        spin_createbill_quantity.setLabelText("QUANTITY");
+        spin_createbill_quantity.setPreferredSize(new java.awt.Dimension(150, 64));
+
+        pnl_calc.setBackground(new java.awt.Color(150, 195, 248));
+        pnl_calc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        javax.swing.GroupLayout pnl_calcLayout = new javax.swing.GroupLayout(pnl_calc);
+        pnl_calc.setLayout(pnl_calcLayout);
+        pnl_calcLayout.setHorizontalGroup(
+            pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pnl_report_mainLayout.setVerticalGroup(
-            pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnl_report_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(pnl_report_tab3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        pnl_calcLayout.setVerticalGroup(
+            pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 261, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panel_reportLayout = new javax.swing.GroupLayout(panel_report);
-        panel_report.setLayout(panel_reportLayout);
-        panel_reportLayout.setHorizontalGroup(
-            panel_reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_reportLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_createbillLayout = new javax.swing.GroupLayout(pnl_createbill);
+        pnl_createbill.setLayout(pnl_createbillLayout);
+        pnl_createbillLayout.setHorizontalGroup(
+            pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_createbillLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnl_report_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_report_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_createbillLayout.createSequentialGroup()
+                        .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_createbill_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_createbill_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_createbillLayout.createSequentialGroup()
+                        .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_createbillLayout.createSequentialGroup()
+                                .addComponent(cmbbox_createbill_prodid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_createbill_prodnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pnl_calc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(spin_createbill_quantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(pnl_createbillLayout.createSequentialGroup()
+                                .addComponent(cmbbox_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_createbill_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                                .addComponent(txt_createbill_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator1)
+                            .addGroup(pnl_createbillLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(lbl_billno, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_billno_no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(10, 10, 10))))
+        );
+        pnl_createbillLayout.setVerticalGroup(
+            pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_createbillLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_billno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_billno_no, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_createbill_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbbox_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txt_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_createbill_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_createbill_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lbl_createbill_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cmbbox_createbill_prodid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txt_createbill_prodnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spin_createbill_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(pnl_calc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        panel_reportLayout.setVerticalGroup(
-            panel_reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_reportLayout.createSequentialGroup()
+
+        pnl_modifybill.setkBorderRadius(40);
+        pnl_modifybill.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_modifybill.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_modifybill.setOpaque(false);
+        pnl_modifybill.setPreferredSize(new java.awt.Dimension(1108, 672));
+
+        jLabel3.setText("MODIFY BILL");
+
+        javax.swing.GroupLayout pnl_modifybillLayout = new javax.swing.GroupLayout(pnl_modifybill);
+        pnl_modifybill.setLayout(pnl_modifybillLayout);
+        pnl_modifybillLayout.setHorizontalGroup(
+            pnl_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_modifybillLayout.createSequentialGroup()
+                .addContainerGap(520, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(503, 503, 503))
+        );
+        pnl_modifybillLayout.setVerticalGroup(
+            pnl_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_modifybillLayout.createSequentialGroup()
+                .addGap(272, 272, 272)
+                .addComponent(jLabel3)
+                .addContainerGap(379, Short.MAX_VALUE))
+        );
+
+        pnl_bill_tab3.setkBorderRadius(40);
+        pnl_bill_tab3.setkEndColor(new java.awt.Color(150, 195, 248));
+        pnl_bill_tab3.setkStartColor(new java.awt.Color(150, 195, 248));
+        pnl_bill_tab3.setOpaque(false);
+        pnl_bill_tab3.setPreferredSize(new java.awt.Dimension(1108, 672));
+
+        javax.swing.GroupLayout pnl_bill_tab3Layout = new javax.swing.GroupLayout(pnl_bill_tab3);
+        pnl_bill_tab3.setLayout(pnl_bill_tab3Layout);
+        pnl_bill_tab3Layout.setHorizontalGroup(
+            pnl_bill_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1108, Short.MAX_VALUE)
+        );
+        pnl_bill_tab3Layout.setVerticalGroup(
+            pnl_bill_tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 672, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pnl_bill_mainLayout = new javax.swing.GroupLayout(pnl_bill_main);
+        pnl_bill_main.setLayout(pnl_bill_mainLayout);
+        pnl_bill_mainLayout.setHorizontalGroup(
+            pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_createbill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_modifybill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_bill_tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_bill_mainLayout.setVerticalGroup(
+            pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 672, Short.MAX_VALUE)
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_createbill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_modifybill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(pnl_bill_tab3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panel_billLayout = new javax.swing.GroupLayout(panel_bill);
+        panel_bill.setLayout(panel_billLayout);
+        panel_billLayout.setHorizontalGroup(
+            panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_billLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnl_bill_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_bill_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panel_billLayout.setVerticalGroup(
+            panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_billLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(pnl_report_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                .addComponent(pnl_bill_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(pnl_report_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_bill_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4370,7 +4490,7 @@ public class Main extends javax.swing.JFrame
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_account, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_product, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4387,7 +4507,7 @@ public class Main extends javax.swing.JFrame
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_account, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panel_report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panel_bill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(panel_product, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel_dash_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4517,10 +4637,10 @@ public class Main extends javax.swing.JFrame
         btnProduct.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }//GEN-LAST:event_btnProductMouseEntered
 
-    private void btnReportMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnReportMouseEntered
-    {//GEN-HEADEREND:event_btnReportMouseEntered
-        btnReport.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_btnReportMouseEntered
+    private void btnBillMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnBillMouseEntered
+    {//GEN-HEADEREND:event_btnBillMouseEntered
+        btnBill.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btnBillMouseEntered
 
     private void btnaccountMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnaccountMouseEntered
     {//GEN-HEADEREND:event_btnaccountMouseEntered
@@ -4596,15 +4716,15 @@ public class Main extends javax.swing.JFrame
         hover(btnProduct, new Color(255, 167, 6), Color.white);
     }//GEN-LAST:event_btnProductFocusLost
 
-    private void btnReportFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnReportFocusGained
-    {//GEN-HEADEREND:event_btnReportFocusGained
-        hover(btnReport, new Color(1, 109, 218), Color.black);
-    }//GEN-LAST:event_btnReportFocusGained
+    private void btnBillFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnBillFocusGained
+    {//GEN-HEADEREND:event_btnBillFocusGained
+        hover(btnBill, new Color(1, 109, 218), Color.black);
+    }//GEN-LAST:event_btnBillFocusGained
 
-    private void btnReportFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnReportFocusLost
-    {//GEN-HEADEREND:event_btnReportFocusLost
-        hover(btnReport, new Color(255, 167, 6), Color.white);
-    }//GEN-LAST:event_btnReportFocusLost
+    private void btnBillFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnBillFocusLost
+    {//GEN-HEADEREND:event_btnBillFocusLost
+        hover(btnBill, new Color(255, 167, 6), Color.white);
+    }//GEN-LAST:event_btnBillFocusLost
 
     private void btnaccountFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btnaccountFocusGained
     {//GEN-HEADEREND:event_btnaccountFocusGained
@@ -4653,15 +4773,15 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_btnProductKeyPressed
 
-    private void btnReportKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnReportKeyPressed
-    {//GEN-HEADEREND:event_btnReportKeyPressed
+    private void btnBillKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnBillKeyPressed
+    {//GEN-HEADEREND:event_btnBillKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(false, false, false, false, true, false, btn_report_menu1);
-            visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
-            onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
+            visibility(false, false, false, false, true, false, btn_createbill_menu);
+            visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
+            onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
         }
-    }//GEN-LAST:event_btnReportKeyPressed
+    }//GEN-LAST:event_btnBillKeyPressed
 
     private void btnaccountKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btnaccountKeyPressed
     {//GEN-HEADEREND:event_btnaccountKeyPressed
@@ -5065,7 +5185,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_accsetting_menuKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnReport.grabFocus();
+            btnBill.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -5098,7 +5218,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_acc_menu2KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnReport.grabFocus();
+            btnBill.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -5131,7 +5251,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_acc_menu3KeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
-            btnReport.grabFocus();
+            btnBill.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
@@ -5140,109 +5260,77 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_btn_acc_menu3KeyPressed
 
-    private void btn_report_menu1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu1FocusGained
-    {//GEN-HEADEREND:event_btn_report_menu1FocusGained
-        hover(btn_report_menu1, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_report_menu1FocusGained
+    private void btn_createbill_menuFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_menuFocusGained
+    {//GEN-HEADEREND:event_btn_createbill_menuFocusGained
+        hover(btn_createbill_menu, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_createbill_menuFocusGained
 
-    private void btn_report_menu1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu1FocusLost
-    {//GEN-HEADEREND:event_btn_report_menu1FocusLost
-        hover(btn_report_menu1, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_report_menu1FocusLost
+    private void btn_createbill_menuFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_menuFocusLost
+    {//GEN-HEADEREND:event_btn_createbill_menuFocusLost
+        hover(btn_createbill_menu, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_createbill_menuFocusLost
 
-    private void btn_report_menu1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu1MouseEntered
-    {//GEN-HEADEREND:event_btn_report_menu1MouseEntered
+    private void btn_createbill_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_createbill_menuMouseEntered
+    {//GEN-HEADEREND:event_btn_createbill_menuMouseEntered
+        btn_createbill_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_createbill_menuMouseEntered
+
+    private void btn_createbill_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_createbill_menuMouseExited
+    {//GEN-HEADEREND:event_btn_createbill_menuMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu1MouseEntered
+    }//GEN-LAST:event_btn_createbill_menuMouseExited
 
-    private void btn_report_menu1MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu1MouseExited
-    {//GEN-HEADEREND:event_btn_report_menu1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu1MouseExited
-
-    private void btn_report_menu1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu1KeyPressed
-    {//GEN-HEADEREND:event_btn_report_menu1KeyPressed
+    private void btn_createbill_menuKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_createbill_menuKeyPressed
+    {//GEN-HEADEREND:event_btn_createbill_menuKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
-            onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
+            visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
+            onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
         }
-    }//GEN-LAST:event_btn_report_menu1KeyPressed
+    }//GEN-LAST:event_btn_createbill_menuKeyPressed
 
-    private void btn_report_menu2FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu2FocusGained
-    {//GEN-HEADEREND:event_btn_report_menu2FocusGained
-        hover(btn_report_menu2, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_report_menu2FocusGained
+    private void btn_modifybill_menuFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_modifybill_menuFocusGained
+    {//GEN-HEADEREND:event_btn_modifybill_menuFocusGained
+        hover(btn_modifybill_menu, new Color(1, 109, 218), Color.white);
+    }//GEN-LAST:event_btn_modifybill_menuFocusGained
 
-    private void btn_report_menu2FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu2FocusLost
-    {//GEN-HEADEREND:event_btn_report_menu2FocusLost
-        hover(btn_report_menu2, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_report_menu2FocusLost
+    private void btn_modifybill_menuFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_modifybill_menuFocusLost
+    {//GEN-HEADEREND:event_btn_modifybill_menuFocusLost
+        hover(btn_modifybill_menu, new Color(255, 203, 109), Color.black);
+    }//GEN-LAST:event_btn_modifybill_menuFocusLost
 
-    private void btn_report_menu2MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu2MouseEntered
-    {//GEN-HEADEREND:event_btn_report_menu2MouseEntered
+    private void btn_modifybill_menuMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_modifybill_menuMouseEntered
+    {//GEN-HEADEREND:event_btn_modifybill_menuMouseEntered
+        btn_modifybill_menu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_btn_modifybill_menuMouseEntered
+
+    private void btn_modifybill_menuMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_modifybill_menuMouseExited
+    {//GEN-HEADEREND:event_btn_modifybill_menuMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu2MouseEntered
+    }//GEN-LAST:event_btn_modifybill_menuMouseExited
 
-    private void btn_report_menu2MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu2MouseExited
-    {//GEN-HEADEREND:event_btn_report_menu2MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu2MouseExited
-
-    private void btn_report_menu2KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu2KeyPressed
-    {//GEN-HEADEREND:event_btn_report_menu2KeyPressed
+    private void btn_modifybill_menuKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_modifybill_menuKeyPressed
+    {//GEN-HEADEREND:event_btn_modifybill_menuKeyPressed
         if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
         {
             btnaccount.grabFocus();
         }
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
-            visibility(pnl_report_tab2, pnl_report_tab1, pnl_report_tab3);
-            onIndicator(lid_report_menu2, lid_report_menu1, lid_report_menu3);
+            visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
+            onIndicator(lid_modifybill, lid_createbill, lid_bill_menu3);
         }
-    }//GEN-LAST:event_btn_report_menu2KeyPressed
+    }//GEN-LAST:event_btn_modifybill_menuKeyPressed
 
-    private void btn_report_menu3FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu3FocusGained
-    {//GEN-HEADEREND:event_btn_report_menu3FocusGained
-        hover(btn_report_menu3, new Color(1, 109, 218), Color.white);
-    }//GEN-LAST:event_btn_report_menu3FocusGained
-
-    private void btn_report_menu3FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_report_menu3FocusLost
-    {//GEN-HEADEREND:event_btn_report_menu3FocusLost
-        hover(btn_report_menu3, new Color(255, 203, 109), Color.black);
-    }//GEN-LAST:event_btn_report_menu3FocusLost
-
-    private void btn_report_menu3MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu3MouseEntered
-    {//GEN-HEADEREND:event_btn_report_menu3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu3MouseEntered
-
-    private void btn_report_menu3MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_report_menu3MouseExited
-    {//GEN-HEADEREND:event_btn_report_menu3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_report_menu3MouseExited
-
-    private void btn_report_menu3KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_report_menu3KeyPressed
-    {//GEN-HEADEREND:event_btn_report_menu3KeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ESCAPE)
-        {
-            btnaccount.grabFocus();
-        }
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
-        {
-            visibility(pnl_report_tab3, pnl_report_tab1, pnl_report_tab2);
-            onIndicator(lid_report_menu3, lid_report_menu1, lid_report_menu2);
-        }
-    }//GEN-LAST:event_btn_report_menu3KeyPressed
-
-    private void btn_report_menu2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu2ActionPerformed
-    {//GEN-HEADEREND:event_btn_report_menu2ActionPerformed
-
-    }//GEN-LAST:event_btn_report_menu2ActionPerformed
+    private void btn_modifybill_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_modifybill_menuActionPerformed
+    {//GEN-HEADEREND:event_btn_modifybill_menuActionPerformed
+        visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
+        onIndicator(lid_modifybill, lid_createbill, lid_bill_menu3);
+    }//GEN-LAST:event_btn_modifybill_menuActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
     {//GEN-HEADEREND:event_btn_addcust_menuActionPerformed
@@ -5334,22 +5422,18 @@ public class Main extends javax.swing.JFrame
         onIndicator(lid_acc_menu3, lid_accsetting, lid_acc_menu2);
     }//GEN-LAST:event_btn_acc_menu3ActionPerformed
 
-    private void btn_report_menu1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu1ActionPerformed
-    {//GEN-HEADEREND:event_btn_report_menu1ActionPerformed
+    private void btn_createbill_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_createbill_menuActionPerformed
+    {//GEN-HEADEREND:event_btn_createbill_menuActionPerformed
+        visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
+        onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+    }//GEN-LAST:event_btn_createbill_menuActionPerformed
 
-    }//GEN-LAST:event_btn_report_menu1ActionPerformed
-
-    private void btn_report_menu3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_report_menu3ActionPerformed
-    {//GEN-HEADEREND:event_btn_report_menu3ActionPerformed
-
-    }//GEN-LAST:event_btn_report_menu3ActionPerformed
-
-    private void btnReportActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnReportActionPerformed
-    {//GEN-HEADEREND:event_btnReportActionPerformed
-        visibility(false, false, false, false, true, false, btn_report_menu1);
-        visibility(pnl_report_tab1, pnl_report_tab2, pnl_report_tab3);
-        onIndicator(lid_report_menu1, lid_report_menu2, lid_report_menu3);
-    }//GEN-LAST:event_btnReportActionPerformed
+    private void btnBillActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnBillActionPerformed
+    {//GEN-HEADEREND:event_btnBillActionPerformed
+        visibility(false, false, false, false, true, false, btn_createbill_menu);
+        visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
+        onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+    }//GEN-LAST:event_btnBillActionPerformed
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
     {//GEN-HEADEREND:event_btn_editcust_editFocusGained
@@ -6062,6 +6146,16 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_proddetKeyPressed
 
+    private void cmbbox_createbill_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_custidActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_createbill_custidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbbox_createbill_custidActionPerformed
+
+    private void cmbbox_createbill_prodidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_prodidActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_createbill_prodidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbbox_createbill_prodidActionPerformed
+
     public static void main(String args[])
     {
 
@@ -6116,7 +6210,7 @@ public class Main extends javax.swing.JFrame
             panel_customer.setVisible(pnl1);
             panel_employee.setVisible(pnl2);
             panel_product.setVisible(pnl3);
-            panel_report.setVisible(pnl5);
+            panel_bill.setVisible(pnl5);
             panel_account.setVisible(pnl4);
             btn.grabFocus();
         }
@@ -6128,7 +6222,7 @@ public class Main extends javax.swing.JFrame
         panel_customer.setVisible(pnl1);
         panel_employee.setVisible(pnl2);
         panel_product.setVisible(pnl3);
-        panel_report.setVisible(pnl4);
+        panel_bill.setVisible(pnl4);
         panel_account.setVisible(pnl5);
         btn.grabFocus();
 
@@ -6392,10 +6486,10 @@ public class Main extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.k33ptoo.components.KButton btnBill;
     private com.k33ptoo.components.KButton btnCustomer;
     private com.k33ptoo.components.KButton btnEmployee;
     private com.k33ptoo.components.KButton btnProduct;
-    private com.k33ptoo.components.KButton btnReport;
     private com.k33ptoo.components.KButton btn_acc_menu2;
     private com.k33ptoo.components.KButton btn_acc_menu3;
     private com.k33ptoo.components.KButton btn_accsetting_menu;
@@ -6405,6 +6499,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_addemp_menu;
     private com.k33ptoo.components.KButton btn_addprod;
     private com.k33ptoo.components.KButton btn_addprod_menu;
+    private com.k33ptoo.components.KButton btn_createbill_menu;
     private com.k33ptoo.components.KButton btn_custdet;
     private com.k33ptoo.components.KButton btn_custdet_menu;
     private com.k33ptoo.components.KButton btn_editcust_edit;
@@ -6419,22 +6514,27 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_empdet_menu;
     private com.k33ptoo.components.KButton btn_login;
+    private com.k33ptoo.components.KButton btn_modifybill_menu;
     private com.k33ptoo.components.KButton btn_proddet;
     private com.k33ptoo.components.KButton btn_proddet_menu;
-    private com.k33ptoo.components.KButton btn_report_menu1;
-    private com.k33ptoo.components.KButton btn_report_menu2;
-    private com.k33ptoo.components.KButton btn_report_menu3;
     private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custid;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodid;
     private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lbl_billno;
+    private javax.swing.JLabel lbl_billno_no;
     private javax.swing.JLabel lbl_close;
+    private javax.swing.JLabel lbl_createbill_custdet;
+    private javax.swing.JLabel lbl_createbill_proddet;
     private javax.swing.JLabel lbl_dash_usr;
     private javax.swing.JLabel lbl_dash_welcome;
     private javax.swing.JLabel lbl_forgot_pswd;
@@ -6449,17 +6549,18 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel lid_add_cust;
     private com.k33ptoo.components.KGradientPanel lid_add_emp;
     private com.k33ptoo.components.KGradientPanel lid_addprod;
+    private com.k33ptoo.components.KGradientPanel lid_bill_menu3;
+    private com.k33ptoo.components.KGradientPanel lid_createbill;
     private com.k33ptoo.components.KGradientPanel lid_cust_det;
     private com.k33ptoo.components.KGradientPanel lid_edit_cust;
     private com.k33ptoo.components.KGradientPanel lid_edit_emp;
     private com.k33ptoo.components.KGradientPanel lid_editprod;
     private com.k33ptoo.components.KGradientPanel lid_emp_det;
+    private com.k33ptoo.components.KGradientPanel lid_modifybill;
     private com.k33ptoo.components.KGradientPanel lid_proddet;
-    private com.k33ptoo.components.KGradientPanel lid_report_menu1;
-    private com.k33ptoo.components.KGradientPanel lid_report_menu2;
-    private com.k33ptoo.components.KGradientPanel lid_report_menu3;
     private com.k33ptoo.components.KGradientPanel panel_account;
     private com.k33ptoo.components.KGradientPanel panel_bg;
+    private com.k33ptoo.components.KGradientPanel panel_bill;
     private com.k33ptoo.components.KGradientPanel panel_customer;
     private com.k33ptoo.components.KGradientPanel panel_dash_main;
     private com.k33ptoo.components.KGradientPanel panel_dash_menu;
@@ -6471,7 +6572,6 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel panel_login_img;
     private com.k33ptoo.components.KGradientPanel panel_login_main;
     private com.k33ptoo.components.KGradientPanel panel_product;
-    private com.k33ptoo.components.KGradientPanel panel_report;
     private com.k33ptoo.components.KGradientPanel pnl_acc_menu2;
     private com.k33ptoo.components.KGradientPanel pnl_acc_menu3;
     private com.k33ptoo.components.KGradientPanel pnl_acc_tab2;
@@ -6486,7 +6586,14 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_addcust_menu;
     private com.k33ptoo.components.KGradientPanel pnl_addemp_menu;
     private com.k33ptoo.components.KGradientPanel pnl_addprod_menu;
+    private com.k33ptoo.components.KGradientPanel pnl_bill_main;
+    private com.k33ptoo.components.KGradientPanel pnl_bill_menu3;
+    private com.k33ptoo.components.KGradientPanel pnl_bill_menubar;
+    private com.k33ptoo.components.KGradientPanel pnl_bill_tab3;
+    private javax.swing.JPanel pnl_calc;
     private javax.swing.JPanel pnl_close;
+    private com.k33ptoo.components.KGradientPanel pnl_createbill;
+    private com.k33ptoo.components.KGradientPanel pnl_createbill_menu;
     private com.k33ptoo.components.KGradientPanel pnl_cust_det;
     private com.k33ptoo.components.KGradientPanel pnl_cust_det_menu;
     private com.k33ptoo.components.KGradientPanel pnl_cust_menubar;
@@ -6503,24 +6610,19 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_employee_main;
     private com.k33ptoo.components.KGradientPanel pnl_menu_head;
     private javax.swing.JPanel pnl_minimize;
+    private com.k33ptoo.components.KGradientPanel pnl_modifybill;
+    private com.k33ptoo.components.KGradientPanel pnl_modifybill_menu;
     private com.k33ptoo.components.KGradientPanel pnl_prod_det;
     private com.k33ptoo.components.KGradientPanel pnl_prod_main;
     private com.k33ptoo.components.KGradientPanel pnl_prod_menubar;
     private com.k33ptoo.components.KGradientPanel pnl_proddet_menu;
-    private com.k33ptoo.components.KGradientPanel pnl_report_main;
-    private com.k33ptoo.components.KGradientPanel pnl_report_menu1;
-    private com.k33ptoo.components.KGradientPanel pnl_report_menu2;
-    private com.k33ptoo.components.KGradientPanel pnl_report_menu3;
-    private com.k33ptoo.components.KGradientPanel pnl_report_menubar;
-    private com.k33ptoo.components.KGradientPanel pnl_report_tab1;
-    private com.k33ptoo.components.KGradientPanel pnl_report_tab2;
-    private com.k33ptoo.components.KGradientPanel pnl_report_tab3;
     private javax.swing.JScrollPane scrolltbl_custdet;
     private javax.swing.JScrollPane scrolltbl_editcust;
     private javax.swing.JScrollPane scrolltbl_editemp;
     private javax.swing.JScrollPane scrolltbl_editprod;
     private javax.swing.JScrollPane scrolltbl_empdet;
     private javax.swing.JScrollPane scrolltbl_proddet;
+    private spinner.Spinner spin_createbill_quantity;
     private javax.swing.JTable table_custdet;
     private javax.swing.JTable table_editcust;
     private javax.swing.JTable table_editemp;
@@ -6546,6 +6648,11 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_addprod_nm;
     private textfield.TextField txt_addprod_quantity;
     private textfield.TextField txt_addprod_sellingprice;
+    private textfield.TextField txt_createbill_addr;
+    private textfield.TextField txt_createbill_contact;
+    private textfield.TextField txt_createbill_custnm;
+    private textfield.TextField txt_createbill_prodnm;
+    private textfield.TextField txt_createbill_prodprice;
     private textfield.TextField txt_custdet_custnm;
     private textfield.TextField txt_editcust_contact;
     private textfield.TextField txt_editcust_email;
