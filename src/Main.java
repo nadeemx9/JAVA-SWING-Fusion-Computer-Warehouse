@@ -271,12 +271,13 @@ public class Main extends javax.swing.JFrame
         scroll_createbill = new javax.swing.JScrollPane();
         table_createbill = new javax.swing.JTable();
         btn_addprod1 = new com.k33ptoo.components.KButton();
-        chk_taxapplicable = new javax.swing.JCheckBox();
-        txt_createbill_prodprice1 = new textfield.TextField();
+        chk_fullypaid = new javax.swing.JCheckBox();
         txt_createbill_prodprice = new textfield.TextField();
         btn_createbill_save = new com.k33ptoo.components.KButton();
         txt_createbill_discount = new textfield.TextField();
         spin_createbill_quantity = new spinner.Spinner();
+        txt_createbill_tax = new textfield.TextField();
+        txt_createbill_amtpaid = new textfield.TextField();
         pnl_modifybill = new com.k33ptoo.components.KGradientPanel();
         jLabel3 = new javax.swing.JLabel();
         pnl_bill_tab3 = new com.k33ptoo.components.KGradientPanel();
@@ -3801,6 +3802,7 @@ public class Main extends javax.swing.JFrame
 
         txt_createbill_custnm.setEditable(false);
         txt_createbill_custnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_custnm.setEnabled(false);
         txt_createbill_custnm.setFocusCycleRoot(true);
         txt_createbill_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_custnm.setLabelText("CUSTOMER NAME");
@@ -3810,6 +3812,7 @@ public class Main extends javax.swing.JFrame
 
         txt_createbill_addr.setEditable(false);
         txt_createbill_addr.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_addr.setEnabled(false);
         txt_createbill_addr.setFocusCycleRoot(true);
         txt_createbill_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_addr.setLabelText("ADDRESS");
@@ -3819,6 +3822,7 @@ public class Main extends javax.swing.JFrame
 
         txt_createbill_contact.setEditable(false);
         txt_createbill_contact.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_contact.setEnabled(false);
         txt_createbill_contact.setFocusCycleRoot(true);
         txt_createbill_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_contact.setLabelText("CONTACT");
@@ -3851,6 +3855,7 @@ public class Main extends javax.swing.JFrame
 
         txt_createbill_prodnm.setEditable(false);
         txt_createbill_prodnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodnm.setEnabled(false);
         txt_createbill_prodnm.setFocusCycleRoot(true);
         txt_createbill_prodnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_prodnm.setLabelText("PRODUCT NAME");
@@ -4023,17 +4028,10 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        chk_taxapplicable.setBackground(new java.awt.Color(150, 195, 248));
-        chk_taxapplicable.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        chk_taxapplicable.setText("TAX APPLICABLE ?");
-        chk_taxapplicable.setPreferredSize(new java.awt.Dimension(294, 40));
-
-        txt_createbill_prodprice1.setBackground(new java.awt.Color(150, 195, 248));
-        txt_createbill_prodprice1.setFocusCycleRoot(true);
-        txt_createbill_prodprice1.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_createbill_prodprice1.setLabelText("TAX (in percentage)");
-        txt_createbill_prodprice1.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_createbill_prodprice1.setPreferredSize(new java.awt.Dimension(294, 64));
+        chk_fullypaid.setBackground(new java.awt.Color(150, 195, 248));
+        chk_fullypaid.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        chk_fullypaid.setText("Fully Paid");
+        chk_fullypaid.setPreferredSize(new java.awt.Dimension(294, 40));
 
         txt_createbill_prodprice.setEditable(false);
         txt_createbill_prodprice.setBackground(new java.awt.Color(150, 195, 248));
@@ -4094,7 +4092,6 @@ public class Main extends javax.swing.JFrame
         });
 
         txt_createbill_discount.setBackground(new java.awt.Color(150, 195, 248));
-        txt_createbill_discount.setEnabled(false);
         txt_createbill_discount.setFocusCycleRoot(true);
         txt_createbill_discount.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_discount.setLabelText("DISCOUNT(%)");
@@ -4105,6 +4102,27 @@ public class Main extends javax.swing.JFrame
         spin_createbill_quantity.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         spin_createbill_quantity.setLabelText("QUANTITY");
         spin_createbill_quantity.setPreferredSize(new java.awt.Dimension(150, 64));
+
+        txt_createbill_tax.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_tax.setFocusCycleRoot(true);
+        txt_createbill_tax.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_tax.setLabelText("TAX(%)");
+        txt_createbill_tax.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_tax.setPreferredSize(new java.awt.Dimension(141, 64));
+
+        txt_createbill_amtpaid.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_amtpaid.setFocusCycleRoot(true);
+        txt_createbill_amtpaid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_amtpaid.setLabelText("AMOUNT PAID");
+        txt_createbill_amtpaid.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_amtpaid.setPreferredSize(new java.awt.Dimension(294, 64));
+        txt_createbill_amtpaid.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txt_createbill_amtpaidActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_createbillLayout = new javax.swing.GroupLayout(pnl_createbill);
         pnl_createbill.setLayout(pnl_createbillLayout);
@@ -4130,10 +4148,10 @@ public class Main extends javax.swing.JFrame
                                 .addGap(18, 18, 18)
                                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(chk_taxapplicable, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txt_createbill_prodprice1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(btn_addprod1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btn_createbill_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(btn_createbill_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(chk_fullypaid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(txt_createbill_amtpaid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(pnl_createbillLayout.createSequentialGroup()
                                         .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -4142,8 +4160,9 @@ public class Main extends javax.swing.JFrame
                                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(pnl_calc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(pnl_createbillLayout.createSequentialGroup()
-                                        .addComponent(txt_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addComponent(txt_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt_createbill_tax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(pnl_createbillLayout.createSequentialGroup()
                                 .addComponent(cmbbox_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -4186,10 +4205,13 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(cmbbox_createbill_prodid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_createbill_prodnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_createbill_tax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_createbill_prodnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(spin_createbill_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_createbillLayout.createSequentialGroup()
@@ -4200,14 +4222,14 @@ public class Main extends javax.swing.JFrame
                         .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pnl_calc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(pnl_createbillLayout.createSequentialGroup()
-                                .addComponent(chk_taxapplicable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chk_fullypaid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_createbill_prodprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(15, 15, 15)
+                                .addComponent(txt_createbill_amtpaid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
                                 .addComponent(btn_addprod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_createbill_save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 16, Short.MAX_VALUE)))))
+                                .addGap(0, 21, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
 
@@ -6487,6 +6509,11 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_createbill_saveKeyPressed
 
+    private void txt_createbill_amtpaidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_createbill_amtpaidActionPerformed
+    {//GEN-HEADEREND:event_txt_createbill_amtpaidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_createbill_amtpaidActionPerformed
+
     public static void main(String args[])
     {
 
@@ -6851,7 +6878,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_proddet;
     private com.k33ptoo.components.KButton btn_proddet_menu;
     private com.k33ptoo.components.KButton btnaccount;
-    private javax.swing.JCheckBox chk_taxapplicable;
+    private javax.swing.JCheckBox chk_fullypaid;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custid;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodid;
@@ -6995,12 +7022,13 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_addprod_quantity;
     private textfield.TextField txt_addprod_sellingprice;
     private textfield.TextField txt_createbill_addr;
+    private textfield.TextField txt_createbill_amtpaid;
     private textfield.TextField txt_createbill_contact;
     private textfield.TextField txt_createbill_custnm;
     private textfield.TextField txt_createbill_discount;
     private textfield.TextField txt_createbill_prodnm;
     private textfield.TextField txt_createbill_prodprice;
-    private textfield.TextField txt_createbill_prodprice1;
+    private textfield.TextField txt_createbill_tax;
     private textfield.TextField txt_custdet_custnm;
     private textfield.TextField txt_editcust_contact;
     private textfield.TextField txt_editcust_email;
