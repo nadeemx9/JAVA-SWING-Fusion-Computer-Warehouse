@@ -5207,35 +5207,31 @@
                                                           <Group type="102" attributes="0">
                                                               <Component id="cmbbox_createbill_prodid" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="txt_createbill_prodnm" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="txt_createbill_prodnm" max="32767" attributes="0"/>
                                                           </Group>
                                                           <Component id="scroll_createbill" max="32767" attributes="0"/>
                                                       </Group>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                              <Component id="chk_taxapplicable" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="txt_createbill_prodprice1" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="btn_addprod1" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="btn_createbill_save" max="32767" attributes="0"/>
+                                                          </Group>
                                                           <Group type="102" attributes="0">
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                               <Component id="txt_createbill_prodprice" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                                              <Component id="btn_addprod1" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                                              <Component id="btn_createbill_save" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="chk_taxapplicable" alignment="1" min="-2" pref="294" max="-2" attributes="0"/>
-                                                                  <Component id="txt_createbill_prodprice1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
+                                                              <EmptySpace max="32767" attributes="0"/>
+                                                              <Component id="spin_createbill_quantity" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="pnl_calc" max="32767" attributes="0"/>
-                                                          <Component id="spin_createbill_quantity" max="32767" attributes="0"/>
+                                                          <Group type="102" attributes="0">
+                                                              <Component id="txt_createbill_discount" min="-2" pref="151" max="-2" attributes="0"/>
+                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                          </Group>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
@@ -5249,7 +5245,6 @@
                                                   </Group>
                                                   <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                                       <Component id="lbl_billno" min="-2" pref="105" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="lbl_billno_no" min="-2" max="-2" attributes="0"/>
@@ -5288,33 +5283,35 @@
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="lbl_createbill_proddet" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="cmbbox_createbill_prodid" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="txt_createbill_prodnm" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cmbbox_createbill_prodid" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="txt_createbill_prodnm" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="txt_createbill_prodprice" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="spin_createbill_quantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txt_createbill_discount" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <Component id="spin_createbill_quantity" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="pnl_calc" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                              <Component id="scroll_createbill" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="scroll_createbill" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="pnl_calc" max="32767" attributes="0"/>
                                                   <Group type="102" attributes="0">
                                                       <Component id="chk_taxapplicable" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="txt_createbill_prodprice1" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                       <Component id="btn_addprod1" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="btn_createbill_save" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -5411,10 +5408,10 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_createbill_custnm">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
-                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5433,10 +5430,10 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_createbill_addr">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
-                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5455,10 +5452,10 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_createbill_contact">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
-                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5537,10 +5534,10 @@
                             </Component>
                             <Component class="textfield.TextField" name="txt_createbill_prodnm">
                               <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
-                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
@@ -5554,42 +5551,6 @@
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[300, 64]"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_prodprice">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
-                                </Property>
-                                <Property name="enabled" type="boolean" value="false"/>
-                                <Property name="focusCycleRoot" type="boolean" value="true"/>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Nirmala UI" size="24" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="PRICE"/>
-                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[128, 64]"/>
-                                </Property>
-                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="txt_addprod_nm"/>
-                                </Property>
-                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[300, 64]"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="spinner.Spinner" name="spin_createbill_quantity">
-                              <Properties>
-                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="24" style="0"/>
-                                </Property>
-                                <Property name="labelText" type="java.lang.String" value="QUANTITY"/>
-                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[150, 64]"/>
                                 </Property>
                               </Properties>
                             </Component>
@@ -5633,28 +5594,28 @@
                                                   <Group type="103" groupAlignment="1" attributes="0">
                                                       <Group type="102" attributes="0">
                                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="lbl_grosstotal" max="32767" attributes="0"/>
-                                                              <Component id="lbl_createbill_grosstotal" max="32767" attributes="0"/>
+                                                              <Component id="lbl_grosstotal" max="-2" attributes="0"/>
+                                                              <Component id="lbl_createbill_grosstotal" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                                           <Component id="lbl_createbill_tax" min="-2" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="lbl_tax" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_tax" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                                   <Component id="lbl_createbill_discount" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="lbl_discount" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_discount" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="lbl_createbill_unpaid" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbl_unpaid" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_unpaid" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="lbl_createbill_nettotal" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbl_nettotal" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_nettotal" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -5716,6 +5677,18 @@
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_grosstotal">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder>
+                                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[130, 27]"/>
                                     </Property>
@@ -5723,6 +5696,18 @@
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_tax">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder>
+                                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[130, 27]"/>
                                     </Property>
@@ -5730,6 +5715,18 @@
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_discount">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder>
+                                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[130, 27]"/>
                                     </Property>
@@ -5737,6 +5734,18 @@
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_unpaid">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder>
+                                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[130, 27]"/>
                                     </Property>
@@ -5744,6 +5753,18 @@
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_nettotal">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Segoe UI" size="20" style="0"/>
+                                    </Property>
+                                    <Property name="horizontalAlignment" type="int" value="0"/>
+                                    <Property name="text" type="java.lang.String" value="0"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                        <LineBorder>
+                                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                                        </LineBorder>
+                                      </Border>
+                                    </Property>
                                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                       <Dimension value="[130, 27]"/>
                                     </Property>
@@ -5819,6 +5840,58 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_addprod1KeyPressed"/>
                               </Events>
                             </Component>
+                            <Component class="javax.swing.JCheckBox" name="chk_taxapplicable">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="20" style="0"/>
+                                </Property>
+                                <Property name="text" type="java.lang.String" value="TAX APPLICABLE ?"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[294, 40]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_createbill_prodprice1">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
+                                </Property>
+                                <Property name="focusCycleRoot" type="boolean" value="true"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Nirmala UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="TAX (in percentage)"/>
+                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[128, 64]"/>
+                                </Property>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[294, 64]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="textfield.TextField" name="txt_createbill_prodprice">
+                              <Properties>
+                                <Property name="editable" type="boolean" value="false"/>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
+                                </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
+                                <Property name="focusCycleRoot" type="boolean" value="true"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Nirmala UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="PRICE"/>
+                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[128, 64]"/>
+                                </Property>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[140, 64]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
                             <Component class="com.k33ptoo.components.KButton" name="btn_createbill_save">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -5849,9 +5922,6 @@
                                 <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="6" green="a7" red="ff" type="rgb"/>
                                 </Property>
-                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="txt_addprod_id"/>
-                                </Property>
                                 <Property name="opaque" type="boolean" value="true"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[250, 60]"/>
@@ -5866,35 +5936,36 @@
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_createbill_saveKeyPressed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="chk_taxapplicable">
+                            <Component class="textfield.TextField" name="txt_createbill_discount">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
                                 </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="0"/>
-                                </Property>
-                                <Property name="text" type="java.lang.String" value="TAX APPLICABLE ?"/>
-                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[294, 40]"/>
-                                </Property>
-                              </Properties>
-                            </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_prodprice1">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
-                                </Property>
+                                <Property name="enabled" type="boolean" value="false"/>
                                 <Property name="focusCycleRoot" type="boolean" value="true"/>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Nirmala UI" size="24" style="0"/>
                                 </Property>
-                                <Property name="labelText" type="java.lang.String" value="TAX (in percentage)"/>
+                                <Property name="labelText" type="java.lang.String" value="DISCOUNT(%)"/>
                                 <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[128, 64]"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[294, 64]"/>
+                                  <Dimension value="[151, 64]"/>
+                                </Property>
+                              </Properties>
+                            </Component>
+                            <Component class="spinner.Spinner" name="spin_createbill_quantity">
+                              <Properties>
+                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Segoe UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="QUANTITY"/>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[150, 64]"/>
                                 </Property>
                               </Properties>
                             </Component>

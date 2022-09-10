@@ -28,35 +28,35 @@ public class NewJFrame extends javax.swing.JFrame
     private void initComponents()
     {
 
-        txt_createbill_prodprice = new textfield.TextField();
+        txt_createbill_prodprice1 = new textfield.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txt_createbill_prodprice.setBackground(new java.awt.Color(150, 195, 248));
-        txt_createbill_prodprice.setFocusCycleRoot(true);
-        txt_createbill_prodprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_createbill_prodprice.setLabelText("PRICE");
-        txt_createbill_prodprice.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_createbill_prodprice.setPreferredSize(new java.awt.Dimension(294, 64));
+        txt_createbill_prodprice1.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_prodprice1.setFocusCycleRoot(true);
+        txt_createbill_prodprice1.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_prodprice1.setLabelText("TAX(%)");
+        txt_createbill_prodprice1.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_prodprice1.setPreferredSize(new java.awt.Dimension(294, 64));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1105, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(402, 402, 402)
-                    .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(409, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(407, Short.MAX_VALUE)
+                    .addComponent(txt_createbill_prodprice1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(581, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 655, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(295, 295, 295)
-                    .addComponent(txt_createbill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(295, Short.MAX_VALUE)
+                    .addComponent(txt_createbill_prodprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(296, Short.MAX_VALUE)))
         );
 
@@ -113,6 +113,6 @@ public class NewJFrame extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private textfield.TextField txt_createbill_prodprice;
+    private textfield.TextField txt_createbill_prodprice1;
     // End of variables declaration//GEN-END:variables
 }
