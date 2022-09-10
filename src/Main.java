@@ -241,8 +241,6 @@ public class Main extends javax.swing.JFrame
         pnl_modifybill_menu = new com.k33ptoo.components.KGradientPanel();
         btn_modifybill_menu = new com.k33ptoo.components.KButton();
         lid_modifybill = new com.k33ptoo.components.KGradientPanel();
-        pnl_bill_menu3 = new com.k33ptoo.components.KGradientPanel();
-        lid_bill_menu3 = new com.k33ptoo.components.KGradientPanel();
         pnl_bill_main = new com.k33ptoo.components.KGradientPanel();
         pnl_createbill = new com.k33ptoo.components.KGradientPanel();
         lbl_createbill_custdet = new javax.swing.JLabel();
@@ -279,7 +277,6 @@ public class Main extends javax.swing.JFrame
         txt_createbill_tax = new textfield.TextField();
         txt_createbill_amtpaid = new textfield.TextField();
         pnl_modifybill = new com.k33ptoo.components.KGradientPanel();
-        jLabel3 = new javax.swing.JLabel();
         pnl_bill_tab3 = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         pnl_account_menubar = new com.k33ptoo.components.KGradientPanel();
@@ -2939,9 +2936,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_prod_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_prod_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_addprod_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_proddet_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_editprod_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_prod_main.setkBorderRadius(40);
@@ -3494,7 +3491,7 @@ public class Main extends javax.swing.JFrame
             panel_productLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_productLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(pnl_prod_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                .addComponent(pnl_prod_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(pnl_prod_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -3693,45 +3690,6 @@ public class Main extends javax.swing.JFrame
                 .addComponent(lid_modifybill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        pnl_bill_menu3.setkEndColor(new java.awt.Color(255, 203, 109));
-        pnl_bill_menu3.setkStartColor(new java.awt.Color(255, 203, 109));
-        pnl_bill_menu3.setOpaque(false);
-        pnl_bill_menu3.setPreferredSize(new java.awt.Dimension(200, 60));
-
-        lid_bill_menu3.setBackground(new java.awt.Color(225, 223, 223));
-        lid_bill_menu3.setkBorderRadius(15);
-        lid_bill_menu3.setkEndColor(new java.awt.Color(211, 211, 211));
-        lid_bill_menu3.setkStartColor(new java.awt.Color(211, 211, 211));
-        lid_bill_menu3.setOpaque(false);
-        lid_bill_menu3.setPreferredSize(new java.awt.Dimension(200, 6));
-
-        javax.swing.GroupLayout lid_bill_menu3Layout = new javax.swing.GroupLayout(lid_bill_menu3);
-        lid_bill_menu3.setLayout(lid_bill_menu3Layout);
-        lid_bill_menu3Layout.setHorizontalGroup(
-            lid_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 188, Short.MAX_VALUE)
-        );
-        lid_bill_menu3Layout.setVerticalGroup(
-            lid_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 6, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout pnl_bill_menu3Layout = new javax.swing.GroupLayout(pnl_bill_menu3);
-        pnl_bill_menu3.setLayout(pnl_bill_menu3Layout);
-        pnl_bill_menu3Layout.setHorizontalGroup(
-            pnl_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_bill_menu3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lid_bill_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        pnl_bill_menu3Layout.setVerticalGroup(
-            pnl_bill_menu3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_bill_menu3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lid_bill_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
         javax.swing.GroupLayout pnl_bill_menubarLayout = new javax.swing.GroupLayout(pnl_bill_menubar);
         pnl_bill_menubar.setLayout(pnl_bill_menubarLayout);
         pnl_bill_menubarLayout.setHorizontalGroup(
@@ -3741,9 +3699,7 @@ public class Main extends javax.swing.JFrame
                 .addComponent(pnl_createbill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnl_modifybill_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22)
-                .addComponent(pnl_bill_menu3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(418, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_bill_menubarLayout.setVerticalGroup(
             pnl_bill_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3751,7 +3707,6 @@ public class Main extends javax.swing.JFrame
                 .addGap(0, 0, 0)
                 .addGroup(pnl_bill_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_createbill_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_bill_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                     .addComponent(pnl_modifybill_menu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
@@ -4239,23 +4194,15 @@ public class Main extends javax.swing.JFrame
         pnl_modifybill.setOpaque(false);
         pnl_modifybill.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        jLabel3.setText("MODIFY BILL");
-
         javax.swing.GroupLayout pnl_modifybillLayout = new javax.swing.GroupLayout(pnl_modifybill);
         pnl_modifybill.setLayout(pnl_modifybillLayout);
         pnl_modifybillLayout.setHorizontalGroup(
             pnl_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_modifybillLayout.createSequentialGroup()
-                .addContainerGap(520, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(503, 503, 503))
+            .addGap(0, 1108, Short.MAX_VALUE)
         );
         pnl_modifybillLayout.setVerticalGroup(
             pnl_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_modifybillLayout.createSequentialGroup()
-                .addGap(272, 272, 272)
-                .addComponent(jLabel3)
-                .addContainerGap(379, Short.MAX_VALUE))
+            .addGap(0, 672, Short.MAX_VALUE)
         );
 
         pnl_bill_tab3.setkBorderRadius(40);
@@ -4279,7 +4226,7 @@ public class Main extends javax.swing.JFrame
         pnl_bill_main.setLayout(pnl_bill_mainLayout);
         pnl_bill_mainLayout.setHorizontalGroup(
             pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1108, Short.MAX_VALUE)
             .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(pnl_createbill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_bill_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4304,7 +4251,7 @@ public class Main extends javax.swing.JFrame
             panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_billLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panel_billLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_bill_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_bill_menubar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -5072,7 +5019,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(false, false, false, false, true, false, btn_createbill_menu);
             visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
-            onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+            onIndicator(lid_createbill, lid_modifybill);
         }
     }//GEN-LAST:event_btnBillKeyPressed
 
@@ -5582,7 +5529,7 @@ public class Main extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
-            onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+            onIndicator(lid_createbill, lid_modifybill);
         }
     }//GEN-LAST:event_btn_createbill_menuKeyPressed
 
@@ -5615,14 +5562,14 @@ public class Main extends javax.swing.JFrame
         if (evt.getKeyCode() == KeyEvent.VK_ENTER)
         {
             visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
-            onIndicator(lid_modifybill, lid_createbill, lid_bill_menu3);
+            onIndicator(lid_modifybill, lid_createbill);
         }
     }//GEN-LAST:event_btn_modifybill_menuKeyPressed
 
     private void btn_modifybill_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_modifybill_menuActionPerformed
     {//GEN-HEADEREND:event_btn_modifybill_menuActionPerformed
         visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
-        onIndicator(lid_modifybill, lid_createbill, lid_bill_menu3);
+        onIndicator(lid_modifybill, lid_createbill);
     }//GEN-LAST:event_btn_modifybill_menuActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
@@ -5718,14 +5665,14 @@ public class Main extends javax.swing.JFrame
     private void btn_createbill_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_createbill_menuActionPerformed
     {//GEN-HEADEREND:event_btn_createbill_menuActionPerformed
         visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
-        onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+        onIndicator(lid_createbill, lid_modifybill);
     }//GEN-LAST:event_btn_createbill_menuActionPerformed
 
     private void btnBillActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnBillActionPerformed
     {//GEN-HEADEREND:event_btnBillActionPerformed
         visibility(false, false, false, false, true, false, btn_createbill_menu);
         visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
-        onIndicator(lid_createbill, lid_modifybill, lid_bill_menu3);
+        onIndicator(lid_createbill, lid_modifybill);
     }//GEN-LAST:event_btnBillActionPerformed
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
@@ -6538,28 +6485,6 @@ public class Main extends javax.swing.JFrame
         button.setBackground(bg);
     }
 
-//    public void hover(KButton btnToSelect, KButton btn2, KButton btn3, KButton btn4, KButton btn5) // To select dashboard main buttons.
-//    {
-//        btnToSelect.setkStartColor(new Color(1, 109, 218));
-//        btnToSelect.setkEndColor(new Color(1, 109, 218));
-//        btnToSelect.setBackground(Color.black);
-//
-//        btn2.setkStartColor(new Color(255, 167, 6));
-//        btn2.setkEndColor(new Color(255, 167, 6));
-//        btn2.setBackground(Color.white);
-//
-//        btn3.setkStartColor(new Color(255, 167, 6));
-//        btn3.setkEndColor(new Color(255, 167, 6));
-//        btn3.setBackground(Color.white);
-//
-//        btn4.setkStartColor(new Color(255, 167, 6));
-//        btn4.setkEndColor(new Color(255, 167, 6));
-//        btn4.setBackground(Color.white);
-//
-//        btn5.setkStartColor(new Color(255, 167, 6));
-//        btn5.setkEndColor(new Color(255, 167, 6));
-//        btn5.setBackground(Color.white);
-//    }
     public void visibility(boolean pnl_home, boolean pnl1, boolean pnl2, boolean pnl3, boolean pnl4, boolean pnl5, KButton btn, int keycode)
     {
         if (keycode == KeyEvent.VK_ENTER)
@@ -6583,7 +6508,6 @@ public class Main extends javax.swing.JFrame
         panel_bill.setVisible(pnl4);
         panel_account.setVisible(pnl5);
         btn.grabFocus();
-
     }
 
     public void visibility(KGradientPanel tabtoshow, KGradientPanel tab2, KGradientPanel tab3)
@@ -6615,7 +6539,18 @@ public class Main extends javax.swing.JFrame
         lid3.setBackground(Color.black);
     }
 
-    public void offIndicator(KGradientPanel lid1, Color color1, KGradientPanel lid2, Color color2, KGradientPanel lid3, Color color3)
+    public void onIndicator(KGradientPanel lid1, KGradientPanel lid2)
+    {
+        lid1.setkStartColor(new Color(1, 109, 218));
+        lid1.setkEndColor(new Color(1, 109, 218));
+        lid1.setBackground(Color.white);
+
+        lid2.setkStartColor(new Color(211, 211, 211));
+        lid2.setkEndColor(new Color(211, 211, 211));
+        lid2.setBackground(Color.black);
+    }
+
+    public void offIndicator(KGradientPanel lid1, Color color1, KGradientPanel lid2, Color color2)
     {
         lid1.setkStartColor(color1);
         lid1.setkEndColor(color1);
@@ -6624,10 +6559,6 @@ public class Main extends javax.swing.JFrame
         lid2.setkStartColor(color2);
         lid2.setkEndColor(color2);
         lid2.setBackground(Color.black);
-
-        lid3.setkStartColor(color3);
-        lid3.setkEndColor(color3);
-        lid3.setBackground(Color.black);
     }
 
     public String getMaxID(String tablenm)
@@ -6888,7 +6819,6 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl_billno;
@@ -6920,7 +6850,6 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel lid_add_cust;
     private com.k33ptoo.components.KGradientPanel lid_add_emp;
     private com.k33ptoo.components.KGradientPanel lid_addprod;
-    private com.k33ptoo.components.KGradientPanel lid_bill_menu3;
     private com.k33ptoo.components.KGradientPanel lid_createbill;
     private com.k33ptoo.components.KGradientPanel lid_cust_det;
     private com.k33ptoo.components.KGradientPanel lid_edit_cust;
@@ -6958,7 +6887,6 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_addemp_menu;
     private com.k33ptoo.components.KGradientPanel pnl_addprod_menu;
     private com.k33ptoo.components.KGradientPanel pnl_bill_main;
-    private com.k33ptoo.components.KGradientPanel pnl_bill_menu3;
     private com.k33ptoo.components.KGradientPanel pnl_bill_menubar;
     private com.k33ptoo.components.KGradientPanel pnl_bill_tab3;
     private javax.swing.JPanel pnl_calc;

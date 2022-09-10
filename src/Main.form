@@ -3533,7 +3533,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="pnl_prod_menubar" pref="59" max="32767" attributes="0"/>
+                              <Component id="pnl_prod_menubar" max="32767" attributes="0"/>
                               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Component id="pnl_prod_main" max="32767" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -3576,9 +3576,9 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_addprod_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_proddet_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_editprod_menu" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_addprod_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_proddet_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_editprod_menu" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -4765,7 +4765,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="pnl_bill_main" max="32767" attributes="0"/>
                                   <Component id="pnl_bill_menubar" max="32767" attributes="0"/>
                               </Group>
@@ -4809,9 +4809,7 @@
                                   <Component id="pnl_createbill_menu" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="pnl_modifybill_menu" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="pnl_bill_menu3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="418" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4821,7 +4819,6 @@
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="pnl_createbill_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_bill_menu3" alignment="0" pref="59" max="32767" attributes="0"/>
                                       <Component id="pnl_modifybill_menu" alignment="1" pref="59" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -5057,73 +5054,6 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_bill_menu3">
-                          <Properties>
-                            <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="6d" green="cb" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="6d" green="cb" red="ff" type="rgb"/>
-                            </Property>
-                            <Property name="opaque" type="boolean" value="false"/>
-                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                              <Dimension value="[200, 60]"/>
-                            </Property>
-                          </Properties>
-
-                          <Layout>
-                            <DimensionLayout dim="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lid_bill_menu3" pref="188" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                            </DimensionLayout>
-                            <DimensionLayout dim="1">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="lid_bill_menu3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                            </DimensionLayout>
-                          </Layout>
-                          <SubComponents>
-                            <Container class="com.k33ptoo.components.KGradientPanel" name="lid_bill_menu3">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="df" green="df" red="e1" type="rgb"/>
-                                </Property>
-                                <Property name="kBorderRadius" type="int" value="15"/>
-                                <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="d3" green="d3" red="d3" type="rgb"/>
-                                </Property>
-                                <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="d3" green="d3" red="d3" type="rgb"/>
-                                </Property>
-                                <Property name="opaque" type="boolean" value="false"/>
-                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[200, 6]"/>
-                                </Property>
-                              </Properties>
-
-                              <Layout>
-                                <DimensionLayout dim="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="188" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                                <DimensionLayout dim="1">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                                  </Group>
-                                </DimensionLayout>
-                              </Layout>
-                            </Container>
-                          </SubComponents>
-                        </Container>
                       </SubComponents>
                     </Container>
                     <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_bill_main">
@@ -5144,7 +5074,7 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
                               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                                   <Component id="pnl_createbill" alignment="1" max="32767" attributes="0"/>
                               </Group>
@@ -6019,30 +5949,15 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace pref="520" max="32767" attributes="0"/>
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="503" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="0" pref="1108" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="379" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="0" pref="672" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
-                          <SubComponents>
-                            <Component class="javax.swing.JLabel" name="jLabel3">
-                              <Properties>
-                                <Property name="text" type="java.lang.String" value="MODIFY BILL"/>
-                              </Properties>
-                            </Component>
-                          </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_bill_tab3">
                           <Properties>
