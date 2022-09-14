@@ -4818,8 +4818,8 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnl_createbill_menu" alignment="0" pref="59" max="32767" attributes="0"/>
-                                      <Component id="pnl_modifybill_menu" alignment="1" pref="59" max="32767" attributes="0"/>
+                                      <Component id="pnl_createbill_menu" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_modifybill_menu" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -5788,6 +5788,7 @@
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="20" style="0"/>
                                 </Property>
+                                <Property name="selected" type="boolean" value="true"/>
                                 <Property name="text" type="java.lang.String" value="Fully Paid"/>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[294, 40]"/>
@@ -5952,25 +5953,23 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane1" alignment="0" min="-2" pref="674" max="-2" attributes="0"/>
+                                          <Component id="lbl_modifybill_prodlisting" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="lbl_createbill_proddet1" min="-2" pref="240" max="-2" attributes="0"/>
-                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Component id="cmbbox_createbill_prodid1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbbox_modifybill_prodid" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="txt_createbill_prodnm1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_modifybill_prodnm" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txt_createbill_prodprice1" min="-2" pref="140" max="-2" attributes="0"/>
+                                              <Component id="txt_modifybill_prodprice" min="-2" pref="140" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="spin_createbill_quantity1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="spin_modifybill_quantity" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="txt_createbill_discount1" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txt_createbill_tax1" max="32767" attributes="0"/>
+                                              <Component id="txt_modifybill_discount" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="txt_modifybill_tax" min="-2" pref="105" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace pref="24" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -5978,37 +5977,39 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="lbl_createbill_proddet1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_modifybill_prodlisting" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                              <Component id="cmbbox_createbill_prodid1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbbox_modifybill_prodid" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                                      <Component id="txt_createbill_discount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="txt_createbill_tax1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_modifybill_discount" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_modifybill_tax" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                      <Component id="txt_createbill_prodnm1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="txt_createbill_prodprice1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_modifybill_prodnm" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txt_modifybill_prodprice" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <Component id="spin_createbill_quantity1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="spin_modifybill_quantity" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="513" max="32767" attributes="0"/>
+                                      <EmptySpace pref="165" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="310" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JLabel" name="lbl_createbill_proddet1">
+                            <Component class="javax.swing.JLabel" name="lbl_modifybill_prodlisting">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Segoe UI" size="24" style="0"/>
                                 </Property>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
-                                <Property name="text" type="java.lang.String" value="PRODUCTS LISTING :"/>
+                                <Property name="text" type="java.lang.String" value="MODIFY BILL :"/>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                                     <BevelBorder/>
@@ -6019,7 +6020,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="cmbbox_createbill_prodid1">
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="cmbbox_modifybill_prodid">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="6" green="a7" red="ff" type="rgb"/>
@@ -6057,10 +6058,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbbox_createbill_prodid1ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbbox_modifybill_prodidActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_prodnm1">
+                            <Component class="textfield.TextField" name="txt_modifybill_prodnm">
                               <Properties>
                                 <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -6083,7 +6084,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_prodprice1">
+                            <Component class="textfield.TextField" name="txt_modifybill_prodprice">
                               <Properties>
                                 <Property name="editable" type="boolean" value="false"/>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -6103,7 +6104,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="spinner.Spinner" name="spin_createbill_quantity1">
+                            <Component class="spinner.Spinner" name="spin_modifybill_quantity">
                               <Properties>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
@@ -6117,7 +6118,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_discount1">
+                            <Component class="textfield.TextField" name="txt_modifybill_discount">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
@@ -6135,7 +6136,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="textfield.TextField" name="txt_createbill_tax1">
+                            <Component class="textfield.TextField" name="txt_modifybill_tax">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="f8" green="c3" red="96" type="rgb"/>
@@ -6149,10 +6150,31 @@
                                   <Dimension value="[128, 64]"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[129, 64]"/>
+                                  <Dimension value="[105, 64]"/>
                                 </Property>
                               </Properties>
                             </Component>
+                            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                              <AuxValues>
+                                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                              </AuxValues>
+
+                              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                              <SubComponents>
+                                <Component class="javax.swing.JTable" name="jTable1">
+                                  <Properties>
+                                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                                      <Table columnCount="4" rowCount="4">
+                                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                                      </Table>
+                                    </Property>
+                                  </Properties>
+                                </Component>
+                              </SubComponents>
+                            </Container>
                           </SubComponents>
                         </Container>
                         <Container class="com.k33ptoo.components.KGradientPanel" name="pnl_bill_tab3">
