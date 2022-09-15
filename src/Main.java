@@ -6564,9 +6564,9 @@ public class Main extends javax.swing.JFrame
         price = Integer.parseInt(txt_createbill_prodprice.getText());
         quantity = Integer.parseInt(spin_createbill_quantity.getValue().toString());
 
-        discount = (price * Integer.parseInt(txt_createbill_discount.getText())) / 100;
-        gtotal = (price * quantity) - (discount * quantity);
-        tax = (price * Integer.parseInt(txt_createbill_tax.getText())) / 100;
+        discount = ((price * quantity) * Integer.parseInt(txt_createbill_discount.getText())) / 100;
+        gtotal = price * quantity - discount;
+        tax = ((price * quantity) * Integer.parseInt(txt_createbill_tax.getText())) / 100;
         unpaid = Integer.parseInt(txt_createbill_unpaid.getText());
         nettotal = gtotal - unpaid;
 
@@ -6612,7 +6612,29 @@ public class Main extends javax.swing.JFrame
 
     private void btn_createbill_saveActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_createbill_saveActionPerformed
     {//GEN-HEADEREND:event_btn_createbill_saveActionPerformed
-        // TODO add your handling code here:
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "insert into bill values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            pst = con.prepareStatement(query);
+            pst.setString(1, lbl_billno_no.getText());
+            pst.setString(2, txt_createbill_custid.getText());
+            pst.setString(3, cmbbox_createbill_custnm.getSelectedItem().toString());
+            pst.setString(4, txt_createbill_contact.getText());
+            pst.setString(5, txt_createbill_addr.getText());
+            pst.setString(6, lbl_tax.getText());
+            pst.setString(7, lbl_discount.getText());
+            pst.setString(8, lbl_grosstotal.getText());
+            pst.setString(9, lbl_unpaid.getText());
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Bill Added Successfully");
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_createbill_saveActionPerformed
 
     private void btn_createbill_saveKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_createbill_saveKeyPressed
