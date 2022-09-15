@@ -248,8 +248,8 @@ public class Main extends javax.swing.JFrame
         jSeparator1 = new javax.swing.JSeparator();
         lbl_billno = new javax.swing.JLabel();
         lbl_billno_no = new javax.swing.JLabel();
-        cmbbox_createbill_custid = new combo_suggestion.ComboBoxSuggestion();
-        txt_createbill_custnm = new textfield.TextField();
+        cmbbox_createbill_custnm = new combo_suggestion.ComboBoxSuggestion();
+        txt_createbill_custid = new textfield.TextField();
         txt_createbill_addr = new textfield.TextField();
         txt_createbill_contact = new textfield.TextField();
         lbl_createbill_proddet = new javax.swing.JLabel();
@@ -269,7 +269,7 @@ public class Main extends javax.swing.JFrame
         lbl_discount = new javax.swing.JLabel();
         scroll_createbill = new javax.swing.JScrollPane();
         table_createbill = new javax.swing.JTable();
-        btn_addprod1 = new com.k33ptoo.components.KButton();
+        btn_createbill_add = new com.k33ptoo.components.KButton();
         txt_createbill_prodprice = new textfield.TextField();
         btn_createbill_save = new com.k33ptoo.components.KButton();
         txt_createbill_discount = new textfield.TextField();
@@ -3747,38 +3747,38 @@ public class Main extends javax.swing.JFrame
         lbl_billno_no.setText("1");
         lbl_billno_no.setPreferredSize(new java.awt.Dimension(50, 50));
 
-        cmbbox_createbill_custid.setBackground(new java.awt.Color(255, 167, 6));
-        cmbbox_createbill_custid.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_createbill_custid.setMaximumRowCount(5);
-        cmbbox_createbill_custid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ID" }));
-        cmbbox_createbill_custid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        cmbbox_createbill_custid.setMaximumSize(new java.awt.Dimension(150, 50));
-        cmbbox_createbill_custid.setMinimumSize(new java.awt.Dimension(150, 50));
-        cmbbox_createbill_custid.setNextFocusableComponent(txt_createbill_custnm);
-        cmbbox_createbill_custid.setPreferredSize(new java.awt.Dimension(150, 64));
-        cmbbox_createbill_custid.addItemListener(new java.awt.event.ItemListener()
+        cmbbox_createbill_custnm.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_createbill_custnm.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_createbill_custnm.setMaximumRowCount(5);
+        cmbbox_createbill_custnm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CUSTOMER NAME" }));
+        cmbbox_createbill_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_createbill_custnm.setMaximumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_custnm.setMinimumSize(new java.awt.Dimension(150, 50));
+        cmbbox_createbill_custnm.setNextFocusableComponent(cmbbox_createbill_prodnm);
+        cmbbox_createbill_custnm.setPreferredSize(new java.awt.Dimension(300, 64));
+        cmbbox_createbill_custnm.addItemListener(new java.awt.event.ItemListener()
         {
             public void itemStateChanged(java.awt.event.ItemEvent evt)
             {
-                cmbbox_createbill_custidItemStateChanged(evt);
+                cmbbox_createbill_custnmItemStateChanged(evt);
             }
         });
-        cmbbox_createbill_custid.addActionListener(new java.awt.event.ActionListener()
+        cmbbox_createbill_custnm.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                cmbbox_createbill_custidActionPerformed(evt);
+                cmbbox_createbill_custnmActionPerformed(evt);
             }
         });
 
-        txt_createbill_custnm.setEditable(false);
-        txt_createbill_custnm.setBackground(new java.awt.Color(150, 195, 248));
-        txt_createbill_custnm.setFocusCycleRoot(true);
-        txt_createbill_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_createbill_custnm.setLabelText("CUSTOMER NAME");
-        txt_createbill_custnm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_createbill_custnm.setNextFocusableComponent(txt_addprod_nm);
-        txt_createbill_custnm.setPreferredSize(new java.awt.Dimension(300, 64));
+        txt_createbill_custid.setEditable(false);
+        txt_createbill_custid.setBackground(new java.awt.Color(150, 195, 248));
+        txt_createbill_custid.setFocusCycleRoot(true);
+        txt_createbill_custid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_createbill_custid.setLabelText("CUST ID");
+        txt_createbill_custid.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_custid.setNextFocusableComponent(txt_addprod_nm);
+        txt_createbill_custid.setPreferredSize(new java.awt.Dimension(150, 64));
 
         txt_createbill_addr.setEditable(false);
         txt_createbill_addr.setBackground(new java.awt.Color(150, 195, 248));
@@ -3807,11 +3807,11 @@ public class Main extends javax.swing.JFrame
         cmbbox_createbill_prodnm.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_createbill_prodnm.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cmbbox_createbill_prodnm.setMaximumRowCount(5);
-        cmbbox_createbill_prodnm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Name" }));
+        cmbbox_createbill_prodnm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PRODUCT NAME" }));
         cmbbox_createbill_prodnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_createbill_prodnm.setMaximumSize(new java.awt.Dimension(150, 50));
         cmbbox_createbill_prodnm.setMinimumSize(new java.awt.Dimension(150, 50));
-        cmbbox_createbill_prodnm.setNextFocusableComponent(txt_createbill_custnm);
+        cmbbox_createbill_prodnm.setNextFocusableComponent(spin_createbill_quantity);
         cmbbox_createbill_prodnm.setPreferredSize(new java.awt.Dimension(300, 64));
         cmbbox_createbill_prodnm.addItemListener(new java.awt.event.ItemListener()
         {
@@ -3954,53 +3954,53 @@ public class Main extends javax.swing.JFrame
         ));
         scroll_createbill.setViewportView(table_createbill);
 
-        btn_addprod1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_addprod1.setText("ADD");
-        btn_addprod1.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btn_addprod1.setkBorderRadius(30);
-        btn_addprod1.setkEndColor(new java.awt.Color(255, 167, 6));
-        btn_addprod1.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_addprod1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_addprod1.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_addprod1.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btn_addprod1.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_addprod1.setNextFocusableComponent(txt_addprod_id);
-        btn_addprod1.setOpaque(true);
-        btn_addprod1.setPreferredSize(new java.awt.Dimension(250, 60));
-        btn_addprod1.addFocusListener(new java.awt.event.FocusAdapter()
+        btn_createbill_add.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_createbill_add.setText("ADD");
+        btn_createbill_add.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btn_createbill_add.setkBorderRadius(30);
+        btn_createbill_add.setkEndColor(new java.awt.Color(255, 167, 6));
+        btn_createbill_add.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_createbill_add.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_createbill_add.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_createbill_add.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btn_createbill_add.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_createbill_add.setNextFocusableComponent(btn_createbill_save);
+        btn_createbill_add.setOpaque(true);
+        btn_createbill_add.setPreferredSize(new java.awt.Dimension(250, 60));
+        btn_createbill_add.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
             {
-                btn_addprod1FocusGained(evt);
+                btn_createbill_addFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt)
             {
-                btn_addprod1FocusLost(evt);
+                btn_createbill_addFocusLost(evt);
             }
         });
-        btn_addprod1.addMouseListener(new java.awt.event.MouseAdapter()
+        btn_createbill_add.addMouseListener(new java.awt.event.MouseAdapter()
         {
             public void mouseEntered(java.awt.event.MouseEvent evt)
             {
-                btn_addprod1MouseEntered(evt);
+                btn_createbill_addMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt)
             {
-                btn_addprod1MouseExited(evt);
+                btn_createbill_addMouseExited(evt);
             }
         });
-        btn_addprod1.addActionListener(new java.awt.event.ActionListener()
+        btn_createbill_add.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btn_addprod1ActionPerformed(evt);
+                btn_createbill_addActionPerformed(evt);
             }
         });
-        btn_addprod1.addKeyListener(new java.awt.event.KeyAdapter()
+        btn_createbill_add.addKeyListener(new java.awt.event.KeyAdapter()
         {
             public void keyPressed(java.awt.event.KeyEvent evt)
             {
-                btn_addprod1KeyPressed(evt);
+                btn_createbill_addKeyPressed(evt);
             }
         });
 
@@ -4022,6 +4022,7 @@ public class Main extends javax.swing.JFrame
         btn_createbill_save.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_createbill_save.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_createbill_save.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_createbill_save.setNextFocusableComponent(cmbbox_createbill_custnm);
         btn_createbill_save.setOpaque(true);
         btn_createbill_save.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_createbill_save.addFocusListener(new java.awt.event.FocusAdapter()
@@ -4066,11 +4067,13 @@ public class Main extends javax.swing.JFrame
         txt_createbill_discount.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_discount.setLabelText("DISCOUNT(%)");
         txt_createbill_discount.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_discount.setNextFocusableComponent(txt_createbill_tax);
         txt_createbill_discount.setPreferredSize(new java.awt.Dimension(151, 64));
 
         spin_createbill_quantity.setForeground(new java.awt.Color(150, 195, 248));
         spin_createbill_quantity.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         spin_createbill_quantity.setLabelText("QUANTITY");
+        spin_createbill_quantity.setNextFocusableComponent(txt_createbill_discount);
         spin_createbill_quantity.setPreferredSize(new java.awt.Dimension(150, 64));
         spin_createbill_quantity.addChangeListener(new javax.swing.event.ChangeListener()
         {
@@ -4085,6 +4088,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_tax.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_tax.setLabelText("TAX(%)");
         txt_createbill_tax.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_tax.setNextFocusableComponent(txt_createbill_unpaid);
         txt_createbill_tax.setPreferredSize(new java.awt.Dimension(141, 64));
 
         txt_createbill_unpaid.setBackground(new java.awt.Color(150, 195, 248));
@@ -4092,6 +4096,7 @@ public class Main extends javax.swing.JFrame
         txt_createbill_unpaid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_createbill_unpaid.setLabelText("UNPAID AMOUNT");
         txt_createbill_unpaid.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_createbill_unpaid.setNextFocusableComponent(btn_createbill_add);
         txt_createbill_unpaid.setPreferredSize(new java.awt.Dimension(294, 64));
         txt_createbill_unpaid.addActionListener(new java.awt.event.ActionListener()
         {
@@ -4125,7 +4130,7 @@ public class Main extends javax.swing.JFrame
                                 .addGap(18, 18, 18)
                                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(btn_addprod1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btn_createbill_add, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(btn_createbill_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(txt_createbill_unpaid, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(pnl_createbillLayout.createSequentialGroup()
@@ -4140,9 +4145,9 @@ public class Main extends javax.swing.JFrame
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(txt_createbill_tax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(pnl_createbillLayout.createSequentialGroup()
-                                .addComponent(cmbbox_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbbox_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txt_createbill_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -4168,9 +4173,9 @@ public class Main extends javax.swing.JFrame
                 .addComponent(lbl_createbill_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmbbox_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbbox_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_createbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_createbill_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_createbill_custid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txt_createbill_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txt_createbill_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
@@ -4201,7 +4206,7 @@ public class Main extends javax.swing.JFrame
                                 .addGap(46, 46, 46)
                                 .addComponent(txt_createbill_unpaid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(10, 10, 10)
-                                .addComponent(btn_addprod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_createbill_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_createbill_save, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 21, Short.MAX_VALUE)))))
@@ -4227,7 +4232,7 @@ public class Main extends javax.swing.JFrame
         cmbbox_modifybill_prodid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_modifybill_prodid.setMaximumSize(new java.awt.Dimension(150, 50));
         cmbbox_modifybill_prodid.setMinimumSize(new java.awt.Dimension(150, 50));
-        cmbbox_modifybill_prodid.setNextFocusableComponent(txt_createbill_custnm);
+        cmbbox_modifybill_prodid.setNextFocusableComponent(txt_createbill_custid);
         cmbbox_modifybill_prodid.setPreferredSize(new java.awt.Dimension(150, 64));
         cmbbox_modifybill_prodid.addActionListener(new java.awt.event.ActionListener()
         {
@@ -5035,7 +5040,6 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
 
         txt_addcust_id.setText(getMaxID("customer"));
-        txt_addcust_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btnCustomerActionPerformed
 
     private void btn_loginMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_loginMouseEntered
@@ -5150,7 +5154,7 @@ public class Main extends javax.swing.JFrame
             visibility(false, false, false, false, true, false, btn_createbill_menu);
             visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
             onIndicator(lid_createbill, lid_modifybill);
-            fillCombobox("customer", "id", cmbbox_createbill_custid);
+            fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
             fillCombobox("product", "nm", cmbbox_createbill_prodnm);
         }
     }//GEN-LAST:event_btnBillKeyPressed
@@ -5663,6 +5667,8 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
             onIndicator(lid_createbill, lid_modifybill);
             lbl_billno_no.setText(getMaxID("bill"));
+            fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
+            cmbbox_createbill_custnm.grabFocus();
         }
     }//GEN-LAST:event_btn_createbill_menuKeyPressed
 
@@ -5800,7 +5806,8 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
         onIndicator(lid_createbill, lid_modifybill);
         lbl_billno_no.setText(getMaxID("bill"));
-        fillCombobox("customer", "id", cmbbox_createbill_custid);
+        fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
+        cmbbox_createbill_custnm.grabFocus();
     }//GEN-LAST:event_btn_createbill_menuActionPerformed
 
     private void btnBillActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnBillActionPerformed
@@ -5808,7 +5815,7 @@ public class Main extends javax.swing.JFrame
         visibility(false, false, false, false, true, false, btn_createbill_menu);
         visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
         onIndicator(lid_createbill, lid_modifybill);
-        fillCombobox("customer", "id", cmbbox_createbill_custid);
+        fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
         fillCombobox("product", "nm", cmbbox_createbill_prodnm);
     }//GEN-LAST:event_btnBillActionPerformed
 
@@ -6523,34 +6530,34 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_proddetKeyPressed
 
-    private void btn_addprod1FocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addprod1FocusGained
-    {//GEN-HEADEREND:event_btn_addprod1FocusGained
+    private void btn_createbill_addFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_addFocusGained
+    {//GEN-HEADEREND:event_btn_createbill_addFocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addprod1FocusGained
+    }//GEN-LAST:event_btn_createbill_addFocusGained
 
-    private void btn_addprod1FocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addprod1FocusLost
-    {//GEN-HEADEREND:event_btn_addprod1FocusLost
+    private void btn_createbill_addFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_addFocusLost
+    {//GEN-HEADEREND:event_btn_createbill_addFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addprod1FocusLost
+    }//GEN-LAST:event_btn_createbill_addFocusLost
 
-    private void btn_addprod1MouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprod1MouseEntered
-    {//GEN-HEADEREND:event_btn_addprod1MouseEntered
+    private void btn_createbill_addMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_createbill_addMouseEntered
+    {//GEN-HEADEREND:event_btn_createbill_addMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addprod1MouseEntered
+    }//GEN-LAST:event_btn_createbill_addMouseEntered
 
-    private void btn_addprod1MouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_addprod1MouseExited
-    {//GEN-HEADEREND:event_btn_addprod1MouseExited
+    private void btn_createbill_addMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_createbill_addMouseExited
+    {//GEN-HEADEREND:event_btn_createbill_addMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addprod1MouseExited
+    }//GEN-LAST:event_btn_createbill_addMouseExited
 
-    private void btn_addprod1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addprod1ActionPerformed
-    {//GEN-HEADEREND:event_btn_addprod1ActionPerformed
+    private void btn_createbill_addActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_createbill_addActionPerformed
+    {//GEN-HEADEREND:event_btn_createbill_addActionPerformed
         tableModel = (DefaultTableModel) table_createbill.getModel();
 
         String custnm, contact, prodnm;
-        int price, quantity, discount, gtotal, tax, nettotal, unpaid;
+        int price = 0, quantity = 0, discount = 0, gtotal = 0, tax = 0, nettotal = 0, unpaid = 0;
 
-        custnm = txt_createbill_custnm.getText();
+        custnm = txt_createbill_custid.getText();
         contact = txt_createbill_contact.getText();
         prodnm = cmbbox_createbill_prodnm.getSelectedItem().toString();
 
@@ -6558,10 +6565,10 @@ public class Main extends javax.swing.JFrame
         quantity = Integer.parseInt(spin_createbill_quantity.getValue().toString());
 
         discount = (price * Integer.parseInt(txt_createbill_discount.getText())) / 100;
-        gtotal = (price * quantity) - discount;
+        gtotal = (price * quantity) - (discount * quantity);
         tax = (price * Integer.parseInt(txt_createbill_tax.getText())) / 100;
-        nettotal = gtotal + tax;
         unpaid = Integer.parseInt(txt_createbill_unpaid.getText());
+        nettotal = gtotal - unpaid;
 
         String[] rows =
         {
@@ -6576,12 +6583,12 @@ public class Main extends javax.swing.JFrame
         lbl_unpaid.setText(Integer.toString(Integer.parseInt(lbl_unpaid.getText()) + unpaid));
         lbl_nettotal.setText(Integer.toString(Integer.parseInt(lbl_nettotal.getText()) + nettotal));
 
-    }//GEN-LAST:event_btn_addprod1ActionPerformed
+    }//GEN-LAST:event_btn_createbill_addActionPerformed
 
-    private void btn_addprod1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addprod1KeyPressed
-    {//GEN-HEADEREND:event_btn_addprod1KeyPressed
+    private void btn_createbill_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_createbill_addKeyPressed
+    {//GEN-HEADEREND:event_btn_createbill_addKeyPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_addprod1KeyPressed
+    }//GEN-LAST:event_btn_createbill_addKeyPressed
 
     private void btn_createbill_saveFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_saveFocusGained
     {//GEN-HEADEREND:event_btn_createbill_saveFocusGained
@@ -6628,18 +6635,18 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbbox_createbill_prodnmActionPerformed
 
-    private void cmbbox_createbill_custidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_custidActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_createbill_custidActionPerformed
+    private void cmbbox_createbill_custnmActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_custnmActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_createbill_custnmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_createbill_custidActionPerformed
+    }//GEN-LAST:event_cmbbox_createbill_custnmActionPerformed
 
-    private void cmbbox_createbill_custidItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_cmbbox_createbill_custidItemStateChanged
-    {//GEN-HEADEREND:event_cmbbox_createbill_custidItemStateChanged
-        String custid = cmbbox_createbill_custid.getSelectedItem().toString();
+    private void cmbbox_createbill_custnmItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_cmbbox_createbill_custnmItemStateChanged
+    {//GEN-HEADEREND:event_cmbbox_createbill_custnmItemStateChanged
+        String custnm = cmbbox_createbill_custnm.getSelectedItem().toString();
 
-        if (custid.equals("ID"))
+        if (custnm.equals("CUSTOMER NAME"))
         {
-            txt_createbill_custnm.setText("");
+            txt_createbill_custid.setText("");
             txt_createbill_contact.setText("");
             txt_createbill_addr.setText("");
         }
@@ -6647,14 +6654,14 @@ public class Main extends javax.swing.JFrame
         {
             try
             {
-                query = "select * from customer where id = " + custid;
+                query = "select * from customer where custnm = '" + custnm + "'";
                 con = dbconnection.getdbConnection();
                 st = con.createStatement();
                 result = st.executeQuery(query);
 
                 if (result.next())
                 {
-                    txt_createbill_custnm.setText(result.getString("custnm"));
+                    txt_createbill_custid.setText(result.getString("id"));
                     txt_createbill_contact.setText(result.getString("contact"));
                     txt_createbill_addr.setText(result.getString("address"));
                 }
@@ -6664,15 +6671,16 @@ public class Main extends javax.swing.JFrame
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
         }
-    }//GEN-LAST:event_cmbbox_createbill_custidItemStateChanged
+    }//GEN-LAST:event_cmbbox_createbill_custnmItemStateChanged
 
     private void cmbbox_createbill_prodnmItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_cmbbox_createbill_prodnmItemStateChanged
     {//GEN-HEADEREND:event_cmbbox_createbill_prodnmItemStateChanged
 
-        if (cmbbox_createbill_prodnm.getSelectedItem().equals("Name"))
+        if (cmbbox_createbill_prodnm.getSelectedItem().equals("PRODUCT NAME"))
         {
             txt_createbill_prodid.setText("");
             txt_createbill_prodprice.setText("");
+            spin_createbill_quantity.setValue(1);
         }
         else
         {
@@ -6692,7 +6700,7 @@ public class Main extends javax.swing.JFrame
                     txt_createbill_discount.setText("0");
                     txt_createbill_tax.setText("0");
                     txt_createbill_unpaid.setText("0");
-                    spin_createbill_quantity.setValue(0);
+                    spin_createbill_quantity.setValue(1);
                 }
             }
             catch (Exception e)
@@ -6810,20 +6818,19 @@ public class Main extends javax.swing.JFrame
 
     public String getMaxID(String tablenm)
     {
-        int id;
+        String id;
         try
         {
             con = dbconnection.getdbConnection();
-            query = "select id from " + tablenm;
+            query = "select max(cast(id as unsigned)) from " + tablenm;
             pst = con.prepareStatement(query);
             result = pst.executeQuery();
 
             if (result.next())
             {
-                if (result.getInt(1) > 0)
+                if (Integer.parseInt(result.getString(1)) > 0)
                 {
-                    id = result.getInt(1) + 1;
-                    return Integer.toString(id);
+                    return Integer.toString(Integer.parseInt(result.getString(1)) + 1);
                 }
                 else
                 {
@@ -7053,8 +7060,8 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_addemp_add;
     private com.k33ptoo.components.KButton btn_addemp_menu;
     private com.k33ptoo.components.KButton btn_addprod;
-    private com.k33ptoo.components.KButton btn_addprod1;
     private com.k33ptoo.components.KButton btn_addprod_menu;
+    private com.k33ptoo.components.KButton btn_createbill_add;
     private com.k33ptoo.components.KButton btn_createbill_menu;
     private com.k33ptoo.components.KButton btn_createbill_save;
     private com.k33ptoo.components.KButton btn_custdet;
@@ -7076,7 +7083,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_proddet_menu;
     private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
-    private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custid;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_modifybill_prodid;
@@ -7221,7 +7228,7 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_addprod_sellingprice;
     private textfield.TextField txt_createbill_addr;
     private textfield.TextField txt_createbill_contact;
-    private textfield.TextField txt_createbill_custnm;
+    private textfield.TextField txt_createbill_custid;
     private textfield.TextField txt_createbill_discount;
     private textfield.TextField txt_createbill_prodid;
     private textfield.TextField txt_createbill_prodprice;
