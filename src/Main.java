@@ -3807,7 +3807,7 @@ public class Main extends javax.swing.JFrame
         cmbbox_createbill_prodnm.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_createbill_prodnm.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cmbbox_createbill_prodnm.setMaximumRowCount(5);
-        cmbbox_createbill_prodnm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Product Name" }));
+        cmbbox_createbill_prodnm.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Name" }));
         cmbbox_createbill_prodnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_createbill_prodnm.setMaximumSize(new java.awt.Dimension(150, 50));
         cmbbox_createbill_prodnm.setMinimumSize(new java.awt.Dimension(150, 50));
@@ -6638,7 +6638,7 @@ public class Main extends javax.swing.JFrame
     private void cmbbox_createbill_prodnmItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_cmbbox_createbill_prodnmItemStateChanged
     {//GEN-HEADEREND:event_cmbbox_createbill_prodnmItemStateChanged
 
-        if (cmbbox_createbill_prodnm.getSelectedItem().equals("Product Name"))
+        if (cmbbox_createbill_prodnm.getSelectedItem().equals("Name"))
         {
             txt_createbill_prodid.setText("");
             txt_createbill_prodprice.setText("");
@@ -6649,7 +6649,7 @@ public class Main extends javax.swing.JFrame
 
             try
             {
-                query = "select * from product where nm = " + prodnm;
+                query = "select * from product where nm like '" + prodnm + "'";
                 con = dbconnection.getdbConnection();
                 st = con.createStatement();
                 result = st.executeQuery(query);
