@@ -56,13 +56,13 @@ public class Main extends javax.swing.JFrame
         System.out.println("Frame Size = " + this.getSize());
         System.out.println("Panel BG = " + panel_bg.getSize());
 
-        cmbbox_role.grabFocus();
+        cmbbox_login_usrnm.grabFocus();
 
         panel_dashboard.setVisible(false);
 
         con = dbconnection.getdbConnection();
 
-        fillCombobox("employee", "usrnm", cmbbox_role);
+        fillCombobox("employee", "usrnm", cmbbox_login_usrnm);
     }
 
     @SuppressWarnings("unchecked")
@@ -95,11 +95,11 @@ public class Main extends javax.swing.JFrame
             }
         };
         panel_login_main = new com.k33ptoo.components.KGradientPanel();
-        cmbbox_role = new combo_suggestion.ComboBoxSuggestion();
+        cmbbox_login_usrnm = new combo_suggestion.ComboBoxSuggestion();
         lbl_role = new javax.swing.JLabel();
         lbl_usr_icon = new javax.swing.JLabel();
         lbl_pswd_icon = new javax.swing.JLabel();
-        txt_pswd = new textfield.PasswordField();
+        txt_login_pswd = new textfield.PasswordField();
         lbl_forgot_pswd = new javax.swing.JLabel();
         btn_login = new com.k33ptoo.components.KButton();
         panel_login_img = new com.k33ptoo.components.KGradientPanel();
@@ -430,18 +430,18 @@ public class Main extends javax.swing.JFrame
         panel_login_main.setOpaque(false);
         panel_login_main.setPreferredSize(new java.awt.Dimension(700, 780));
 
-        cmbbox_role.setBackground(new java.awt.Color(255, 167, 6));
-        cmbbox_role.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_role.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        cmbbox_role.setMaximumSize(new java.awt.Dimension(415, 64));
-        cmbbox_role.setMinimumSize(new java.awt.Dimension(415, 64));
-        cmbbox_role.setNextFocusableComponent(txt_pswd);
-        cmbbox_role.setPreferredSize(new java.awt.Dimension(415, 64));
-        cmbbox_role.addActionListener(new java.awt.event.ActionListener()
+        cmbbox_login_usrnm.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_login_usrnm.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_login_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_login_usrnm.setMaximumSize(new java.awt.Dimension(415, 64));
+        cmbbox_login_usrnm.setMinimumSize(new java.awt.Dimension(415, 64));
+        cmbbox_login_usrnm.setNextFocusableComponent(txt_login_pswd);
+        cmbbox_login_usrnm.setPreferredSize(new java.awt.Dimension(415, 64));
+        cmbbox_login_usrnm.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                cmbbox_roleActionPerformed(evt);
+                cmbbox_login_usrnmActionPerformed(evt);
             }
         });
 
@@ -449,21 +449,21 @@ public class Main extends javax.swing.JFrame
         lbl_role.setText("Select Role :");
         lbl_role.setMaximumSize(new java.awt.Dimension(500, 64));
         lbl_role.setMinimumSize(new java.awt.Dimension(500, 64));
-        lbl_role.setNextFocusableComponent(cmbbox_role);
+        lbl_role.setNextFocusableComponent(cmbbox_login_usrnm);
         lbl_role.setPreferredSize(new java.awt.Dimension(500, 64));
 
         lbl_usr_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/user.png"))); // NOI18N
 
         lbl_pswd_icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/padlock.png"))); // NOI18N
 
-        txt_pswd.setBackground(new java.awt.Color(150, 195, 248));
-        txt_pswd.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_pswd.setLabelText("Password");
-        txt_pswd.setMaximumSize(new java.awt.Dimension(415, 64));
-        txt_pswd.setMinimumSize(new java.awt.Dimension(415, 64));
-        txt_pswd.setNextFocusableComponent(btn_login);
-        txt_pswd.setPreferredSize(new java.awt.Dimension(415, 64));
-        txt_pswd.setShowAndHide(true);
+        txt_login_pswd.setBackground(new java.awt.Color(150, 195, 248));
+        txt_login_pswd.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_login_pswd.setLabelText("Password");
+        txt_login_pswd.setMaximumSize(new java.awt.Dimension(415, 64));
+        txt_login_pswd.setMinimumSize(new java.awt.Dimension(415, 64));
+        txt_login_pswd.setNextFocusableComponent(btn_login);
+        txt_login_pswd.setPreferredSize(new java.awt.Dimension(415, 64));
+        txt_login_pswd.setShowAndHide(true);
 
         lbl_forgot_pswd.setFont(new java.awt.Font("Nirmala UI Semilight", 0, 18)); // NOI18N
         lbl_forgot_pswd.setText("Forgot Password ?");
@@ -489,7 +489,7 @@ public class Main extends javax.swing.JFrame
         btn_login.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_login.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_login.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_login.setNextFocusableComponent(cmbbox_role);
+        btn_login.setNextFocusableComponent(cmbbox_login_usrnm);
         btn_login.addFocusListener(new java.awt.event.FocusAdapter()
         {
             public void focusGained(java.awt.event.FocusEvent evt)
@@ -538,8 +538,8 @@ public class Main extends javax.swing.JFrame
                             .addComponent(lbl_pswd_icon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(panel_login_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cmbbox_role, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txt_login_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbbox_login_usrnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(lbl_role, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(100, 100, 100))
         );
@@ -550,12 +550,12 @@ public class Main extends javax.swing.JFrame
                 .addComponent(lbl_role, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(50, 50, 50)
                 .addGroup(panel_login_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmbbox_role, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbbox_login_usrnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_usr_icon))
                 .addGap(50, 50, 50)
                 .addGroup(panel_login_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbl_pswd_icon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txt_login_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(lbl_forgot_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(73, 73, 73)
@@ -4983,10 +4983,10 @@ public class Main extends javax.swing.JFrame
         this.setExtendedState(NewJFrame.ICONIFIED);
     }//GEN-LAST:event_lbl_minimizeMouseClicked
 
-    private void cmbbox_roleActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_roleActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_roleActionPerformed
+    private void cmbbox_login_usrnmActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_login_usrnmActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_login_usrnmActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_roleActionPerformed
+    }//GEN-LAST:event_cmbbox_login_usrnmActionPerformed
 
     private void lbl_forgot_pswdMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_forgot_pswdMouseEntered
     {//GEN-HEADEREND:event_lbl_forgot_pswdMouseEntered
@@ -5007,11 +5007,20 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "select nm from employee where usrnm like '" + cmbbox_role.getSelectedItem().toString() + "'";
+            query = "select nm from employee where usrnm like '" + cmbbox_login_usrnm.getSelectedItem().toString() + "'";
             st = con.createStatement();
             result = st.executeQuery(query);
             result.next();
             lbl_dash_usr.setText(result.getString("nm"));
+
+            if (lbl_dash_usr.getText().equals("ADMIN"))
+            {
+                btnEmployee.setEnabled(true);
+            }
+            else
+            {
+                btnEmployee.setEnabled(false);
+            }
         }
         catch (Exception e)
         {
@@ -5071,7 +5080,7 @@ public class Main extends javax.swing.JFrame
         {
             panel_login.setVisible(false);
             panel_dashboard.setVisible(true);
-            lbl_dash_usr.setText(cmbbox_role.getSelectedItem().toString());
+            lbl_dash_usr.setText(cmbbox_login_usrnm.getSelectedItem().toString());
             lbl_dash_welcome.grabFocus();
             visibility(true, false, false, false, false, false, btnCustomer);
         }
@@ -7157,8 +7166,8 @@ public class Main extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_login_usrnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_modifybill_prodid;
-    private combo_suggestion.ComboBoxSuggestion cmbbox_role;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -7326,12 +7335,12 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editprod_quantity;
     private textfield.TextField txt_editprod_sellingprice;
     private textfield.TextField txt_empdet_nm;
+    private textfield.PasswordField txt_login_pswd;
     private textfield.TextField txt_modifybill_discount;
     private textfield.TextField txt_modifybill_prodnm;
     private textfield.TextField txt_modifybill_prodprice;
     private textfield.TextField txt_modifybill_tax;
     private textfield.TextField txt_proddet_nm;
-    private textfield.PasswordField txt_pswd;
     private javax.swing.JTextArea txtarea_format;
     // End of variables declaration//GEN-END:variables
 }
