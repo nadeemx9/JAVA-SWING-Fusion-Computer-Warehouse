@@ -59,9 +59,10 @@ public class Main extends javax.swing.JFrame
         cmbbox_role.grabFocus();
 
         panel_dashboard.setVisible(false);
-        lbl_role.grabFocus();
 
         con = dbconnection.getdbConnection();
+
+        fillCombobox("employee", "usrnm", cmbbox_role);
     }
 
     @SuppressWarnings("unchecked")
@@ -180,11 +181,10 @@ public class Main extends javax.swing.JFrame
         txt_addemp_addr = new textfield.TextField();
         btn_addemp_add = new com.k33ptoo.components.KButton();
         txt_addemp_pswd = new textfield.PasswordField();
-        txt_addemp_cpswd = new textfield.PasswordField();
+        txt_addemp_usrnm = new textfield.TextField();
         pnl_edit_emp = new com.k33ptoo.components.KGradientPanel();
         scrolltbl_editemp = new javax.swing.JScrollPane();
         table_editemp = new javax.swing.JTable();
-        txt_editemp_id = new textfield.TextField();
         txt_editemp_nm = new textfield.TextField();
         txt_editemp_contact = new textfield.TextField();
         txt_editemp_email = new textfield.TextField();
@@ -193,6 +193,8 @@ public class Main extends javax.swing.JFrame
         btn_editemp_edit = new com.k33ptoo.components.KButton();
         btn_editemp_rmv = new com.k33ptoo.components.KButton();
         txt_editemp_pswd = new textfield.PasswordField();
+        cmbbox_editemp_id = new combo_suggestion.ComboBoxSuggestion();
+        txt_editemp_usrnm = new textfield.TextField();
         pnl_emp_det = new com.k33ptoo.components.KGradientPanel();
         txt_empdet_nm = new textfield.TextField();
         scrolltbl_empdet = new javax.swing.JScrollPane();
@@ -303,6 +305,8 @@ public class Main extends javax.swing.JFrame
         jLabel18 = new javax.swing.JLabel();
         pnl_acc_tab2 = new com.k33ptoo.components.KGradientPanel();
         jLabel19 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtarea_format = new javax.swing.JTextArea();
         pnl_acc_tab3 = new com.k33ptoo.components.KGradientPanel();
         jLabel20 = new javax.swing.JLabel();
 
@@ -429,7 +433,6 @@ public class Main extends javax.swing.JFrame
 
         cmbbox_role.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_role.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_role.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Nadeem", "Employee" }));
         cmbbox_role.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_role.setMaximumSize(new java.awt.Dimension(415, 64));
         cmbbox_role.setMinimumSize(new java.awt.Dimension(415, 64));
@@ -2109,7 +2112,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_nm.setLabelText("EMPLOYEE NAME");
         txt_addemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_addemp_nm.setNextFocusableComponent(txt_addemp_contact);
+        txt_addemp_nm.setNextFocusableComponent(txt_addemp_usrnm);
         txt_addemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_addemp_contact.setBackground(new java.awt.Color(150, 195, 248));
@@ -2137,7 +2140,7 @@ public class Main extends javax.swing.JFrame
         txt_addemp_addr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_addr.setLabelText("ADDRESS");
         txt_addemp_addr.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_addemp_addr.setNextFocusableComponent(txt_addemp_pswd);
+        txt_addemp_addr.setNextFocusableComponent(btn_addemp_add);
         txt_addemp_addr.setPreferredSize(new java.awt.Dimension(404, 64));
 
         btn_addemp_add.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -2193,16 +2196,16 @@ public class Main extends javax.swing.JFrame
         txt_addemp_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_addemp_pswd.setLabelText("PASSWORD");
-        txt_addemp_pswd.setNextFocusableComponent(txt_addemp_cpswd);
+        txt_addemp_pswd.setNextFocusableComponent(txt_addemp_contact);
         txt_addemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_addemp_pswd.setShowAndHide(true);
 
-        txt_addemp_cpswd.setBackground(new java.awt.Color(150, 195, 248));
-        txt_addemp_cpswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        txt_addemp_cpswd.setLabelText("CONFIRM PASSWORD");
-        txt_addemp_cpswd.setNextFocusableComponent(btn_addemp_add);
-        txt_addemp_cpswd.setPreferredSize(new java.awt.Dimension(404, 64));
-        txt_addemp_cpswd.setShowAndHide(true);
+        txt_addemp_usrnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_addemp_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_addemp_usrnm.setLabelText("USERNAME");
+        txt_addemp_usrnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_addemp_usrnm.setNextFocusableComponent(txt_addemp_pswd);
+        txt_addemp_usrnm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         javax.swing.GroupLayout pnl_add_empLayout = new javax.swing.GroupLayout(pnl_add_emp);
         pnl_add_emp.setLayout(pnl_add_empLayout);
@@ -2214,13 +2217,13 @@ public class Main extends javax.swing.JFrame
                     .addComponent(txt_addemp_salary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txt_addemp_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txt_addemp_contact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_addemp_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txt_addemp_usrnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txt_addemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_addemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txt_addemp_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_addemp_cpswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txt_addemp_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_addemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txt_addemp_addr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(100, 100, 100))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_add_empLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2236,19 +2239,19 @@ public class Main extends javax.swing.JFrame
                     .addComponent(txt_addemp_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_addemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_addemp_usrnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_addemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_addemp_cpswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(btn_addemp_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
+                .addGap(20, 20, 20))
         );
 
         pnl_edit_emp.setkBorderRadius(40);
@@ -2262,14 +2265,14 @@ public class Main extends javax.swing.JFrame
         table_editemp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String []
             {
-                "ID", "NAME", "CONTACT", "EMAIL", "SALARY", "ADDRESS", "PASSWORD"
+                "ID", "NAME", "USERNAME", "PASSWORD", "CONTACT", "EMAIL", "SALARY", "ADDRESS"
             }
         ));
         table_editemp.setPreferredSize(new java.awt.Dimension(527, 336));
@@ -2281,13 +2284,6 @@ public class Main extends javax.swing.JFrame
             }
         });
         scrolltbl_editemp.setViewportView(table_editemp);
-
-        txt_editemp_id.setBackground(new java.awt.Color(150, 195, 248));
-        txt_editemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_editemp_id.setLabelText("EMPLOYEE ID");
-        txt_editemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_id.setNextFocusableComponent(txt_editemp_nm);
-        txt_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_editemp_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -2384,7 +2380,6 @@ public class Main extends javax.swing.JFrame
         btn_editemp_rmv.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editemp_rmv.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editemp_rmv.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_editemp_rmv.setNextFocusableComponent(txt_editemp_id);
         btn_editemp_rmv.setOpaque(true);
         btn_editemp_rmv.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editemp_rmv.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2427,21 +2422,44 @@ public class Main extends javax.swing.JFrame
         txt_editemp_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_editemp_pswd.setLabelText("PASSWORD");
-        txt_editemp_pswd.setNextFocusableComponent(txt_addemp_cpswd);
         txt_editemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_editemp_pswd.setShowAndHide(true);
+
+        cmbbox_editemp_id.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_editemp_id.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_editemp_id.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "EMPLOYEE ID" }));
+        cmbbox_editemp_id.setSelectedItem("--SELECT--BRAND--");
+        cmbbox_editemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_editemp_id.setMaximumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editemp_id.setMinimumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editemp_id.setNextFocusableComponent(txt_addprod_quantity);
+        cmbbox_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        cmbbox_editemp_id.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbbox_editemp_idActionPerformed(evt);
+            }
+        });
+
+        txt_editemp_usrnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editemp_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editemp_usrnm.setLabelText("USERNAME");
+        txt_editemp_usrnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_usrnm.setNextFocusableComponent(txt_editemp_contact);
+        txt_editemp_usrnm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         javax.swing.GroupLayout pnl_edit_empLayout = new javax.swing.GroupLayout(pnl_edit_emp);
         pnl_edit_emp.setLayout(pnl_edit_empLayout);
         pnl_edit_empLayout.setHorizontalGroup(
             pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_edit_empLayout.createSequentialGroup()
-                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(pnl_edit_empLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbbox_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
                         .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(pnl_edit_empLayout.createSequentialGroup()
                                 .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2450,40 +2468,43 @@ public class Main extends javax.swing.JFrame
                             .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                         .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_editemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_salary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_editemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_editemp_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_id, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(50, 50, 50))
+                            .addComponent(txt_editemp_usrnm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_editemp_salary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_editemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50))))
         );
         pnl_edit_empLayout.setVerticalGroup(
             pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(35, 35, 35)
+                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addComponent(txt_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cmbbox_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
                         .addComponent(txt_editemp_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_editemp_usrnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_editemp_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_editemp_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_editemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_editemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_editemp_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                        .addComponent(txt_editemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_editemp_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_editemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pnl_emp_det.setkBorderRadius(40);
@@ -4756,25 +4777,36 @@ public class Main extends javax.swing.JFrame
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("PANEL 4 Tab 2");
 
+        txtarea_format.setEditable(false);
+        txtarea_format.setColumns(20);
+        txtarea_format.setRows(5);
+        jScrollPane2.setViewportView(txtarea_format);
+
         javax.swing.GroupLayout pnl_acc_tab2Layout = new javax.swing.GroupLayout(pnl_acc_tab2);
         pnl_acc_tab2.setLayout(pnl_acc_tab2Layout);
         pnl_acc_tab2Layout.setHorizontalGroup(
             pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
+            .addGroup(pnl_acc_tab2Layout.createSequentialGroup()
+                .addGap(271, 271, 271)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(537, Short.MAX_VALUE))
             .addGroup(pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_acc_tab2Layout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         pnl_acc_tab2Layout.setVerticalGroup(
             pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_acc_tab2Layout.createSequentialGroup()
+                .addContainerGap(435, Short.MAX_VALUE)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(187, 187, 187))
             .addGroup(pnl_acc_tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_acc_tab2Layout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pnl_acc_tab3.setkBorderRadius(40);
@@ -4996,10 +5028,21 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_loginActionPerformed
         panel_login.setVisible(false);
         panel_dashboard.setVisible(true);
-        lbl_dash_usr.setText(cmbbox_role.getSelectedItem().toString());
-        lbl_dash_welcome.grabFocus();
         visibility(true, false, false, false, false, false, btnCustomer);
 
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "select nm from employee where usrnm like '" + cmbbox_role.getSelectedItem().toString() + "'";
+            st = con.createStatement();
+            result = st.executeQuery(query);
+            result.next();
+            lbl_dash_usr.setText(result.getString("nm"));
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btn_loginActionPerformed
 
     private void btnEmployeeMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btnEmployeeMouseEntered
@@ -5035,10 +5078,8 @@ public class Main extends javax.swing.JFrame
     private void btnCustomerActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCustomerActionPerformed
     {//GEN-HEADEREND:event_btnCustomerActionPerformed
         visibility(false, true, false, false, false, false, btn_addcust_menu);
-//        hover(btnCustomer, btnEmployee, btnProduct, btnReport, btnUser);   // To select dashboard main buttons.
-        onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
-
+        onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
         txt_addcust_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btnCustomerActionPerformed
 
@@ -5117,8 +5158,6 @@ public class Main extends javax.swing.JFrame
             visibility(false, true, false, false, false, false, btn_addcust_menu);
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
-//            hover(btnCustomer, btnEmployee, btnProduct, btnReport, btnUser);   // To select dashboard main buttons.
-            txt_addcust_id.setText(getMaxID("customer"));
             txt_addcust_id.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btnCustomerKeyPressed
@@ -5131,7 +5170,6 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
             onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
             txt_addemp_id.setText(getMaxID("employee"));
-            txt_addemp_id.setText(getMaxID("customer"));
         }
     }//GEN-LAST:event_btnEmployeeKeyPressed
 
@@ -5175,7 +5213,6 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
         onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
         txt_addemp_id.setText(getMaxID("employee"));
-        txt_addemp_id.setText(getMaxID("customer"));
     }//GEN-LAST:event_btnEmployeeActionPerformed
 
     private void btnProductActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnProductActionPerformed
@@ -5391,7 +5428,7 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
             onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
-            txt_editemp_id.grabFocus();
+            cmbbox_editemp_id.grabFocus();
             bindEmployeeTableData(table_editemp);
         }
     }//GEN-LAST:event_btn_editemp_menuKeyPressed
@@ -5747,7 +5784,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_editemp_menuActionPerformed
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
-        txt_editemp_id.grabFocus();
+        cmbbox_editemp_id.grabFocus();
         bindEmployeeTableData(table_editemp);
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
@@ -5963,21 +6000,22 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "insert into employee (id, nm, contact, email, salary, address, pswd) values(?, ?, ?, ?, ?, ?, ?)";
+            query = "insert into employee (id, nm, usrnm, pswd, contact, email, salary, address) values(?, ?, ?, ?, ?, ?, ?, ?)";
 
             pst = con.prepareStatement(query);
             pst.setString(1, txt_addemp_id.getText());
             pst.setString(2, txt_addemp_nm.getText());
-            pst.setString(3, txt_addemp_contact.getText());
-            pst.setString(4, txt_addemp_email.getText());
-            pst.setString(5, txt_addemp_salary.getText());
-            pst.setString(6, txt_addemp_addr.getText());
-            pst.setString(7, txt_addemp_pswd.getText());
+            pst.setString(3, txt_addemp_usrnm.getText());
+            pst.setString(4, txt_addemp_pswd.getText());
+            pst.setString(5, txt_addemp_contact.getText());
+            pst.setString(6, txt_addemp_email.getText());
+            pst.setString(7, txt_addemp_salary.getText());
+            pst.setString(8, txt_addemp_addr.getText());
 
             pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Record Inserted Successfully!");
-            clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr, txt_addemp_pswd, txt_addemp_cpswd);
+            JOptionPane.showMessageDialog(null, "Employee Inserted Successfully!");
+            clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
             txt_addemp_id.setText(getMaxID("employee"));
             txt_addemp_id.grabFocus();
         }
@@ -6165,7 +6203,7 @@ public class Main extends javax.swing.JFrame
             query = "delete from employee where id = ?";
 
             pst = con.prepareStatement(query);
-            pst.setString(1, txt_editemp_id.getText());
+            pst.setString(1, cmbbox_editemp_id.getSelectedItem().toString());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
@@ -6216,7 +6254,7 @@ public class Main extends javax.swing.JFrame
             pst.setString(4, txt_editemp_salary.getText());
             pst.setString(5, txt_editemp_addr.getText());
             pst.setString(6, txt_editemp_pswd.getText());
-            pst.setString(7, txt_editemp_id.getText());
+            pst.setString(7, cmbbox_editemp_id.getSelectedItem().toString());
 
             pst.executeUpdate();
             JOptionPane.showMessageDialog(null, "Record Updated Successfully!");
@@ -6366,15 +6404,13 @@ public class Main extends javax.swing.JFrame
         {
             int i = table_editemp.getSelectedRow();
             tableModel = (DefaultTableModel) table_editemp.getModel();
-
-            txt_editemp_id.setText(tableModel.getValueAt(i, 0).toString());
             txt_editemp_nm.setText(tableModel.getValueAt(i, 1).toString());
-            txt_editemp_contact.setText(tableModel.getValueAt(i, 2).toString());
-            txt_editemp_email.setText(tableModel.getValueAt(i, 3).toString());
-            txt_editemp_salary.setText(tableModel.getValueAt(i, 4).toString());
-            txt_editemp_addr.setText(tableModel.getValueAt(i, 5).toString());
-            txt_editemp_pswd.setText(tableModel.getValueAt(i, 6).toString());
-//            txt_editemp_pswd.setText(tableModel.getValueAt(i, 7).toString());
+            txt_editemp_usrnm.setText(tableModel.getValueAt(i, 2).toString());
+            txt_editemp_pswd.setText(tableModel.getValueAt(i, 3).toString());
+            txt_editemp_contact.setText(tableModel.getValueAt(i, 4).toString());
+            txt_editemp_email.setText(tableModel.getValueAt(i, 5).toString());
+            txt_editemp_salary.setText(tableModel.getValueAt(i, 6).toString());
+            txt_editemp_addr.setText(tableModel.getValueAt(i, 7).toString());
         }
     }//GEN-LAST:event_table_editempMouseClicked
 
@@ -6615,7 +6651,7 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "insert into bill values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            query = "insert into bill values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             pst = con.prepareStatement(query);
             pst.setString(1, lbl_billno_no.getText());
             pst.setString(2, txt_createbill_custid.getText());
@@ -6626,10 +6662,28 @@ public class Main extends javax.swing.JFrame
             pst.setString(7, lbl_discount.getText());
             pst.setString(8, lbl_grosstotal.getText());
             pst.setString(9, lbl_unpaid.getText());
+            pst.setString(10, java.time.LocalDate.now().toString());
 
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Bill Added Successfully");
+
+            txtarea_format.append("\t\t Billing Application \n"
+                    + "\n***************************************************************\n"
+                    + "***************************************************************\n"
+                    + "  Bill No. :                             " + lbl_billno_no.getText() + "\n"
+                    + "  CUSTOMER NAME :                        " + cmbbox_createbill_custnm.getSelectedItem().toString() + "\n"
+                    + "  CONTACT :                              " + txt_createbill_contact.getText() + "\n"
+                    + "  ADDRESS :                              " + txt_createbill_addr.getText() + "\n"
+                    + "===============================================================\n"
+                    + "  Tax :                                  " + lbl_tax.getText() + "\n"
+                    + "  Discount :                             " + lbl_discount.getText() + "\n"
+                    + "  Total Amount :                         " + lbl_nettotal.getText() + "\n"
+                    + "===============================================================\n"
+                    + "  UNPAID :                               " + lbl_unpaid.getText() + "\n"
+                    + "*************** Thank You for Shopping ********************\n");
+
+            txtarea_format.print();
         }
         catch (Exception e)
         {
@@ -6737,6 +6791,11 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_spin_createbill_quantityStateChanged
 
     }//GEN-LAST:event_spin_createbill_quantityStateChanged
+
+    private void cmbbox_editemp_idActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editemp_idActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_editemp_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbbox_editemp_idActionPerformed
 
     public static void main(String args[])
     {
@@ -6917,20 +6976,21 @@ public class Main extends javax.swing.JFrame
 
             result = pst.executeQuery();
 
-            String id, nm, contact, email, salary, addr, pswd;
+            String id, nm, usrnm, pswd, contact, email, salary, addr;
             while (result.next())
             {
                 id = result.getString(1);
                 nm = result.getString(2);
-                contact = result.getString(3);
-                email = result.getString(4);
-                salary = result.getString(5);
-                addr = result.getString(6);
-                pswd = result.getString(7);
+                usrnm = result.getString(3);
+                pswd = result.getString(4);
+                contact = result.getString(5);
+                email = result.getString(6);
+                salary = result.getString(7);
+                addr = result.getString(8);
 
                 String[] rows =
                 {
-                    id, nm, contact, email, salary, addr, pswd
+                    id, nm, usrnm, pswd, contact, email, salary, addr
                 };
 
                 tableModel.addRow(rows);
@@ -7028,7 +7088,7 @@ public class Main extends javax.swing.JFrame
         txt7.setText("");
     }
 
-    public void clearTextFields(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextField txt6, PasswordField txt7, PasswordField txt8)
+    public void clearTextFields(TextField txt1, TextField txt2, TextField txt3, PasswordField txt4, TextField txt5, TextField txt6, TextField txt7, TextField txt8)
     {
         txt1.setText("");
         txt2.setText("");
@@ -7107,6 +7167,7 @@ public class Main extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodnm;
+    private combo_suggestion.ComboBoxSuggestion cmbbox_editemp_id;
     private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_modifybill_prodid;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
@@ -7115,6 +7176,7 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
@@ -7237,12 +7299,12 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_addcust_shopnm;
     private textfield.TextField txt_addemp_addr;
     private textfield.TextField txt_addemp_contact;
-    private textfield.PasswordField txt_addemp_cpswd;
     private textfield.TextField txt_addemp_email;
     private textfield.TextField txt_addemp_id;
     private textfield.TextField txt_addemp_nm;
     private textfield.PasswordField txt_addemp_pswd;
     private textfield.TextField txt_addemp_salary;
+    private textfield.TextField txt_addemp_usrnm;
     private textfield.TextField txt_addprod_costprice;
     private textfield.TextField txt_addprod_id;
     private textfield.TextField txt_addprod_nm;
@@ -7266,10 +7328,10 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editemp_addr;
     private textfield.TextField txt_editemp_contact;
     private textfield.TextField txt_editemp_email;
-    private textfield.TextField txt_editemp_id;
     private textfield.TextField txt_editemp_nm;
     private textfield.PasswordField txt_editemp_pswd;
     private textfield.TextField txt_editemp_salary;
+    private textfield.TextField txt_editemp_usrnm;
     private textfield.TextField txt_editprod_costprice;
     private textfield.TextField txt_editprod_id;
     private textfield.TextField txt_editprod_nm;
@@ -7282,5 +7344,6 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_modifybill_tax;
     private textfield.TextField txt_proddet_nm;
     private textfield.PasswordField txt_pswd;
+    private javax.swing.JTextArea txtarea_format;
     // End of variables declaration//GEN-END:variables
 }
