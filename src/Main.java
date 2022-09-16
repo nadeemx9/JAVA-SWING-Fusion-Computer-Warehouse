@@ -193,7 +193,6 @@ public class Main extends javax.swing.JFrame
         btn_editemp_edit = new com.k33ptoo.components.KButton();
         btn_editemp_rmv = new com.k33ptoo.components.KButton();
         txt_editemp_pswd = new textfield.PasswordField();
-        cmbbox_editemp_id = new combo_suggestion.ComboBoxSuggestion();
         txt_editemp_usrnm = new textfield.TextField();
         pnl_emp_det = new com.k33ptoo.components.KGradientPanel();
         txt_empdet_nm = new textfield.TextField();
@@ -1630,7 +1629,7 @@ public class Main extends javax.swing.JFrame
 
         txt_custdet_custnm.setBackground(new java.awt.Color(150, 195, 248));
         txt_custdet_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_custdet_custnm.setLabelText("CUSTOMER NAME");
+        txt_custdet_custnm.setLabelText("SEARCH BY CUSTOMER NAME");
         txt_custdet_custnm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_custdet_custnm.setNextFocusableComponent(btn_custdet);
         txt_custdet_custnm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -2425,23 +2424,6 @@ public class Main extends javax.swing.JFrame
         txt_editemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_editemp_pswd.setShowAndHide(true);
 
-        cmbbox_editemp_id.setBackground(new java.awt.Color(255, 167, 6));
-        cmbbox_editemp_id.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_editemp_id.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "EMPLOYEE ID" }));
-        cmbbox_editemp_id.setSelectedItem("--SELECT--BRAND--");
-        cmbbox_editemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        cmbbox_editemp_id.setMaximumSize(new java.awt.Dimension(415, 64));
-        cmbbox_editemp_id.setMinimumSize(new java.awt.Dimension(415, 64));
-        cmbbox_editemp_id.setNextFocusableComponent(txt_addprod_quantity);
-        cmbbox_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
-        cmbbox_editemp_id.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_editemp_idActionPerformed(evt);
-            }
-        });
-
         txt_editemp_usrnm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_usrnm.setLabelText("USERNAME");
@@ -2455,37 +2437,29 @@ public class Main extends javax.swing.JFrame
             pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_edit_empLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
+                .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
+                        .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(btn_editemp_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addComponent(cmbbox_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                                .addComponent(btn_editemp_edit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
-                                .addComponent(btn_editemp_rmv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                        .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_editemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_usrnm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_salary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_editemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50))))
+                    .addComponent(txt_editemp_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_usrnm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_pswd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_contact, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_salary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_editemp_addr, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50))
         );
         pnl_edit_empLayout.setVerticalGroup(
             pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(150, 150, 150)
                 .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnl_edit_empLayout.createSequentialGroup()
-                        .addComponent(cmbbox_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
                         .addComponent(txt_editemp_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2515,7 +2489,7 @@ public class Main extends javax.swing.JFrame
 
         txt_empdet_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_empdet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_empdet_nm.setLabelText("EMPLOYEE ID");
+        txt_empdet_nm.setLabelText("SEARCH BY EMPLOYEE NAME");
         txt_empdet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_empdet_nm.setNextFocusableComponent(btn_empdet);
         txt_empdet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -5081,6 +5055,8 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
         onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
         txt_addcust_id.setText(getMaxID("customer"));
+
+        txt_addcust_id.grabFocus();
     }//GEN-LAST:event_btnCustomerActionPerformed
 
     private void btn_loginMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_loginMouseEntered
@@ -5159,6 +5135,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
             txt_addcust_id.setText(getMaxID("customer"));
+            txt_addcust_id.grabFocus();
         }
     }//GEN-LAST:event_btnCustomerKeyPressed
 
@@ -5213,6 +5190,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_add_emp, pnl_edit_emp, pnl_emp_det);
         onIndicator(lid_add_emp, lid_edit_emp, lid_emp_det);
         txt_addemp_id.setText(getMaxID("employee"));
+        txt_addemp_id.grabFocus();
     }//GEN-LAST:event_btnEmployeeActionPerformed
 
     private void btnProductActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnProductActionPerformed
@@ -5328,8 +5306,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
             onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
-            txt_addcust_id.grabFocus();
             txt_addcust_id.setText(getMaxID("customer"));
+            txt_addcust_id.grabFocus();
         }
     }//GEN-LAST:event_btn_addcust_menuKeyPressed
 
@@ -5343,8 +5321,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
             onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
-            txt_editcust_id.grabFocus();
             bindCustomerTableData(table_editcust);
+            txt_editcust_id.grabFocus();
         }
     }//GEN-LAST:event_btn_editcust_menuKeyPressed
 
@@ -5358,8 +5336,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
             onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
-            txt_custdet_custnm.grabFocus();
             bindCustomerTableData(table_custdet);
+            txt_custdet_custnm.grabFocus();
         }
     }//GEN-LAST:event_btn_custdet_menuKeyPressed
 
@@ -5428,8 +5406,10 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
             onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
-            cmbbox_editemp_id.grabFocus();
             bindEmployeeTableData(table_editemp);
+//            fillCombobox("employee", "usrnm", cmbbox_editemp_usrnm);
+            txt_editemp_nm.grabFocus();
+
         }
     }//GEN-LAST:event_btn_editemp_menuKeyPressed
 
@@ -5752,24 +5732,24 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addcust_menuActionPerformed
         visibility(pnl_add_cust, pnl_edit_cust, pnl_cust_det);
         onIndicator(lid_add_cust, lid_edit_cust, lid_cust_det);
-        txt_addcust_id.grabFocus();
         txt_editcust_id.setText(getMaxID("customer"));
+        txt_addcust_id.grabFocus();
     }//GEN-LAST:event_btn_addcust_menuActionPerformed
 
     private void btn_editcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_menuActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_menuActionPerformed
         visibility(pnl_edit_cust, pnl_add_cust, pnl_cust_det);
         onIndicator(lid_edit_cust, lid_add_cust, lid_cust_det);
-        txt_editcust_id.grabFocus();
         bindCustomerTableData(table_editcust);
+        txt_editcust_id.grabFocus();
     }//GEN-LAST:event_btn_editcust_menuActionPerformed
 
     private void btn_custdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_custdet_menuActionPerformed
     {//GEN-HEADEREND:event_btn_custdet_menuActionPerformed
         visibility(pnl_cust_det, pnl_add_cust, pnl_edit_cust);
         onIndicator(lid_cust_det, lid_add_cust, lid_edit_cust);
-        txt_custdet_custnm.grabFocus();
         bindCustomerTableData(table_custdet);
+        txt_custdet_custnm.grabFocus();
     }//GEN-LAST:event_btn_custdet_menuActionPerformed
 
     private void btn_addemp_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addemp_menuActionPerformed
@@ -5784,8 +5764,9 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_editemp_menuActionPerformed
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
-        cmbbox_editemp_id.grabFocus();
         bindEmployeeTableData(table_editemp);
+//        fillCombobox("employee", "usrnm", cmbbox_editemp_usrnm);
+        txt_editemp_nm.grabFocus();
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
     private void btn_empdet_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_empdet_menuActionPerformed
@@ -5893,7 +5874,11 @@ public class Main extends javax.swing.JFrame
 
             pst.executeUpdate();
             bindCustomerTableData(table_editcust);
-            JOptionPane.showMessageDialog(null, "Recored Updated Successfully");
+
+            JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
+
+            clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+            txt_editcust_id.grabFocus();
         }
         catch (Exception e)
         {
@@ -6014,7 +5999,7 @@ public class Main extends javax.swing.JFrame
 
             pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Employee Inserted Successfully!");
+            JOptionPane.showMessageDialog(null, "Employee Added Successfully!");
             clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
             txt_addemp_id.setText(getMaxID("employee"));
             txt_addemp_id.grabFocus();
@@ -6177,6 +6162,9 @@ public class Main extends javax.swing.JFrame
                 pst.executeUpdate();
                 bindCustomerTableData(table_editcust);
                 JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+
+                clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+                txt_editcust_id.grabFocus();
             }
             catch (Exception e)
             {
@@ -6200,14 +6188,16 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "delete from employee where id = ?";
+            String empnm = txt_editemp_nm.getText();
+            query = "delete from employee where nm = '" + empnm + "'";
 
             pst = con.prepareStatement(query);
-            pst.setString(1, cmbbox_editemp_id.getSelectedItem().toString());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+            JOptionPane.showMessageDialog(null, "Employee Removed Successfully !");
             bindEmployeeTableData(table_editemp);
+            clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+            txt_editemp_pswd.setText("");
         }
         catch (Exception e)
         {
@@ -6245,20 +6235,24 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "update employee set nm = ?, contact = ?, email = ?, salary = ?, address = ?, pswd = ? where id = ? ";
+            query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where usrnm = ? ";
 
             pst = con.prepareStatement(query);
             pst.setString(1, txt_editemp_nm.getText());
-            pst.setString(2, txt_editemp_contact.getText());
-            pst.setString(3, txt_editemp_email.getText());
-            pst.setString(4, txt_editemp_salary.getText());
-            pst.setString(5, txt_editemp_addr.getText());
-            pst.setString(6, txt_editemp_pswd.getText());
-            pst.setString(7, cmbbox_editemp_id.getSelectedItem().toString());
+            pst.setString(2, txt_editemp_usrnm.getText());
+            pst.setString(3, txt_editemp_pswd.getText());
+            pst.setString(4, txt_editemp_contact.getText());
+            pst.setString(5, txt_editemp_email.getText());
+            pst.setString(6, txt_editemp_salary.getText());
+            pst.setString(7, txt_editemp_addr.getText());
+            pst.setString(8, txt_editemp_usrnm.getText());
 
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Record Updated Successfully!");
+            JOptionPane.showMessageDialog(null, "Employee Details Updated Successfully!");
             bindEmployeeTableData(table_editemp);
+
+            clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+            txt_editemp_pswd.setText("");
         }
         catch (Exception e)
         {
@@ -6792,11 +6786,6 @@ public class Main extends javax.swing.JFrame
 
     }//GEN-LAST:event_spin_createbill_quantityStateChanged
 
-    private void cmbbox_editemp_idActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editemp_idActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_editemp_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_editemp_idActionPerformed
-
     public static void main(String args[])
     {
 
@@ -7167,7 +7156,6 @@ public class Main extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_custnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_createbill_prodnm;
-    private combo_suggestion.ComboBoxSuggestion cmbbox_editemp_id;
     private combo_suggestion.ComboBoxSuggestion cmbbox_editprod_brand;
     private combo_suggestion.ComboBoxSuggestion cmbbox_modifybill_prodid;
     private combo_suggestion.ComboBoxSuggestion cmbbox_role;
