@@ -1266,6 +1266,7 @@ public class Main extends javax.swing.JFrame
         pnl_add_cust.setkStartColor(new java.awt.Color(150, 195, 248));
         pnl_add_cust.setOpaque(false);
 
+        txt_addcust_id.setEditable(false);
         txt_addcust_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addcust_id.setLabelText("CUSTOMER ID");
@@ -1283,6 +1284,13 @@ public class Main extends javax.swing.JFrame
         txt_addcust_contact.setLabelText("CONTACT NO");
         txt_addcust_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_contact.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addcust_contact.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_addcust_contactKeyTyped(evt);
+            }
+        });
 
         txt_addcust_email.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -1290,6 +1298,13 @@ public class Main extends javax.swing.JFrame
         txt_addcust_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_email.setNextFocusableComponent(txt_addcust_shopnm);
         txt_addcust_email.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addcust_email.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_addcust_emailKeyTyped(evt);
+            }
+        });
 
         txt_addcust_shopaddr.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_shopaddr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -1530,6 +1545,13 @@ public class Main extends javax.swing.JFrame
         txt_editcust_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_contact.setNextFocusableComponent(txt_editcust_email);
         txt_editcust_contact.setPreferredSize(new java.awt.Dimension(250, 64));
+        txt_editcust_contact.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_editcust_contactKeyTyped(evt);
+            }
+        });
 
         txt_editcust_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -2495,6 +2517,10 @@ public class Main extends javax.swing.JFrame
         txt_empdet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_empdet_nm.addKeyListener(new java.awt.event.KeyAdapter()
         {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_empdet_nmKeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt)
             {
                 txt_empdet_nmKeyReleased(evt);
@@ -2957,6 +2983,7 @@ public class Main extends javax.swing.JFrame
         pnl_add_prod.setOpaque(false);
         pnl_add_prod.setPreferredSize(new java.awt.Dimension(1108, 672));
 
+        txt_addprod_id.setEditable(false);
         txt_addprod_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_id.setFocusCycleRoot(true);
         txt_addprod_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -2988,8 +3015,7 @@ public class Main extends javax.swing.JFrame
 
         cmbbox_addprod_brand.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_addprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_addprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "DELL", "HP", "LENOVO", "ACER" }));
-        cmbbox_addprod_brand.setSelectedItem("--SELECT--BRAND--");
+        cmbbox_addprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "HP", "ACER", "LENOVO", "DELL", "ACER" }));
         cmbbox_addprod_brand.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_addprod_brand.setMaximumSize(new java.awt.Dimension(415, 64));
         cmbbox_addprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
@@ -3353,7 +3379,7 @@ public class Main extends javax.swing.JFrame
 
         txt_proddet_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_proddet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        txt_proddet_nm.setLabelText("EMPLOYEE ID");
+        txt_proddet_nm.setLabelText("SEARCH BY PRODUCT NAME");
         txt_proddet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_proddet_nm.setNextFocusableComponent(btn_proddet);
         txt_proddet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
@@ -5868,30 +5894,33 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_editActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_editActionPerformed
-        try
+        if (isFieldEmpty(txt_editcust_id, txt_editcust_nm, txt_editcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr))
         {
-            con = dbconnection.getdbConnection();
-            query = "update customer set custnm = ?, contact = ?, email = ?, shopnm = ?, address = ? where id = ?";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "update customer set custnm = ?, contact = ?, email = ?, shopnm = ?, address = ? where id = ?";
 
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_editcust_nm.getText());
-            pst.setString(2, txt_editcust_contact.getText());
-            pst.setString(3, txt_editcust_email.getText());
-            pst.setString(4, txt_editcust_shopnm.getText());
-            pst.setString(5, txt_editcust_shopaddr.getText());
-            pst.setString(6, txt_editcust_id.getText());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_editcust_nm.getText());
+                pst.setString(2, txt_editcust_contact.getText());
+                pst.setString(3, txt_editcust_email.getText());
+                pst.setString(4, txt_editcust_shopnm.getText());
+                pst.setString(5, txt_editcust_shopaddr.getText());
+                pst.setString(6, txt_editcust_id.getText());
 
-            pst.executeUpdate();
-            bindCustomerTableData(table_editcust);
+                pst.executeUpdate();
+                bindCustomerTableData(table_editcust);
 
-            JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
+                JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
 
-            clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
-            txt_editcust_id.grabFocus();
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+                clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+                txt_editcust_id.grabFocus();
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_editcust_editActionPerformed
 
@@ -5937,30 +5966,32 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addcust_addActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_addActionPerformed
     {//GEN-HEADEREND:event_btn_addcust_addActionPerformed
-
-        try
+        if (isFieldEmpty(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr))
         {
-            con = dbconnection.getdbConnection();
-            query = "insert into customer values(?, ?, ?, ?, ?, ?)";
-            pst = con.prepareStatement(query);
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "insert into customer values(?, ?, ?, ?, ?, ?)";
+                pst = con.prepareStatement(query);
 
-            pst.setString(1, txt_addcust_id.getText());
-            pst.setString(2, txt_addcust_nm.getText());
-            pst.setString(3, txt_addcust_contact.getText());
-            pst.setString(4, txt_addcust_email.getText());
-            pst.setString(5, txt_addcust_shopnm.getText());
-            pst.setString(6, txt_addcust_shopaddr.getText());
+                pst.setString(1, txt_addcust_id.getText());
+                pst.setString(2, txt_addcust_nm.getText());
+                pst.setString(3, txt_addcust_contact.getText());
+                pst.setString(4, txt_addcust_email.getText());
+                pst.setString(5, txt_addcust_shopnm.getText());
+                pst.setString(6, txt_addcust_shopaddr.getText());
 
-            pst.executeUpdate();
+                pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
-            clearTextFields(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr);
-            txt_addcust_id.setText(getMaxID("customer"));
-            txt_addcust_id.grabFocus();
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+                JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
+                clearTextFields(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr);
+                txt_addcust_id.setText(getMaxID("customer"));
+                txt_addcust_id.grabFocus();
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_addcust_addActionPerformed
 
@@ -6111,27 +6142,30 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addprodActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addprodActionPerformed
     {//GEN-HEADEREND:event_btn_addprodActionPerformed
-        try
+        if (isFieldEmpty(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, txt_addprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_addprod_brand))
         {
-            con = dbconnection.getdbConnection();
-            query = "insert into product (id, nm, costprice, sellingprice, brand, quantity) values(?, ?, ?, ?, ?, ?)";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "insert into product (id, nm, costprice, sellingprice, brand, quantity) values(?, ?, ?, ?, ?, ?)";
 
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_addprod_id.getText());
-            pst.setString(2, txt_addprod_nm.getText());
-            pst.setString(3, txt_addprod_costprice.getText());
-            pst.setString(4, txt_addprod_sellingprice.getText());
-            pst.setString(5, cmbbox_addprod_brand.getSelectedItem().toString());
-            pst.setString(6, txt_addprod_quantity.getText());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_addprod_id.getText());
+                pst.setString(2, txt_addprod_nm.getText());
+                pst.setString(3, txt_addprod_costprice.getText());
+                pst.setString(4, txt_addprod_sellingprice.getText());
+                pst.setString(5, cmbbox_addprod_brand.getSelectedItem().toString());
+                pst.setString(6, txt_addprod_quantity.getText());
 
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Record inserted Successfull");
-            clearTextFields(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, cmbbox_addprod_brand, txt_addprod_quantity);
-            txt_addprod_id.setText(getMaxID("product"));
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Record inserted Successfull");
+                clearTextFields(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, cmbbox_addprod_brand, txt_addprod_quantity);
+                txt_addprod_id.setText(getMaxID("product"));
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_addprodActionPerformed
 
@@ -6386,6 +6420,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_table_editcustMouseClicked
         table_editcust = (JTable) evt.getSource();
 
+        // Database table column index starts from "1", while Jtable column index starts from "0".
         if (evt.getClickCount() == 1 && table_editcust.getSelectedRow() != -1)
         {
             int i = table_editcust.getSelectedRow();
@@ -6403,6 +6438,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_table_editempMouseClicked
         table_editemp = (JTable) evt.getSource();
 
+        // Database table column index starts from "1", while Jtable column index starts from "0".
         if (evt.getClickCount() == 1 && table_editemp.getSelectedRow() != -1)
         {
             int i = table_editemp.getSelectedRow();
@@ -6421,6 +6457,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_table_editprodMouseClicked
         table_editprod = (JTable) evt.getSource();
 
+        // Database table column index starts from "1", while Jtable column index starts from "0".
         if (evt.getClickCount() == 1 && table_editprod.getSelectedRow() != -1)
         {
             int i = table_editprod.getSelectedRow();
@@ -6462,25 +6499,28 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editprod_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_editActionPerformed
     {//GEN-HEADEREND:event_btn_editprod_editActionPerformed
-        try
+        if (isFieldEmpty(txt_editprod_id, txt_editprod_nm, txt_editprod_costprice, txt_editprod_sellingprice, txt_editprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_editprod_brand))
         {
-            con = dbconnection.getdbConnection();
-            query = "update product set nm = ?, costprice = ?, sellingprice = ?, brand = ?, quantity = ? where id = ? ";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "update product set nm = ?, costprice = ?, sellingprice = ?, brand = ?, quantity = ? where id = ? ";
 
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_editprod_nm.getText());
-            pst.setString(2, txt_editprod_costprice.getText());
-            pst.setString(3, txt_editprod_sellingprice.getText());
-            pst.setString(4, cmbbox_editprod_brand.getSelectedItem().toString());
-            pst.setString(5, txt_editprod_quantity.getText());
-            pst.setString(6, txt_editprod_id.getText());
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Product Updated Successfully!");
-            bindProductTableData(table_editprod);
-        }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_editprod_nm.getText());
+                pst.setString(2, txt_editprod_costprice.getText());
+                pst.setString(3, txt_editprod_sellingprice.getText());
+                pst.setString(4, cmbbox_editprod_brand.getSelectedItem().toString());
+                pst.setString(5, txt_editprod_quantity.getText());
+                pst.setString(6, txt_editprod_id.getText());
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Product Updated Successfully!");
+                bindProductTableData(table_editprod);
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_editprod_editActionPerformed
 
@@ -6536,7 +6576,48 @@ public class Main extends javax.swing.JFrame
 
     private void txt_proddet_nmKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_proddet_nmKeyReleased
     {//GEN-HEADEREND:event_txt_proddet_nmKeyReleased
-        // TODO add your handling code here:
+        if (txt_proddet_nm.getText().equals(""))
+        {
+            bindProductTableData(table_proddet);
+        }
+        else
+        {
+            String prodnm = txt_proddet_nm.getText();
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "select * from product where nm like '" + prodnm + "%'";
+
+                tableModel = (DefaultTableModel) table_proddet.getModel();
+                tableModel.setRowCount(0);
+
+                pst = con.prepareStatement(query);
+                result = pst.executeQuery();
+
+                String id, nm, costrprice, sellingprice, brand, quantity;
+
+                while (result.next())
+                {
+                    id = result.getString(1);
+                    nm = result.getString(2);
+                    costrprice = result.getString(3);
+                    sellingprice = result.getString(4);
+                    brand = result.getString(5);
+                    quantity = result.getString(6);
+
+                    String[] rows =
+                    {
+                        id, nm, costrprice, sellingprice, brand, quantity
+                    };
+
+                    tableModel.addRow(rows);
+                }
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+        }
     }//GEN-LAST:event_txt_proddet_nmKeyReleased
 
     private void btn_proddetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddetFocusGained
@@ -6794,6 +6875,26 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_spin_createbill_quantityStateChanged
 
     }//GEN-LAST:event_spin_createbill_quantityStateChanged
+
+    private void txt_empdet_nmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_empdet_nmKeyPressed
+    {//GEN-HEADEREND:event_txt_empdet_nmKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_empdet_nmKeyPressed
+
+    private void txt_addcust_contactKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addcust_contactKeyTyped
+    {//GEN-HEADEREND:event_txt_addcust_contactKeyTyped
+        isDigit(evt, txt_addcust_contact);
+    }//GEN-LAST:event_txt_addcust_contactKeyTyped
+
+    private void txt_addcust_emailKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addcust_emailKeyTyped
+    {//GEN-HEADEREND:event_txt_addcust_emailKeyTyped
+
+    }//GEN-LAST:event_txt_addcust_emailKeyTyped
+
+    private void txt_editcust_contactKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editcust_contactKeyTyped
+    {//GEN-HEADEREND:event_txt_editcust_contactKeyTyped
+        isDigit(evt, txt_editcust_contact);
+    }//GEN-LAST:event_txt_editcust_contactKeyTyped
 
     public static void main(String args[])
     {
@@ -7125,8 +7226,105 @@ public class Main extends javax.swing.JFrame
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+
     }
 
+    public boolean isFieldEmpty(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextField txt6)
+    {
+        if (txt1.getText().equals(""))
+        {
+            txt1.grabFocus();
+            return false;
+        }
+        else if (txt2.getText().equals(""))
+        {
+            txt2.grabFocus();
+            return false;
+        }
+        else if (txt3.getText().equals(""))
+        {
+            txt3.grabFocus();
+            return false;
+
+        }
+        else if (txt4.getText().equals(""))
+        {
+            txt4.grabFocus();
+            return false;
+
+        }
+        else if (txt5.getText().equals(""))
+        {
+            txt5.grabFocus();
+            return false;
+
+        }
+        else if (txt6.getText().equals(""))
+        {
+            txt6.grabFocus();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public boolean isFieldEmpty(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5)
+    {
+        if (txt1.getText().equals(""))
+        {
+            txt1.grabFocus();
+            return false;
+        }
+        else if (txt2.getText().equals(""))
+        {
+            txt2.grabFocus();
+            return false;
+        }
+        else if (txt3.getText().equals(""))
+        {
+            txt3.grabFocus();
+            return false;
+
+        }
+        else if (txt4.getText().equals(""))
+        {
+            txt4.grabFocus();
+            return false;
+
+        }
+        else if (txt5.getText().equals(""))
+        {
+            txt5.grabFocus();
+            return false;
+
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void isDigit(KeyEvent evt, TextField txt)
+    {
+        if (evt.getKeyChar() < '0' || evt.getKeyChar() > '9' || txt.getText().length() == 10)
+        {
+            evt.consume();
+        }
+    }
+
+    public boolean isCmbboxDefaultSelected(String str, combo_suggestion.ComboBoxSuggestion cmbbox)
+    {
+        if (cmbbox.getSelectedItem().equals(str))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btnBill;
     private com.k33ptoo.components.KButton btnCustomer;
