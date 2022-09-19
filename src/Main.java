@@ -285,8 +285,8 @@ public class Main extends javax.swing.JFrame
         spin_modifybill_quantity = new spinner.Spinner();
         txt_modifybill_discount = new textfield.TextField();
         txt_modifybill_tax = new textfield.TextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        scrollpane_modifybill = new javax.swing.JScrollPane();
+        table_modifybill = new javax.swing.JTable();
         pnl_bill_tab3 = new com.k33ptoo.components.KGradientPanel();
         panel_account = new com.k33ptoo.components.KGradientPanel();
         pnl_account_menubar = new com.k33ptoo.components.KGradientPanel();
@@ -4415,7 +4415,7 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        table_modifybill.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
                 {null, null, null, null},
@@ -4428,7 +4428,7 @@ public class Main extends javax.swing.JFrame
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        scrollpane_modifybill.setViewportView(table_modifybill);
 
         javax.swing.GroupLayout pnl_modifybillLayout = new javax.swing.GroupLayout(pnl_modifybill);
         pnl_modifybill.setLayout(pnl_modifybillLayout);
@@ -4437,7 +4437,6 @@ public class Main extends javax.swing.JFrame
             .addGroup(pnl_modifybillLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(pnl_modifybillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_modifybill_prodlisting, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_modifybillLayout.createSequentialGroup()
                         .addComponent(cmbbox_modifybill_prodid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4450,7 +4449,10 @@ public class Main extends javax.swing.JFrame
                         .addGap(18, 18, 18)
                         .addComponent(txt_modifybill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_modifybill_tax, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_modifybill_tax, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl_modifybillLayout.createSequentialGroup()
+                        .addGap(194, 194, 194)
+                        .addComponent(scrollpane_modifybill, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         pnl_modifybillLayout.setVerticalGroup(
@@ -4470,9 +4472,9 @@ public class Main extends javax.swing.JFrame
                                 .addComponent(txt_modifybill_prodnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txt_modifybill_prodprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(spin_modifybill_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 169, Short.MAX_VALUE)
+                .addComponent(scrollpane_modifybill, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
 
         pnl_bill_tab3.setkBorderRadius(40);
@@ -5722,7 +5724,7 @@ public class Main extends javax.swing.JFrame
             visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
             onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
             bindEmployeeTableData(table_editemp);
-//            fillCombobox("employee", "usrnm", cmbbox_editemp_usrnm);
+
             txt_editemp_nm.grabFocus();
 
         }
@@ -6044,6 +6046,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
         onIndicator(lid_modifybill, lid_createbill);
         fillCombobox("bill", "id", cmbbox_modifybill_prodid);
+
     }//GEN-LAST:event_btn_modifybill_menuActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
@@ -6083,7 +6086,7 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_edit_emp, pnl_add_emp, pnl_emp_det);
         onIndicator(lid_edit_emp, lid_add_emp, lid_emp_det);
         bindEmployeeTableData(table_editemp);
-//        fillCombobox("employee", "usrnm", cmbbox_editemp_usrnm);
+
         txt_editemp_nm.grabFocus();
     }//GEN-LAST:event_btn_editemp_menuActionPerformed
 
@@ -6151,8 +6154,10 @@ public class Main extends javax.swing.JFrame
         visibility(false, false, false, false, true, false, btn_createbill_menu);
         visibility(pnl_createbill, pnl_modifybill, pnl_bill_tab3);
         onIndicator(lid_createbill, lid_modifybill);
+        lbl_billno_no.setText(getMaxID("bill"));
         fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
         fillCombobox("product", "nm", cmbbox_createbill_prodnm);
+
     }//GEN-LAST:event_btnBillActionPerformed
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
@@ -7468,7 +7473,7 @@ public class Main extends javax.swing.JFrame
         try
         {
             con = dbconnection.getdbConnection();
-            query = "select max(cast(id as unsigned)) from " + tablenm;
+            query = "select id from " + tablenm;
             pst = con.prepareStatement(query);
             result = pst.executeQuery();
 
@@ -7478,7 +7483,6 @@ public class Main extends javax.swing.JFrame
                 {
                     return Integer.toString(Integer.parseInt(result.getString(1)) + 1);
                 }
-
             }
             else
             {
@@ -7883,11 +7887,9 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lbl_accsetting_id;
     private javax.swing.JLabel lbl_billno;
     private javax.swing.JLabel lbl_billno_no;
@@ -7985,6 +7987,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KGradientPanel pnl_prod_menubar;
     private com.k33ptoo.components.KGradientPanel pnl_proddet_menu;
     private javax.swing.JScrollPane scroll_createbill;
+    private javax.swing.JScrollPane scrollpane_modifybill;
     private javax.swing.JScrollPane scrolltbl_custdet;
     private javax.swing.JScrollPane scrolltbl_editcust;
     private javax.swing.JScrollPane scrolltbl_editemp;
@@ -7999,6 +8002,7 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JTable table_editemp;
     private javax.swing.JTable table_editprod;
     private javax.swing.JTable table_empdet;
+    private javax.swing.JTable table_modifybill;
     private javax.swing.JTable table_proddet;
     private textfield.TextField txt_accsetting_address;
     private textfield.TextField txt_accsetting_contact;

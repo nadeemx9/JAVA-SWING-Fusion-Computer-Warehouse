@@ -5976,7 +5976,6 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jScrollPane1" alignment="0" min="-2" pref="674" max="-2" attributes="0"/>
                                           <Component id="lbl_modifybill_prodlisting" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="cmbbox_modifybill_prodid" min="-2" max="-2" attributes="0"/>
@@ -5990,6 +5989,10 @@
                                               <Component id="txt_modifybill_discount" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="txt_modifybill_tax" min="-2" pref="105" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="194" max="-2" attributes="0"/>
+                                              <Component id="scrollpane_modifybill" min="-2" pref="674" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace pref="24" max="32767" attributes="0"/>
@@ -6018,9 +6021,9 @@
                                           </Group>
                                           <Component id="spin_modifybill_quantity" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="165" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" min="-2" pref="310" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <EmptySpace pref="169" max="32767" attributes="0"/>
+                                      <Component id="scrollpane_modifybill" min="-2" pref="310" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -6178,14 +6181,14 @@
                                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_modifybill_taxKeyReleased"/>
                               </Events>
                             </Component>
-                            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                            <Container class="javax.swing.JScrollPane" name="scrollpane_modifybill">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                               <SubComponents>
-                                <Component class="javax.swing.JTable" name="jTable1">
+                                <Component class="javax.swing.JTable" name="table_modifybill">
                                   <Properties>
                                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                       <Table columnCount="4" rowCount="4">
