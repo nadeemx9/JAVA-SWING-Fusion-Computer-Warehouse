@@ -3035,11 +3035,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="lbl_editemp_id" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_editemp_id" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="102" alignment="1" attributes="0">
+                                          <Group type="102" attributes="0">
                                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Group type="102" attributes="0">
@@ -3069,7 +3069,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                                      <Component id="lbl_editemp_id" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txt_editemp_id" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="scrolltbl_editemp" min="-2" pref="412" max="-2" attributes="0"/>
@@ -3375,15 +3375,28 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_editemp_id">
+                            <Component class="textfield.TextField" name="txt_editemp_id">
                               <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="f8" green="c3" red="96" type="rgb"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Segoe UI" size="20" style="1"/>
+                                  <Font name="Nirmala UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="labelText" type="java.lang.String" value="EMPLOYEE ID"/>
+                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[128, 64]"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_editemp_usrnm"/>
                                 </Property>
                                 <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                   <Dimension value="[404, 64]"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_editemp_idKeyTyped"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>
@@ -4163,13 +4176,14 @@
                                   </Border>
                                 </Property>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="6">
+                                  <StringArray count="7">
                                     <StringItem index="0" value="--SELECT BRAND--"/>
                                     <StringItem index="1" value="HP"/>
-                                    <StringItem index="2" value="ACER"/>
+                                    <StringItem index="2" value="ASUS"/>
                                     <StringItem index="3" value="LENOVO"/>
-                                    <StringItem index="4" value="DELL"/>
-                                    <StringItem index="5" value="ACER"/>
+                                    <StringItem index="4" value="MSI"/>
+                                    <StringItem index="5" value="DELL"/>
+                                    <StringItem index="6" value="ACER"/>
                                   </StringArray>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -4346,11 +4360,11 @@
                                           <Component id="txt_editprod_nm" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="txt_editprod_sellingprice" min="-2" pref="64" max="-2" attributes="0"/>
-                                          <Component id="cmbbox_editprod_brand" min="-2" pref="64" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="txt_editprod_sellingprice" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
+                                          <Component id="cmbbox_editprod_brand" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txt_editprod_quantity" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
                                           <Component id="txt_editprod_costprice" alignment="3" min="-2" pref="64" max="-2" attributes="0"/>
@@ -4512,48 +4526,6 @@
                                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_editprod_sellingpriceKeyTyped"/>
                               </Events>
                             </Component>
-                            <Component class="combo_suggestion.ComboBoxSuggestion" name="cmbbox_editprod_brand">
-                              <Properties>
-                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="6" green="a7" red="ff" type="rgb"/>
-                                </Property>
-                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
-                                    <EmptyBorder/>
-                                  </Border>
-                                </Property>
-                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                  <StringArray count="5">
-                                    <StringItem index="0" value="--SELECT BRAND--"/>
-                                    <StringItem index="1" value="DELL"/>
-                                    <StringItem index="2" value="HP"/>
-                                    <StringItem index="3" value="LENOVO"/>
-                                    <StringItem index="4" value="ACER"/>
-                                  </StringArray>
-                                </Property>
-                                <Property name="selectedItem" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                                  <Connection code="&quot;--SELECT--BRAND--&quot;" type="code"/>
-                                </Property>
-                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                  <Font name="Nirmala UI" size="24" style="0"/>
-                                </Property>
-                                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[415, 64]"/>
-                                </Property>
-                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[415, 64]"/>
-                                </Property>
-                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="txt_editprod_sellingprice"/>
-                                </Property>
-                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                                  <Dimension value="[404, 64]"/>
-                                </Property>
-                              </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbbox_editprod_brandActionPerformed"/>
-                              </Events>
-                            </Component>
                             <Component class="com.k33ptoo.components.KButton" name="btn_editprod_edit">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -4646,6 +4618,47 @@
                                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_editprod_rmvMouseExited"/>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editprod_rmvActionPerformed"/>
                                 <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_editprod_rmvKeyPressed"/>
+                              </Events>
+                            </Component>
+                            <Component class="combo_suggestion.ComboBoxSuggestion" name="cmbbox_editprod_brand">
+                              <Properties>
+                                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                  <Color blue="6" green="a7" red="ff" type="rgb"/>
+                                </Property>
+                                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                                    <EmptyBorder/>
+                                  </Border>
+                                </Property>
+                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                  <StringArray count="7">
+                                    <StringItem index="0" value="--SELECT BRAND--"/>
+                                    <StringItem index="1" value="HP"/>
+                                    <StringItem index="2" value="ASUS"/>
+                                    <StringItem index="3" value="LENOVO"/>
+                                    <StringItem index="4" value="MSI"/>
+                                    <StringItem index="5" value="DELL"/>
+                                    <StringItem index="6" value="ACER"/>
+                                  </StringArray>
+                                </Property>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Nirmala UI" size="24" style="0"/>
+                                </Property>
+                                <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[415, 64]"/>
+                                </Property>
+                                <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[415, 64]"/>
+                                </Property>
+                                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                                  <ComponentRef name="txt_addprod_quantity"/>
+                                </Property>
+                                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                                  <Dimension value="[404, 64]"/>
+                                </Property>
+                              </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbbox_editprod_brandActionPerformed"/>
                               </Events>
                             </Component>
                           </SubComponents>

@@ -194,7 +194,7 @@ public class Main extends javax.swing.JFrame
         btn_editemp_rmv = new com.k33ptoo.components.KButton();
         txt_editemp_pswd = new textfield.PasswordField();
         txt_editemp_usrnm = new textfield.TextField();
-        lbl_editemp_id = new javax.swing.JLabel();
+        txt_editemp_id = new textfield.TextField();
         pnl_emp_det = new com.k33ptoo.components.KGradientPanel();
         txt_empdet_nm = new textfield.TextField();
         scrolltbl_empdet = new javax.swing.JScrollPane();
@@ -228,9 +228,9 @@ public class Main extends javax.swing.JFrame
         txt_editprod_costprice = new textfield.TextField();
         txt_editprod_quantity = new textfield.TextField();
         txt_editprod_sellingprice = new textfield.TextField();
-        cmbbox_editprod_brand = new combo_suggestion.ComboBoxSuggestion();
         btn_editprod_edit = new com.k33ptoo.components.KButton();
         btn_editprod_rmv = new com.k33ptoo.components.KButton();
+        cmbbox_editprod_brand = new combo_suggestion.ComboBoxSuggestion();
         pnl_prod_det = new com.k33ptoo.components.KGradientPanel();
         txt_proddet_nm = new textfield.TextField();
         scrolltbl_proddet = new javax.swing.JScrollPane();
@@ -2498,8 +2498,19 @@ public class Main extends javax.swing.JFrame
         txt_editemp_usrnm.setNextFocusableComponent(txt_editemp_pswd);
         txt_editemp_usrnm.setPreferredSize(new java.awt.Dimension(404, 64));
 
-        lbl_editemp_id.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        lbl_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editemp_id.setBackground(new java.awt.Color(150, 195, 248));
+        txt_editemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_editemp_id.setLabelText("EMPLOYEE ID");
+        txt_editemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_editemp_id.setNextFocusableComponent(txt_editemp_usrnm);
+        txt_editemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editemp_id.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_editemp_idKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_edit_empLayout = new javax.swing.GroupLayout(pnl_edit_emp);
         pnl_edit_emp.setLayout(pnl_edit_empLayout);
@@ -2509,7 +2520,7 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lbl_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnl_edit_empLayout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2533,7 +2544,7 @@ public class Main extends javax.swing.JFrame
             pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_edit_empLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(lbl_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_editemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_edit_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrolltbl_editemp, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3077,7 +3088,7 @@ public class Main extends javax.swing.JFrame
 
         cmbbox_addprod_brand.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_addprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_addprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "HP", "ACER", "LENOVO", "DELL", "ACER" }));
+        cmbbox_addprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "HP", "ASUS", "LENOVO", "MSI", "DELL", "ACER" }));
         cmbbox_addprod_brand.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_addprod_brand.setMaximumSize(new java.awt.Dimension(415, 64));
         cmbbox_addprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
@@ -3297,23 +3308,6 @@ public class Main extends javax.swing.JFrame
             }
         });
 
-        cmbbox_editprod_brand.setBackground(new java.awt.Color(255, 167, 6));
-        cmbbox_editprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        cmbbox_editprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "DELL", "HP", "LENOVO", "ACER" }));
-        cmbbox_editprod_brand.setSelectedItem("--SELECT--BRAND--");
-        cmbbox_editprod_brand.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        cmbbox_editprod_brand.setMaximumSize(new java.awt.Dimension(415, 64));
-        cmbbox_editprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
-        cmbbox_editprod_brand.setNextFocusableComponent(txt_editprod_sellingprice);
-        cmbbox_editprod_brand.setPreferredSize(new java.awt.Dimension(404, 64));
-        cmbbox_editprod_brand.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_editprod_brandActionPerformed(evt);
-            }
-        });
-
         btn_editprod_edit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btn_editprod_edit.setText("EDIT PRODUCT");
         btn_editprod_edit.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -3414,6 +3408,22 @@ public class Main extends javax.swing.JFrame
             }
         });
 
+        cmbbox_editprod_brand.setBackground(new java.awt.Color(255, 167, 6));
+        cmbbox_editprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        cmbbox_editprod_brand.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "--SELECT BRAND--", "HP", "ASUS", "LENOVO", "MSI", "DELL", "ACER" }));
+        cmbbox_editprod_brand.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        cmbbox_editprod_brand.setMaximumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
+        cmbbox_editprod_brand.setNextFocusableComponent(txt_addprod_quantity);
+        cmbbox_editprod_brand.setPreferredSize(new java.awt.Dimension(404, 64));
+        cmbbox_editprod_brand.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                cmbbox_editprod_brandActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnl_edit_prodLayout = new javax.swing.GroupLayout(pnl_edit_prod);
         pnl_edit_prod.setLayout(pnl_edit_prodLayout);
         pnl_edit_prodLayout.setHorizontalGroup(
@@ -3454,10 +3464,10 @@ public class Main extends javax.swing.JFrame
                     .addComponent(txt_editprod_id, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editprod_nm, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_editprod_sellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cmbbox_editprod_brand, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(25, 25, 25)
                 .addGroup(pnl_edit_prodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_editprod_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_editprod_costprice, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -6334,30 +6344,38 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_editcust_editActionPerformed
         if (isFieldEmpty(txt_editcust_id, txt_editcust_nm, txt_editcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr))
         {
-            try
+            if (isIdExist(txt_editcust_id.getText(), "customer"))
             {
-                con = dbconnection.getdbConnection();
-                query = "update customer set custnm = ?, contact = ?, email = ?, shopnm = ?, address = ? where id = ?";
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "update customer set custnm = ?, contact = ?, email = ?, shopnm = ?, address = ? where id = ?";
 
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_editcust_nm.getText());
-                pst.setString(2, txt_editcust_contact.getText());
-                pst.setString(3, txt_editcust_email.getText());
-                pst.setString(4, txt_editcust_shopnm.getText());
-                pst.setString(5, txt_editcust_shopaddr.getText());
-                pst.setString(6, txt_editcust_id.getText());
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_editcust_nm.getText());
+                    pst.setString(2, txt_editcust_contact.getText());
+                    pst.setString(3, txt_editcust_email.getText());
+                    pst.setString(4, txt_editcust_shopnm.getText());
+                    pst.setString(5, txt_editcust_shopaddr.getText());
+                    pst.setString(6, txt_editcust_id.getText());
 
-                pst.executeUpdate();
-                bindCustomerTableData(table_editcust);
+                    pst.executeUpdate();
+                    bindCustomerTableData(table_editcust);
 
-                JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
+                    JOptionPane.showMessageDialog(null, "Customer Details Updated Successfully");
 
-                clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
-                txt_editcust_id.grabFocus();
+                    clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+                    txt_editcust_id.grabFocus();
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                JOptionPane.showMessageDialog(null, "No ID Found");
+                txt_editcust_id.grabFocus();
             }
         }
     }//GEN-LAST:event_btn_editcust_editActionPerformed
@@ -6406,29 +6424,37 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addcust_addActionPerformed
         if (isFieldEmpty(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr))
         {
-            try
+            if (isIdExist(txt_addcust_id.getText(), "customer"))
             {
-                con = dbconnection.getdbConnection();
-                query = "insert into customer values(?, ?, ?, ?, ?, ?)";
-                pst = con.prepareStatement(query);
-
-                pst.setString(1, txt_addcust_id.getText());
-                pst.setString(2, txt_addcust_nm.getText());
-                pst.setString(3, txt_addcust_contact.getText());
-                pst.setString(4, txt_addcust_email.getText());
-                pst.setString(5, txt_addcust_shopnm.getText());
-                pst.setString(6, txt_addcust_shopaddr.getText());
-
-                pst.executeUpdate();
-
-                JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
-                clearTextFields(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr);
-                txt_addcust_id.setText(getMaxID("customer"));
+                JOptionPane.showMessageDialog(null, "ID already exist");
                 txt_addcust_id.grabFocus();
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "insert into customer values(?, ?, ?, ?, ?, ?)";
+                    pst = con.prepareStatement(query);
+
+                    pst.setString(1, txt_addcust_id.getText());
+                    pst.setString(2, txt_addcust_nm.getText());
+                    pst.setString(3, txt_addcust_contact.getText());
+                    pst.setString(4, txt_addcust_email.getText());
+                    pst.setString(5, txt_addcust_shopnm.getText());
+                    pst.setString(6, txt_addcust_shopaddr.getText());
+
+                    pst.executeUpdate();
+
+                    JOptionPane.showMessageDialog(null, "Record Inserted Successfully !");
+                    clearTextFields(txt_addcust_id, txt_addcust_nm, txt_addcust_contact, txt_addcust_email, txt_addcust_shopnm, txt_addcust_shopaddr);
+                    txt_addcust_id.setText(getMaxID("customer"));
+                    txt_addcust_id.grabFocus();
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
         }
     }//GEN-LAST:event_btn_addcust_addActionPerformed
@@ -6462,34 +6488,41 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addemp_addActionPerformed
         if (isFieldEmpty(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr))
         {
-            try
+            if (isIdExist(txt_addemp_id.getText(), "employee"))
             {
-                con = dbconnection.getdbConnection();
-                query = "insert into employee (id, nm, usrnm, pswd, contact, email, salary, address) values(?, ?, ?, ?, ?, ?, ?, ?)";
-
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_addemp_id.getText());
-                pst.setString(2, txt_addemp_nm.getText());
-                pst.setString(3, txt_addemp_usrnm.getText());
-                pst.setString(4, txt_addemp_pswd.getText());
-                pst.setString(5, txt_addemp_contact.getText());
-                pst.setString(6, txt_addemp_email.getText());
-                pst.setString(7, txt_addemp_salary.getText());
-                pst.setString(8, txt_addemp_addr.getText());
-
-                pst.executeUpdate();
-
-                JOptionPane.showMessageDialog(null, "Employee Added Successfully!");
-                clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
-                txt_addemp_id.setText(getMaxID("employee"));
+                JOptionPane.showMessageDialog(null, "ID already exist!");
                 txt_addemp_id.grabFocus();
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "insert into employee (id, nm, usrnm, pswd, contact, email, salary, address) values(?, ?, ?, ?, ?, ?, ?, ?)";
+
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_addemp_id.getText());
+                    pst.setString(2, txt_addemp_nm.getText());
+                    pst.setString(3, txt_addemp_usrnm.getText());
+                    pst.setString(4, txt_addemp_pswd.getText());
+                    pst.setString(5, txt_addemp_contact.getText());
+                    pst.setString(6, txt_addemp_email.getText());
+                    pst.setString(7, txt_addemp_salary.getText());
+                    pst.setString(8, txt_addemp_addr.getText());
+
+                    pst.executeUpdate();
+
+                    JOptionPane.showMessageDialog(null, "Employee Added Successfully!");
+                    clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
+                    txt_addemp_id.setText(getMaxID("employee"));
+                    txt_addemp_id.grabFocus();
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
         }
-
     }//GEN-LAST:event_btn_addemp_addActionPerformed
 
     private void btn_addemp_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addemp_addKeyPressed
@@ -6586,27 +6619,35 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addprodActionPerformed
         if (isFieldEmpty(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, txt_addprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_addprod_brand) == false)
         {
-            try
+            if (isIdExist(txt_addprod_id.getText(), "product"))
             {
-                con = dbconnection.getdbConnection();
-                query = "insert into product (id, nm, costprice, sellingprice, brand, quantity) values(?, ?, ?, ?, ?, ?)";
-
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_addprod_id.getText());
-                pst.setString(2, txt_addprod_nm.getText());
-                pst.setString(3, txt_addprod_costprice.getText());
-                pst.setString(4, txt_addprod_sellingprice.getText());
-                pst.setString(5, cmbbox_addprod_brand.getSelectedItem().toString());
-                pst.setString(6, txt_addprod_quantity.getText());
-
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Record inserted Successfull");
-                clearTextFields(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, cmbbox_addprod_brand, txt_addprod_quantity);
-                txt_addprod_id.setText(getMaxID("product"));
+                JOptionPane.showMessageDialog(null, "ID already exist");
+                txt_addprod_id.grabFocus();
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "insert into product (id, nm, costprice, sellingprice, brand, quantity) values(?, ?, ?, ?, ?, ?)";
+
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_addprod_id.getText());
+                    pst.setString(2, txt_addprod_nm.getText());
+                    pst.setString(3, txt_addprod_costprice.getText());
+                    pst.setString(4, txt_addprod_sellingprice.getText());
+                    pst.setString(5, cmbbox_addprod_brand.getSelectedItem().toString());
+                    pst.setString(6, txt_addprod_quantity.getText());
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Record inserted Successfull");
+                    clearTextFields(txt_addprod_id, txt_addprod_nm, txt_addprod_costprice, txt_addprod_sellingprice, cmbbox_addprod_brand, txt_addprod_quantity);
+                    txt_addprod_id.setText(getMaxID("product"));
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
         }
     }//GEN-LAST:event_btn_addprodActionPerformed
@@ -6634,27 +6675,30 @@ public class Main extends javax.swing.JFrame
         }
         else
         {
-            int confirmMsg = JOptionPane.showConfirmDialog(null, "Confirm Deletion ?");
-            if (confirmMsg == 0)
+            if (isIdExist(txt_editcust_id.getText(), "customer"))
             {
-                try
+                int confirmMsg = JOptionPane.showConfirmDialog(null, "Confirm Deletion ?");
+                if (confirmMsg == 0)
                 {
-                    con = dbconnection.getdbConnection();
-                    query = "delete from customer where id = ?";
+                    try
+                    {
+                        con = dbconnection.getdbConnection();
+                        query = "delete from customer where id = ?";
 
-                    pst = con.prepareStatement(query);
-                    pst.setString(1, txt_editcust_id.getText());
+                        pst = con.prepareStatement(query);
+                        pst.setString(1, txt_editcust_id.getText());
 
-                    pst.executeUpdate();
-                    bindCustomerTableData(table_editcust);
-                    JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+                        pst.executeUpdate();
+                        bindCustomerTableData(table_editcust);
+                        JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
 
-                    clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
-                    txt_editcust_id.grabFocus();
-                }
-                catch (Exception e)
-                {
-                    JOptionPane.showMessageDialog(null, e.getMessage());
+                        clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+                        txt_editcust_id.grabFocus();
+                    }
+                    catch (Exception e)
+                    {
+                        JOptionPane.showMessageDialog(null, e.getMessage());
+                    }
                 }
             }
         }
@@ -6672,30 +6716,38 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_rmvActionPerformed
-        if (txt_editemp_nm.getText().equals(""))
+        if (txt_editemp_id.getText().equals(""))
         {
             txt_editemp_nm.grabFocus();
         }
         else
         {
-            try
+            if (isIdExist(txt_editemp_id.getText(), "employee"))
             {
-                con = dbconnection.getdbConnection();
-                String empnm = txt_editemp_nm.getText();
-                query = "delete from employee where nm = '" + empnm + "'";
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    String empnm = txt_editemp_nm.getText();
+                    query = "delete from employee where nm = '" + empnm + "'";
 
-                pst = con.prepareStatement(query);
+                    pst = con.prepareStatement(query);
 
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Employee Removed Successfully !");
-                bindEmployeeTableData(table_editemp);
-                clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
-                txt_editemp_pswd.setText("");
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Employee Removed Successfully !");
+                    bindEmployeeTableData(table_editemp);
+                    clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+                    txt_editemp_pswd.setText("");
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                JOptionPane.showMessageDialog(null, "ID not found");
             }
+
         }
     }//GEN-LAST:event_btn_editemp_rmvActionPerformed
 
@@ -6726,36 +6778,43 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_editActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_editActionPerformed
-        if (isFieldEmpty(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr))
+        if (isFieldEmpty(txt_editemp_id, txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr))
         {
-            try
+            if (isIdExist(txt_editemp_id.getText(), "employee"))
             {
-                con = dbconnection.getdbConnection();
-                query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where usrnm = ? ";
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where usrnm = ? ";
 
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_editemp_nm.getText());
-                pst.setString(2, txt_editemp_usrnm.getText());
-                pst.setString(3, txt_editemp_pswd.getText());
-                pst.setString(4, txt_editemp_contact.getText());
-                pst.setString(5, txt_editemp_email.getText());
-                pst.setString(6, txt_editemp_salary.getText());
-                pst.setString(7, txt_editemp_addr.getText());
-                pst.setString(8, txt_editemp_usrnm.getText());
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_editemp_nm.getText());
+                    pst.setString(2, txt_editemp_usrnm.getText());
+                    pst.setString(3, txt_editemp_pswd.getText());
+                    pst.setString(4, txt_editemp_contact.getText());
+                    pst.setString(5, txt_editemp_email.getText());
+                    pst.setString(6, txt_editemp_salary.getText());
+                    pst.setString(7, txt_editemp_addr.getText());
+                    pst.setString(8, txt_editemp_usrnm.getText());
 
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Employee Details Updated Successfully!");
-                bindEmployeeTableData(table_editemp);
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Employee Details Updated Successfully!");
+                    bindEmployeeTableData(table_editemp);
 
-                clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
-                txt_editemp_pswd.setText("");
+                    clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+                    txt_editemp_pswd.setText("");
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                JOptionPane.showMessageDialog(null, "No ID Found");
+                txt_editemp_id.grabFocus();
             }
         }
-
     }//GEN-LAST:event_btn_editemp_editActionPerformed
 
     private void btn_editemp_editMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_editMouseExited
@@ -6928,11 +6987,6 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_table_editprodMouseClicked
 
-    private void cmbbox_editprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editprod_brandActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_editprod_brandActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_editprod_brandActionPerformed
-
     private void btn_editprod_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editprod_editFocusGained
     {//GEN-HEADEREND:event_btn_editprod_editFocusGained
         hover(btn_editprod_edit, new Color(1, 109, 218), Color.BLACK);
@@ -6956,7 +7010,7 @@ public class Main extends javax.swing.JFrame
     private void btn_editprod_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_editActionPerformed
     {//GEN-HEADEREND:event_btn_editprod_editActionPerformed
 
-        if (isFieldEmpty(txt_editprod_id, txt_editprod_nm, txt_editprod_costprice, txt_editprod_sellingprice, txt_editprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_editprod_brand))
+        if (isFieldEmpty(txt_editprod_id, txt_editprod_nm, txt_editprod_costprice, txt_editprod_sellingprice, txt_editprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_editprod_brand) == false)
         {
             if (isIdExist(txt_editprod_id.getText(), "product"))
             {
@@ -6984,8 +7038,8 @@ public class Main extends javax.swing.JFrame
             else
             {
                 JOptionPane.showMessageDialog(null, "ID does not exist");
+                txt_editprod_id.grabFocus();
             }
-
         }
     }//GEN-LAST:event_btn_editprod_editActionPerformed
 
@@ -7016,22 +7070,37 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editprod_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editprod_rmvActionPerformed
-        try
+        if (txt_editprod_id.getText().equals(""))
         {
-            con = dbconnection.getdbConnection();
-            query = "delete from product where id = ?";
-
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_editprod_id.getText());
-
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Producgt Deleted Successfully !");
-            bindProductTableData(table_editprod);
+            txt_editprod_id.grabFocus();
         }
-        catch (Exception e)
+        else
         {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            if (isIdExist(txt_editprod_id.getText(), "product"))
+            {
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "delete from product where id = ?";
+
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_editprod_id.getText());
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Product Deleted Successfully !");
+                    bindProductTableData(table_editprod);
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "ID does not exist");
+            }
         }
+
     }//GEN-LAST:event_btn_editprod_rmvActionPerformed
 
     private void btn_editprod_rmvKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_editprod_rmvKeyPressed
@@ -7211,46 +7280,53 @@ public class Main extends javax.swing.JFrame
 
     private void btn_createbill_saveActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_createbill_saveActionPerformed
     {//GEN-HEADEREND:event_btn_createbill_saveActionPerformed
-        try
+        if (isIdExist(lbl_billno_no.getText(), "bill"))
         {
-            con = dbconnection.getdbConnection();
-            query = "insert into bill values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            pst = con.prepareStatement(query);
-            pst.setString(1, lbl_billno_no.getText());
-            pst.setString(2, txt_createbill_custid.getText());
-            pst.setString(3, cmbbox_createbill_custnm.getSelectedItem().toString());
-            pst.setString(4, txt_createbill_contact.getText());
-            pst.setString(5, txt_createbill_addr.getText());
-            pst.setString(6, lbl_tax.getText());
-            pst.setString(7, lbl_discount.getText());
-            pst.setString(8, lbl_grosstotal.getText());
-            pst.setString(9, lbl_unpaid.getText());
-            pst.setString(10, java.time.LocalDate.now().toString());
-
-            pst.executeUpdate();
-
-            JOptionPane.showMessageDialog(null, "Bill Added Successfully");
-
-            txtarea_format.append("\t\t Billing Application \n"
-                    + "\n***************************************************************\n"
-                    + "***************************************************************\n"
-                    + "  Bill No. :                             " + lbl_billno_no.getText() + "\n"
-                    + "  CUSTOMER NAME :                        " + cmbbox_createbill_custnm.getSelectedItem().toString() + "\n"
-                    + "  CONTACT :                              " + txt_createbill_contact.getText() + "\n"
-                    + "  ADDRESS :                              " + txt_createbill_addr.getText() + "\n"
-                    + "===============================================================\n"
-                    + "  Tax :                                  " + lbl_tax.getText() + "\n"
-                    + "  Discount :                             " + lbl_discount.getText() + "\n"
-                    + "  Total Amount :                         " + lbl_nettotal.getText() + "\n"
-                    + "===============================================================\n"
-                    + "  UNPAID :                               " + lbl_unpaid.getText() + "\n"
-                    + "*************** Thank You for Shopping ********************\n");
-
-            txtarea_format.print();
+            JOptionPane.showMessageDialog(null, "ID already exist");
         }
-        catch (Exception e)
+        else
         {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "insert into bill values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                pst = con.prepareStatement(query);
+                pst.setString(1, lbl_billno_no.getText());
+                pst.setString(2, txt_createbill_custid.getText());
+                pst.setString(3, cmbbox_createbill_custnm.getSelectedItem().toString());
+                pst.setString(4, txt_createbill_contact.getText());
+                pst.setString(5, txt_createbill_addr.getText());
+                pst.setString(6, lbl_tax.getText());
+                pst.setString(7, lbl_discount.getText());
+                pst.setString(8, lbl_grosstotal.getText());
+                pst.setString(9, lbl_unpaid.getText());
+                pst.setString(10, java.time.LocalDate.now().toString());
+
+                pst.executeUpdate();
+
+                JOptionPane.showMessageDialog(null, "Bill Added Successfully");
+
+                txtarea_format.append("\t\t Billing Application \n"
+                        + "\n***************************************************************\n"
+                        + "***************************************************************\n"
+                        + "  Bill No. :                             " + lbl_billno_no.getText() + "\n"
+                        + "  CUSTOMER NAME :                        " + cmbbox_createbill_custnm.getSelectedItem().toString() + "\n"
+                        + "  CONTACT :                              " + txt_createbill_contact.getText() + "\n"
+                        + "  ADDRESS :                              " + txt_createbill_addr.getText() + "\n"
+                        + "===============================================================\n"
+                        + "  Tax :                                  " + lbl_tax.getText() + "\n"
+                        + "  Discount :                             " + lbl_discount.getText() + "\n"
+                        + "  Total Amount :                         " + lbl_nettotal.getText() + "\n"
+                        + "===============================================================\n"
+                        + "  UNPAID :                               " + lbl_unpaid.getText() + "\n"
+                        + "*************** Thank You for Shopping ********************\n");
+
+                txtarea_format.print();
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_createbill_saveActionPerformed
 
@@ -7567,6 +7643,16 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_createbill_unpaidKeyTyped
         isDigit(evt, txt_createbill_unpaid);
     }//GEN-LAST:event_txt_createbill_unpaidKeyTyped
+
+    private void cmbbox_editprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editprod_brandActionPerformed
+    {//GEN-HEADEREND:event_cmbbox_editprod_brandActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbbox_editprod_brandActionPerformed
+
+    private void txt_editemp_idKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editemp_idKeyTyped
+    {//GEN-HEADEREND:event_txt_editemp_idKeyTyped
+        isDigit(evt, txt_editemp_id);
+    }//GEN-LAST:event_txt_editemp_idKeyTyped
 
     public static void main(String args[])
     {
@@ -8113,7 +8199,6 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JLabel lbl_dash_usr;
     private javax.swing.JLabel lbl_dash_welcome;
     private javax.swing.JLabel lbl_discount;
-    private javax.swing.JLabel lbl_editemp_id;
     private javax.swing.JLabel lbl_forgot_pswd;
     private javax.swing.JLabel lbl_grosstotal;
     private javax.swing.JLabel lbl_login_img;
@@ -8262,6 +8347,7 @@ public class Main extends javax.swing.JFrame
     private textfield.TextField txt_editemp_addr;
     private textfield.TextField txt_editemp_contact;
     private textfield.TextField txt_editemp_email;
+    private textfield.TextField txt_editemp_id;
     private textfield.TextField txt_editemp_nm;
     private textfield.PasswordField txt_editemp_pswd;
     private textfield.TextField txt_editemp_salary;
