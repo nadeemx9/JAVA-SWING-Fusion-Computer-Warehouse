@@ -301,7 +301,15 @@ public class Main extends javax.swing.JFrame
         lid_acc_menu3 = new com.k33ptoo.components.KGradientPanel();
         pnl_account_main = new com.k33ptoo.components.KGradientPanel();
         pnl_accsetting = new com.k33ptoo.components.KGradientPanel();
-        jLabel18 = new javax.swing.JLabel();
+        txt_accsetting_nm = new textfield.TextField();
+        txt_accsetting_usrnm = new textfield.TextField();
+        txt_accsetting_pswd = new textfield.PasswordField();
+        txt_accsetting_email = new textfield.TextField();
+        txt_accsetting_contact = new textfield.TextField();
+        txt_accsetting_salary = new textfield.TextField();
+        txt_accsetting_address = new textfield.TextField();
+        btn_accsetting_update = new com.k33ptoo.components.KButton();
+        lbl_accsetting_id = new javax.swing.JLabel();
         pnl_acc_tab2 = new com.k33ptoo.components.KGradientPanel();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -4725,9 +4733,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_account_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_account_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                    .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
+                    .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         pnl_account_main.setkBorderRadius(40);
@@ -4742,29 +4750,155 @@ public class Main extends javax.swing.JFrame
         pnl_accsetting.setOpaque(false);
         pnl_accsetting.setPreferredSize(new java.awt.Dimension(1108, 672));
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("PANEL 4 Tab 1");
+        txt_accsetting_nm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_nm.setLabelText("EMPLOYEE NAME");
+        txt_accsetting_nm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_nm.setNextFocusableComponent(txt_addemp_usrnm);
+        txt_accsetting_nm.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_accsetting_usrnm.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_usrnm.setLabelText("USERNAME");
+        txt_accsetting_usrnm.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_usrnm.setNextFocusableComponent(txt_addemp_pswd);
+        txt_accsetting_usrnm.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_accsetting_pswd.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        txt_accsetting_pswd.setLabelText("PASSWORD");
+        txt_accsetting_pswd.setNextFocusableComponent(txt_addemp_contact);
+        txt_accsetting_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_accsetting_pswd.setShowAndHide(true);
+
+        txt_accsetting_email.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_email.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_email.setLabelText("EMAIL");
+        txt_accsetting_email.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_email.setNextFocusableComponent(txt_addemp_salary);
+        txt_accsetting_email.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_accsetting_contact.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_contact.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_contact.setLabelText("CONTACT NO");
+        txt_accsetting_contact.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_contact.setNextFocusableComponent(txt_addemp_email);
+        txt_accsetting_contact.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_accsetting_salary.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_salary.setLabelText("SALARY");
+        txt_accsetting_salary.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_salary.setNextFocusableComponent(txt_addemp_addr);
+        txt_accsetting_salary.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        txt_accsetting_address.setBackground(new java.awt.Color(150, 195, 248));
+        txt_accsetting_address.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        txt_accsetting_address.setLabelText("ADDRESS");
+        txt_accsetting_address.setMinimumSize(new java.awt.Dimension(128, 64));
+        txt_accsetting_address.setNextFocusableComponent(btn_addemp_add);
+        txt_accsetting_address.setPreferredSize(new java.awt.Dimension(404, 64));
+
+        btn_accsetting_update.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btn_accsetting_update.setText("UPDATE");
+        btn_accsetting_update.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
+        btn_accsetting_update.setkBorderRadius(30);
+        btn_accsetting_update.setkEndColor(new java.awt.Color(255, 167, 6));
+        btn_accsetting_update.setkHoverEndColor(new java.awt.Color(1, 109, 218));
+        btn_accsetting_update.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_accsetting_update.setkHoverStartColor(new java.awt.Color(1, 109, 218));
+        btn_accsetting_update.setkPressedColor(new java.awt.Color(255, 167, 6));
+        btn_accsetting_update.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_accsetting_update.setNextFocusableComponent(txt_addemp_id);
+        btn_accsetting_update.setOpaque(true);
+        btn_accsetting_update.setPreferredSize(new java.awt.Dimension(250, 60));
+        btn_accsetting_update.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusGained(java.awt.event.FocusEvent evt)
+            {
+                btn_accsetting_updateFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                btn_accsetting_updateFocusLost(evt);
+            }
+        });
+        btn_accsetting_update.addMouseListener(new java.awt.event.MouseAdapter()
+        {
+            public void mouseEntered(java.awt.event.MouseEvent evt)
+            {
+                btn_accsetting_updateMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt)
+            {
+                btn_accsetting_updateMouseExited(evt);
+            }
+        });
+        btn_accsetting_update.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                btn_accsetting_updateActionPerformed(evt);
+            }
+        });
+        btn_accsetting_update.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                btn_accsetting_updateKeyPressed(evt);
+            }
+        });
+
+        lbl_accsetting_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        lbl_accsetting_id.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout pnl_accsettingLayout = new javax.swing.GroupLayout(pnl_accsetting);
         pnl_accsetting.setLayout(pnl_accsettingLayout);
         pnl_accsettingLayout.setHorizontalGroup(
             pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1108, Short.MAX_VALUE)
-            .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_accsettingLayout.createSequentialGroup()
-                    .addGap(404, 404, 404)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(404, Short.MAX_VALUE)))
+            .addGroup(pnl_accsettingLayout.createSequentialGroup()
+                .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_accsettingLayout.createSequentialGroup()
+                        .addGap(429, 429, 429)
+                        .addComponent(btn_accsetting_update, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(329, 329, 329))
+                    .addGroup(pnl_accsettingLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_accsetting_salary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_accsetting_contact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_accsetting_usrnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_accsetting_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_accsetting_nm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_accsetting_pswd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_accsetting_email, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txt_accsetting_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(100, 100, 100))
         );
         pnl_accsettingLayout.setVerticalGroup(
             pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 672, Short.MAX_VALUE)
-            .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(pnl_accsettingLayout.createSequentialGroup()
-                    .addGap(311, 311, 311)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(311, Short.MAX_VALUE)))
+            .addGroup(pnl_accsettingLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_accsetting_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbl_accsetting_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(50, 50, 50)
+                .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_accsetting_pswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_accsetting_usrnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_accsetting_contact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_accsetting_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_accsetting_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_accsetting_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(btn_accsetting_update, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
 
         pnl_acc_tab2.setkBorderRadius(40);
@@ -6896,6 +7030,36 @@ public class Main extends javax.swing.JFrame
         isDigit(evt, txt_editcust_contact);
     }//GEN-LAST:event_txt_editcust_contactKeyTyped
 
+    private void btn_accsetting_updateFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_accsetting_updateFocusGained
+    {//GEN-HEADEREND:event_btn_accsetting_updateFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateFocusGained
+
+    private void btn_accsetting_updateFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_accsetting_updateFocusLost
+    {//GEN-HEADEREND:event_btn_accsetting_updateFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateFocusLost
+
+    private void btn_accsetting_updateMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_accsetting_updateMouseEntered
+    {//GEN-HEADEREND:event_btn_accsetting_updateMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateMouseEntered
+
+    private void btn_accsetting_updateMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_accsetting_updateMouseExited
+    {//GEN-HEADEREND:event_btn_accsetting_updateMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateMouseExited
+
+    private void btn_accsetting_updateActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_accsetting_updateActionPerformed
+    {//GEN-HEADEREND:event_btn_accsetting_updateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateActionPerformed
+
+    private void btn_accsetting_updateKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_accsetting_updateKeyPressed
+    {//GEN-HEADEREND:event_btn_accsetting_updateKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_accsetting_updateKeyPressed
+
     public static void main(String args[])
     {
 
@@ -7333,6 +7497,7 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_acc_menu2;
     private com.k33ptoo.components.KButton btn_acc_menu3;
     private com.k33ptoo.components.KButton btn_accsetting_menu;
+    private com.k33ptoo.components.KButton btn_accsetting_update;
     private com.k33ptoo.components.KButton btn_addcust_add;
     private com.k33ptoo.components.KButton btn_addcust_menu;
     private com.k33ptoo.components.KButton btn_addemp_add;
@@ -7367,7 +7532,6 @@ public class Main extends javax.swing.JFrame
     private combo_suggestion.ComboBoxSuggestion cmbbox_login_usrnm;
     private combo_suggestion.ComboBoxSuggestion cmbbox_modifybill_prodid;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JScrollPane jScrollPane1;
@@ -7375,6 +7539,7 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lbl_accsetting_id;
     private javax.swing.JLabel lbl_billno;
     private javax.swing.JLabel lbl_billno_no;
     private javax.swing.JLabel lbl_close;
@@ -7486,6 +7651,13 @@ public class Main extends javax.swing.JFrame
     private javax.swing.JTable table_editprod;
     private javax.swing.JTable table_empdet;
     private javax.swing.JTable table_proddet;
+    private textfield.TextField txt_accsetting_address;
+    private textfield.TextField txt_accsetting_contact;
+    private textfield.TextField txt_accsetting_email;
+    private textfield.TextField txt_accsetting_nm;
+    private textfield.PasswordField txt_accsetting_pswd;
+    private textfield.TextField txt_accsetting_salary;
+    private textfield.TextField txt_accsetting_usrnm;
     private textfield.TextField txt_addcust_contact;
     private textfield.TextField txt_addcust_email;
     private textfield.TextField txt_addcust_id;
