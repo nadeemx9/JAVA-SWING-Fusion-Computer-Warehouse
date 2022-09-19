@@ -5912,7 +5912,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_createbill_discountFocusLost"/>
-                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_discountKeyReleased"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_discountKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="spinner.Spinner" name="spin_createbill_quantity">
@@ -5957,7 +5957,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_createbill_taxFocusLost"/>
-                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_taxKeyReleased"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_taxKeyTyped"/>
                               </Events>
                             </Component>
                             <Component class="textfield.TextField" name="txt_createbill_unpaid">
@@ -5982,8 +5982,7 @@
                               </Properties>
                               <Events>
                                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_createbill_unpaidFocusLost"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_createbill_unpaidActionPerformed"/>
-                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_unpaidKeyReleased"/>
+                                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_createbill_unpaidKeyTyped"/>
                               </Events>
                             </Component>
                           </SubComponents>

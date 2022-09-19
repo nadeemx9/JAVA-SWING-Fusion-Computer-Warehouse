@@ -4196,9 +4196,9 @@ public class Main extends javax.swing.JFrame
         });
         txt_createbill_discount.addKeyListener(new java.awt.event.KeyAdapter()
         {
-            public void keyReleased(java.awt.event.KeyEvent evt)
+            public void keyTyped(java.awt.event.KeyEvent evt)
             {
-                txt_createbill_discountKeyReleased(evt);
+                txt_createbill_discountKeyTyped(evt);
             }
         });
 
@@ -4231,9 +4231,9 @@ public class Main extends javax.swing.JFrame
         });
         txt_createbill_tax.addKeyListener(new java.awt.event.KeyAdapter()
         {
-            public void keyReleased(java.awt.event.KeyEvent evt)
+            public void keyTyped(java.awt.event.KeyEvent evt)
             {
-                txt_createbill_taxKeyReleased(evt);
+                txt_createbill_taxKeyTyped(evt);
             }
         });
 
@@ -4251,18 +4251,11 @@ public class Main extends javax.swing.JFrame
                 txt_createbill_unpaidFocusLost(evt);
             }
         });
-        txt_createbill_unpaid.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_createbill_unpaidActionPerformed(evt);
-            }
-        });
         txt_createbill_unpaid.addKeyListener(new java.awt.event.KeyAdapter()
         {
-            public void keyReleased(java.awt.event.KeyEvent evt)
+            public void keyTyped(java.awt.event.KeyEvent evt)
             {
-                txt_createbill_unpaidKeyReleased(evt);
+                txt_createbill_unpaidKeyTyped(evt);
             }
         });
 
@@ -7266,11 +7259,6 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_createbill_saveKeyPressed
 
-    private void txt_createbill_unpaidActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_createbill_unpaidActionPerformed
-    {//GEN-HEADEREND:event_txt_createbill_unpaidActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_createbill_unpaidActionPerformed
-
     private void cmbbox_createbill_prodnmActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_prodnmActionPerformed
     {//GEN-HEADEREND:event_cmbbox_createbill_prodnmActionPerformed
         // TODO add your handling code here:
@@ -7431,21 +7419,6 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_accsetting_updateKeyPressed
 
-    private void txt_createbill_discountKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_discountKeyReleased
-    {//GEN-HEADEREND:event_txt_createbill_discountKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_createbill_discountKeyReleased
-
-    private void txt_createbill_taxKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_taxKeyReleased
-    {//GEN-HEADEREND:event_txt_createbill_taxKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_createbill_taxKeyReleased
-
-    private void txt_createbill_unpaidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_unpaidKeyReleased
-    {//GEN-HEADEREND:event_txt_createbill_unpaidKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_createbill_unpaidKeyReleased
-
     private void txt_createbill_discountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_createbill_discountFocusLost
     {//GEN-HEADEREND:event_txt_createbill_discountFocusLost
         if (txt_createbill_discount.getText().equals(""))
@@ -7579,6 +7552,21 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_editprod_idKeyTyped
         isDigit(evt, txt_editprod_id);
     }//GEN-LAST:event_txt_editprod_idKeyTyped
+
+    private void txt_createbill_discountKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_discountKeyTyped
+    {//GEN-HEADEREND:event_txt_createbill_discountKeyTyped
+        isDigit(evt, txt_createbill_discount);
+    }//GEN-LAST:event_txt_createbill_discountKeyTyped
+
+    private void txt_createbill_taxKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_taxKeyTyped
+    {//GEN-HEADEREND:event_txt_createbill_taxKeyTyped
+        isDigit(evt, txt_createbill_tax);
+    }//GEN-LAST:event_txt_createbill_taxKeyTyped
+
+    private void txt_createbill_unpaidKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_unpaidKeyTyped
+    {//GEN-HEADEREND:event_txt_createbill_unpaidKeyTyped
+        isDigit(evt, txt_createbill_unpaid);
+    }//GEN-LAST:event_txt_createbill_unpaidKeyTyped
 
     public static void main(String args[])
     {
