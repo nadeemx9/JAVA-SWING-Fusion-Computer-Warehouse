@@ -4733,9 +4733,9 @@ public class Main extends javax.swing.JFrame
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_account_menubarLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(pnl_account_menubarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(pnl_accsetting_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu3, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(pnl_acc_menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)))
         );
 
         pnl_account_main.setkBorderRadius(40);
@@ -4849,6 +4849,8 @@ public class Main extends javax.swing.JFrame
             }
         });
 
+        lbl_accsetting_id.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lbl_accsetting_id.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         lbl_accsetting_id.setPreferredSize(new java.awt.Dimension(404, 64));
         lbl_accsetting_id.setRequestFocusEnabled(false);
 
@@ -5376,6 +5378,28 @@ public class Main extends javax.swing.JFrame
         visibility(false, false, false, false, false, true, btn_accsetting_menu);
         visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
         onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
+
+        String usr = lbl_dash_usr.getText();
+
+        try
+        {
+            con = dbconnection.getdbConnection();
+            query = "select id from employee where nm = '" + usr + "'";
+            st = con.createStatement();
+            result = st.executeQuery(query);
+            if (result.next())
+            {
+                lbl_accsetting_id.setText(result.getString("id"));
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "No Id Found");
+            }
+        }
+        catch (Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }//GEN-LAST:event_btnaccountActionPerformed
 
     private void lbl_dash_usrMouseClicked(java.awt.event.MouseEvent evt)//GEN-FIRST:event_lbl_dash_usrMouseClicked
@@ -7052,7 +7076,15 @@ public class Main extends javax.swing.JFrame
 
     private void btn_accsetting_updateActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_accsetting_updateActionPerformed
     {//GEN-HEADEREND:event_btn_accsetting_updateActionPerformed
-        // TODO add your handling code here:
+        if (isFieldEmpty(txt_accsetting_nm, txt_accsetting_usrnm, txt_accsetting_contact, txt_accsetting_email, txt_accsetting_salary, txt_accsetting_address))
+        {
+
+        }
+        if (txt_accsetting_pswd.getText().equals(""))
+        {
+            txt_accsetting_pswd.grabFocus();
+        }
+
     }//GEN-LAST:event_btn_accsetting_updateActionPerformed
 
     private void btn_accsetting_updateKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_accsetting_updateKeyPressed
