@@ -1596,6 +1596,7 @@ public class Main extends javax.swing.JFrame
             }
         });
 
+        txt_editcust_id.setEditable(false);
         txt_editcust_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_editcust_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editcust_id.setLabelText("CUSTOMER ID");
@@ -2130,6 +2131,7 @@ public class Main extends javax.swing.JFrame
         pnl_add_emp.setOpaque(false);
         pnl_add_emp.setPreferredSize(new java.awt.Dimension(1108, 672));
 
+        txt_addemp_id.setEditable(false);
         txt_addemp_id.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_id.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_addemp_id.setLabelText("EMPLOYEE ID");
@@ -2262,7 +2264,7 @@ public class Main extends javax.swing.JFrame
         pnl_add_empLayout.setVerticalGroup(
             pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_add_empLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(100, 100, 100)
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2278,9 +2280,9 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_add_empLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_addemp_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_addemp_addr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(btn_addemp_add, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGap(50, 50, 50))
         );
 
         pnl_edit_emp.setkBorderRadius(40);
@@ -2318,7 +2320,7 @@ public class Main extends javax.swing.JFrame
         txt_editemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_nm.setLabelText("EMPLOYEE NAME");
         txt_editemp_nm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_nm.setNextFocusableComponent(txt_editemp_contact);
+        txt_editemp_nm.setNextFocusableComponent(txt_editemp_usrnm);
         txt_editemp_nm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         txt_editemp_contact.setBackground(new java.awt.Color(150, 195, 248));
@@ -2409,6 +2411,7 @@ public class Main extends javax.swing.JFrame
         btn_editemp_rmv.setkHoverStartColor(new java.awt.Color(1, 109, 218));
         btn_editemp_rmv.setkPressedColor(new java.awt.Color(255, 167, 6));
         btn_editemp_rmv.setkStartColor(new java.awt.Color(255, 167, 6));
+        btn_editemp_rmv.setNextFocusableComponent(txt_editemp_nm);
         btn_editemp_rmv.setOpaque(true);
         btn_editemp_rmv.setPreferredSize(new java.awt.Dimension(250, 60));
         btn_editemp_rmv.addFocusListener(new java.awt.event.FocusAdapter()
@@ -2451,6 +2454,7 @@ public class Main extends javax.swing.JFrame
         txt_editemp_pswd.setBackground(new java.awt.Color(150, 195, 248));
         txt_editemp_pswd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         txt_editemp_pswd.setLabelText("PASSWORD");
+        txt_editemp_pswd.setNextFocusableComponent(txt_editcust_contact);
         txt_editemp_pswd.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_editemp_pswd.setShowAndHide(true);
 
@@ -2458,7 +2462,7 @@ public class Main extends javax.swing.JFrame
         txt_editemp_usrnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_editemp_usrnm.setLabelText("USERNAME");
         txt_editemp_usrnm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_editemp_usrnm.setNextFocusableComponent(txt_editemp_contact);
+        txt_editemp_usrnm.setNextFocusableComponent(txt_editemp_pswd);
         txt_editemp_usrnm.setPreferredSize(new java.awt.Dimension(404, 64));
 
         javax.swing.GroupLayout pnl_edit_empLayout = new javax.swing.GroupLayout(pnl_edit_emp);
@@ -3013,6 +3017,17 @@ public class Main extends javax.swing.JFrame
                 txt_addprod_costpriceActionPerformed(evt);
             }
         });
+        txt_addprod_costprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_addprod_costpriceKeyReleased(evt);
+            }
+            public void keyPressed(java.awt.event.KeyEvent evt)
+            {
+                txt_addprod_costpriceKeyPressed(evt);
+            }
+        });
 
         txt_addprod_sellingprice.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_sellingprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -3020,6 +3035,13 @@ public class Main extends javax.swing.JFrame
         txt_addprod_sellingprice.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_sellingprice.setNextFocusableComponent(cmbbox_addprod_brand);
         txt_addprod_sellingprice.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addprod_sellingprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_addprod_sellingpriceKeyReleased(evt);
+            }
+        });
 
         cmbbox_addprod_brand.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_addprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -3099,6 +3121,13 @@ public class Main extends javax.swing.JFrame
         txt_addprod_quantity.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_quantity.setNextFocusableComponent(btn_addprod);
         txt_addprod_quantity.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addprod_quantity.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_addprod_quantityKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_add_prodLayout = new javax.swing.GroupLayout(pnl_add_prod);
         pnl_add_prod.setLayout(pnl_add_prodLayout);
@@ -3193,6 +3222,13 @@ public class Main extends javax.swing.JFrame
         txt_editprod_costprice.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editprod_costprice.setNextFocusableComponent(txt_editprod_quantity);
         txt_editprod_costprice.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editprod_costprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_editprod_costpriceKeyReleased(evt);
+            }
+        });
 
         txt_editprod_quantity.setBackground(new java.awt.Color(150, 195, 248));
         txt_editprod_quantity.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -3200,6 +3236,13 @@ public class Main extends javax.swing.JFrame
         txt_editprod_quantity.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editprod_quantity.setNextFocusableComponent(btn_editprod_edit);
         txt_editprod_quantity.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editprod_quantity.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_editprod_quantityKeyReleased(evt);
+            }
+        });
 
         txt_editprod_sellingprice.setBackground(new java.awt.Color(150, 195, 248));
         txt_editprod_sellingprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -3207,6 +3250,13 @@ public class Main extends javax.swing.JFrame
         txt_editprod_sellingprice.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editprod_sellingprice.setNextFocusableComponent(txt_editprod_costprice);
         txt_editprod_sellingprice.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editprod_sellingprice.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_editprod_sellingpriceKeyReleased(evt);
+            }
+        });
 
         cmbbox_editprod_brand.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_editprod_brand.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -3945,15 +3995,15 @@ public class Main extends javax.swing.JFrame
         pnl_calcLayout.setVerticalGroup(
             pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_calcLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lbl_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_discount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbl_grosstotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_createbill_grosstotal))
                 .addGap(18, 18, 18)
+                .addGroup(pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_createbill_discount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_discount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
                 .addGroup(pnl_calcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lbl_createbill_tax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_tax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4098,6 +4148,20 @@ public class Main extends javax.swing.JFrame
         txt_createbill_discount.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_createbill_discount.setNextFocusableComponent(txt_createbill_tax);
         txt_createbill_discount.setPreferredSize(new java.awt.Dimension(151, 64));
+        txt_createbill_discount.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_createbill_discountFocusLost(evt);
+            }
+        });
+        txt_createbill_discount.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_createbill_discountKeyReleased(evt);
+            }
+        });
 
         spin_createbill_quantity.setForeground(new java.awt.Color(150, 195, 248));
         spin_createbill_quantity.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -4119,6 +4183,20 @@ public class Main extends javax.swing.JFrame
         txt_createbill_tax.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_createbill_tax.setNextFocusableComponent(txt_createbill_unpaid);
         txt_createbill_tax.setPreferredSize(new java.awt.Dimension(141, 64));
+        txt_createbill_tax.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_createbill_taxFocusLost(evt);
+            }
+        });
+        txt_createbill_tax.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_createbill_taxKeyReleased(evt);
+            }
+        });
 
         txt_createbill_unpaid.setBackground(new java.awt.Color(150, 195, 248));
         txt_createbill_unpaid.setFocusCycleRoot(true);
@@ -4127,11 +4205,25 @@ public class Main extends javax.swing.JFrame
         txt_createbill_unpaid.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_createbill_unpaid.setNextFocusableComponent(btn_createbill_add);
         txt_createbill_unpaid.setPreferredSize(new java.awt.Dimension(294, 64));
+        txt_createbill_unpaid.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_createbill_unpaidFocusLost(evt);
+            }
+        });
         txt_createbill_unpaid.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 txt_createbill_unpaidActionPerformed(evt);
+            }
+        });
+        txt_createbill_unpaid.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_createbill_unpaidKeyReleased(evt);
             }
         });
 
@@ -4257,7 +4349,7 @@ public class Main extends javax.swing.JFrame
         cmbbox_modifybill_prodid.setBackground(new java.awt.Color(255, 167, 6));
         cmbbox_modifybill_prodid.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         cmbbox_modifybill_prodid.setMaximumRowCount(5);
-        cmbbox_modifybill_prodid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cmbbox_modifybill_prodid.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "BILL  ID" }));
         cmbbox_modifybill_prodid.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         cmbbox_modifybill_prodid.setMaximumSize(new java.awt.Dimension(150, 50));
         cmbbox_modifybill_prodid.setMinimumSize(new java.awt.Dimension(150, 50));
@@ -4301,6 +4393,13 @@ public class Main extends javax.swing.JFrame
         txt_modifybill_discount.setLabelText("DISCOUNT(%)");
         txt_modifybill_discount.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_modifybill_discount.setPreferredSize(new java.awt.Dimension(151, 64));
+        txt_modifybill_discount.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_modifybill_discountKeyReleased(evt);
+            }
+        });
 
         txt_modifybill_tax.setBackground(new java.awt.Color(150, 195, 248));
         txt_modifybill_tax.setFocusCycleRoot(true);
@@ -4308,6 +4407,13 @@ public class Main extends javax.swing.JFrame
         txt_modifybill_tax.setLabelText("TAX(%)");
         txt_modifybill_tax.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_modifybill_tax.setPreferredSize(new java.awt.Dimension(105, 64));
+        txt_modifybill_tax.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyReleased(java.awt.event.KeyEvent evt)
+            {
+                txt_modifybill_taxKeyReleased(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
@@ -4898,9 +5004,9 @@ public class Main extends javax.swing.JFrame
                 .addGroup(pnl_accsettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_accsetting_salary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_accsetting_address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(btn_accsetting_update, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
+                .addGap(50, 50, 50))
         );
 
         pnl_acc_tab2.setkBorderRadius(40);
@@ -5379,22 +5485,38 @@ public class Main extends javax.swing.JFrame
         visibility(pnl_accsetting, pnl_acc_tab2, pnl_acc_tab3);
         onIndicator(lid_accsetting, lid_acc_menu2, lid_acc_menu3);
 
-        String usr = lbl_dash_usr.getText();
-
         try
         {
+            String usr = lbl_dash_usr.getText();
             con = dbconnection.getdbConnection();
-            query = "select id from employee where nm = '" + usr + "'";
+            query = "select * from employee where nm = '" + usr + "'";
             st = con.createStatement();
             result = st.executeQuery(query);
             if (result.next())
             {
-                lbl_accsetting_id.setText(result.getString("id"));
+                String id = result.getString("id");
+                String nm = result.getString("nm");
+                String usrnm = result.getString("usrnm");
+                String pswd = result.getString("pswd");
+                String contact = result.getString("contact");
+                String email = result.getString("email");
+                String salary = result.getString("salary");
+                String address = result.getString("address");
+
+                lbl_accsetting_id.setText(id);
+                txt_accsetting_nm.setText(nm);
+                txt_accsetting_usrnm.setText(usrnm);
+                txt_accsetting_pswd.setText(pswd);
+                txt_accsetting_contact.setText(contact);
+                txt_accsetting_email.setText(email);
+                txt_accsetting_salary.setText(salary);
+                txt_accsetting_address.setText(address);
             }
             else
             {
                 JOptionPane.showMessageDialog(null, "No Id Found");
             }
+
         }
         catch (Exception e)
         {
@@ -5912,6 +6034,8 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
             onIndicator(lid_modifybill, lid_createbill);
+            fillCombobox("bill", "id", cmbbox_modifybill_prodid);
+
         }
     }//GEN-LAST:event_btn_modifybill_menuKeyPressed
 
@@ -5919,6 +6043,7 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_modifybill_menuActionPerformed
         visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
         onIndicator(lid_modifybill, lid_createbill);
+        fillCombobox("bill", "id", cmbbox_modifybill_prodid);
     }//GEN-LAST:event_btn_modifybill_menuActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
@@ -6180,32 +6305,36 @@ public class Main extends javax.swing.JFrame
 
     private void btn_addemp_addActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addemp_addActionPerformed
     {//GEN-HEADEREND:event_btn_addemp_addActionPerformed
-        try
+        if (isFieldEmpty(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr))
         {
-            con = dbconnection.getdbConnection();
-            query = "insert into employee (id, nm, usrnm, pswd, contact, email, salary, address) values(?, ?, ?, ?, ?, ?, ?, ?)";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "insert into employee (id, nm, usrnm, pswd, contact, email, salary, address) values(?, ?, ?, ?, ?, ?, ?, ?)";
 
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_addemp_id.getText());
-            pst.setString(2, txt_addemp_nm.getText());
-            pst.setString(3, txt_addemp_usrnm.getText());
-            pst.setString(4, txt_addemp_pswd.getText());
-            pst.setString(5, txt_addemp_contact.getText());
-            pst.setString(6, txt_addemp_email.getText());
-            pst.setString(7, txt_addemp_salary.getText());
-            pst.setString(8, txt_addemp_addr.getText());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_addemp_id.getText());
+                pst.setString(2, txt_addemp_nm.getText());
+                pst.setString(3, txt_addemp_usrnm.getText());
+                pst.setString(4, txt_addemp_pswd.getText());
+                pst.setString(5, txt_addemp_contact.getText());
+                pst.setString(6, txt_addemp_email.getText());
+                pst.setString(7, txt_addemp_salary.getText());
+                pst.setString(8, txt_addemp_addr.getText());
 
-            pst.executeUpdate();
+                pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Employee Added Successfully!");
-            clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
-            txt_addemp_id.setText(getMaxID("employee"));
-            txt_addemp_id.grabFocus();
+                JOptionPane.showMessageDialog(null, "Employee Added Successfully!");
+                clearTextFields(txt_addemp_id, txt_addemp_nm, txt_addemp_usrnm, txt_addemp_pswd, txt_addemp_contact, txt_addemp_email, txt_addemp_salary, txt_addemp_addr);
+                txt_addemp_id.setText(getMaxID("employee"));
+                txt_addemp_id.grabFocus();
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
+
     }//GEN-LAST:event_btn_addemp_addActionPerformed
 
     private void btn_addemp_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_addemp_addKeyPressed
@@ -6349,27 +6478,34 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editcust_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editcust_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editcust_rmvActionPerformed
-        int confirmMsg = JOptionPane.showConfirmDialog(null, "Confirm Deletion ?");
-        if (confirmMsg == 0)
+        if (txt_editcust_id.getText().equals(""))
         {
-            try
+            txt_editcust_id.grabFocus();
+        }
+        else
+        {
+            int confirmMsg = JOptionPane.showConfirmDialog(null, "Confirm Deletion ?");
+            if (confirmMsg == 0)
             {
-                con = dbconnection.getdbConnection();
-                query = "delete from customer where id = ?";
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "delete from customer where id = ?";
 
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_editcust_id.getText());
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_editcust_id.getText());
 
-                pst.executeUpdate();
-                bindCustomerTableData(table_editcust);
-                JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
+                    pst.executeUpdate();
+                    bindCustomerTableData(table_editcust);
+                    JOptionPane.showMessageDialog(null, "Record Deleted Successfully !");
 
-                clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
-                txt_editcust_id.grabFocus();
-            }
-            catch (Exception e)
-            {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                    clearTextFields(txt_editcust_id, txt_editcust_nm, txt_addcust_contact, txt_editcust_email, txt_editcust_shopnm, txt_editcust_shopaddr);
+                    txt_editcust_id.grabFocus();
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
         }
     }//GEN-LAST:event_btn_editcust_rmvActionPerformed
@@ -6386,23 +6522,30 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_rmvActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_rmvActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_rmvActionPerformed
-        try
+        if (txt_editemp_nm.getText().equals(""))
         {
-            con = dbconnection.getdbConnection();
-            String empnm = txt_editemp_nm.getText();
-            query = "delete from employee where nm = '" + empnm + "'";
-
-            pst = con.prepareStatement(query);
-
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee Removed Successfully !");
-            bindEmployeeTableData(table_editemp);
-            clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
-            txt_editemp_pswd.setText("");
+            txt_editemp_nm.grabFocus();
         }
-        catch (Exception e)
+        else
         {
-            JOptionPane.showMessageDialog(null, e.getMessage());
+            try
+            {
+                con = dbconnection.getdbConnection();
+                String empnm = txt_editemp_nm.getText();
+                query = "delete from employee where nm = '" + empnm + "'";
+
+                pst = con.prepareStatement(query);
+
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Employee Removed Successfully !");
+                bindEmployeeTableData(table_editemp);
+                clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+                txt_editemp_pswd.setText("");
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
     }//GEN-LAST:event_btn_editemp_rmvActionPerformed
 
@@ -6433,32 +6576,36 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editemp_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editemp_editActionPerformed
     {//GEN-HEADEREND:event_btn_editemp_editActionPerformed
-        try
+        if (isFieldEmpty(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr))
         {
-            con = dbconnection.getdbConnection();
-            query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where usrnm = ? ";
+            try
+            {
+                con = dbconnection.getdbConnection();
+                query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where usrnm = ? ";
 
-            pst = con.prepareStatement(query);
-            pst.setString(1, txt_editemp_nm.getText());
-            pst.setString(2, txt_editemp_usrnm.getText());
-            pst.setString(3, txt_editemp_pswd.getText());
-            pst.setString(4, txt_editemp_contact.getText());
-            pst.setString(5, txt_editemp_email.getText());
-            pst.setString(6, txt_editemp_salary.getText());
-            pst.setString(7, txt_editemp_addr.getText());
-            pst.setString(8, txt_editemp_usrnm.getText());
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_editemp_nm.getText());
+                pst.setString(2, txt_editemp_usrnm.getText());
+                pst.setString(3, txt_editemp_pswd.getText());
+                pst.setString(4, txt_editemp_contact.getText());
+                pst.setString(5, txt_editemp_email.getText());
+                pst.setString(6, txt_editemp_salary.getText());
+                pst.setString(7, txt_editemp_addr.getText());
+                pst.setString(8, txt_editemp_usrnm.getText());
 
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Employee Details Updated Successfully!");
-            bindEmployeeTableData(table_editemp);
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Employee Details Updated Successfully!");
+                bindEmployeeTableData(table_editemp);
 
-            clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
-            txt_editemp_pswd.setText("");
+                clearTextFields(txt_editemp_nm, txt_editemp_usrnm, txt_editemp_contact, txt_editemp_email, txt_editemp_salary, txt_editemp_addr);
+                txt_editemp_pswd.setText("");
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
-        catch (Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
+
     }//GEN-LAST:event_btn_editemp_editActionPerformed
 
     private void btn_editemp_editMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_editemp_editMouseExited
@@ -6657,28 +6804,37 @@ public class Main extends javax.swing.JFrame
 
     private void btn_editprod_editActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_editprod_editActionPerformed
     {//GEN-HEADEREND:event_btn_editprod_editActionPerformed
+
         if (isFieldEmpty(txt_editprod_id, txt_editprod_nm, txt_editprod_costprice, txt_editprod_sellingprice, txt_editprod_quantity) && isCmbboxDefaultSelected("--SELECT BRAND--", cmbbox_editprod_brand))
         {
-            try
+            if (isIdExist(txt_editprod_id.getText(), "product"))
             {
-                con = dbconnection.getdbConnection();
-                query = "update product set nm = ?, costprice = ?, sellingprice = ?, brand = ?, quantity = ? where id = ? ";
+                try
+                {
+                    con = dbconnection.getdbConnection();
+                    query = "update product set nm = ?, costprice = ?, sellingprice = ?, brand = ?, quantity = ? where id = ? ";
 
-                pst = con.prepareStatement(query);
-                pst.setString(1, txt_editprod_nm.getText());
-                pst.setString(2, txt_editprod_costprice.getText());
-                pst.setString(3, txt_editprod_sellingprice.getText());
-                pst.setString(4, cmbbox_editprod_brand.getSelectedItem().toString());
-                pst.setString(5, txt_editprod_quantity.getText());
-                pst.setString(6, txt_editprod_id.getText());
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Product Updated Successfully!");
-                bindProductTableData(table_editprod);
+                    pst = con.prepareStatement(query);
+                    pst.setString(1, txt_editprod_nm.getText());
+                    pst.setString(2, txt_editprod_costprice.getText());
+                    pst.setString(3, txt_editprod_sellingprice.getText());
+                    pst.setString(4, cmbbox_editprod_brand.getSelectedItem().toString());
+                    pst.setString(5, txt_editprod_quantity.getText());
+                    pst.setString(6, txt_editprod_id.getText());
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Product Updated Successfully!");
+                    bindProductTableData(table_editprod);
+                }
+                catch (Exception e)
+                {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
             }
-            catch (Exception e)
+            else
             {
-                JOptionPane.showMessageDialog(null, e.getMessage());
+                JOptionPane.showMessageDialog(null, "ID does not exist");
             }
+
         }
     }//GEN-LAST:event_btn_editprod_editActionPerformed
 
@@ -6832,21 +6988,36 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_createbill_addActionPerformed
         tableModel = (DefaultTableModel) table_createbill.getModel();
 
-        String custnm, contact, prodnm;
-        int price = 0, quantity = 0, discount = 0, gtotal = 0, tax = 0, nettotal = 0, unpaid = 0;
+        String custnm, custid, contact, address, prodnm, prodid;
+        int price = 0, quantity = 0, gtotal = 0, discount = 0, tax = 0, nettotal = 0, unpaid = 0;
 
-        custnm = txt_createbill_custid.getText();
+        custnm = cmbbox_createbill_custnm.getSelectedItem().toString();
+        custid = txt_createbill_custid.getText();
         contact = txt_createbill_contact.getText();
+        address = txt_createbill_addr.getText();
         prodnm = cmbbox_createbill_prodnm.getSelectedItem().toString();
+        prodid = txt_createbill_custid.getText();
 
         price = Integer.parseInt(txt_createbill_prodprice.getText());
         quantity = Integer.parseInt(spin_createbill_quantity.getValue().toString());
-
-        discount = ((price * quantity) * Integer.parseInt(txt_createbill_discount.getText())) / 100;
-        gtotal = price * quantity - discount;
-        tax = ((price * quantity) * Integer.parseInt(txt_createbill_tax.getText())) / 100;
+        discount = Integer.parseInt(txt_createbill_discount.getText());
+        tax = Integer.parseInt(txt_createbill_tax.getText());
         unpaid = Integer.parseInt(txt_createbill_unpaid.getText());
-        nettotal = gtotal - unpaid;
+
+        gtotal = price * quantity;
+        lbl_grosstotal.setText(Integer.toString(Integer.parseInt(lbl_grosstotal.getText()) + gtotal));
+
+        discount = (gtotal * discount) / 100;
+        lbl_discount.setText(Integer.toString(Integer.parseInt(lbl_discount.getText()) + discount));
+
+        tax = (gtotal * tax) / 100;
+        lbl_tax.setText(Integer.toString(Integer.parseInt(lbl_tax.getText()) + tax));
+
+        unpaid = Integer.parseInt(txt_createbill_unpaid.getText());
+        lbl_unpaid.setText(Integer.toString(Integer.parseInt(lbl_unpaid.getText()) + unpaid));
+
+        nettotal = gtotal - discount + tax;
+        lbl_nettotal.setText(Integer.toString(Integer.parseInt(lbl_nettotal.getText()) + nettotal));
 
         String[] rows =
         {
@@ -6855,12 +7026,11 @@ public class Main extends javax.swing.JFrame
 
         tableModel.addRow(rows);
 
-        lbl_discount.setText(Integer.toString(Integer.parseInt(lbl_discount.getText()) + discount));
-        lbl_grosstotal.setText(Integer.toString(Integer.parseInt(lbl_grosstotal.getText()) + gtotal));
-        lbl_tax.setText(Integer.toString(Integer.parseInt(lbl_tax.getText()) + tax));
-        lbl_unpaid.setText(Integer.toString(Integer.parseInt(lbl_unpaid.getText()) + unpaid));
-        lbl_nettotal.setText(Integer.toString(Integer.parseInt(lbl_nettotal.getText()) + nettotal));
-
+//        lbl_discount.setText(Integer.toString(Integer.parseInt(lbl_discount.getText()) + discount));
+//        lbl_grosstotal.setText(Integer.toString(Integer.parseInt(lbl_grosstotal.getText()) + gtotal));
+//        lbl_tax.setText(Integer.toString(Integer.parseInt(lbl_tax.getText()) + tax));
+//        lbl_unpaid.setText(Integer.toString(Integer.parseInt(lbl_unpaid.getText()) + unpaid));
+//        lbl_nettotal.setText(Integer.toString(Integer.parseInt(lbl_nettotal.getText()) + nettotal));
     }//GEN-LAST:event_btn_createbill_addActionPerformed
 
     private void btn_createbill_addKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_createbill_addKeyPressed
@@ -7078,19 +7248,119 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_accsetting_updateActionPerformed
         if (isFieldEmpty(txt_accsetting_nm, txt_accsetting_usrnm, txt_accsetting_contact, txt_accsetting_email, txt_accsetting_salary, txt_accsetting_address))
         {
+            try
+            {
+                String nm = lbl_dash_usr.getText();
+                query = "update employee set nm = ?, usrnm = ?, pswd = ?, contact = ?, email = ?, salary = ?, address = ? where nm = ?";
 
+                con = dbconnection.getdbConnection();
+                pst = con.prepareStatement(query);
+                pst.setString(1, txt_accsetting_nm.getText());
+                pst.setString(2, txt_accsetting_usrnm.getText());
+                pst.setString(3, txt_accsetting_pswd.getLabelText());
+                pst.setString(4, txt_accsetting_contact.getText());
+                pst.setString(5, txt_accsetting_email.getText());
+                pst.setString(6, txt_accsetting_salary.getText());
+                pst.setString(7, txt_accsetting_address.getText());
+                pst.setString(8, nm);
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Emloyee Details Updated Successfully");
+            }
+            catch (Exception e)
+            {
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
         }
-        if (txt_accsetting_pswd.getText().equals(""))
-        {
-            txt_accsetting_pswd.grabFocus();
-        }
-
     }//GEN-LAST:event_btn_accsetting_updateActionPerformed
 
     private void btn_accsetting_updateKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_accsetting_updateKeyPressed
     {//GEN-HEADEREND:event_btn_accsetting_updateKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_accsetting_updateKeyPressed
+
+    private void txt_editprod_costpriceKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editprod_costpriceKeyReleased
+    {//GEN-HEADEREND:event_txt_editprod_costpriceKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_editprod_costpriceKeyReleased
+
+    private void txt_editprod_sellingpriceKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editprod_sellingpriceKeyReleased
+    {//GEN-HEADEREND:event_txt_editprod_sellingpriceKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_editprod_sellingpriceKeyReleased
+
+    private void txt_editprod_quantityKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editprod_quantityKeyReleased
+    {//GEN-HEADEREND:event_txt_editprod_quantityKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_editprod_quantityKeyReleased
+
+    private void txt_addprod_costpriceKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addprod_costpriceKeyPressed
+    {//GEN-HEADEREND:event_txt_addprod_costpriceKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_addprod_costpriceKeyPressed
+
+    private void txt_addprod_costpriceKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addprod_costpriceKeyReleased
+    {//GEN-HEADEREND:event_txt_addprod_costpriceKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_addprod_costpriceKeyReleased
+
+    private void txt_addprod_sellingpriceKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addprod_sellingpriceKeyReleased
+    {//GEN-HEADEREND:event_txt_addprod_sellingpriceKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_addprod_sellingpriceKeyReleased
+
+    private void txt_addprod_quantityKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addprod_quantityKeyReleased
+    {//GEN-HEADEREND:event_txt_addprod_quantityKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_addprod_quantityKeyReleased
+
+    private void txt_createbill_discountKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_discountKeyReleased
+    {//GEN-HEADEREND:event_txt_createbill_discountKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_createbill_discountKeyReleased
+
+    private void txt_createbill_taxKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_taxKeyReleased
+    {//GEN-HEADEREND:event_txt_createbill_taxKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_createbill_taxKeyReleased
+
+    private void txt_createbill_unpaidKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_createbill_unpaidKeyReleased
+    {//GEN-HEADEREND:event_txt_createbill_unpaidKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_createbill_unpaidKeyReleased
+
+    private void txt_modifybill_discountKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_modifybill_discountKeyReleased
+    {//GEN-HEADEREND:event_txt_modifybill_discountKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_modifybill_discountKeyReleased
+
+    private void txt_modifybill_taxKeyReleased(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_modifybill_taxKeyReleased
+    {//GEN-HEADEREND:event_txt_modifybill_taxKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_modifybill_taxKeyReleased
+
+    private void txt_createbill_discountFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_createbill_discountFocusLost
+    {//GEN-HEADEREND:event_txt_createbill_discountFocusLost
+        if (txt_createbill_discount.getText().equals(""))
+        {
+            txt_createbill_discount.setText("0");
+        }
+    }//GEN-LAST:event_txt_createbill_discountFocusLost
+
+    private void txt_createbill_taxFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_createbill_taxFocusLost
+    {//GEN-HEADEREND:event_txt_createbill_taxFocusLost
+        if (txt_createbill_tax.getText().equals(""))
+        {
+            txt_createbill_tax.setText("0");
+        }
+    }//GEN-LAST:event_txt_createbill_taxFocusLost
+
+    private void txt_createbill_unpaidFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_createbill_unpaidFocusLost
+    {//GEN-HEADEREND:event_txt_createbill_unpaidFocusLost
+        if (txt_createbill_unpaid.getText().equals(""))
+        {
+            txt_createbill_unpaid.setText("0");
+        }
+    }//GEN-LAST:event_txt_createbill_unpaidFocusLost
 
     public static void main(String args[])
     {
@@ -7208,10 +7478,11 @@ public class Main extends javax.swing.JFrame
                 {
                     return Integer.toString(Integer.parseInt(result.getString(1)) + 1);
                 }
-                else
-                {
-                    return "1";
-                }
+
+            }
+            else
+            {
+                return "1";
             }
         }
         catch (Exception e)
@@ -7458,6 +7729,52 @@ public class Main extends javax.swing.JFrame
         else if (txt6.getText().equals(""))
         {
             txt6.grabFocus();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public boolean isFieldEmpty(TextField txt1, TextField txt2, TextField txt3, TextField txt4, TextField txt5, TextField txt6, TextField txt7)
+    {
+        if (txt1.getText().equals(""))
+        {
+            txt1.grabFocus();
+            return false;
+        }
+        else if (txt2.getText().equals(""))
+        {
+            txt2.grabFocus();
+            return false;
+        }
+        else if (txt3.getText().equals(""))
+        {
+            txt3.grabFocus();
+            return false;
+
+        }
+        else if (txt4.getText().equals(""))
+        {
+            txt4.grabFocus();
+            return false;
+
+        }
+        else if (txt5.getText().equals(""))
+        {
+            txt5.grabFocus();
+            return false;
+
+        }
+        else if (txt6.getText().equals(""))
+        {
+            txt6.grabFocus();
+            return false;
+        }
+        else if (txt7.getText().equals(""))
+        {
+            txt7.grabFocus();
             return false;
         }
         else
