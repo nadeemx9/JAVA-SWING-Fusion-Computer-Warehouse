@@ -159,7 +159,6 @@ public class Main extends javax.swing.JFrame
         txt_custdet_custnm = new textfield.TextField();
         scrolltbl_custdet = new javax.swing.JScrollPane();
         table_custdet = new javax.swing.JTable();
-        btn_custdet = new com.k33ptoo.components.KButton();
         panel_employee = new com.k33ptoo.components.KGradientPanel();
         pnl_emp_menubar = new com.k33ptoo.components.KGradientPanel();
         pnl_addemp_menu = new com.k33ptoo.components.KGradientPanel();
@@ -199,7 +198,6 @@ public class Main extends javax.swing.JFrame
         txt_empdet_nm = new textfield.TextField();
         scrolltbl_empdet = new javax.swing.JScrollPane();
         table_empdet = new javax.swing.JTable();
-        btn_empdet = new com.k33ptoo.components.KButton();
         panel_product = new com.k33ptoo.components.KGradientPanel();
         pnl_prod_menubar = new com.k33ptoo.components.KGradientPanel();
         pnl_addprod_menu = new com.k33ptoo.components.KGradientPanel();
@@ -235,7 +233,6 @@ public class Main extends javax.swing.JFrame
         txt_proddet_nm = new textfield.TextField();
         scrolltbl_proddet = new javax.swing.JScrollPane();
         table_proddet = new javax.swing.JTable();
-        btn_proddet = new com.k33ptoo.components.KButton();
         panel_bill = new com.k33ptoo.components.KGradientPanel();
         pnl_bill_menubar = new com.k33ptoo.components.KGradientPanel();
         pnl_createbill_menu = new com.k33ptoo.components.KGradientPanel();
@@ -1311,13 +1308,6 @@ public class Main extends javax.swing.JFrame
         txt_addcust_email.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addcust_email.setNextFocusableComponent(txt_addcust_shopnm);
         txt_addcust_email.setPreferredSize(new java.awt.Dimension(404, 64));
-        txt_addcust_email.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyTyped(java.awt.event.KeyEvent evt)
-            {
-                txt_addcust_emailKeyTyped(evt);
-            }
-        });
 
         txt_addcust_shopaddr.setBackground(new java.awt.Color(150, 195, 248));
         txt_addcust_shopaddr.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -1593,13 +1583,6 @@ public class Main extends javax.swing.JFrame
         txt_editcust_shopaddr.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_shopaddr.setNextFocusableComponent(btn_editcust_edit);
         txt_editcust_shopaddr.setPreferredSize(new java.awt.Dimension(250, 64));
-        txt_editcust_shopaddr.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_editcust_shopaddrActionPerformed(evt);
-            }
-        });
 
         txt_editcust_id.setEditable(false);
         txt_editcust_id.setBackground(new java.awt.Color(150, 195, 248));
@@ -1608,6 +1591,13 @@ public class Main extends javax.swing.JFrame
         txt_editcust_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_editcust_id.setNextFocusableComponent(txt_editcust_nm);
         txt_editcust_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_editcust_id.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_editcust_idKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_edit_custLayout = new javax.swing.GroupLayout(pnl_edit_cust);
         pnl_edit_cust.setLayout(pnl_edit_custLayout);
@@ -1667,7 +1657,6 @@ public class Main extends javax.swing.JFrame
         txt_custdet_custnm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_custdet_custnm.setLabelText("SEARCH BY CUSTOMER NAME");
         txt_custdet_custnm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_custdet_custnm.setNextFocusableComponent(btn_custdet);
         txt_custdet_custnm.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_custdet_custnm.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -1695,56 +1684,6 @@ public class Main extends javax.swing.JFrame
         table_custdet.setPreferredSize(new java.awt.Dimension(908, 400));
         scrolltbl_custdet.setViewportView(table_custdet);
 
-        btn_custdet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_custdet.setText("FETCH CUSTOMER DETAIL");
-        btn_custdet.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btn_custdet.setkBorderRadius(30);
-        btn_custdet.setkEndColor(new java.awt.Color(255, 167, 6));
-        btn_custdet.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_custdet.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_custdet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_custdet.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btn_custdet.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_custdet.setNextFocusableComponent(txt_custdet_custnm);
-        btn_custdet.setOpaque(true);
-        btn_custdet.setPreferredSize(new java.awt.Dimension(450, 60));
-        btn_custdet.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                btn_custdetFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                btn_custdetFocusLost(evt);
-            }
-        });
-        btn_custdet.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                btn_custdetMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                btn_custdetMouseExited(evt);
-            }
-        });
-        btn_custdet.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btn_custdetActionPerformed(evt);
-            }
-        });
-        btn_custdet.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                btn_custdetKeyPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnl_cust_detLayout = new javax.swing.GroupLayout(pnl_cust_det);
         pnl_cust_det.setLayout(pnl_cust_detLayout);
         pnl_cust_detLayout.setHorizontalGroup(
@@ -1753,7 +1692,6 @@ public class Main extends javax.swing.JFrame
                 .addGap(100, 100, 100)
                 .addGroup(pnl_cust_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_custdet_custnm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_custdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
@@ -1764,9 +1702,7 @@ public class Main extends javax.swing.JFrame
                 .addComponent(txt_custdet_custnm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_custdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnl_customer_mainLayout = new javax.swing.GroupLayout(pnl_customer_main);
@@ -2143,6 +2079,13 @@ public class Main extends javax.swing.JFrame
         txt_addemp_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addemp_id.setNextFocusableComponent(txt_addemp_nm);
         txt_addemp_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addemp_id.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_addemp_idKeyTyped(evt);
+            }
+        });
 
         txt_addemp_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addemp_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -2579,14 +2522,9 @@ public class Main extends javax.swing.JFrame
         txt_empdet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_empdet_nm.setLabelText("SEARCH BY EMPLOYEE NAME");
         txt_empdet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_empdet_nm.setNextFocusableComponent(btn_empdet);
         txt_empdet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_empdet_nm.addKeyListener(new java.awt.event.KeyAdapter()
         {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                txt_empdet_nmKeyPressed(evt);
-            }
             public void keyReleased(java.awt.event.KeyEvent evt)
             {
                 txt_empdet_nmKeyReleased(evt);
@@ -2611,56 +2549,6 @@ public class Main extends javax.swing.JFrame
         table_empdet.setPreferredSize(new java.awt.Dimension(908, 400));
         scrolltbl_empdet.setViewportView(table_empdet);
 
-        btn_empdet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_empdet.setText("FETCH EMPLOYEE DETAIL");
-        btn_empdet.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btn_empdet.setkBorderRadius(30);
-        btn_empdet.setkEndColor(new java.awt.Color(255, 167, 6));
-        btn_empdet.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_empdet.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_empdet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_empdet.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btn_empdet.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_empdet.setNextFocusableComponent(txt_empdet_nm);
-        btn_empdet.setOpaque(true);
-        btn_empdet.setPreferredSize(new java.awt.Dimension(450, 60));
-        btn_empdet.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                btn_empdetFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                btn_empdetFocusLost(evt);
-            }
-        });
-        btn_empdet.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                btn_empdetMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                btn_empdetMouseExited(evt);
-            }
-        });
-        btn_empdet.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btn_empdetActionPerformed(evt);
-            }
-        });
-        btn_empdet.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                btn_empdetKeyPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnl_emp_detLayout = new javax.swing.GroupLayout(pnl_emp_det);
         pnl_emp_det.setLayout(pnl_emp_detLayout);
         pnl_emp_detLayout.setHorizontalGroup(
@@ -2669,7 +2557,6 @@ public class Main extends javax.swing.JFrame
                 .addGap(100, 100, 100)
                 .addGroup(pnl_emp_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_empdet_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
@@ -2680,9 +2567,7 @@ public class Main extends javax.swing.JFrame
                 .addComponent(txt_empdet_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_empdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_empdet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnl_employee_mainLayout = new javax.swing.GroupLayout(pnl_employee_main);
@@ -3057,6 +2942,13 @@ public class Main extends javax.swing.JFrame
         txt_addprod_id.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_addprod_id.setNextFocusableComponent(txt_addprod_nm);
         txt_addprod_id.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_addprod_id.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_addprod_idKeyTyped(evt);
+            }
+        });
 
         txt_addprod_costprice.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_costprice.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -3094,13 +2986,6 @@ public class Main extends javax.swing.JFrame
         cmbbox_addprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
         cmbbox_addprod_brand.setNextFocusableComponent(txt_addprod_quantity);
         cmbbox_addprod_brand.setPreferredSize(new java.awt.Dimension(404, 64));
-        cmbbox_addprod_brand.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_addprod_brandActionPerformed(evt);
-            }
-        });
 
         txt_addprod_nm.setBackground(new java.awt.Color(150, 195, 248));
         txt_addprod_nm.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -3416,13 +3301,6 @@ public class Main extends javax.swing.JFrame
         cmbbox_editprod_brand.setMinimumSize(new java.awt.Dimension(415, 64));
         cmbbox_editprod_brand.setNextFocusableComponent(txt_addprod_quantity);
         cmbbox_editprod_brand.setPreferredSize(new java.awt.Dimension(404, 64));
-        cmbbox_editprod_brand.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_editprod_brandActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout pnl_edit_prodLayout = new javax.swing.GroupLayout(pnl_edit_prod);
         pnl_edit_prod.setLayout(pnl_edit_prodLayout);
@@ -3488,7 +3366,6 @@ public class Main extends javax.swing.JFrame
         txt_proddet_nm.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         txt_proddet_nm.setLabelText("SEARCH BY PRODUCT NAME");
         txt_proddet_nm.setMinimumSize(new java.awt.Dimension(128, 64));
-        txt_proddet_nm.setNextFocusableComponent(btn_proddet);
         txt_proddet_nm.setPreferredSize(new java.awt.Dimension(404, 64));
         txt_proddet_nm.addKeyListener(new java.awt.event.KeyAdapter()
         {
@@ -3516,56 +3393,6 @@ public class Main extends javax.swing.JFrame
         table_proddet.setPreferredSize(new java.awt.Dimension(908, 400));
         scrolltbl_proddet.setViewportView(table_proddet);
 
-        btn_proddet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        btn_proddet.setText("FETCH PRODUCT DETAIL");
-        btn_proddet.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
-        btn_proddet.setkBorderRadius(30);
-        btn_proddet.setkEndColor(new java.awt.Color(255, 167, 6));
-        btn_proddet.setkHoverEndColor(new java.awt.Color(1, 109, 218));
-        btn_proddet.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_proddet.setkHoverStartColor(new java.awt.Color(1, 109, 218));
-        btn_proddet.setkPressedColor(new java.awt.Color(255, 167, 6));
-        btn_proddet.setkStartColor(new java.awt.Color(255, 167, 6));
-        btn_proddet.setNextFocusableComponent(txt_proddet_nm);
-        btn_proddet.setOpaque(true);
-        btn_proddet.setPreferredSize(new java.awt.Dimension(450, 60));
-        btn_proddet.addFocusListener(new java.awt.event.FocusAdapter()
-        {
-            public void focusGained(java.awt.event.FocusEvent evt)
-            {
-                btn_proddetFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt)
-            {
-                btn_proddetFocusLost(evt);
-            }
-        });
-        btn_proddet.addMouseListener(new java.awt.event.MouseAdapter()
-        {
-            public void mouseEntered(java.awt.event.MouseEvent evt)
-            {
-                btn_proddetMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt)
-            {
-                btn_proddetMouseExited(evt);
-            }
-        });
-        btn_proddet.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                btn_proddetActionPerformed(evt);
-            }
-        });
-        btn_proddet.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                btn_proddetKeyPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnl_prod_detLayout = new javax.swing.GroupLayout(pnl_prod_det);
         pnl_prod_det.setLayout(pnl_prod_detLayout);
         pnl_prod_detLayout.setHorizontalGroup(
@@ -3574,7 +3401,6 @@ public class Main extends javax.swing.JFrame
                 .addGap(100, 100, 100)
                 .addGroup(pnl_prod_detLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txt_proddet_nm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_proddet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrolltbl_proddet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
@@ -3585,9 +3411,7 @@ public class Main extends javax.swing.JFrame
                 .addComponent(txt_proddet_nm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(scrolltbl_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_proddet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnl_prod_mainLayout = new javax.swing.GroupLayout(pnl_prod_main);
@@ -3891,13 +3715,6 @@ public class Main extends javax.swing.JFrame
                 cmbbox_createbill_custnmItemStateChanged(evt);
             }
         });
-        cmbbox_createbill_custnm.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_createbill_custnmActionPerformed(evt);
-            }
-        });
 
         txt_createbill_custid.setEditable(false);
         txt_createbill_custid.setBackground(new java.awt.Color(150, 195, 248));
@@ -3946,13 +3763,6 @@ public class Main extends javax.swing.JFrame
             public void itemStateChanged(java.awt.event.ItemEvent evt)
             {
                 cmbbox_createbill_prodnmItemStateChanged(evt);
-            }
-        });
-        cmbbox_createbill_prodnm.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cmbbox_createbill_prodnmActionPerformed(evt);
             }
         });
 
@@ -4217,13 +4027,6 @@ public class Main extends javax.swing.JFrame
         spin_createbill_quantity.setLabelText("QUANTITY");
         spin_createbill_quantity.setNextFocusableComponent(txt_createbill_discount);
         spin_createbill_quantity.setPreferredSize(new java.awt.Dimension(150, 64));
-        spin_createbill_quantity.addChangeListener(new javax.swing.event.ChangeListener()
-        {
-            public void stateChanged(javax.swing.event.ChangeEvent evt)
-            {
-                spin_createbill_quantityStateChanged(evt);
-            }
-        });
 
         txt_createbill_tax.setBackground(new java.awt.Color(150, 195, 248));
         txt_createbill_tax.setFocusCycleRoot(true);
@@ -5052,6 +4855,13 @@ public class Main extends javax.swing.JFrame
         txt_accsetting_contact.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_accsetting_contact.setNextFocusableComponent(txt_addemp_email);
         txt_accsetting_contact.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_accsetting_contact.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_accsetting_contactKeyTyped(evt);
+            }
+        });
 
         txt_accsetting_salary.setBackground(new java.awt.Color(150, 195, 248));
         txt_accsetting_salary.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -5059,6 +4869,13 @@ public class Main extends javax.swing.JFrame
         txt_accsetting_salary.setMinimumSize(new java.awt.Dimension(128, 64));
         txt_accsetting_salary.setNextFocusableComponent(txt_addemp_addr);
         txt_accsetting_salary.setPreferredSize(new java.awt.Dimension(404, 64));
+        txt_accsetting_salary.addKeyListener(new java.awt.event.KeyAdapter()
+        {
+            public void keyTyped(java.awt.event.KeyEvent evt)
+            {
+                txt_accsetting_salaryKeyTyped(evt);
+            }
+        });
 
         txt_accsetting_address.setBackground(new java.awt.Color(150, 195, 248));
         txt_accsetting_address.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
@@ -6405,11 +6222,6 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_editcust_rmvKeyPressed
 
-    private void txt_editcust_shopaddrActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_editcust_shopaddrActionPerformed
-    {//GEN-HEADEREND:event_txt_editcust_shopaddrActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_editcust_shopaddrActionPerformed
-
     private void btn_addcust_addFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addcust_addFocusGained
     {//GEN-HEADEREND:event_btn_addcust_addFocusGained
         hover(btn_addcust_add, new Color(1, 109, 218), Color.BLACK);
@@ -6529,71 +6341,6 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_addemp_addKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_addemp_addKeyPressed
-
-    private void btn_custdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_custdetKeyPressed
-    {//GEN-HEADEREND:event_btn_custdetKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_custdetKeyPressed
-
-    private void btn_custdetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_custdetActionPerformed
-    {//GEN-HEADEREND:event_btn_custdetActionPerformed
-        bindCustomerTableData(table_custdet);
-    }//GEN-LAST:event_btn_custdetActionPerformed
-
-    private void btn_custdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_custdetMouseExited
-    {//GEN-HEADEREND:event_btn_custdetMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_custdetMouseExited
-
-    private void btn_custdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_custdetMouseEntered
-    {//GEN-HEADEREND:event_btn_custdetMouseEntered
-        btn_custdet.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_btn_custdetMouseEntered
-
-    private void btn_custdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_custdetFocusLost
-    {//GEN-HEADEREND:event_btn_custdetFocusLost
-        hover(btn_custdet, new Color(255, 167, 6), Color.WHITE);
-    }//GEN-LAST:event_btn_custdetFocusLost
-
-    private void btn_custdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_custdetFocusGained
-    {//GEN-HEADEREND:event_btn_custdetFocusGained
-        hover(btn_custdet, new Color(1, 109, 218), Color.BLACK);
-    }//GEN-LAST:event_btn_custdetFocusGained
-
-    private void btn_empdetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_empdetFocusGained
-    {//GEN-HEADEREND:event_btn_empdetFocusGained
-        hover(btn_empdet, new Color(1, 109, 218), Color.BLACK);
-    }//GEN-LAST:event_btn_empdetFocusGained
-
-    private void btn_empdetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_empdetFocusLost
-    {//GEN-HEADEREND:event_btn_empdetFocusLost
-        hover(btn_empdet, new Color(255, 167, 6), Color.WHITE);
-    }//GEN-LAST:event_btn_empdetFocusLost
-
-    private void btn_empdetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_empdetMouseEntered
-    {//GEN-HEADEREND:event_btn_empdetMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_empdetMouseEntered
-
-    private void btn_empdetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_empdetMouseExited
-    {//GEN-HEADEREND:event_btn_empdetMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_empdetMouseExited
-
-    private void btn_empdetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_empdetActionPerformed
-    {//GEN-HEADEREND:event_btn_empdetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_empdetActionPerformed
-
-    private void btn_empdetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_empdetKeyPressed
-    {//GEN-HEADEREND:event_btn_empdetKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_empdetKeyPressed
-
-    private void cmbbox_addprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_addprod_brandActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_addprod_brandActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_addprod_brandActionPerformed
 
     private void btn_addprodFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_addprodFocusGained
     {//GEN-HEADEREND:event_btn_addprodFocusGained
@@ -7154,36 +6901,6 @@ public class Main extends javax.swing.JFrame
         }
     }//GEN-LAST:event_txt_proddet_nmKeyReleased
 
-    private void btn_proddetFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddetFocusGained
-    {//GEN-HEADEREND:event_btn_proddetFocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetFocusGained
-
-    private void btn_proddetFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_proddetFocusLost
-    {//GEN-HEADEREND:event_btn_proddetFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetFocusLost
-
-    private void btn_proddetMouseEntered(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddetMouseEntered
-    {//GEN-HEADEREND:event_btn_proddetMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetMouseEntered
-
-    private void btn_proddetMouseExited(java.awt.event.MouseEvent evt)//GEN-FIRST:event_btn_proddetMouseExited
-    {//GEN-HEADEREND:event_btn_proddetMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetMouseExited
-
-    private void btn_proddetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_proddetActionPerformed
-    {//GEN-HEADEREND:event_btn_proddetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetActionPerformed
-
-    private void btn_proddetKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_btn_proddetKeyPressed
-    {//GEN-HEADEREND:event_btn_proddetKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_proddetKeyPressed
-
     private void btn_createbill_addFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_createbill_addFocusGained
     {//GEN-HEADEREND:event_btn_createbill_addFocusGained
         // TODO add your handling code here:
@@ -7335,16 +7052,6 @@ public class Main extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_createbill_saveKeyPressed
 
-    private void cmbbox_createbill_prodnmActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_prodnmActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_createbill_prodnmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_createbill_prodnmActionPerformed
-
-    private void cmbbox_createbill_custnmActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_createbill_custnmActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_createbill_custnmActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_createbill_custnmActionPerformed
-
     private void cmbbox_createbill_custnmItemStateChanged(java.awt.event.ItemEvent evt)//GEN-FIRST:event_cmbbox_createbill_custnmItemStateChanged
     {//GEN-HEADEREND:event_cmbbox_createbill_custnmItemStateChanged
         String custnm = cmbbox_createbill_custnm.getSelectedItem().toString();
@@ -7416,25 +7123,10 @@ public class Main extends javax.swing.JFrame
 
     }//GEN-LAST:event_cmbbox_createbill_prodnmItemStateChanged
 
-    private void spin_createbill_quantityStateChanged(javax.swing.event.ChangeEvent evt)//GEN-FIRST:event_spin_createbill_quantityStateChanged
-    {//GEN-HEADEREND:event_spin_createbill_quantityStateChanged
-
-    }//GEN-LAST:event_spin_createbill_quantityStateChanged
-
-    private void txt_empdet_nmKeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_empdet_nmKeyPressed
-    {//GEN-HEADEREND:event_txt_empdet_nmKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_empdet_nmKeyPressed
-
     private void txt_addcust_contactKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addcust_contactKeyTyped
     {//GEN-HEADEREND:event_txt_addcust_contactKeyTyped
         isDigit(evt, txt_addcust_contact);
     }//GEN-LAST:event_txt_addcust_contactKeyTyped
-
-    private void txt_addcust_emailKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addcust_emailKeyTyped
-    {//GEN-HEADEREND:event_txt_addcust_emailKeyTyped
-
-    }//GEN-LAST:event_txt_addcust_emailKeyTyped
 
     private void txt_editcust_contactKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editcust_contactKeyTyped
     {//GEN-HEADEREND:event_txt_editcust_contactKeyTyped
@@ -7644,15 +7336,35 @@ public class Main extends javax.swing.JFrame
         isDigit(evt, txt_createbill_unpaid);
     }//GEN-LAST:event_txt_createbill_unpaidKeyTyped
 
-    private void cmbbox_editprod_brandActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_cmbbox_editprod_brandActionPerformed
-    {//GEN-HEADEREND:event_cmbbox_editprod_brandActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmbbox_editprod_brandActionPerformed
-
     private void txt_editemp_idKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editemp_idKeyTyped
     {//GEN-HEADEREND:event_txt_editemp_idKeyTyped
         isDigit(evt, txt_editemp_id);
     }//GEN-LAST:event_txt_editemp_idKeyTyped
+
+    private void txt_editcust_idKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_editcust_idKeyTyped
+    {//GEN-HEADEREND:event_txt_editcust_idKeyTyped
+        isDigit(evt, txt_editcust_id);
+    }//GEN-LAST:event_txt_editcust_idKeyTyped
+
+    private void txt_addemp_idKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addemp_idKeyTyped
+    {//GEN-HEADEREND:event_txt_addemp_idKeyTyped
+        isDigit(evt, txt_addemp_id);
+    }//GEN-LAST:event_txt_addemp_idKeyTyped
+
+    private void txt_addprod_idKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_addprod_idKeyTyped
+    {//GEN-HEADEREND:event_txt_addprod_idKeyTyped
+        isDigit(evt, txt_addprod_id);
+    }//GEN-LAST:event_txt_addprod_idKeyTyped
+
+    private void txt_accsetting_contactKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_accsetting_contactKeyTyped
+    {//GEN-HEADEREND:event_txt_accsetting_contactKeyTyped
+        isDigit(evt, txt_accsetting_contact);
+    }//GEN-LAST:event_txt_accsetting_contactKeyTyped
+
+    private void txt_accsetting_salaryKeyTyped(java.awt.event.KeyEvent evt)//GEN-FIRST:event_txt_accsetting_salaryKeyTyped
+    {//GEN-HEADEREND:event_txt_accsetting_salaryKeyTyped
+        isDigit(evt, txt_accsetting_salary);
+    }//GEN-LAST:event_txt_accsetting_salaryKeyTyped
 
     public static void main(String args[])
     {
@@ -8151,7 +7863,6 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_createbill_add;
     private com.k33ptoo.components.KButton btn_createbill_menu;
     private com.k33ptoo.components.KButton btn_createbill_save;
-    private com.k33ptoo.components.KButton btn_custdet;
     private com.k33ptoo.components.KButton btn_custdet_menu;
     private com.k33ptoo.components.KButton btn_editcust_edit;
     private com.k33ptoo.components.KButton btn_editcust_menu;
@@ -8162,11 +7873,9 @@ public class Main extends javax.swing.JFrame
     private com.k33ptoo.components.KButton btn_editprod_edit;
     private com.k33ptoo.components.KButton btn_editprod_menu;
     private com.k33ptoo.components.KButton btn_editprod_rmv;
-    private com.k33ptoo.components.KButton btn_empdet;
     private com.k33ptoo.components.KButton btn_empdet_menu;
     private com.k33ptoo.components.KButton btn_login;
     private com.k33ptoo.components.KButton btn_modifybill_menu;
-    private com.k33ptoo.components.KButton btn_proddet;
     private com.k33ptoo.components.KButton btn_proddet_menu;
     private com.k33ptoo.components.KButton btnaccount;
     private combo_suggestion.ComboBoxSuggestion cmbbox_addprod_brand;
