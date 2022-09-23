@@ -5703,7 +5703,6 @@ public class Main extends javax.swing.JFrame
             bindEmployeeTableData(table_editemp);
 
             txt_editemp_nm.grabFocus();
-
         }
     }//GEN-LAST:event_btn_editemp_menuKeyPressed
 
@@ -6013,8 +6012,6 @@ public class Main extends javax.swing.JFrame
         {
             visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
             onIndicator(lid_modifybill, lid_createbill);
-//            fillCombobox("bill", "id", cmbbox_modifybill_prodid);
-
         }
     }//GEN-LAST:event_btn_modifybill_menuKeyPressed
 
@@ -6022,8 +6019,6 @@ public class Main extends javax.swing.JFrame
     {//GEN-HEADEREND:event_btn_modifybill_menuActionPerformed
         visibility(pnl_modifybill, pnl_createbill, pnl_bill_tab3);
         onIndicator(lid_modifybill, lid_createbill);
-//        fillCombobox("bill", "id", cmbbox_modifybill_prodid);
-
     }//GEN-LAST:event_btn_modifybill_menuActionPerformed
 
     private void btn_addcust_menuActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btn_addcust_menuActionPerformed
@@ -6134,7 +6129,6 @@ public class Main extends javax.swing.JFrame
         lbl_billno_no.setText(getMaxID("bill"));
         fillCombobox("customer", "custnm", cmbbox_createbill_custnm);
         fillCombobox("product", "nm", cmbbox_createbill_prodnm);
-
     }//GEN-LAST:event_btnBillActionPerformed
 
     private void btn_editcust_editFocusGained(java.awt.event.FocusEvent evt)//GEN-FIRST:event_btn_editcust_editFocusGained
@@ -7039,6 +7033,7 @@ public class Main extends javax.swing.JFrame
                         + "*************** Thank You for Shopping ********************\n");
 
                 txtarea_format.print();
+                lbl_billno_no.setText(getMaxID("bill"));
             }
             catch (Exception e)
             {

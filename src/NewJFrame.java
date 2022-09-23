@@ -1,14 +1,11 @@
-
-import java.awt.print.PrinterException;
-import javax.swing.JOptionPane;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
 /**
  *
- * @author dhruv
+ * @author HalfLife
  */
 public class NewJFrame extends javax.swing.JFrame
 {
@@ -31,94 +28,21 @@ public class NewJFrame extends javax.swing.JFrame
     private void initComponents()
     {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtarea_bill = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        txtarea_bill.setColumns(20);
-        txtarea_bill.setRows(5);
-        jScrollPane1.setViewportView(txtarea_bill);
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jButton1.addKeyListener(new java.awt.event.KeyAdapter()
-        {
-            public void keyPressed(java.awt.event.KeyEvent evt)
-            {
-                jButton1KeyPressed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(462, 462, 462)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(371, 371, 371)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(347, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(98, 98, 98))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1KeyPressed(java.awt.event.KeyEvent evt)//GEN-FIRST:event_jButton1KeyPressed
-    {//GEN-HEADEREND:event_jButton1KeyPressed
-
-    }//GEN-LAST:event_jButton1KeyPressed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
-    {//GEN-HEADEREND:event_jButton1ActionPerformed
-        txtarea_bill.append("\t\t Billing Application \n"
-                + "\n***************************************************************\n"
-                + "***************************************************************\n"
-                + "  Name :                                 hrllo\n"
-                + "  Mobile No :                            how\n"
-                + "  EMAIL :                                are\n"
-                + "  Date :                                 you\n"
-                + "  Time :                                 yp\n"
-                + "===============================================================\n"
-                + "  Category:                              \n"
-                + "  Brand :                                \n"
-                + "  Model :                                \n"
-                + "***************************************************************\n"
-                + "  Sub Total :                            yo\n"
-                + "  Tax :                                  uo\n"
-                + "  Discount :                             hello\n"
-                + "  Total Amount :                         how\n"
-                + "  Paid :                                 you\n\n"
-                + "*************** Thank You for Shoping ********************\n");
-        try
-        {
-            txtarea_bill.print();
-        }
-        catch (PrinterException ex)
-        {
-            JOptionPane.showMessageDialog(null, "error");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,8 +94,5 @@ public class NewJFrame extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtarea_bill;
     // End of variables declaration//GEN-END:variables
 }
